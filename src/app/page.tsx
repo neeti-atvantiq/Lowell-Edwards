@@ -6,6 +6,7 @@ import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import Ticker from '@/components/sections/Ticker';
 import Solution from '@/components/sections/Solution';
+import LTE from '@/components/sections/LTE';
 import Personas from '@/components/sections/Personas';
 import Finder from '@/components/sections/Finder';
 import Products from '@/components/sections/Products';
@@ -41,6 +42,7 @@ export default function Home() {
         <Hero />
         <Ticker />
         <Solution />
+        <LTE />
         <Personas />
         <Finder />
         <Products />

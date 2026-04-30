@@ -83,15 +83,15 @@ export default function Quote() {
                 </div>
                 <div className="qf-field">
                   <label className="qf-label">Company / Organisation</label>
-                  <input className="qf-input" placeholder="Acme Property Management" value={form.company} onChange={onChange('company')} />
+                  <input className="qf-input" placeholder="Acme Property Management Ltd" value={form.company} onChange={onChange('company')} />
                 </div>
                 <div className="qf-field">
                   <label className="qf-label">Email Address</label>
-                  <input className="qf-input" type="email" placeholder="john@yourcompany.com" value={form.email} onChange={onChange('email')} />
+                  <input className="qf-input" type="email" placeholder="john@yourcompany.co.uk" value={form.email} onChange={onChange('email')} />
                 </div>
                 <div className="qf-field">
                   <label className="qf-label">Phone Number</label>
-                  <input className="qf-input" type="tel" placeholder="(201) 555-0100" value={form.phone} onChange={onChange('phone')} />
+                  <input className="qf-input" type="tel" placeholder="+44 7700 000 000" value={form.phone} onChange={onChange('phone')} />
                 </div>
                 <div className="qf-field">
                   <label className="qf-label">Building Type</label>

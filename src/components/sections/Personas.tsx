@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import Image from 'next/image';
 
 type Persona = {
   mark: string;
@@ -15,8 +16,8 @@ type Persona = {
 const personas: Persona[] = [
   {
     mark: 'For Residents',
-    img: 'https://images.unsplash.com/photo-1768638687896-35bde623d532?w=800&h=500&q=80&auto=format&fit=crop',
-    img2x: 'https://images.unsplash.com/photo-1768638687896-35bde623d532?w=1200&h=750&q=80&auto=format&fit=crop',
+    img: '/images/Personas/tenants.jpg',
+    img2x: '/images/Personas/tenants.jpg',
     alt: 'Modern apartment building exterior with balconies',
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
@@ -39,8 +40,8 @@ const personas: Persona[] = [
   },
   {
     mark: 'For Managers',
-    img: 'https://images.unsplash.com/photo-1742199009963-c028d0c5a603?w=800&h=500&q=80&auto=format&fit=crop',
-    img2x: 'https://images.unsplash.com/photo-1742199009963-c028d0c5a603?w=1200&h=750&q=80&auto=format&fit=crop',
+    img: '/images/Personas/property_managers.jpg',
+    img2x: '/images/Personas/property_managers.jpg',
     alt: 'Property management workspace with multiple screens',
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
@@ -109,12 +110,12 @@ export default function Personas() {
             <div className="persona-card" key={i}>
               <div className="persona-image">
                 <span className="persona-image-mark">{p.mark}</span>
-                <img
+                <Image
                   src={p.img}
-                  srcSet={`${p.img} 1x, ${p.img2x} 2x`}
                   alt={p.alt}
+                  width={800}
+                  height={500}
                   loading="lazy"
-                  decoding="async"
                 />
               </div>
               <div className="persona-top">

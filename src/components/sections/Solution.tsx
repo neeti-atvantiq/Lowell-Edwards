@@ -1,39 +1,47 @@
+import Image from 'next/image';
+
 const cards = [
   {
     n: '01',
     title: 'See Every Visitor Before You Open',
-    body: 'High-definition video calling means every resident sees and verifies guests, couriers, and contractors before granting access — eliminating doorstep crime and unauthorised entry.',
+    body: 'HD video intercom lets residents and managers see and speak to any visitor before granting access — from their phone, from anywhere in the world. No more opening blind.',
     fact: 'Real-time HD video to any device',
+    image: '/images/solutions/solution-01.jpg',
   },
   {
     n: '02',
     title: 'Secure Package Delivery, Every Time',
-    body: 'Couriers use a dedicated, time-limited access code to drop parcels in a secure lobby — every delivery captured and logged. No more porch piracy.',
+    body: 'Couriers use a dedicated delivery PIN or QR code. Every delivery is logged with time-stamped video evidence. No more stolen parcels — residents and managers have full accountability.',
     fact: 'Time-stamped delivery proof',
+    image: '/images/solutions/solution-02.jpg',
   },
   {
     n: '03',
     title: 'Manage Access Remotely & Instantly',
-    body: 'Add residents, issue contractor codes, or revoke access from a single cloud dashboard — no callouts, no hardware visits, no waiting.',
+    body: 'Grant or revoke access credentials in seconds from any device. Onboarding a new tenant or locking out a former occupant takes moments — no site visit, no locksmith, no delay.',
     fact: 'Zero on-site visits required',
+    image: '/images/solutions/solution-03.jpg',
   },
   {
     n: '04',
     title: 'Complete Audit Trail',
-    body: 'Every entry, every visitor, every event timestamped and stored — court-admissible video logs that protect residents, managers, and owners alike.',
+    body: 'Every entry event is logged — who, when, and how. Time-stamped video records provide irrefutable evidence for insurance claims, tenant disputes, and compliance audits.',
     fact: 'Court-admissible video logs',
+    image: '/images/solutions/solution-04.jpg',
   },
   {
     n: '05',
     title: 'Zero-Touch Visitor Management',
-    body: 'Issue auto-expiring access codes for cleaners, contractors, deliveries, and short-term guests — no fobs, no pickups, no hassle.',
+    body: 'Issue temporary access codes for contractors, cleaners, or guests with defined time windows. Access expires automatically — no physical handover of keys, no loose ends.',
     fact: 'Auto-expiring access codes',
+    image: '/images/solutions/solution-05.jpg',
   },
   {
     n: '06',
     title: 'Touchless Face Recognition Entry',
-    body: 'AI-powered face recognition for staff and residents — no fobs, no codes, no friction. Hygienic, fast, and engineered for the highest-security environments.',
+    body: 'For premium buildings, AI-powered face recognition provides frictionless, keyless entry for registered residents — secure, hygienic, and effortlessly modern.',
     fact: 'AI-powered, hygienic entry',
+    image: '/images/solutions/solution-06.jpg',
   },
 ];
 
@@ -65,13 +73,13 @@ export default function Solution() {
               </div>
               <div className="sol-index">{c.n}</div>
               <div className="sol-graphic">
-                <svg viewBox="0 0 200 100" fill="none" stroke="currentColor" strokeWidth="1.4">
-                  <rect x="20" y="20" width="160" height="60" rx="6" opacity=".5" />
-                  <circle cx="50" cy="50" r="12" />
-                  <line x1="80" y1="40" x2="160" y2="40" opacity=".7" />
-                  <line x1="80" y1="55" x2="140" y2="55" opacity=".5" />
-                  <line x1="80" y1="65" x2="120" y2="65" opacity=".4" />
-                </svg>
+                <Image
+                  src={c.image}
+                  alt={c.title}
+                  width={600}
+                  height={375}
+                  style={{ display: 'block', width: '100%', height: '100%', objectFit: 'cover' }}
+                />
               </div>
               <div className="sol-title">{c.title}</div>
               <div className="sol-body">{c.body}</div>

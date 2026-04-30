@@ -1,61 +1,93 @@
 'use client';
 import { useState } from 'react';
+import { gallerySvgs } from './GallerySvgs';
 
 type Brand = 'all' | 'bmx' | 'akv' | 'db';
 
-const cards: { brand: Exclude<Brand, 'all'>; tag: string; title: string; sub: string }[] = [
-  { brand: 'bmx', tag: 'ButterflyMX', title: 'Mobile App Entry', sub: 'Residents grant access from their smartphone — anywhere in the world.' },
-  { brand: 'bmx', tag: 'ButterflyMX', title: 'Package Room', sub: 'Couriers receive secure access codes — eliminating doorstep theft.' },
-  { brand: 'akv', tag: 'Akuvox', title: 'AI Face Recognition', sub: 'Touchless entry powered by AI — for offices and high-security buildings.' },
-  { brand: 'akv', tag: 'Akuvox', title: 'SIP Integration', sub: 'Connects directly to existing PBX systems for seamless multi-tenant calling.' },
-  { brand: 'db', tag: 'DoorBird', title: 'Stainless Architectural', sub: 'IP65/IK10-rated stainless steel door stations for premium developments.' },
-  { brand: 'db', tag: 'DoorBird', title: '1080p Ultra-Wide Camera', sub: 'Crystal-clear day and night vision with 180° field of view.' },
-  { brand: 'db', tag: 'DoorBird', title: 'Smart Home Ready', sub: 'Native integration with Control4, Crestron, Savant, and more.' },
+type Card = {
+  brand: Exclude<Brand, 'all'>;
+  badge: string;
+  spec: string;
+  brandLabel: string;
+  model: string;
+  sub: string;
+};
+
+const cards: Card[] = [
+  { brand: 'bmx', badge: 'ButterflyMX', spec: '1080P HD',      brandLabel: 'ButterflyMX', model: 'Video Intercom Panel',    sub: 'Multi-tenant · Cloud managed' },
+  { brand: 'bmx', badge: 'ButterflyMX', spec: 'iOS · ANDROID', brandLabel: 'ButterflyMX', model: 'Mobile Access App',       sub: 'iOS & Android · Open from anywhere' },
+  { brand: 'akv', badge: 'Akuvox',      spec: 'AI · TOUCHLESS', brandLabel: 'Akuvox',      model: 'R29 Face Recognition',    sub: 'AI touchless entry · SIP compatible' },
+  { brand: 'akv', badge: 'Akuvox',      spec: 'TOUCHSCREEN',    brandLabel: 'Akuvox',      model: 'E16C Multi-Tenant Station',sub: 'Touchscreen · RFID · PIN access' },
+  { brand: 'db',  badge: 'DoorBird',    spec: 'IP65 · 1080P',  brandLabel: 'DoorBird',    model: 'D101S IP Station',        sub: 'Stainless steel · IP65 · 1080p fisheye' },
+  { brand: 'db',  badge: 'DoorBird',    spec: 'IK10 · IP65',   brandLabel: 'DoorBird',    model: 'D2101V Surface Station',  sub: 'Horizontal mount · IP65 · IK10 vandal-rated' },
+  { brand: 'bmx', badge: 'ButterflyMX', spec: 'RFID · KEYPAD', brandLabel: 'ButterflyMX', model: 'Access Control Reader',   sub: 'Keypad · RFID fob · Key card' },
 ];
 
 export default function Gallery() {
   const [filter, setFilter] = useState<Brand>('all');
-  const visible = cards.filter((c) => filter === 'all' || c.brand === filter);
+  const visible = cards
+    .map((c, i) => ({ ...c, origIndex: i }))
+    .filter((c) => filter === 'all' || c.brand === filter);
 
   return (
     <section className="section gallery" id="gallery">
-      <div className="wrap">
-        <div className="gallery-header reveal">
-          <div className="tag" style={{ justifyContent: 'center' }}>Capabilities Showcase</div>
-          <h2 className="h2">See it in action</h2>
-          <p
-            className="body-lg"
-            style={{ marginTop: 18, maxWidth: 520, marginLeft: 'auto', marginRight: 'auto' }}
-          >
-            Explore our most-installed capabilities by brand. Filter to see what each system does best.
-          </p>
+      <div className="gallery-inner">
+        <div className="gallery-intro reveal">
+          <div className="gallery-intro-text">
+            <div className="tag">Product Range</div>
+            <div className="gallery-intro-title">
+              Explore the hardware<br />we <em>supply &amp; install</em>
+            </div>
+            <div className="gallery-intro-desc">
+              Every device below is available through us as a certified integrator — supplied, installed, and maintained by our UK team.
+            </div>
+          </div>
+          <div className="gallery-tabs">
+            {(['all', 'bmx', 'akv', 'db'] as Brand[]).map((b) => (
+              <button
+                key={b}
+                type="button"
+                className={`g-tab ${filter === b ? 'active' : ''}`}
+                onClick={() => setFilter(b)}
+              >
+                {b === 'all' ? 'All Products' : b === 'bmx' ? 'ButterflyMX' : b === 'akv' ? 'Akuvox' : 'DoorBird'}
+              </button>
+            ))}
+          </div>
         </div>
-        <div className="g-tabs reveal">
-          {(['all', 'bmx', 'akv', 'db'] as Brand[]).map((b) => (
-            <button
-              key={b}
-              className={`g-tab ${filter === b ? 'active' : ''}`}
-              onClick={() => setFilter(b)}
-            >
-              {b === 'all' ? 'All' : b === 'bmx' ? 'ButterflyMX' : b === 'akv' ? 'Akuvox' : 'DoorBird'}
-            </button>
-          ))}
-        </div>
-        <div className="g-grid reveal" style={{ transitionDelay: '.1s' }}>
-          {visible.map((c, i) => (
-            <div className={`g-card g-${c.brand}`} key={i} data-brand={c.brand}>
-              <div className="g-art">
-                <svg viewBox="0 0 320 200" fill="none">
-                  <rect x="0" y="0" width="320" height="200" rx="6" fill="#0a0a18" />
-                  <rect x="40" y="30" width="240" height="140" rx="6" fill="none" stroke="currentColor" strokeWidth="1.5" opacity=".4" />
-                  <circle cx="160" cy="100" r="38" fill="none" stroke="currentColor" strokeWidth="1.8" />
-                  <circle cx="160" cy="100" r="14" fill="currentColor" opacity=".6" />
-                </svg>
+
+        <div className="gallery-grid reveal" style={{ transitionDelay: '.1s' }}>
+          {visible.map((c) => (
+            <div className={`g-card ${c.brand}`} key={`${c.brand}-${c.origIndex}`} data-brand={c.brand}>
+              <div className="g-img-area">
+                <div className="g-img-bg" />
+                <div className="g-badge">{c.badge}</div>
+                <div className="g-img-wrap">
+                  {gallerySvgs[c.origIndex]}
+                </div>
+                <button className="g-view-btn" type="button">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                    <circle cx="12" cy="12" r="3" />
+                  </svg>
+                  View Product
+                </button>
+                <div className="g-specs"><span className="g-spec">{c.spec}</span></div>
+                <span className="g-index">{String(c.origIndex + 1).padStart(2, '0')}</span>
               </div>
-              <div className="g-meta">
-                <div className="g-tag">{c.tag}</div>
-                <div className="g-title">{c.title}</div>
-                <div className="g-sub">{c.sub}</div>
+              <div className="g-info">
+                <div className="g-info-left">
+                  <div className="g-prod-brand">{c.brandLabel}</div>
+                  <div className="g-prod-model">{c.model}</div>
+                  <div className="g-prod-sub">{c.sub}</div>
+                </div>
+                <a href="#quote" className="g-info-btn">
+                  Quote
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12,5 19,12 12,19" />
+                  </svg>
+                </a>
               </div>
             </div>
           ))}

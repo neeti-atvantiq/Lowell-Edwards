@@ -5,26 +5,26 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <div className="nav-logo">
-              <div className="nav-logo-mark">
+              {/* <div className="nav-logo-mark">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <rect x="3" y="3" width="7" height="10" rx="1.5" />
                   <rect x="14" y="3" width="7" height="7" rx="1.5" />
                   <rect x="14" y="14" width="7" height="7" rx="1.5" />
                   <rect x="3" y="17" width="7" height="4" rx="1.5" />
                 </svg>
-              </div>
+              </div> */}
               Lowell Edwards<span style={{ color: 'var(--gold)' }}>.</span>
             </div>
             <p>
-              Certified authorised integrators for leading video intercom and access control
-              systems. Supplying, installing, and maintaining building security solutions across
-              the tri-state area from Hackensack, NJ.
+              Certified authorised integrators for leading video intercom and access control systems. Supplying, installing, and maintaining building security solutions across the UK.
+
+
             </p>
-            <a href="tel:2015253300" className="footer-phone">
+            <a href="tel:08001234567" className="footer-phone">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 010 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.9v2.02z" />
               </svg>
-              201.525.3300
+              0800 123 4567
             </a>
           </div>
           <div className="footer-col">

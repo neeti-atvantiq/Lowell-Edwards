@@ -3,6 +3,7 @@ const items = [
   '✦ ButterflyMX Authorised Reseller',
   '✦ Akuvox Partner',
   '✦ DoorBird Certified Installer',
+  '✦ LTE Internet',
   '✦ 24-Hour Response Guarantee',
   '✦ 1-Year Workmanship Warranty',
   '✦ Hackensack, NJ-Based Engineers',
