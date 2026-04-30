@@ -29,7 +29,7 @@ export default function Navigation() {
             src="/logo.jpg"
             alt="Lowell Edwards logo"
             width={190}
-            height={70}
+            height={60}
           />
         </a>
         <div className="nav-links">
