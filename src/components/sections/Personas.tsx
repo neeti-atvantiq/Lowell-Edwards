@@ -40,8 +40,8 @@ const personas: Persona[] = [
   },
   {
     mark: 'For Managers',
-    img: '/images/Personas/property_managers.jpg',
-    img2x: '/images/Personas/property_managers.jpg',
+    img: '/images/Personas/property_manager.jpg',
+    img2x: '/images/Personas/property_manager.jpg',
     alt: 'Property management workspace with multiple screens',
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">

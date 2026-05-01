@@ -76,13 +76,13 @@ export default function LTE() {
               </li>
             </ul>
 
-            <a href="#quote" className="btn btn-gold" style={{ marginTop: 36 }}>
+            {/* <a href="#quote" className="btn btn-gold" style={{ marginTop: 36 }}>
               <span>Add LTE to my quote</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12" />
                 <polyline points="12 5 19 12 12 19" />
               </svg>
-            </a>
+            </a> */}
           </div>
 
           {/* Right column: visual */}
@@ -113,6 +113,15 @@ export default function LTE() {
                 style={{ width: '100%', height: 'auto', maxWidth: 380, borderRadius: 8 }}
               />
             </div>
+            <div style={{ marginTop: 12, textAlign: 'center' }}>
+  <a href="#quote" className="btn btn-gold">
+    <span>Add LTE to my quote</span>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+  </a>
+</div>
           </div>
 
         </div>
