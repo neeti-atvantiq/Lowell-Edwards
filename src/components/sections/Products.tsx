@@ -86,7 +86,7 @@ export default function Products() {
               </div>
               <div className="prod-meta">
                 <span className="prod-cert">{p.cert}</span>
-                <span className="prod-ref">{p.ref}</span>
+                {/* <span className="prod-ref">{p.ref}</span> */}
               </div>
               <div className="prod-top">
                 <div className="prod-brand">{p.brand}</div>
