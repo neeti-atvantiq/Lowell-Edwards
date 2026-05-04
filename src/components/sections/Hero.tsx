@@ -1,19 +1,47 @@
-import Image from 'next/image';
+import ImageSlider from '@/components/ui/ImageSlider';
+
+const heroImages = [
+  'https://images.unsplash.com/photo-1758448721134-1798533ae917?auto=format&fit=crop&w=1920&h=900&q=85',
+  'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&h=900&q=85',
+  'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1920&h=900&q=85',
+  'https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=1920&h=900&q=85',
+];
 
 export default function Hero() {
   return (
     <section className="hero" id="home">
       <div className="hero-building-bg">
-        <Image
-          className="hero-bg-img"
-          src="https://images.unsplash.com/photo-1758448721134-1798533ae917?auto=format&fit=crop&w=1920&h=900&q=85"
-          alt=""
-          aria-hidden="true"
-          fill
-          priority
-          sizes="100vw"
-        />
+        <ImageSlider images={heroImages} interval={6000} />
       </div>
+      
+      {/* Floating Badges */}
+      <div className="hero-badges">
+        <div className="hero-badge badge-cloud">
+          <div className="badge-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </div>
+          <div className="badge-text">
+            <div className="badge-label">Cloud-Based</div>
+            <div className="badge-sub">Remote Access</div>
+          </div>
+        </div>
+        
+        <div className="hero-badge badge-app">
+          <div className="badge-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="5" y="2" width="14" height="20" rx="2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M12 18h.01" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </div>
+          <div className="badge-text">
+            <div className="badge-label">App Control</div>
+            <div className="badge-sub">iOS & Android</div>
+          </div>
+        </div>
+      </div>
+      
       <div className="hero-veil" />
       <div className="hero-inner">
         <div className="hero-text-col">

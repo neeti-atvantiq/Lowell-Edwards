@@ -1,6 +1,5 @@
 'use client';
 import { useEffect } from 'react';
-import ContactBar from '@/components/layout/ContactBar';
 import Navigation from '@/components/layout/Navigation';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
@@ -37,7 +36,6 @@ export default function Home() {
 
   return (
     <>
-      <ContactBar />
       <Navigation />
       <main>
         <Hero />
