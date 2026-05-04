@@ -15,13 +15,13 @@ type Card = {
 };
 
 const cards: Card[] = [
-  { brand: 'bmx', image: '/images/products/coming_soon.jpg', badge: 'ButterflyMX', spec: '1080P HD',      brandLabel: 'ButterflyMX', model: 'Video Intercom Panel',    sub: 'Multi-tenant · Cloud managed' },
+  { brand: 'bmx', image: '/images/products/butterfly/video_intercom.webp', badge: 'ButterflyMX', spec: '1080P HD',      brandLabel: 'ButterflyMX', model: 'Video Intercom Panel',    sub: 'Multi-tenant · Cloud managed' },
   // { brand: 'bmx', image: '/images/products/product-02.jpg', badge: 'ButterflyMX', spec: 'iOS · ANDROID', brandLabel: 'ButterflyMX', model: 'Mobile Access App',       sub: 'iOS & Android · Open from anywhere' },
-  { brand: 'akv', image: '/images/products/akuvox/1.jpg', badge: 'Akuvox',      spec: 'AI · TOUCHLESS', brandLabel: 'Akuvox',      model: 'R29 Face Recognition',    sub: 'AI touchless entry · SIP compatible' },
-  { brand: 'akv', image: '/images/products/akuvox/3.jpg', badge: 'Akuvox',      spec: 'TOUCHSCREEN',    brandLabel: 'Akuvox',      model: 'E16C Multi-Tenant Station',sub: 'Touchscreen · RFID · PIN access' },
-  { brand: 'db',  image: '/images/products/doorbird/1.jpg', badge: 'DoorBird',    spec: 'IP65 · 1080P',  brandLabel: 'DoorBird',    model: 'D101S IP Station',        sub: 'Stainless steel · IP65 · 1080p fisheye' },
-  { brand: 'db',  image: '/images/products/doorbird/2.jpg', badge: 'DoorBird',    spec: 'IK10 · IP65',   brandLabel: 'DoorBird',    model: 'D2101V Surface Station',  sub: 'Horizontal mount · IP65 · IK10 vandal-rated' },
-  { brand: 'bmx', image: '/images/products/coming_soon.jpg', badge: 'ButterflyMX', spec: 'RFID · KEYPAD', brandLabel: 'ButterflyMX', model: 'Access Control Reader',   sub: 'Keypad · RFID fob · Key card' },
+  { brand: 'akv', image: '/images/products/akuvox/R29.png', badge: 'Akuvox',      spec: 'AI · TOUCHLESS', brandLabel: 'Akuvox',      model: 'R29 Face Recognition',    sub: 'AI touchless entry · SIP compatible' },
+  { brand: 'akv', image: '/images/products/akuvox/E16.png', badge: 'Akuvox',      spec: 'TOUCHSCREEN',    brandLabel: 'Akuvox',      model: 'E16C Multi-Tenant Station',sub: 'Touchscreen · RFID · PIN access' },
+  { brand: 'db',  image: '/images/products/doorbird/D101S.png', badge: 'DoorBird',    spec: 'IP65 · 1080P',  brandLabel: 'DoorBird',    model: 'D101S IP Station',        sub: 'Stainless steel · IP65 · 1080p fisheye' },
+  { brand: 'db',  image: '/images/products/doorbird/D2101V.png', badge: 'DoorBird',    spec: 'IK10 · IP65',   brandLabel: 'DoorBird',    model: 'D2101V Surface Station',  sub: 'Horizontal mount · IP65 · IK10 vandal-rated' },
+  { brand: 'bmx', image: '/images/products/butterfly/access_control.png', badge: 'ButterflyMX', spec: 'RFID · KEYPAD', brandLabel: 'ButterflyMX', model: 'Access Control Reader',   sub: 'Keypad · RFID fob · Key card' },
 ];
 
 export default function Gallery() {
