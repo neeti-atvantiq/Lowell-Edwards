@@ -284,6 +284,7 @@ section.gallery::before { content: ''; position: absolute; inset: 0; background-
 .g-card.db .g-img-area::before { background: radial-gradient(ellipse, rgba(120,100,60,.2) 0%, transparent 70%); }
 .g-card:hover .g-img-area::before { opacity: .52; transform: translate(-50%, -50%) scale(1.06); }
 .g-img-wrap svg { position: relative; z-index: 1; filter: drop-shadow(0 20px 40px rgba(0,0,0,.18)); }
+.g-product-image { object-fit: contain; object-position: center; padding: 20px; z-index: 1; filter: drop-shadow(0 20px 40px rgba(0,0,0,.18)); }
 .g-img-wrap::after { content: ''; position: absolute; bottom: 14%; left: 50%; transform: translateX(-50%); width: 132px; height: 14px; background: radial-gradient(ellipse, rgba(28,18,8,.20), transparent 70%); filter: blur(7px); z-index: 0; pointer-events: none; }
 .g-view-btn { position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%) translateY(8px); opacity: 0; transition: all .3s cubic-bezier(.4,0,.2,1); z-index: 10; white-space: nowrap; font-family: var(--fb); font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; padding: 10px 22px; background: var(--gold); color: #fff; border: none; cursor: pointer; display: flex; align-items: center; gap: 8px; }
 .g-card:hover .g-view-btn { opacity: 1; transform: translateX(-50%) translateY(0); }
@@ -302,6 +303,28 @@ section.gallery::before { content: ''; position: absolute; inset: 0; background-
 .g-info-btn:hover { background: var(--gold); color: #fff; }
 .g-info-btn svg { transition: transform .2s; }
 .g-info-btn:hover svg { transform: translateX(3px); }
+
+/* INSTALLATIONS */
+section.installations { padding-top: 30px; background: linear-gradient(180deg, #FFFFFF 0%, #F6F8FB 100%); overflow: hidden; }
+.installations-head { text-align: center; max-width: 760px; margin: 0 auto 34px; }
+.installations-head .h2 em { color: var(--gold); font-style: italic; }
+.installations-slider { width: 100%; overflow: hidden; position: relative; }
+.installations-slider::before,
+.installations-slider::after { content: ''; position: absolute; top: 0; bottom: 0; width: 120px; z-index: 3; pointer-events: none; }
+.installations-slider::before { left: 0; background: linear-gradient(90deg, rgba(246,248,251,1) 0%, rgba(246,248,251,0) 100%); }
+.installations-slider::after { right: 0; background: linear-gradient(270deg, rgba(246,248,251,1) 0%, rgba(246,248,251,0) 100%); }
+.installations-track { display: flex; gap: 20px; width: max-content; padding: 8px 0 8px 20px; animation: instScroll 36s linear infinite; }
+.inst-card { width: min(28vw, 390px); min-width: 280px; background: #FFFFFF; border: 1px solid rgba(26,26,46,.08); border-radius: 14px; box-shadow: 0 8px 28px rgba(26,26,46,.08); overflow: hidden; }
+.inst-image-wrap { position: relative; width: 100%; height: 240px; background: #EDEFF3; }
+.inst-image { object-fit: cover; object-position: center; }
+.inst-meta { padding: 14px 16px 16px; }
+.inst-meta h3 { font-family: var(--fd); font-size: 20px; color: var(--cream); margin-bottom: 3px; }
+.inst-meta p { font-family: var(--fb); font-size: 13px; color: var(--c65); text-transform: uppercase; letter-spacing: .11em; }
+
+@keyframes instScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 10px)); }
+}
 
 /* WHY US — BENTO */
 section.why { background: #FFFFFF; }
@@ -542,6 +565,7 @@ section.quote-section { background: #FFFFFF; }
   .nav-right { gap: 10px; }
   .nav-phone { display: none; }
   .nav-right .btn { padding: 10px 16px !important; }
+  .inst-card { width: min(42vw, 360px); }
 }
 @media (max-width: 768px) {
   .wrap { padding: 0 10px; }
@@ -589,6 +613,11 @@ section.quote-section { background: #FFFFFF; }
   .lte-feat { gap: 14px; }
   .lte-feat-icon { width: 40px; height: 40px; }
   .lte-features {grid-template-columns: 1fr;}
+  .installations-head { margin-bottom: 24px; }
+  .installations-slider::before,
+  .installations-slider::after { width: 38px; }
+  .installations-track { gap: 14px; padding-left: 10px; }
+  .inst-card { min-width: 78vw; }
 }
 @media (max-width: 480px) {
   .wrap { padding: 0 6px; }
@@ -611,4 +640,10 @@ section.quote-section { background: #FFFFFF; }
   .lte-stat-banner { gap: 12px; }
   .lte-stat-num { font-size: 26px; }
   .lte-illustration { min-height: 200px; }
+  .g-product-image { object-fit: cover; /* Ensure images fill the container */
+    object-position: center; /* Center the image */
+    width: 100%; /* Ensure it scales responsively */
+    height: 100%; /* Maintain aspect ratio */
+  }
+  .inst-image-wrap { height: 210px; }
 }

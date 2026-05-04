@@ -1,11 +1,12 @@
 'use client';
+import Image from 'next/image';
 import { useState } from 'react';
-import { gallerySvgs } from './GallerySvgs';
 
 type Brand = 'all' | 'bmx' | 'akv' | 'db';
 
 type Card = {
   brand: Exclude<Brand, 'all'>;
+  image: string;
   badge: string;
   spec: string;
   brandLabel: string;
@@ -14,13 +15,13 @@ type Card = {
 };
 
 const cards: Card[] = [
-  { brand: 'bmx', badge: 'ButterflyMX', spec: '1080P HD',      brandLabel: 'ButterflyMX', model: 'Video Intercom Panel',    sub: 'Multi-tenant · Cloud managed' },
-  { brand: 'bmx', badge: 'ButterflyMX', spec: 'iOS · ANDROID', brandLabel: 'ButterflyMX', model: 'Mobile Access App',       sub: 'iOS & Android · Open from anywhere' },
-  { brand: 'akv', badge: 'Akuvox',      spec: 'AI · TOUCHLESS', brandLabel: 'Akuvox',      model: 'R29 Face Recognition',    sub: 'AI touchless entry · SIP compatible' },
-  { brand: 'akv', badge: 'Akuvox',      spec: 'TOUCHSCREEN',    brandLabel: 'Akuvox',      model: 'E16C Multi-Tenant Station',sub: 'Touchscreen · RFID · PIN access' },
-  { brand: 'db',  badge: 'DoorBird',    spec: 'IP65 · 1080P',  brandLabel: 'DoorBird',    model: 'D101S IP Station',        sub: 'Stainless steel · IP65 · 1080p fisheye' },
-  { brand: 'db',  badge: 'DoorBird',    spec: 'IK10 · IP65',   brandLabel: 'DoorBird',    model: 'D2101V Surface Station',  sub: 'Horizontal mount · IP65 · IK10 vandal-rated' },
-  { brand: 'bmx', badge: 'ButterflyMX', spec: 'RFID · KEYPAD', brandLabel: 'ButterflyMX', model: 'Access Control Reader',   sub: 'Keypad · RFID fob · Key card' },
+  { brand: 'bmx', image: '/images/products/coming_soon.jpg', badge: 'ButterflyMX', spec: '1080P HD',      brandLabel: 'ButterflyMX', model: 'Video Intercom Panel',    sub: 'Multi-tenant · Cloud managed' },
+  // { brand: 'bmx', image: '/images/products/product-02.jpg', badge: 'ButterflyMX', spec: 'iOS · ANDROID', brandLabel: 'ButterflyMX', model: 'Mobile Access App',       sub: 'iOS & Android · Open from anywhere' },
+  { brand: 'akv', image: '/images/products/akuvox/1.jpg', badge: 'Akuvox',      spec: 'AI · TOUCHLESS', brandLabel: 'Akuvox',      model: 'R29 Face Recognition',    sub: 'AI touchless entry · SIP compatible' },
+  { brand: 'akv', image: '/images/products/akuvox/3.jpg', badge: 'Akuvox',      spec: 'TOUCHSCREEN',    brandLabel: 'Akuvox',      model: 'E16C Multi-Tenant Station',sub: 'Touchscreen · RFID · PIN access' },
+  { brand: 'db',  image: '/images/products/doorbird/1.jpg', badge: 'DoorBird',    spec: 'IP65 · 1080P',  brandLabel: 'DoorBird',    model: 'D101S IP Station',        sub: 'Stainless steel · IP65 · 1080p fisheye' },
+  { brand: 'db',  image: '/images/products/doorbird/2.jpg', badge: 'DoorBird',    spec: 'IK10 · IP65',   brandLabel: 'DoorBird',    model: 'D2101V Surface Station',  sub: 'Horizontal mount · IP65 · IK10 vandal-rated' },
+  { brand: 'bmx', image: '/images/products/coming_soon.jpg', badge: 'ButterflyMX', spec: 'RFID · KEYPAD', brandLabel: 'ButterflyMX', model: 'Access Control Reader',   sub: 'Keypad · RFID fob · Key card' },
 ];
 
 export default function Gallery() {
@@ -63,7 +64,13 @@ export default function Gallery() {
                 <div className="g-img-bg" />
                 <div className="g-badge">{c.badge}</div>
                 <div className="g-img-wrap">
-                  {gallerySvgs[c.origIndex]}
+                  <Image
+                    src={c.image}
+                    alt={c.model}
+                    width={300} // Set fixed width
+                    height={500} // Set fixed height
+                    className="g-product-image"
+                  />
                 </div>
                 <button className="g-view-btn" type="button">
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">

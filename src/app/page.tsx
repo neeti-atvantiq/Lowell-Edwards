@@ -11,6 +11,7 @@ import Personas from '@/components/sections/Personas';
 import Finder from '@/components/sections/Finder';
 import Products from '@/components/sections/Products';
 import Gallery from '@/components/sections/Gallery';
+import Installations from '@/components/sections/Installations';
 import WhyUs from '@/components/sections/WhyUs';
 import Compare from '@/components/sections/Compare';
 import CTAStrip from '@/components/sections/CTAStrip';
@@ -47,6 +48,7 @@ export default function Home() {
         <Finder />
         <Products />
         <Gallery />
+        <Installations />
         <WhyUs />
         <Compare />
         <CTAStrip />
