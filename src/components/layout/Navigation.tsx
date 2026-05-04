@@ -16,7 +16,7 @@ export default function Navigation() {
     <nav id="nav" className={scrolled ? 'solid scrolled' : ''}>
       <div className="nav-inner">
         <a href="#" className="nav-logo" style={{ gap: 0 }}>
-          <Image src="/logo.jpg" alt="Lowell Edwards logo" width={190} height={60} />
+          <Image src="/logo.jpg" alt="Lowell Edwards logo" width={190} height={60} loading="eager"/>
         </a>
 
         {/* Desktop Links */}
