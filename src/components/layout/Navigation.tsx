@@ -17,15 +17,16 @@ export default function Navigation() {
     <nav id="nav" className={scrolled ? 'solid scrolled' : ''}>
       <div className="nav-inner">
         <Link href="/" className="nav-logo" style={{ gap: 0 }}>
-          <Image src="/logo.jpg" alt="Lowell Edwards logo" width={180} height={50} loading="eager"/>
+          <Image src="/logo.jpg" alt="Lowell Edwards logo" width={230} height={50} loading="eager"/>
         </Link>
 
         {/* Desktop Links */}
         <div className="nav-links">
-          <Link href="/#solutions">Solutions</Link>
+          <Link href="/solution">Solutions</Link>
           <Link href="/#products">Products</Link>
-          <Link href="/#why-us">Why Us</Link>
-          <Link href="/#compare">Compare</Link>
+          <Link href="/why-us">Why Us</Link>
+          <Link href="/compare">Compare</Link>
+          <Link href="/contact">Contact Us</Link>
         </div>
 
         <div className="nav-right">
@@ -41,9 +42,9 @@ export default function Navigation() {
             Get a Quote
           </Link>
 
-          <a href="/contact" className="btn btn-gold" style={{ padding: '10px 20px', fontSize: 11.5 }}>
-            Contact Us
-          </a>
+          <Link href="/#contact" className="btn btn-gold" style={{ padding: '10px 20px', fontSize: 11.5 }}>
+            Request Service
+          </Link>
 
           {/* ONLY NEW THING */}
           <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
@@ -56,16 +57,16 @@ export default function Navigation() {
 
       {/* Mobile Dropdown ONLY */}
       <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
-        <a href="#solutions" onClick={() => setMenuOpen(false)}>Solutions</a>
-        <a href="#products" onClick={() => setMenuOpen(false)}>Products</a>
-        <a href="#why-us" onClick={() => setMenuOpen(false)}>Why Us</a>
-        <a href="#compare" onClick={() => setMenuOpen(false)}>Compare</a>
-        <a href="#quote" onClick={() => setMenuOpen(false)}>Quote</a>
+        <Link href="/solution" onClick={() => setMenuOpen(false)}>Solutions</Link>
+        <Link href="/#products" onClick={() => setMenuOpen(false)}>Products</Link>
+        <Link href="/why-us" onClick={() => setMenuOpen(false)}>Why Us</Link>
+        <Link href="/compare" onClick={() => setMenuOpen(false)}>Compare</Link>
+        <Link href="/#quote" onClick={() => setMenuOpen(false)}>Quote</Link>
 
         {/* FIXED BUTTON STYLE */}
         <div className="mobile-cta">
-          <a href="#quote" className="btn btn-gold">Get a Quote</a>
-          <a href="#quote" className="btn btn-gold">Request Service</a>
+          <Link href="/#quote" className="btn btn-gold" onClick={() => setMenuOpen(false)}>Get a Quote</Link>
+          <Link href="/#lte" className="btn btn-gold" onClick={() => setMenuOpen(false)}>Request Service</Link>
         </div>
       </div>
     </nav>

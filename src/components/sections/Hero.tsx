@@ -2,9 +2,8 @@ import ImageSlider from '@/components/ui/ImageSlider';
 
 const heroImages = [
   'https://images.unsplash.com/photo-1758448721134-1798533ae917?auto=format&fit=crop&w=1920&h=900&q=85',
-  'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&h=900&q=85',
-  'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1920&h=900&q=85',
-  'https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=1920&h=900&q=85',
+  '/images/hero/1.jpg',
+  '/images/hero/2.png',
 ];
 
 export default function Hero() {

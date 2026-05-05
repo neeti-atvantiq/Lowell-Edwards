@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Footer() {
   return (
     <footer className="footer">
@@ -30,38 +32,38 @@ export default function Footer() {
           <div className="footer-col">
             <h5>Products</h5>
             <ul>
-              <li><a href="#products">Smart Video Intercom</a></li>
-              <li><a href="#products">Face Recognition System</a></li>
-              <li><a href="#products">Premium IP Door Station</a></li>
-              <li><a href="#products">Access Control</a></li>
-              <li><a href="#compare">Compare Products</a></li>
+              <li><Link href="/#products">Smart Video Intercom</Link></li>
+              <li><Link href="/#products">Face Recognition System</Link></li>
+              <li><Link href="/#products">Premium IP Door Station</Link></li>
+              <li><Link href="/#products">Access Control</Link></li>
+              <li><Link href="/compare">Compare Products</Link></li>
             </ul>
           </div>
           <div className="footer-col">
             <h5>Solutions</h5>
             <ul>
-              <li><a href="#personas">Residential Buildings</a></li>
-              <li><a href="#personas">Commercial Offices</a></li>
-              <li><a href="#personas">Gated Communities</a></li>
-              <li><a href="#personas">Student Housing</a></li>
-              <li><a href="#personas">New Developments</a></li>
+              <li><Link href="/solution">Residential Buildings</Link></li>
+              <li><Link href="/solution">Commercial Offices</Link></li>
+              <li><Link href="/solution">Gated Communities</Link></li>
+              <li><Link href="/solution">Student Housing</Link></li>
+              <li><Link href="/solution">New Developments</Link></li>
             </ul>
           </div>
           <div className="footer-col">
             <h5>Support</h5>
             <ul>
-              <li><a href="#quote">Get a Free Quote</a></li>
-              <li><a href="#quote">Book a Site Survey</a></li>
-              <li><a href="#why-us">24hr Maintenance</a></li>
-              <li><a href="#why-us">Remote Support</a></li>
-              <li><a href="#quote">Contact Us</a></li>
+              <li><Link href="/#quote">Get a Free Quote</Link></li>
+              <li><Link href="/#quote">Book a Site Survey</Link></li>
+              <li><Link href="/why-us">24hr Maintenance</Link></li>
+              <li><Link href="/why-us">Remote Support</Link></li>
+              <li><Link href="/contact">Contact Us</Link></li>
             </ul>
           </div>
         </div>
         <hr className="rule" />
         <div className="footer-bottom">
           <div className="footer-legal">
-            © 2025 Lowell Edwards Home Integration, Inc. ·{' '}
+            © 2026 Lowell Edwards Home Integration, Inc. ·{' '}
             <a href="#">Privacy Policy</a> · <a href="#">Terms of Service</a>
           </div>
           <div className="footer-certs">

@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function CTAStrip() {
   return (
     <div className="cta-strip">
@@ -14,7 +16,7 @@ export default function CTAStrip() {
               </svg>
               Call 201.525.3300
             </a>
-            <a href="#quote" className="btn-dark">Get My Free Quote</a>
+            <Link href="/#quote" className="btn-dark">Get My Free Quote</Link>
           </div>
         </div>
       </div>

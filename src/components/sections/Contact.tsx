@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -24,7 +25,17 @@ export default function ContactPage() {
   return (
     <div className="contact-page">
       <div className="contact-hero">
-        <div className="wrap">
+        <div className="contact-hero-bg">
+          <Image
+            src="/images/installations/6.jpg"
+            alt="Contact Us"
+            fill
+            sizes="100vw"
+            style={{ objectFit: 'cover' }}
+            priority
+          />
+        </div>
+        <div className="wrap" style={{ position: 'relative', zIndex: 2 }}>
           <div className="tag">Get in Touch</div>
           <h1 className="h1">Contact Us</h1>
           <p className="body-lg" style={{ maxWidth: 580, marginTop: 18, marginInline: 'auto' }}>
