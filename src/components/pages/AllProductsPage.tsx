@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useState, useMemo } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 type ProductCard = {
@@ -12,6 +13,7 @@ type ProductCard = {
   tagline: string;
   specs: string[];
   href: string;
+  image: string;
 };
 
 const allProducts: ProductCard[] = [
@@ -25,6 +27,7 @@ const allProducts: ProductCard[] = [
     tagline: 'The flagship apartment intercom. 12.5" touchscreen, HD video calls to any smartphone, cloud-managed across the entire building.',
     specs: ['12.5″ touchscreen', '1080p HD camera', 'IP65 / IK10'],
     href: '/product/butterfly/video-intercom-panel',
+    image: 'https://butterflymx.com/wp-content/uploads/2025/12/intercom_video_calling.webp',
   },
   {
     brand: 'ButterflyMX',
@@ -36,6 +39,7 @@ const allProducts: ProductCard[] = [
     tagline: 'The compact alternative for smaller buildings, side entrances, or budget-conscious rollouts. Same software, smaller form.',
     specs: ['7″ touchscreen', '1080p camera', 'PoE / WiFi'],
     href: '/product/butterfly/video-intercom-panel',
+    image: 'https://butterflymx.com/wp-content/uploads/2023/02/access_control_butterflymx_2_door_controller.png',
   },
   {
     brand: 'ButterflyMX',
@@ -46,6 +50,7 @@ const allProducts: ProductCard[] = [
     tagline: 'Standalone PIN and RFID keypad for back gates, mailrooms, or amenity spaces. Cloud-synced credentials, no on-site management needed.',
     specs: ['PIN + RFID', 'Cloud-synced', 'IP65'],
     href: '/product/butterfly/access-control-reader',
+    image: 'https://butterflymx.com/wp-content/uploads/2023/02/access_control_butterflymx_2_door_controller.png',
   },
   {
     brand: 'ButterflyMX',
@@ -55,7 +60,20 @@ const allProducts: ProductCard[] = [
     name: 'Front Desk Station',
     tagline: 'Tablet-based concierge dashboard for staffed lobbies. See and authorise every visitor, courier, and resident in real time.',
     specs: ['10.2″ tablet', 'Cloud dashboard', 'Multi-entry support'],
-    href: '/product/butterfly/video-intercom-panel',
+    href: '/product/butterfly/front-desk-station',
+    image: 'https://butterflymx.com/wp-content/uploads/2021/11/audit-trails-butterflymx.jpg',
+  },
+  {
+    brand: 'ButterflyMX',
+    brandSlug: 'butterflymx',
+    mark: 'B',
+    status: 'new',
+    category: 'QR Code Intercom',
+    name: 'ButterflyMX QR Plaque',
+    tagline: 'Visitors scan a QR code to call residents — no app download, no hardware complexity. Lowest-cost entry point into the ButterflyMX ecosystem.',
+    specs: ['No electronics', 'Web-based intercom', 'Aluminium plaque'],
+    href: '/product/butterfly/qr-code-intercom',
+    image: 'https://butterflymx.com/wp-content/uploads/2025/12/butterflymx-scanning-qr-code-2.webp',
   },
   {
     brand: 'ButterflyMX',
@@ -66,6 +84,7 @@ const allProducts: ProductCard[] = [
     tagline: 'The app residents use to answer the door, manage visitor PINs, and unlock from anywhere. iOS & Android. Apple Watch support.',
     specs: ['iOS 13+ / Android 8+', 'Apple Watch', 'Free download'],
     href: '/product/butterfly/video-intercom-panel',
+    image: 'https://butterflymx.com/wp-content/uploads/2025/12/intercom_video_calling.webp',
   },
   {
     brand: 'Akuvox',
@@ -76,7 +95,8 @@ const allProducts: ProductCard[] = [
     name: 'Akuvox X915',
     tagline: 'Flagship AI face recognition panel. 8MP RGB + IR + ToF tri-camera. 99.9% accuracy in under 500ms. Touchless authentication.',
     specs: ['10″ IPS · 8MP+IR+ToF', '99.9% accuracy', '3D anti-spoofing'],
-    href: '/product/akuvox/r29-face-recognition',
+    href: '/product/akuvox/x915-flagship-panel',
+    image: '/images/products/akuvox/x915.jpg',
   },
   {
     brand: 'Akuvox',
@@ -87,6 +107,7 @@ const allProducts: ProductCard[] = [
     tagline: 'Multi-tenant SIP door phone with directory search and on-screen calling. Solid choice for small-to-medium apartment buildings.',
     specs: ['7″ touchscreen', 'SIP / RFID / PIN', 'Up to 10,000 users'],
     href: '/product/akuvox/r29-face-recognition',
+    image: '/images/products/akuvox/R29.jpg',
   },
   {
     brand: 'Akuvox',
@@ -94,20 +115,78 @@ const allProducts: ProductCard[] = [
     mark: 'A',
     status: 'new',
     category: 'Compact Doorbell',
-    name: 'Akuvox E12',
+    name: 'Akuvox E16c',
     tagline: 'Compact single-button doorbell with face recognition + RFID. Sleek slim form factor for residential and small commercial entry points.',
     specs: ['Face + RFID', 'Slim 27mm depth', 'PoE / WiFi'],
     href: '/product/akuvox/e16c-multi-tenant-station',
+    image: '/images/products/akuvox/E16.png',
   },
   {
     brand: 'Akuvox',
     brandSlug: 'akuvox',
     mark: 'A',
     category: 'Indoor Monitor',
-    name: 'Akuvox A0510',
+    name: 'Akuvox S562',
     tagline: '10" indoor wall-mounted monitor for residents who prefer a dedicated panel over the smartphone app. View, talk, unlock from inside.',
     specs: ['10″ HD touchscreen', 'PoE', 'Multi-station support'],
-    href: '/product/akuvox/e16c-multi-tenant-station',
+    href: '/product/akuvox/s562-indoor-station',
+    image: '/images/products/akuvox/S562.png',
+  },
+  {
+    brand: 'Akuvox',
+    brandSlug: 'akuvox',
+    mark: 'A',
+    category: 'Modular Intercom',
+    name: 'Akuvox X912',
+    tagline: 'Modular snap-fit panel system. Mix and match camera, keypad, card reader, face recognition, and display modules per entrance.',
+    specs: ['6+ module types', 'Snap-fit design', 'IP65 all modules'],
+    href: '/product/akuvox/x912-intercom-panel',
+    image: '/images/products/akuvox/X912.png',
+  },
+  {
+    brand: 'Akuvox',
+    brandSlug: 'akuvox',
+    mark: 'A',
+    category: 'Access Terminal',
+    name: 'Akuvox S532',
+    tagline: 'Compact 5" touchscreen access terminal with face recognition, RFID, and PIN. Ideal for secondary doors, gyms, and car parks.',
+    specs: ['5″ touchscreen', 'Face + RFID + PIN', '10,000 users'],
+    href: '/product/akuvox/s532-body-temperature',
+    image: '/images/products/akuvox/S532.png',
+  },
+  {
+    brand: 'Akuvox',
+    brandSlug: 'akuvox',
+    mark: 'A',
+    category: 'Indoor Monitor',
+    name: 'Akuvox C313',
+    tagline: '7" wall-mounted indoor monitor. See visitors, talk, and unlock without reaching for your phone. PoE single-cable install.',
+    specs: ['7″ touchscreen', 'SIP video', 'PoE powered'],
+    href: '/product/akuvox/c313-indoor-monitor',
+    image: '/images/products/akuvox/C313.png',
+  },
+  {
+    brand: 'Akuvox',
+    brandSlug: 'akuvox',
+    mark: 'A',
+    category: 'Budget Indoor Phone',
+    name: 'Akuvox A02S',
+    tagline: 'Affordable 4.3" indoor video phone. Essential intercom functionality at an accessible price point for every unit.',
+    specs: ['4.3″ display', 'SIP 2.0', 'Budget tier'],
+    href: '/product/akuvox/a02s-indoor-phone',
+    image: '/images/products/akuvox/a02.png',
+  },
+  {
+    brand: 'Akuvox',
+    brandSlug: 'akuvox',
+    mark: 'A',
+    status: 'popular',
+    category: 'Mobile App',
+    name: 'Akuvox SmartPlus',
+    tagline: 'Companion app for all Akuvox devices. HD video calls, remote unlock, visitor QR codes, and multi-site management.',
+    specs: ['iOS + Android', 'Free · no subscription', 'Apple Watch'],
+    href: '/product/akuvox/smartplus-app',
+    image: '/images/products/akuvox/smartplus.png',
   },
   {
     brand: 'DoorBird',
@@ -119,6 +198,7 @@ const allProducts: ProductCard[] = [
     tagline: 'The flagship single-residence doorbell. 4K Ultra HD camera, native HomeKit/KNX/Crestron integration, V4A stainless steel.',
     specs: ['4K UHD camera', 'V4A stainless steel', 'HomeKit · KNX'],
     href: '/product/doorbird/d2101v-surface-station',
+    image: '/images/products/doorbird/D2101V.png',
   },
   {
     brand: 'DoorBird',
@@ -129,16 +209,41 @@ const allProducts: ProductCard[] = [
     tagline: 'The same flagship hardware in polished brass — for heritage properties, listed buildings, and Georgian/Victorian conversions where finish matters.',
     specs: ['Polished brass', '4K UHD', 'Heritage-suitable'],
     href: '/product/doorbird/d2101v-surface-station',
+    image: 'https://www.doorbird.com/shop/media/4260423866782/D1101V_flush_blackdoor_rgb.jpeg',
   },
   {
     brand: 'DoorBird',
     brandSlug: 'doorbird',
     mark: 'D',
-    category: 'Multi-Tenant Doorbell',
-    name: 'DoorBird D2100E',
-    tagline: 'Multi-button variant for converted townhouses and small apartment blocks (up to 20 units). Same engineering, scaled to many.',
-    specs: ['Up to 20 units', 'RFID + keypad', 'V2A steel'],
-    href: '/product/doorbird/d101s-ip-station',
+    category: 'Multi-Button Series',
+    name: 'DoorBird D210X',
+    tagline: 'Push-button range from 1-6 buttons. Each routes to a different unit. Full 4K video in premium stainless steel.',
+    specs: ['1-6 buttons', '4K camera', 'V4A steel'],
+    href: '/product/doorbird/d210x-push-button',
+    image: '/images/products/doorbird/D210X.jpeg',
+  },
+  {
+    brand: 'DoorBird',
+    brandSlug: 'doorbird',
+    mark: 'D',
+    status: 'new',
+    category: 'Video + Keypad',
+    name: 'DoorBird D21DKV',
+    tagline: '4K video intercom with integrated backlit keypad. PIN entry plus video calling in one V4A stainless panel.',
+    specs: ['4K + keypad', 'Time-limited PINs', 'Dual relay'],
+    href: '/product/doorbird/d21dkv-keypad-station',
+    image: '/images/products/doorbird/D21DKV.jpeg',
+  },
+  {
+    brand: 'DoorBird',
+    brandSlug: 'doorbird',
+    mark: 'D',
+    category: 'Horizontal Keypad',
+    name: 'DoorBird D21DKH',
+    tagline: 'Landscape-orientation keypad intercom for gate pillars and wide rails. Same 4K + keypad combo in horizontal format.',
+    specs: ['Horizontal mount', '4K + keypad', 'IK10 vandal'],
+    href: '/product/doorbird/d21dkh-horizontal-keypad',
+    image: '/images/products/doorbird/D21DKH.jpeg',
   },
   {
     brand: 'DoorBird',
@@ -146,10 +251,11 @@ const allProducts: ProductCard[] = [
     mark: 'D',
     status: 'new',
     category: 'Indoor Station',
-    name: 'DoorBird Indoor A1101',
-    tagline: 'Wall-mounted indoor monitor for residents. Sleek glass-fronted design, integrates with HomeKit scenes — bell rings, lights respond.',
-    specs: ['10″ HD touchscreen', 'PoE', 'HomeKit scenes'],
-    href: '/product/doorbird/d101s-ip-station',
+    name: 'DoorBird D1101',
+    tagline: 'Flush-mount glass-fronted indoor monitor. 7" touchscreen with HomeKit scene triggers. See, talk, unlock — elegantly.',
+    specs: ['7″ glass-front', 'HomeKit scenes', 'Flush mount'],
+    href: '/product/doorbird/d1101kh-indoor-station',
+    image: '/images/products/doorbird/D1101KH.png',
   },
 ];
 
@@ -162,7 +268,7 @@ export default function AllProductsPage() {
   const [visibleLimit, setVisibleLimit] = useState(PAGE_SIZE);
 
   const filtered = useMemo(() => {
-    let items = filter === 'all' ? [...allProducts] : allProducts.filter((p) => p.brandSlug === filter);
+    const items = filter === 'all' ? [...allProducts] : allProducts.filter((p) => p.brandSlug === filter);
     if (sort === 'brand') {
       items.sort((a, b) => a.brand.localeCompare(b.brand));
     } else if (sort === 'name') {
@@ -275,6 +381,13 @@ export default function AllProductsPage() {
               <article className="ap-card reveal" key={`${p.name}-${i}`}>
                 <div className="ap-card-image">
                   <div className="ap-card-image-bg"></div>
+                  <Image
+                    src={p.image}
+                    alt={p.name}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    style={{ objectFit: 'contain', padding: '20px' }}
+                  />
                   <span className="ap-brand-tag">
                     <span className="ap-brand-mark">{p.mark}</span>
                     <span className="ap-brand-name">{p.brand}</span>

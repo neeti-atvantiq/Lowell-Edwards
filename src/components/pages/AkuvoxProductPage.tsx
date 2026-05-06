@@ -169,9 +169,12 @@ export default function AkuvoxProductPage({ product }: { product: ProductData })
           </div>
 
           <div className="akv-usecases-grid">
-            {product.useCases.map((uc, i) => (
+            {product.useCases.map((uc, i) => {
+              const ucImages = ['https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&h=560&q=80&auto=format&fit=crop', 'https://images.unsplash.com/photo-1551076805-e1869033e561?w=900&h=560&q=80&auto=format&fit=crop', 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=900&h=560&q=80&auto=format&fit=crop'];
+              return (
               <div className="akv-uc-card reveal" key={i} style={{ transitionDelay: `${i * 0.1}s` }}>
                 <div className="akv-uc-image">
+                  <Image src={uc.image || ucImages[i % ucImages.length]} alt={uc.title} fill sizes="(max-width: 1024px) 100vw, 33vw" style={{ objectFit: 'cover' }} />
                   <span className="akv-uc-image-mark">{uc.mark}</span>
                 </div>
                 <div className="akv-uc-content">
@@ -187,7 +190,8 @@ export default function AkuvoxProductPage({ product }: { product: ProductData })
                   </ul>
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -290,36 +294,26 @@ export default function AkuvoxProductPage({ product }: { product: ProductData })
       <section className="section pp-installations">
         <div className="wrap">
           <div className="section-header reveal">
-            <div className="pp-tag">Our Installations</div>
-            <h2 className="pp-h2">Real sites. Real deployments. <em className="em">Built to perform.</em></h2>
-            <p className="pp-body-lg">A quick look at recent {product.brand} projects delivered by our team across the country.</p>
+            <div className="pp-tag">Installations</div>
+            <h2 className="pp-h2">Real environments. <em className="em">Real outcomes.</em></h2>
+            <p className="pp-body-lg">A selection of recent {product.brand} deployments — chosen to show the range of contexts where AI-powered access earns its keep.</p>
           </div>
-        </div>
-        <div className="pp-inst-slider reveal">
-          <div className="pp-inst-track">
+
+          <div className="pp-inst-grid reveal">
             {[
-              { title: 'Riverside Apartments', location: 'Manhattan, NY', image: '/images/installations/8.jpg' },
-              { title: 'Westbrook Offices', location: 'Brooklyn, NY', image: '/images/installations/2.jpg' },
-              { title: 'Crown Plaza Residences', location: 'Hackensack, NJ', image: '/images/installations/7.jpg' },
-              { title: 'North Gate Student Living', location: 'Newark, NJ', image: '/images/installations/4.jpg' },
-              { title: 'Elm Street Mixed Use', location: 'Jersey City, NJ', image: '/images/installations/5.jpg' },
-              { title: 'Canal View Towers', location: 'Hoboken, NJ', image: '/images/installations/6.jpg' },
-              { title: 'Riverside Apartments', location: 'Manhattan, NY', image: '/images/installations/8.jpg' },
-              { title: 'Westbrook Offices', location: 'Brooklyn, NY', image: '/images/installations/2.jpg' },
-              { title: 'Crown Plaza Residences', location: 'Hackensack, NJ', image: '/images/installations/7.jpg' },
-              { title: 'North Gate Student Living', location: 'Newark, NJ', image: '/images/installations/4.jpg' },
-              { title: 'Elm Street Mixed Use', location: 'Jersey City, NJ', image: '/images/installations/5.jpg' },
-              { title: 'Canal View Towers', location: 'Hoboken, NJ', image: '/images/installations/6.jpg' },
+              { title: 'Aldgate Tower · 22-floor HQ', location: 'X915 · staff turnstile integration', image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&h=900&q=80&auto=format&fit=crop', featured: true },
+              { title: 'Riverside Medical', location: 'Mask-aware · 6 zones · clinic-grade', image: 'https://images.unsplash.com/photo-1551076805-e1869033e561?w=600&h=600&q=80&auto=format&fit=crop' },
+              { title: 'The Workshop · Co-working', location: 'Member self-enrolment · 4 floors', image: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=600&h=600&q=80&auto=format&fit=crop' },
+              { title: 'Quay Heights · BTR', location: '120 units · zero-fob deployment', image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&h=600&q=80&auto=format&fit=crop' },
+              { title: 'Sigma Labs · Pharma R&D', location: 'Cleanroom · multi-factor zones', image: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&h=600&q=80&auto=format&fit=crop' },
             ].map((inst, i) => (
-              <article className="pp-inst-card" key={i}>
-                <div className="pp-inst-image-wrap">
-                  <Image src={inst.image} alt={`${inst.title} installation`} fill sizes="(max-width: 768px) 80vw, 28vw" className="pp-inst-image" />
+              <div className="pp-inst-item" key={i}>
+                {inst.featured && <span className="pp-inst-tag">Featured</span>}
+                <Image src={inst.image} alt={`${inst.title} installation`} fill sizes={i === 0 ? '(max-width: 768px) 100vw, 66vw' : '(max-width: 768px) 100vw, 33vw'} />
+                <div className="pp-inst-overlay">
+                  <div className="pp-inst-caption">{inst.title}<span>{inst.location}</span></div>
                 </div>
-                <div className="pp-inst-meta">
-                  <h3>{inst.title}</h3>
-                  <p>{inst.location}</p>
-                </div>
-              </article>
+              </div>
             ))}
           </div>
         </div>

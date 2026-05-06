@@ -88,7 +88,7 @@ export default function SolutionPage() {
 
             <div className="feature-visual-card solution-hero-visual">
               <Image
-                src="/images/installations/6.jpg"
+                src="/images/hero/solutions.png"
                 alt="Smart intercom installation in a residential building"
                 fill
                 sizes="(max-width: 1024px) 100vw, 44vw"

@@ -23,7 +23,7 @@ export default function Navigation() {
         {/* Desktop Links */}
         <div className="nav-links">
           <Link href="/solution">Solutions</Link>
-          <Link href="/#products">Products</Link>
+          <Link href="/products">Products</Link>
           <Link href="/why-us">Why Us</Link>
           <Link href="/compare">Compare</Link>
           <Link href="/contact">Contact Us</Link>
@@ -58,10 +58,9 @@ export default function Navigation() {
       {/* Mobile Dropdown ONLY */}
       <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
         <Link href="/solution" onClick={() => setMenuOpen(false)}>Solutions</Link>
-        <Link href="/#products" onClick={() => setMenuOpen(false)}>Products</Link>
+        <Link href="/products" onClick={() => setMenuOpen(false)}>Products</Link>
         <Link href="/why-us" onClick={() => setMenuOpen(false)}>Why Us</Link>
         <Link href="/compare" onClick={() => setMenuOpen(false)}>Compare</Link>
-        <Link href="/#quote" onClick={() => setMenuOpen(false)}>Quote</Link>
         <Link href="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
 
         {/* FIXED BUTTON STYLE */}

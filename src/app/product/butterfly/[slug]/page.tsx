@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import ButterflyMXProductPage from '@/components/pages/ButterflyMXProductPage';
 import { products } from '@/data/products';
 
-const butterflySlugs = ['video-intercom-panel', 'access-control-reader'];
+const butterflySlugs = ['video-intercom-panel', 'access-control-reader', 'qr-code-intercom', 'front-desk-station'];
 
 export function generateStaticParams() {
   return butterflySlugs.map((slug) => ({ slug }));

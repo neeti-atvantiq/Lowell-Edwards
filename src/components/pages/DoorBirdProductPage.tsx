@@ -169,9 +169,12 @@ export default function DoorBirdProductPage({ product }: { product: ProductData 
           </div>
 
           <div className="db-usecases-grid">
-            {product.useCases.map((uc, i) => (
+            {product.useCases.map((uc, i) => {
+              const ucImages = ['https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&h=560&q=80&auto=format&fit=crop', 'https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=900&h=560&q=80&auto=format&fit=crop', 'https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'];
+              return (
               <div className="db-uc-card reveal" key={i} style={{ transitionDelay: `${i * 0.1}s` }}>
                 <div className="db-uc-image">
+                  <Image src={uc.image || ucImages[i % ucImages.length]} alt={uc.title} fill sizes="(max-width: 1024px) 100vw, 33vw" style={{ objectFit: 'cover' }} />
                   <span className="db-uc-image-mark">{uc.mark}</span>
                 </div>
                 <div className="db-uc-content">
@@ -187,7 +190,8 @@ export default function DoorBirdProductPage({ product }: { product: ProductData 
                   </ul>
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -290,36 +294,26 @@ export default function DoorBirdProductPage({ product }: { product: ProductData 
       <section className="section pp-installations">
         <div className="wrap">
           <div className="section-header reveal">
-            <div className="pp-tag">Our Installations</div>
-            <h2 className="pp-h2">Real sites. Real deployments. <em className="em">Built to perform.</em></h2>
-            <p className="pp-body-lg">A quick look at recent {product.brand} projects delivered by our team across the country.</p>
+            <div className="pp-tag">Installations</div>
+            <h2 className="pp-h2">In situ. <em className="em">Always considered.</em></h2>
+            <p className="pp-body-lg">A few recent {product.brand} installations — chosen to show the breadth of property contexts where DoorBird is the right answer.</p>
           </div>
-        </div>
-        <div className="pp-inst-slider reveal">
-          <div className="pp-inst-track">
+
+          <div className="pp-inst-grid reveal">
             {[
-              { title: 'Riverside Apartments', location: 'Manhattan, NY', image: '/images/installations/8.jpg' },
-              { title: 'Westbrook Offices', location: 'Brooklyn, NY', image: '/images/installations/2.jpg' },
-              { title: 'Crown Plaza Residences', location: 'Hackensack, NJ', image: '/images/installations/7.jpg' },
-              { title: 'North Gate Student Living', location: 'Newark, NJ', image: '/images/installations/4.jpg' },
-              { title: 'Elm Street Mixed Use', location: 'Jersey City, NJ', image: '/images/installations/5.jpg' },
-              { title: 'Canal View Towers', location: 'Hoboken, NJ', image: '/images/installations/6.jpg' },
-              { title: 'Riverside Apartments', location: 'Manhattan, NY', image: '/images/installations/8.jpg' },
-              { title: 'Westbrook Offices', location: 'Brooklyn, NY', image: '/images/installations/2.jpg' },
-              { title: 'Crown Plaza Residences', location: 'Hackensack, NJ', image: '/images/installations/7.jpg' },
-              { title: 'North Gate Student Living', location: 'Newark, NJ', image: '/images/installations/4.jpg' },
-              { title: 'Elm Street Mixed Use', location: 'Jersey City, NJ', image: '/images/installations/5.jpg' },
-              { title: 'Canal View Towers', location: 'Hoboken, NJ', image: '/images/installations/6.jpg' },
+              { title: 'Mayfair House · Private Residence', location: 'D2101V · brass finish · recessed flush mount', image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&h=900&q=80&auto=format&fit=crop', featured: true },
+              { title: 'The Old Rectory · Cotswolds', location: 'Stone gatepost integration', image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&h=600&q=80&auto=format&fit=crop' },
+              { title: 'Hartford Boutique · Edinburgh', location: 'Hospitality · 12 rooms · brand engraved', image: 'https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&h=600&q=80&auto=format&fit=crop' },
+              { title: 'Belgravia Townhouse · London', location: 'Grade II listed · bronze finish', image: 'https://images.unsplash.com/photo-1480796927426-f609979314bd?w=600&h=600&q=80&auto=format&fit=crop' },
+              { title: 'Riverside Villa · Henley-on-Thames', location: 'Contemporary · anthracite + Crestron', image: 'https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=600&h=600&q=80&auto=format&fit=crop' },
             ].map((inst, i) => (
-              <article className="pp-inst-card" key={i}>
-                <div className="pp-inst-image-wrap">
-                  <Image src={inst.image} alt={`${inst.title} installation`} fill sizes="(max-width: 768px) 80vw, 28vw" className="pp-inst-image" />
+              <div className="pp-inst-item" key={i}>
+                {inst.featured && <span className="pp-inst-tag">Featured</span>}
+                <Image src={inst.image} alt={`${inst.title} installation`} fill sizes={i === 0 ? '(max-width: 768px) 100vw, 66vw' : '(max-width: 768px) 100vw, 33vw'} />
+                <div className="pp-inst-overlay">
+                  <div className="pp-inst-caption">{inst.title}<span>{inst.location}</span></div>
                 </div>
-                <div className="pp-inst-meta">
-                  <h3>{inst.title}</h3>
-                  <p>{inst.location}</p>
-                </div>
-              </article>
+              </div>
             ))}
           </div>
         </div>

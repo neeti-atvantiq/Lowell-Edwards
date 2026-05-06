@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import DoorBirdProductPage from '@/components/pages/DoorBirdProductPage';
 import { products } from '@/data/products';
 
-const doorbirdSlugs = ['d101s-ip-station', 'd2101v-surface-station'];
+const doorbirdSlugs = ['d101s-ip-station', 'd2101v-surface-station', 'd210x-push-button', 'd21dkv-keypad-station', 'd21dkh-horizontal-keypad', 'd1101fh-indoor-station'];
 
 export function generateStaticParams() {
   return doorbirdSlugs.map((slug) => ({ slug }));

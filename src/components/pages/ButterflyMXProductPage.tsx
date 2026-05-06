@@ -158,9 +158,12 @@ export default function ButterflyMXProductPage({ product }: { product: ProductDa
           </div>
 
           <div className="bmx-uc-grid reveal">
-            {product.useCases.map((uc, i) => (
+            {product.useCases.map((uc, i) => {
+              const ucImages = ['https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=900&h=675&q=85', 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&h=675&q=85', 'https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=900&h=675&q=85'];
+              return (
               <div className="bmx-uc-card" key={i}>
                 <div className="bmx-uc-image">
+                  <Image src={uc.image || ucImages[i % ucImages.length]} alt={uc.title} fill sizes="(max-width: 1024px) 100vw, 33vw" style={{ objectFit: 'cover' }} />
                   <span className="bmx-uc-mark">{uc.mark}</span>
                 </div>
                 <div className="bmx-uc-body">
@@ -176,7 +179,8 @@ export default function ButterflyMXProductPage({ product }: { product: ProductDa
                   </div>
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -290,36 +294,26 @@ export default function ButterflyMXProductPage({ product }: { product: ProductDa
       <section className="section pp-installations">
         <div className="wrap">
           <div className="section-header reveal">
-            <div className="pp-tag">Our Installations</div>
-            <h2 className="pp-h2">Real sites. Real deployments. <em className="em">Built to perform.</em></h2>
-            <p className="pp-body-lg">A quick look at recent {product.brand} projects delivered by our team across the country.</p>
+            <div className="pp-tag">Installations Gallery</div>
+            <h2 className="pp-h2">See {product.brand} <em className="em">in the field</em>.</h2>
+            <p className="pp-body-lg">A selection of our recent {product.brand} installations — from boutique developments to high-traffic apartment buildings.</p>
           </div>
-        </div>
-        <div className="pp-inst-slider reveal">
-          <div className="pp-inst-track">
+
+          <div className="pp-inst-grid reveal">
             {[
-              { title: 'Riverside Apartments', location: 'Manhattan, NY', image: '/images/installations/8.jpg' },
-              { title: 'Westbrook Offices', location: 'Brooklyn, NY', image: '/images/installations/2.jpg' },
-              { title: 'Crown Plaza Residences', location: 'Hackensack, NJ', image: '/images/installations/7.jpg' },
-              { title: 'North Gate Student Living', location: 'Newark, NJ', image: '/images/installations/4.jpg' },
-              { title: 'Elm Street Mixed Use', location: 'Jersey City, NJ', image: '/images/installations/5.jpg' },
-              { title: 'Canal View Towers', location: 'Hoboken, NJ', image: '/images/installations/6.jpg' },
-              { title: 'Riverside Apartments', location: 'Manhattan, NY', image: '/images/installations/8.jpg' },
-              { title: 'Westbrook Offices', location: 'Brooklyn, NY', image: '/images/installations/2.jpg' },
-              { title: 'Crown Plaza Residences', location: 'Hackensack, NJ', image: '/images/installations/7.jpg' },
-              { title: 'North Gate Student Living', location: 'Newark, NJ', image: '/images/installations/4.jpg' },
-              { title: 'Elm Street Mixed Use', location: 'Jersey City, NJ', image: '/images/installations/5.jpg' },
-              { title: 'Canal View Towers', location: 'Hoboken, NJ', image: '/images/installations/6.jpg' },
+              { title: 'Wellington House · 48-unit residential', location: 'Manchester', image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&h=900&q=85', featured: true },
+              { title: 'Mixed-use entrance', location: 'Birmingham', image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&h=450&q=85' },
+              { title: 'Lobby integration', location: 'London EC1', image: 'https://images.unsplash.com/photo-1567496898669-ee935f5f647a?auto=format&fit=crop&w=600&h=900&q=85' },
+              { title: 'Riverside Heights · 96-unit installation', location: 'Docklands', image: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&h=600&q=85' },
+              { title: 'Gated estate', location: 'Surrey', image: 'https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?auto=format&fit=crop&w=600&h=450&q=85' },
             ].map((inst, i) => (
-              <article className="pp-inst-card" key={i}>
-                <div className="pp-inst-image-wrap">
-                  <Image src={inst.image} alt={`${inst.title} installation`} fill sizes="(max-width: 768px) 80vw, 28vw" className="pp-inst-image" />
+              <div className="pp-inst-item" key={i}>
+                {inst.featured && <span className="pp-inst-tag">Featured</span>}
+                <Image src={inst.image} alt={`${inst.title} installation`} fill sizes={i === 0 ? '(max-width: 768px) 100vw, 66vw' : '(max-width: 768px) 100vw, 33vw'} />
+                <div className="pp-inst-overlay">
+                  <div className="pp-inst-caption">{inst.title}<span>{inst.location}</span></div>
                 </div>
-                <div className="pp-inst-meta">
-                  <h3>{inst.title}</h3>
-                  <p>{inst.location}</p>
-                </div>
-              </article>
+              </div>
             ))}
           </div>
         </div>

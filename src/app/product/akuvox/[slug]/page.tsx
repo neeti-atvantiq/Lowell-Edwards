@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import AkuvoxProductPage from '@/components/pages/AkuvoxProductPage';
 import { products } from '@/data/products';
 
-const akuvoxSlugs = ['r29-face-recognition', 'e16c-multi-tenant-station'];
+const akuvoxSlugs = ['r29-face-recognition', 'e16c-multi-tenant-station', 'x915-flagship-panel', 'x912-intercom-panel', 's532-body-temperature', 'c313-indoor-monitor', 's562-indoor-station', 'a02s-indoor-phone', 'smartplus-app'];
 
 export function generateStaticParams() {
   return akuvoxSlugs.map((slug) => ({ slug }));
