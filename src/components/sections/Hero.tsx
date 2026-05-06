@@ -3,7 +3,7 @@ import ImageSlider from '@/components/ui/ImageSlider';
 const heroImages = [
   'https://images.unsplash.com/photo-1758448721134-1798533ae917?auto=format&fit=crop&w=1920&h=900&q=85',
   '/images/hero/1.jpg',
-  '/images/hero/2.png',
+  '/images/hero/2.jpg',
 ];
 
 export default function Hero() {

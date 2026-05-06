@@ -42,7 +42,7 @@ export default function Navigation() {
             Get a Quote
           </Link>
 
-          <Link href="/#contact" className="btn btn-gold" style={{ padding: '10px 20px', fontSize: 11.5 }}>
+          <Link href="/#lte" className="btn btn-gold" style={{ padding: '10px 20px', fontSize: 11.5 }}>
             Request Service
           </Link>
 
@@ -62,6 +62,7 @@ export default function Navigation() {
         <Link href="/why-us" onClick={() => setMenuOpen(false)}>Why Us</Link>
         <Link href="/compare" onClick={() => setMenuOpen(false)}>Compare</Link>
         <Link href="/#quote" onClick={() => setMenuOpen(false)}>Quote</Link>
+        <Link href="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
 
         {/* FIXED BUTTON STYLE */}
         <div className="mobile-cta">

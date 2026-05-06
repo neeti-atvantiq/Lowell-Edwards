@@ -126,8 +126,8 @@ export default function WhyUsPage() {
                 <div className="trust-row-content">
                   <div className="trust-row-label">{section.label}</div>
                   <h2>{section.title}</h2>
-                  <p>{section.body}</p>
-                  <p className="trust-row-detail">{section.detail}</p>
+                  <p className="body-lg">{section.body}</p>
+                  <p className="trust-row-detail body-md">{section.detail}</p>
                 </div>
               </article>
             ))}

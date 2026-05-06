@@ -27,10 +27,10 @@ export default function ContactPage() {
       <div className="contact-hero">
         <div className="contact-hero-bg">
           <Image
-            src="/images/installations/6.jpg"
+            src="/images/hero/contact_us.jpg"
             alt="Contact Us"
             fill
-            sizes="100vw"
+            sizes="100vw 70vh"
             style={{ objectFit: 'cover' }}
             priority
           />

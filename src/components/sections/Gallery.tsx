@@ -1,5 +1,6 @@
 'use client';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 
 type Brand = 'all' | 'bmx' | 'akv' | 'db';
@@ -12,16 +13,17 @@ type Card = {
   brandLabel: string;
   model: string;
   sub: string;
+  href: string;
 };
 
 const cards: Card[] = [
-  { brand: 'bmx', image: '/images/products/butterfly/videocom.webp', badge: 'ButterflyMX', spec: '1080P HD',      brandLabel: 'ButterflyMX', model: 'Video Intercom Panel',    sub: 'Multi-tenant · Cloud managed' },
-  // { brand: 'bmx', image: '/images/products/product-02.jpg', badge: 'ButterflyMX', spec: 'iOS · ANDROID', brandLabel: 'ButterflyMX', model: 'Mobile Access App',       sub: 'iOS & Android · Open from anywhere' },
-  { brand: 'akv', image: '/images/products/akuvox/R29.png', badge: 'Akuvox',      spec: 'AI · TOUCHLESS', brandLabel: 'Akuvox',      model: 'R29 Face Recognition',    sub: 'AI touchless entry · SIP compatible' },
-  { brand: 'akv', image: '/images/products/akuvox/E16.png', badge: 'Akuvox',      spec: 'TOUCHSCREEN',    brandLabel: 'Akuvox',      model: 'E16C Multi-Tenant Station',sub: 'Touchscreen · RFID · PIN access' },
-  { brand: 'db',  image: '/images/products/doorbird/D101S.png', badge: 'DoorBird',    spec: 'IP65 · 1080P',  brandLabel: 'DoorBird',    model: 'D101S IP Station',        sub: 'Stainless steel · IP65 · 1080p fisheye' },
-  { brand: 'db',  image: '/images/products/doorbird/D2101V.png', badge: 'DoorBird',    spec: 'IK10 · IP65',   brandLabel: 'DoorBird',    model: 'D2101V Surface Station',  sub: 'Horizontal mount · IP65 · IK10 vandal-rated' },
-  { brand: 'bmx', image: '/images/products/butterfly/access_control.png', badge: 'ButterflyMX', spec: 'RFID · KEYPAD', brandLabel: 'ButterflyMX', model: 'Access Control Reader',   sub: 'Keypad · RFID fob · Key card' },
+  { brand: 'bmx', image: '/images/products/butterfly/videocom.webp', badge: 'ButterflyMX', spec: '1080P HD',      brandLabel: 'ButterflyMX', model: 'Video Intercom Panel',    sub: 'Multi-tenant · Cloud managed', href: '/product/butterfly/video-intercom-panel' },
+  // { brand: 'bmx', image: '/images/products/product-02.jpg', badge: 'ButterflyMX', spec: 'iOS · ANDROID', brandLabel: 'ButterflyMX', model: 'Mobile Access App',       sub: 'iOS & Android · Open from anywhere', href: '#' },
+  { brand: 'akv', image: '/images/products/akuvox/R29.png', badge: 'Akuvox',      spec: 'AI · TOUCHLESS', brandLabel: 'Akuvox',      model: 'R29 Face Recognition',    sub: 'AI touchless entry · SIP compatible', href: '/product/akuvox/r29-face-recognition' },
+  { brand: 'akv', image: '/images/products/akuvox/E16.png', badge: 'Akuvox',      spec: 'TOUCHSCREEN',    brandLabel: 'Akuvox',      model: 'E16C Multi-Tenant Station',sub: 'Touchscreen · RFID · PIN access', href: '/product/akuvox/e16c-multi-tenant-station' },
+  { brand: 'db',  image: '/images/products/doorbird/D101S.png', badge: 'DoorBird',    spec: 'IP65 · 1080P',  brandLabel: 'DoorBird',    model: 'D101S IP Station',        sub: 'Stainless steel · IP65 · 1080p fisheye', href: '/product/doorbird/d101s-ip-station' },
+  { brand: 'db',  image: '/images/products/doorbird/D2101V.png', badge: 'DoorBird',    spec: 'IK10 · IP65',   brandLabel: 'DoorBird',    model: 'D2101V Surface Station',  sub: 'Horizontal mount · IP65 · IK10 vandal-rated', href: '/product/doorbird/d2101v-surface-station' },
+  { brand: 'bmx', image: '/images/products/butterfly/access_control.png', badge: 'ButterflyMX', spec: 'RFID · KEYPAD', brandLabel: 'ButterflyMX', model: 'Access Control Reader',   sub: 'Keypad · RFID fob · Key card', href: '/product/butterfly/access-control-reader' },
 ];
 
 export default function Gallery() {
@@ -72,13 +74,13 @@ export default function Gallery() {
                     className="g-product-image"
                   />
                 </div>
-                <button className="g-view-btn" type="button">
+                <Link href={c.href} className="g-view-btn">
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                     <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
                     <circle cx="12" cy="12" r="3" />
                   </svg>
                   View Product
-                </button>
+                </Link>
                 <div className="g-specs"><span className="g-spec">{c.spec}</span></div>
                 <span className="g-index">{String(c.origIndex + 1).padStart(2, '0')}</span>
               </div>
