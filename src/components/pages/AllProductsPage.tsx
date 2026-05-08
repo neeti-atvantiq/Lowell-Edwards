@@ -18,7 +18,7 @@ type ProductCard = {
 
 const allProducts: ProductCard[] = [
   // AKUVOX
-  { brand: 'Akuvox', brandSlug: 'akuvox', category: 'AI Face Recognition', name: 'Akuvox X915', mark: 'A', tagline: 'Flagship AI panel with 8MP+IR+ToF tri-camera.', specs: ['10″ IPS', '99.9% accuracy', '3D anti-spoofing'], href: '/product/akuvox/x915-flagship-panel', image: '/images/products/akuvox/x915.jpg' },
+  { brand: 'Akuvox', brandSlug: 'akuvox', category: 'AI Face Recognition', name: 'Akuvox X915', mark: 'A', tagline: 'Flagship AI panel with 8MP+IR+ToF tri-camera.', specs: ['10″ IPS', '99.9% accuracy', '3D anti-spoofing'], href: '/product/akuvox/x915-flagship-panel', image: 'https://www.akuvox.com/uploads/202012/2020123119053400.png' },
   { brand: 'Akuvox', brandSlug: 'akuvox', category: 'Modular Intercom', name: 'Akuvox X912', mark: 'A', tagline: 'Modular snap-fit system. Mix and match modules per entrance.', specs: ['6+ modules', 'IP65', 'Modular'], href: '/product/akuvox/x912-intercom-panel', image: '/images/products/akuvox/X912.png' },
   { brand: 'Akuvox', brandSlug: 'akuvox', category: 'Access Terminal', name: 'Akuvox S532', mark: 'A', tagline: 'Compact 5" touchscreen terminal with face recognition.', specs: ['5″ screen', 'Face/RFID/PIN', '10k users'], href: '/product/akuvox/s532-body-temperature', image: '/images/products/akuvox/S532.png' },
   { brand: 'Akuvox', brandSlug: 'akuvox', category: 'Indoor Monitor', name: 'Akuvox C313', mark: 'A', tagline: '7" wall-mounted monitor for residents. PoE powered.', specs: ['7″ touchscreen', 'SIP video', 'PoE'], href: '/product/akuvox/c313-indoor-monitor', image: '/images/products/akuvox/C313.png' },

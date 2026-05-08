@@ -9,28 +9,28 @@ const cards = [
     title: 'See Every Visitor Before You Open',
     body: 'HD video intercom lets residents and managers see and speak to any visitor before granting access — from their phone, from anywhere in the world. No more opening blind.',
     fact: 'Real-time HD video to any device',
-    image: '/images/solutions/solution-01.png',
+    image: '/images/solutions/solution-01.jpg',
   },
   {
     n: '02',
-    title: 'Secure Package & Visitor Management',
-    body: 'Couriers and guests use delivery PINs, QR codes, or temporary access codes. Every visit is logged with time-stamped video. Access expires automatically—no lost parcels, no loose ends.',
-    fact: 'Auto-expiring, logged access codes',
+    title: 'Secure Deliveries & Complete Audit Trail',
+    body: 'Couriers use a dedicated delivery PIN or QR code, while every entry event is logged — who, when, and how. Time-stamped video records provide irrefutable evidence for accountability, compliance, and dispute resolution.',
+    fact: 'Time-stamped, court-admissible logs',
     image: '/images/solutions/solution-02.jpg',
   },
   {
     n: '03',
-    title: 'Complete Audit Trail',
-    body: 'Every entry event is logged — who, when, and how. Time-stamped video records provide irrefutable evidence for insurance claims, tenant disputes, and compliance audits.',
-    fact: 'Court-admissible video logs',
-    image: '/images/solutions/solution-04.png',
-  },
-  {
-    n: '04',
     title: 'Manage Access Remotely & Instantly',
     body: 'Grant or revoke access credentials in seconds from any device. Onboarding a new tenant or locking out a former occupant takes moments — no site visit, no locksmith, no delay.',
     fact: 'Zero on-site visits required',
     image: '/images/solutions/solution-03.jpg',
+  },
+  {
+    n: '04',
+    title: 'Zero-Touch Visitor Management',
+    body: 'Issue temporary access codes for contractors, cleaners, or guests with defined time windows. Access expires automatically — no physical handover of keys, no loose ends.',
+    fact: 'Auto-expiring access codes',
+    image: '/images/solutions/solution-05.jpg',
   },
   {
     n: '05',
@@ -62,7 +62,7 @@ export default function Solution() {
           sliderRef.current.scrollTo({ left: scrollLeft + scrollAmount, behavior: 'smooth' });
         }
       }
-    }, 2000);
+    }, 3500);
 
     return () => clearInterval(interval);
   }, [isPaused]);
@@ -89,53 +89,81 @@ export default function Solution() {
           </h2>
           <p
             className="body-lg"
-            style={{ textAlign: 'center', marginTop: 18, maxWidth: 580, marginLeft: 'auto', marginRight: 'auto' }}
+            style={{ textAlign: 'center', marginTop: 18, maxWidth: 580, marginLeft: 'auto', marginRight: 'auto', marginBottom: 48 }}
           >
             Modern video intercom and access control transforms how buildings are secured — giving
             managers full visibility and control from anywhere, at any time.
           </p>
         </div>
 
-        <div 
-          className="solution-slider reveal" 
-          ref={sliderRef}
-          style={{ transitionDelay: '.1s' }}
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
-          onTouchStart={() => setIsPaused(true)}
-          onTouchEnd={() => setIsPaused(false)}
-          onFocus={() => setIsPaused(true)}
-          onBlur={() => setIsPaused(false)}
-        >
-          {cards.map((c) => (
-            <div className="slider-card" key={c.n}>
-              {/* Image Hero Section */}
-              <div className="slider-card-image">
-                <div className="slider-card-badge">
-                  <span>{c.n}</span>
+        {/* Wrapper for Slider and Absolute Buttons */}
+        <div className="slider-wrapper reveal" style={{ position: 'relative' }}>
+          
+          {/* Left Arrow */}
+          <button 
+            onClick={() => scroll('left')} 
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+            className="slider-btn slider-btn-left"
+            aria-label="Scroll Left"
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M15 18l-6-6 6-6" />
+            </svg>
+          </button>
+
+          {/* Slider Container */}
+          <div 
+            className="solution-slider" 
+            ref={sliderRef}
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+            onTouchStart={() => setIsPaused(true)}
+            onTouchEnd={() => setIsPaused(false)}
+            onFocus={() => setIsPaused(true)}
+            onBlur={() => setIsPaused(false)}
+          >
+            {cards.map((c) => (
+              <div className="slider-card" key={c.n}>
+                <div className="slider-card-image">
+                  <div className="slider-card-badge">
+                    <span>{c.n}</span>
+                  </div>
+                  <Image
+                    src={c.image}
+                    alt={c.title}
+                    fill
+                    sizes="(max-width: 768px) 85vw, 400px"
+                    style={{ objectFit: 'cover' }}
+                    className="sc-img"
+                  />
                 </div>
-                <Image
-                  src={c.image}
-                  alt={c.title}
-                  fill
-                  sizes="(max-width: 768px) 85vw, 400px"
-                  style={{ objectFit: 'cover' }}
-                  className="sc-img"
-                />
-              </div>
-              
-              {/* Content Section */}
-              <div className="slider-card-content">
-                <div className="slider-card-title">{c.title}</div>
-                <div className="slider-card-body">{c.body}</div>
                 
-                <div className="slider-card-footer">
-                  <div className="sc-dot"></div>
-                  <div className="sc-fact">{c.fact}</div>
+                <div className="slider-card-content">
+                  <div className="slider-card-title">{c.title}</div>
+                  <div className="slider-card-body">{c.body}</div>
+                  
+                  <div className="slider-card-footer">
+                    <div className="sc-dot"></div>
+                    <div className="sc-fact">{c.fact}</div>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+
+          {/* Right Arrow */}
+          <button 
+            onClick={() => scroll('right')} 
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+            className="slider-btn slider-btn-right"
+            aria-label="Scroll Right"
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M9 18l6-6-6-6" />
+            </svg>
+          </button>
         </div>
       </div>
 
@@ -150,7 +178,7 @@ export default function Solution() {
           margin: -10px;
           -ms-overflow-style: none;
           scrollbar-width: none;
-          align-items: stretch; /* Ensures all cards are same height */
+          align-items: stretch;
         }
         
         .solution-slider::-webkit-scrollbar {
@@ -223,7 +251,7 @@ export default function Solution() {
           padding: 32px 28px 28px;
           display: flex;
           flex-direction: column;
-          flex: 1; /* Pushes footer to the bottom */
+          flex: 1; 
         }
 
         .slider-card-title {
@@ -271,12 +299,16 @@ export default function Solution() {
           color: var(--gold);
         }
 
-        /* Navigation Buttons */
+        /* Positioned Navigation Buttons */
         .slider-btn {
-          width: 44px;
-          height: 44px;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          z-index: 10;
+          width: 52px;
+          height: 52px;
           border-radius: 50%;
-          border: 1px solid rgba(217,28,28,.2);
+          border: 1px solid rgba(217,28,28,.15);
           background: #FFFFFF;
           color: var(--gold);
           display: flex;
@@ -284,15 +316,31 @@ export default function Solution() {
           justify-content: center;
           cursor: pointer;
           transition: all 0.3s ease;
-          box-shadow: 0 4px 12px rgba(26,26,46,.04);
+          box-shadow: 0 8px 24px rgba(26,26,46,.12);
+        }
+
+        /* Negative margins pull the buttons outside the card boundary */
+        .slider-btn-left {
+          left: -26px;
+        }
+
+        .slider-btn-right {
+          right: -26px;
         }
 
         .slider-btn:hover {
           background: var(--gold);
           color: #FFFFFF;
           border-color: var(--gold);
-          transform: translateY(-2px);
-          box-shadow: 0 8px 24px rgba(217,28,28,.25);
+          transform: translateY(-50%) scale(1.08); /* Retain centering, scale up slightly */
+          box-shadow: 0 12px 32px rgba(217,28,28,.25);
+        }
+
+        /* Hide the arrows on small screens to prioritize swipe gestures */
+        @media (max-width: 768px) {
+          .slider-btn {
+            display: none;
+          }
         }
       `}} />
     </section>

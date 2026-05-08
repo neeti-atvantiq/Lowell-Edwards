@@ -106,7 +106,7 @@ export default function LTE() {
             {/* LTE router image */}
             <div className="lte-illustration">
               <Image
-                src="/images/lte.png"
+                src="/images/LTE.png"
                 alt="Industrial LTE router — dual-SIM 4G failover device"
                 width={380}
                 height={280}

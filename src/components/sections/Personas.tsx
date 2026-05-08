@@ -66,8 +66,8 @@ const personas: Persona[] = [
   },
   {
     mark: 'For Developers',
-    img: 'https://images.unsplash.com/photo-1768230130990-6b4fe57778ce?w=800&h=500&q=80&auto=format&fit=crop',
-    img2x: 'https://images.unsplash.com/photo-1768230130990-6b4fe57778ce?w=1200&h=750&q=80&auto=format&fit=crop',
+    img: '/images/Personas/developers.jpeg',
+    img2x: '/images/Personas/developers@2x.jpeg',
     alt: 'Aerial view of modern residential development',
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">

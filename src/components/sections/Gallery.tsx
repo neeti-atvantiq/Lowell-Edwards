@@ -22,7 +22,7 @@ export const cards: Card[] = [
   { brand: 'bmx', image: 'https://butterflymx.com/wp-content/uploads/2024/08/butterflymx-dome-security-camera-features.webp', badge: 'ButterflyMX', spec: 'CLOUD · POE', brandLabel: 'ButterflyMX', model: 'Smart Camera', sub: 'Unified CCTV · Cloud recording', href: '/product/butterfly/camera' },
 
   // --- AKUVOX INTERCOM MODELS (X915, X912, S532) ---
-  { brand: 'akv', image: '/images/products/akuvox/X915.jpg', badge: 'Akuvox', spec: 'AI · TOUCHLESS', brandLabel: 'Akuvox', model: 'X915 Flagship Panel', sub: 'Tri-camera · 50k faces · 3D anti-spoof', href: '/product/akuvox/x915-flagship-panel' },
+  { brand: 'akv', image: 'https://www.akuvox.com/uploads/202012/2020123119053400.png', badge: 'Akuvox', spec: 'AI · TOUCHLESS', brandLabel: 'Akuvox', model: 'X915 Flagship Panel', sub: 'Tri-camera · 50k faces · 3D anti-spoof', href: '/product/akuvox/x915-flagship-panel' },
   { brand: 'akv', image: '/images/products/akuvox/X912.png', badge: 'Akuvox', spec: 'MODULAR', brandLabel: 'Akuvox', model: 'X912 Modular Intercom', sub: 'Snap-fit modules · expandable', href: '/product/akuvox/x912-intercom-panel' },
   { brand: 'akv', image: '/images/products/akuvox/S532.png', badge: 'Akuvox', spec: 'COMPACT', brandLabel: 'Akuvox', model: 'S532 Access Terminal', sub: 'Face + RFID + PIN · 5" screen', href: '/product/akuvox/s532-body-temperature' },
 

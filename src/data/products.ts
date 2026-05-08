@@ -222,7 +222,7 @@ export const products: Record<string, ProductData> = {
     title: 'The ultimate AI face recognition panel with tri-camera system.',
     tagline: '— 8MP RGB + IR + ToF for 99.9% accuracy in under 500ms.',
     description: 'The Akuvox X915 is the flagship face recognition panel featuring a 10" IPS display and tri-camera system (8MP RGB + IR + ToF) for 3D anti-spoofing. Supports up to 50,000 face templates with on-device AI processing for touchless, secure entry.',
-    image: '/images/products/akuvox/x915.png',
+    image: 'https://www.akuvox.com/uploads/202012/2020123119053400.png',
     meta: [
       { value: '99.9', unit: '%', label: 'Recognition accuracy' },
       { value: '10', unit: '"', label: 'IPS touchscreen' },
