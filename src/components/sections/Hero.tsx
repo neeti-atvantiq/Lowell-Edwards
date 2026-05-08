@@ -44,6 +44,7 @@ export default function Hero() {
       <div className="hero-inner">
         <div className="hero-text-col">
           <div className="hero-eyebrow">Certified Home Integration Specialists · Hackensack, NJ</div>
+          <div className="hero-service-tagline">Proudly serving Northern New Jersey and the New York Metro Area for over 30 years</div>
           <h1
             className="h1"
             style={{

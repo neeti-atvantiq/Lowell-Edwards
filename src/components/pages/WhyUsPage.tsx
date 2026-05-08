@@ -1,10 +1,19 @@
 import Link from 'next/link';
 
 const credentials = [
-  { label: 'Certified Integrator', name: 'ButterflyMX', sub: 'Authorised installation partner' },
-  { label: 'Certified Integrator', name: 'Akuvox', sub: 'AI biometric specialist partner' },
-  { label: 'Certified Integrator', name: 'DoorBird', sub: 'Premium German installer programme' },
-  { label: 'Compliance & Standards', name: 'GDPR · BS 7671', sub: 'ICO registered · NICEIC approved' },
+  {
+    label: 'Certified Integrator',
+    brands: [
+      { name: 'ButterflyMX', sub: 'Authorised installation partner' },
+      { name: 'Akuvox', sub: 'AI biometric specialist partner' },
+      { name: 'DoorBird', sub: 'Premium German installer programme' },
+    ],
+  },
+  {
+    label: 'Compliance & Standards',
+    name: 'GDPR · BS 7671',
+    sub: 'ICO registered · NICEIC approved',
+  },
 ];
 
 const stats = [
@@ -65,6 +74,16 @@ const compareRows = [
 ];
 
 export default function WhyUsPage() {
+  const certifiedBrands =
+    credentials.find(
+      (c): c is { label: string; brands: Array<{ name: string; sub: string }> } =>
+        'brands' in c,
+    )?.brands ?? [];
+
+  const complianceCredential = credentials.find(
+    (c): c is { label: string; name: string; sub: string } => 'name' in c && 'sub' in c,
+  );
+
   return (
     <main className="inner-page why-page">
       {/* HERO */}
@@ -96,18 +115,34 @@ export default function WhyUsPage() {
             </div>
 
             <div className="wu-credentials-stack">
-              {credentials.map((c, i) => (
-                <div className="wu-credential-card" key={i}>
-                  <div className="wu-credential-icon">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><path d="M9 12l2 2 4-4" /></svg>
-                  </div>
-                  <div className="wu-credential-text">
-                    <div className="wu-credential-label">{c.label}</div>
-                    <div className="wu-credential-name">{c.name}</div>
-                    <div className="wu-credential-sub">{c.sub}</div>
-                  </div>
+              {/* Certified Integrator block */}
+              <div className="wu-credential-card">
+                <div className="wu-credential-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><path d="M9 12l2 2 4-4" /></svg>
                 </div>
-              ))}
+                <div className="wu-credential-text">
+                  <div className="wu-credential-label">Certified Integrator</div>
+                  <ul className="wu-credential-list">
+                    {certifiedBrands.map((b, i) => (
+                      <li key={i} className="wu-credential-list-item">
+                        <span className="wu-credential-name">{b.name}</span>
+                        <span className="wu-credential-sub wu-credential-sub-inline">{b.sub}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+              {/* Compliance & Standards block */}
+              <div className="wu-credential-card">
+                <div className="wu-credential-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><path d="M9 12l2 2 4-4" /></svg>
+                </div>
+                <div className="wu-credential-text">
+                  <div className="wu-credential-label">{complianceCredential?.label ?? ''}</div>
+                  <div className="wu-credential-name">{complianceCredential?.name ?? ''}</div>
+                  <div className="wu-credential-sub">{complianceCredential?.sub ?? ''}</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

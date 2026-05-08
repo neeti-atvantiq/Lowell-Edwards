@@ -559,7 +559,7 @@
 .ap-header-desc { font-family: var(--fb); font-size: 17px; font-weight: 300; line-height: 1.65; color: var(--c65); max-width: 760px; }
 
 /* AP Filter Bar */
-.ap-filter-bar { padding: 32px 0 24px; border-top: 1px solid var(--gborder2); border-bottom: 1px solid var(--gborder2); background: var(--bg); position: sticky; top: 124px; z-index: 90; margin-top: 24px; }
+.ap-filter-bar { padding: 24px 0 20px; border-top: 1px solid var(--gborder2); border-bottom: 1px solid var(--gborder2); background: var(--bg); position: sticky; top: 70px; z-index: 90; margin-top: 0; }
 .ap-filter-bar-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
 .ap-filter-tabs { display: flex; gap: 8px; flex-wrap: wrap; }
 .ap-filter-tab { font-family: var(--fb); font-size: 12.5px; font-weight: 500; letter-spacing: .04em; color: var(--c65); background: var(--bg2); border: 1px solid var(--gborder2); padding: 10px 20px; border-radius: 100px; cursor: pointer; transition: all .3s var(--ease); display: inline-flex; align-items: center; gap: 10px; }

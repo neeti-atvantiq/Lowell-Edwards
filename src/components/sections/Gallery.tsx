@@ -16,21 +16,42 @@ type Card = {
   href: string;
 };
 
-const cards: Card[] = [
-  { brand: 'bmx', image: 'https://butterflymx.com/wp-content/uploads/2025/12/intercom_video_calling.webp', badge: 'ButterflyMX', spec: '1080P HD',      brandLabel: 'ButterflyMX', model: 'Video Intercom Panel',    sub: 'Multi-tenant · Cloud managed', href: '/product/butterfly/video-intercom-panel' },
-  { brand: 'bmx', image: 'https://butterflymx.com/wp-content/uploads/2023/02/access_control_butterflymx_2_door_controller.png', badge: 'ButterflyMX', spec: 'RFID · KEYPAD', brandLabel: 'ButterflyMX', model: 'Access Control Reader',   sub: 'Keypad · RFID fob · Key card', href: '/product/butterfly/access-control-reader' },
-  { brand: 'bmx', image: 'https://butterflymx.com/wp-content/uploads/2025/12/butterflymx-scanning-qr-code-2.webp', badge: 'ButterflyMX', spec: 'QR · NO APP', brandLabel: 'ButterflyMX', model: 'QR Code Intercom',    sub: 'Visitor scan · no app download · aluminium', href: '/product/butterfly/qr-code-intercom' },
-  { brand: 'bmx', image: 'https://butterflymx.com/wp-content/uploads/2021/11/audit-trails-butterflymx.jpg', badge: 'ButterflyMX', spec: 'CONCIERGE', brandLabel: 'ButterflyMX', model: 'Front Desk Station',    sub: 'Tablet dashboard · multi-entry · audit logs', href: '/product/butterfly/front-desk-station' },
-  { brand: 'akv', image: '/images/products/akuvox/X915.jpg', badge: 'Akuvox',      spec: 'AI · TOUCHLESS', brandLabel: 'Akuvox',      model: 'X915 Flagship Panel',    sub: 'Tri-camera · 50k faces · 3D anti-spoof', href: '/product/akuvox/x915-flagship-panel' },
-  { brand: 'akv', image: '/images/products/akuvox/R29.jpg', badge: 'Akuvox',      spec: 'AI · 7" TOUCH', brandLabel: 'Akuvox',      model: 'R29 Face Recognition',    sub: 'AI touchless entry · SIP compatible', href: '/product/akuvox/r29-face-recognition' },
-  { brand: 'akv', image: '/images/products/akuvox/X912.png', badge: 'Akuvox',      spec: 'MODULAR',    brandLabel: 'Akuvox',      model: 'X912 Modular Intercom',sub: 'Snap-fit modules · expandable', href: '/product/akuvox/x912-intercom-panel' },
-  { brand: 'akv', image: '/images/products/akuvox/E16.png', badge: 'Akuvox',      spec: 'TOUCHSCREEN',    brandLabel: 'Akuvox',      model: 'E16C Multi-Tenant Station',sub: 'Touchscreen · RFID · PIN access', href: '/product/akuvox/e16c-multi-tenant-station' },
-  { brand: 'akv', image: '/images/products/akuvox/S532.png', badge: 'Akuvox',      spec: 'COMPACT',    brandLabel: 'Akuvox',      model: 'S532 Access Terminal',sub: 'Face + RFID + PIN · 5" screen', href: '/product/akuvox/s532-body-temperature' },
-  { brand: 'db',  image: '/images/products/doorbird/D210X.jpeg', badge: 'DoorBird',    spec: '4K · V4A',   brandLabel: 'DoorBird',    model: 'D210X Push Button',        sub: '1-6 buttons · 4K · stainless steel', href: '/product/doorbird/d210x-push-button' },
-  { brand: 'db',  image: 'https://www.doorbird.com/shop/media/4260423870840/4260423870840.png', badge: 'DoorBird',    spec: '4K · KEYPAD',  brandLabel: 'DoorBird',    model: 'D21DKV Keypad Station',        sub: '4K video + backlit keypad · dual relay', href: '/product/doorbird/d21dkv-keypad-station' },
-  { brand: 'db',  image: 'https://www.doorbird.com/shop/media/4260423870055/4260423870055.png', badge: 'DoorBird',    spec: 'IP65 · 1080P',  brandLabel: 'DoorBird',    model: 'D101S IP Station',        sub: 'Stainless steel · IP65 · 1080p fisheye', href: '/product/doorbird/d101s-ip-station' },
-  { brand: 'db',  image: 'https://www.doorbird.com/web-interface/media/productImage.php?ean=4260423866744', badge: 'DoorBird',    spec: 'IK10 · IP65',   brandLabel: 'DoorBird',    model: 'D2101V Surface Station',  sub: 'Horizontal mount · IP65 · IK10 vandal-rated', href: '/product/doorbird/d2101v-surface-station' },
-  { brand: 'db',  image: 'https://www.doorbird.com/shop/media/4260423867550/transparent_4260423867550.png', badge: 'DoorBird',    spec: 'GLASS · 7"',   brandLabel: 'DoorBird',    model: 'D1101KH Indoor Station',  sub: 'Flush-mount glass · HomeKit scenes', href: '/product/doorbird/d1101fh-indoor-station' },
+export const cards: Card[] = [
+  // --- BUTTERFLYMX (Access Control & Camera ONLY) ---
+  { brand: 'bmx', image: 'https://butterflymx.com/wp-content/uploads/2023/02/butterflymx-single-gang-reader.png', badge: 'ButterflyMX', spec: 'RFID · KEYPAD', brandLabel: 'ButterflyMX', model: 'Access Control Reader', sub: 'Keypad · RFID fob · Key card', href: '/product/butterfly/access-control-reader' },
+  { brand: 'bmx', image: 'https://butterflymx.com/wp-content/uploads/2024/08/butterflymx-dome-security-camera-features.webp', badge: 'ButterflyMX', spec: 'CLOUD · POE', brandLabel: 'ButterflyMX', model: 'Smart Camera', sub: 'Unified CCTV · Cloud recording', href: '/product/butterfly/camera' },
+
+  // --- AKUVOX INTERCOM MODELS (X915, X912, S532) ---
+  { brand: 'akv', image: '/images/products/akuvox/X915.jpg', badge: 'Akuvox', spec: 'AI · TOUCHLESS', brandLabel: 'Akuvox', model: 'X915 Flagship Panel', sub: 'Tri-camera · 50k faces · 3D anti-spoof', href: '/product/akuvox/x915-flagship-panel' },
+  { brand: 'akv', image: '/images/products/akuvox/X912.png', badge: 'Akuvox', spec: 'MODULAR', brandLabel: 'Akuvox', model: 'X912 Modular Intercom', sub: 'Snap-fit modules · expandable', href: '/product/akuvox/x912-intercom-panel' },
+  { brand: 'akv', image: '/images/products/akuvox/S532.png', badge: 'Akuvox', spec: 'COMPACT', brandLabel: 'Akuvox', model: 'S532 Access Terminal', sub: 'Face + RFID + PIN · 5" screen', href: '/product/akuvox/s532-body-temperature' },
+
+  // --- AKUVOX APARTMENT STATIONS (C313, S562) ---
+  { brand: 'akv', image: '/images/products/akuvox/C313.png', badge: 'Akuvox', spec: '7" · POE', brandLabel: 'Akuvox', model: 'C313 Indoor Monitor', sub: 'Wall-mounted · SIP · HD Touchscreen', href: '/product/akuvox/c313-indoor-monitor' },
+  { brand: 'akv', image: '/images/products/akuvox/S562.png', badge: 'Akuvox', spec: '10" · SMART', brandLabel: 'Akuvox', model: 'S562 Indoor Station', sub: 'Premium Android OS · Smart home control', href: '/product/akuvox/s562-indoor-station' },
+
+  // --- AKUVOX ACCESS CONTROL (A02s, A08, A094) ---
+  { brand: 'akv', image: '/images/products/akuvox/a02.png', badge: 'Akuvox', spec: 'RFID · PIN', brandLabel: 'Akuvox', model: 'A02S Access Reader', sub: 'Slim mullion reader · Cloud ready', href: '/product/akuvox/a02s-indoor-phone' },
+  { brand: 'akv', image: 'https://www.akuvox.com/uploads/images/9d537ac8c4fcaea6a45dbe8ed0952389.png', badge: 'Akuvox', spec: '2-DOOR · CLOUD', brandLabel: 'Akuvox', model: 'A08 Access Controller', sub: 'Web-managed 2-door hub · Offline cache', href: '/product/akuvox/a08-access-controller' },
+  { brand: 'akv', image: 'https://www.akuvox.com/uploads/202301/2023011116260311.png', badge: 'Akuvox', spec: '4-DOOR · DIN', brandLabel: 'Akuvox', model: 'A094 Access Controller', sub: 'Enterprise 4-door hub · Anti-passback', href: '/product/akuvox/a094-access-controller' },
+
+  // --- AKUVOX APP ---
+  { brand: 'akv', image: '/images/products/akuvox/smartplus.png', badge: 'Akuvox', spec: 'IOS · ANDROID', brandLabel: 'Akuvox', model: 'SmartPlus App', sub: 'Mobile entry · Video calls · Cloud', href: '/product/akuvox/smartplus-app' },
+
+  // --- DOORBIRD INTERCOM PANELS (D210X, D21DKV, D21DKH, D31TDH) ---
+  { brand: 'db', image: '/images/products/doorbird/D210X.jpeg', badge: 'DoorBird', spec: '4K · V4A', brandLabel: 'DoorBird', model: 'D210X Push Button', sub: '1-6 buttons · 4K · stainless steel', href: '/product/doorbird/d210x-push-button' },
+  { brand: 'db', image: 'https://www.doorbird.com/shop/media/4260423870840/4260423870840.png', badge: 'DoorBird', spec: '4K · KEYPAD', brandLabel: 'DoorBird', model: 'D21DKV Keypad Station', sub: '4K video + backlit keypad · dual relay', href: '/product/doorbird/d21dkv-keypad-station' },
+  { brand: 'db', image: '/images/products/doorbird/D21DKH.jpeg', badge: 'DoorBird', spec: 'HORIZONTAL', brandLabel: 'DoorBird', model: 'D21DKH Gate Keypad', sub: 'Landscape format · 4K + keypad', href: '/product/doorbird/d21dkh-horizontal-keypad' },
+  { brand: 'db', image: 'https://www.doorbird.com/web-interface/media/productImage.php?ean=4251489601011', badge: 'DoorBird', spec: 'DIRECTORY · 4K', brandLabel: 'DoorBird', model: 'D31TDH Display Intercom', sub: 'Touchscreen search · V4A steel', href: '/product/doorbird/d31tdh-display' },
+
+  // --- DOORBIRD APT STATIONS ---
+  { brand: 'db', image: 'https://www.doorbird.com/shop/media/4260423867550/transparent_4260423867550.png', badge: 'DoorBird', spec: 'GLASS · 7"', brandLabel: 'DoorBird', model: 'A1101 Indoor Station', sub: 'Flush-mount glass · HomeKit scenes', href: '/product/doorbird/d1101fh-indoor-station' },
+
+  // --- DOORBIRD ACCESS CONTROL ---
+  { brand: 'db', image: 'https://www.doorbird.com/web-interface/media/productImage.php?ean=4260423860346', badge: 'DoorBird', spec: 'I/O CONTROLLER', brandLabel: 'DoorBird', model: 'A1081 Access Controller', sub: 'Network IP I/O Door Controller', href: '/product/doorbird/a1081-access-controller' },
+
+  // --- DOORBIRD APP ---
+  { brand: 'db', image: 'https://www.doorbird.com/images/en_phone_live.png', badge: 'DoorBird', spec: 'LOCAL STORAGE', brandLabel: 'DoorBird', model: 'DoorBird App', sub: 'iOS/Android · No subscription fees', href: '/product/doorbird/doorbird-app' },
 ];
 
 export default function Gallery() {
