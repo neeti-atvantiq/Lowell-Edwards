@@ -43,8 +43,794 @@ export type ProductData = {
   }[];
 };
 
+export type InstallationImage = {
+  image: string;
+  tag: string;
+  title: string;
+  desc: string;
+};
+
+export type CategoryData = {
+  title: string;
+  subtitle: string;
+  description: string;
+  brandName: string;
+  brandSlug: string;
+  categorySlug: string;
+  heroImage: string;
+  products: string[];
+  highlights: { value: string; label: string }[];
+  crossBrandComparison: {
+    headers: { brand: string; tag: string; featured?: boolean }[];
+    rows: { feature: string; values: string[] }[];
+  };
+  installationImages: InstallationImage[];
+};
+
+export const categories: Record<string, CategoryData> = {
+  'akuvox/intercoms': {
+    title: 'Akuvox Intercoms & Entry Systems',
+    subtitle: 'AI-Powered Entry',
+    description: 'Akuvox delivers the most advanced AI-powered intercom systems on the market — featuring face recognition, touchless entry, and a modular platform that scales from single doors to entire campuses.',
+    brandName: 'Akuvox',
+    brandSlug: 'akuvox',
+    categorySlug: 'intercoms',
+    heroImage: 'https://www.akuvox.com/uploads/202012/2020123119053400.png',
+    products: ['akuvox/x915-flagship-panel', 'akuvox/x912-intercom-panel', 'akuvox/s532-body-temperature'],
+    highlights: [
+      { value: '99.9% accurate', label: 'Face recognition' },
+      { value: '<500ms', label: 'Entry speed' },
+      { value: '50,000', label: 'Face capacity' },
+      { value: '3D anti-spoof', label: 'Security level' },
+    ],
+    crossBrandComparison: {
+      headers: [
+        { brand: 'Akuvox', tag: 'AI · Face Recognition', featured: true },
+        { brand: 'ButterflyMX', tag: 'Cloud · Video' },
+        { brand: 'DoorBird', tag: 'Premium · IP' },
+      ],
+      rows: [
+        { feature: 'AI face recognition', values: ['yes', 'no', 'no'] },
+        { feature: '3D anti-spoofing', values: ['yes', 'no', 'no'] },
+        { feature: 'Modular design', values: ['yes', 'no', 'no'] },
+        { feature: 'Cloud management', values: ['yes', 'yes', 'partial'] },
+        { feature: 'Smartphone app', values: ['yes', 'yes', 'yes'] },
+        { feature: 'Smart home integration', values: ['partial', 'no', 'yes'] },
+        { feature: 'Stainless steel build', values: ['no', 'no', 'yes'] },
+        { feature: 'No cloud subscription', values: ['yes', 'partial', 'yes'] },
+      ],
+    },
+    installationImages: [
+      {
+        image: '/images/installations/8.jpg',
+        tag: 'Residential',
+        title: '48-Unit Apartment Block',
+        desc: 'Full Akuvox intercom deployment'
+      },
+      {
+        image: '/images/installations/2.jpg',
+        tag: 'Commercial',
+        title: 'Office Complex',
+        desc: 'Multi-entry system'
+      },
+      {
+        image: '/images/installations/6.jpg',
+        tag: 'Community',
+        title: 'Gated Development',
+        desc: 'Perimeter security'
+      },
+      {
+        image: '/images/installations/4.jpg',
+        tag: 'Student',
+        title: 'Student Accommodation',
+        desc: '200+ unit rollout'
+      },
+      {
+        image: '/images/installations/5.jpg',
+        tag: 'New Build',
+        title: 'BTR Development',
+        desc: 'Phase 1 of 3 buildings'
+      }
+    ],
+  },
+  'akuvox/access-control': {
+    title: 'Akuvox Access Control',
+    subtitle: 'Smart Readers & Controllers',
+    description: 'Complete access control ecosystem — from compact face-recognition terminals for secondary doors to enterprise 4-door controllers managing entire campuses via the cloud.',
+    brandName: 'Akuvox',
+    brandSlug: 'akuvox',
+    categorySlug: 'access-control',
+    heroImage: 'https://www.akuvox.com/uploads/images/9d537ac8c4fcaea6a45dbe8ed0952389.png',
+    products: ['akuvox/a02s-indoor-phone', 'akuvox/a08-access-controller', 'akuvox/a094-access-controller'],
+    highlights: [
+      { value: '50,000', label: 'User capacity' },
+      { value: 'Cloud', label: 'Managed' },
+      { value: 'Face + Card + PIN', label: 'Multi-modal' },
+      { value: '4 doors', label: 'Per controller' },
+    ],
+    crossBrandComparison: {
+      headers: [
+        { brand: 'Akuvox', tag: 'AI · Cloud-native', featured: true },
+        { brand: 'ButterflyMX', tag: 'Cloud · Unified' },
+        { brand: 'DoorBird', tag: 'Encrypted · IP' },
+      ],
+      rows: [
+        { feature: 'Face recognition readers', values: ['yes', 'no', 'no'] },
+        { feature: 'Cloud management', values: ['yes', 'yes', 'partial'] },
+        { feature: 'Offline redundancy', values: ['yes', 'partial', 'yes'] },
+        { feature: 'Multi-door controllers', values: ['yes', 'no', 'no'] },
+        { feature: 'Anti-passback', values: ['yes', 'no', 'no'] },
+        { feature: 'Fire alarm integration', values: ['yes', 'no', 'partial'] },
+        { feature: 'Encrypted communication', values: ['yes', 'yes', 'yes'] },
+        { feature: 'DIN-rail mount', values: ['yes', 'no', 'partial'] },
+      ],
+    },
+    installationImages: [
+      {
+        image: '/images/installations/8.jpg',
+        tag: 'Residential',
+        title: '48-Unit Apartment Block',
+        desc: 'Full Akuvox access control deployment'
+      },
+      {
+        image: '/images/installations/2.jpg',
+        tag: 'Commercial',
+        title: 'Office Complex',
+        desc: 'Multi-entry system'
+      },
+      {
+        image: '/images/installations/6.jpg',
+        tag: 'Community',
+        title: 'Gated Development',
+        desc: 'Perimeter security'
+      },
+      {
+        image: '/images/installations/4.jpg',
+        tag: 'Student',
+        title: 'Student Accommodation',
+        desc: '200+ unit rollout'
+      },
+      {
+        image: '/images/installations/5.jpg',
+        tag: 'New Build',
+        title: 'BTR Development',
+        desc: 'Phase 1 of 3 buildings'
+      }
+    ],
+  },
+  'akuvox/apartment-stations': {
+    title: 'Akuvox Apartment Stations',
+    subtitle: 'Indoor Monitors & Panels',
+    description: 'From budget-friendly 4.3" video phones to premium 10" smart home panels — an indoor station for every unit, every budget, and every resident preference.',
+    brandName: 'Akuvox',
+    brandSlug: 'akuvox',
+    categorySlug: 'apartment-stations',
+    heroImage: '/images/products/akuvox/S562.png',
+    products: ['akuvox/c313-indoor-monitor', 'akuvox/s562-indoor-station'],
+    highlights: [
+      { value: '4.3" to 10"', label: 'Screen range' },
+      { value: 'Smart home', label: 'Integration' },
+      { value: 'PoE', label: 'Single cable' },
+      { value: 'From budget to premium', label: 'For every unit' },
+    ],
+    crossBrandComparison: {
+      headers: [
+        { brand: 'Akuvox', tag: '3 tiers · Smart', featured: true },
+        { brand: 'DoorBird', tag: 'Premium · IP' },
+        { brand: 'Smartphone', tag: 'App-only' },
+      ],
+      rows: [
+        { feature: 'Budget option available', values: ['yes', 'no', 'yes'] },
+        { feature: 'Smart home control', values: ['yes', 'no', 'no'] },
+        { feature: '10" display option', values: ['yes', 'no', 'no'] },
+        { feature: 'Always-on (no phone needed)', values: ['yes', 'yes', 'no'] },
+        { feature: 'Room-to-room calling', values: ['yes', 'partial', 'no'] },
+        { feature: 'PoE powered', values: ['yes', 'yes', 'no'] },
+        { feature: 'Elderly-friendly', values: ['yes', 'yes', 'no'] },
+      ],
+    },
+    installationImages: [
+      {
+        image: '/images/installations/1.jpg',
+        tag: 'Residential',
+        title: '48-Unit Apartment Block',
+        desc: 'Full Akuvox indoor station deployment'
+      },
+      {
+        image: '/images/installations/2.jpg',
+        tag: 'Commercial',
+        title: 'Office Complex',
+        desc: 'Multi-entry system'
+      },
+      {
+        image: '/images/installations/3.jpg',
+        tag: 'Community',
+        title: 'Gated Development',
+        desc: 'Perimeter security'
+      },
+      {
+        image: '/images/installations/4.jpg',
+        tag: 'Student',
+        title: 'Student Accommodation',
+        desc: '200+ unit rollout'
+      },
+      {
+        image: '/images/installations/5.jpg',
+        tag: 'New Build',
+        title: 'BTR Development',
+        desc: 'Phase 1 of 3 buildings'
+      }
+    ],
+  },
+  'butterflymx/intercoms': {
+    title: 'ButterflyMX Video Intercoms',
+    subtitle: 'Cloud-First Video Entry',
+    description: 'The leading cloud-based video intercom platform for multi-tenant buildings — smartphone access, delivery management, and property-wide control from a single dashboard.',
+    brandName: 'ButterflyMX',
+    brandSlug: 'butterflymx',
+    categorySlug: 'intercoms',
+    heroImage: 'https://butterflymx.com/wp-content/uploads/2021/11/11-surface-intercom-butterflymx-jpg.webp',
+    products: ['butterfly/video-intercom-panel'],
+    highlights: [
+      { value: '10,000+', label: 'Buildings' },
+      { value: 'Cloud', label: 'Platform' },
+      { value: 'Smartphone', label: 'First' },
+      { value: '99.9%', label: 'Uptime' },
+    ],
+    crossBrandComparison: {
+      headers: [
+        { brand: 'ButterflyMX', tag: 'Cloud · Smartphone', featured: true },
+        { brand: 'Akuvox', tag: 'AI · Face Rec' },
+        { brand: 'DoorBird', tag: 'Premium · IP' },
+      ],
+      rows: [
+        { feature: 'Cloud-first platform', values: ['yes', 'partial', 'no'] },
+        { feature: 'Property management tools', values: ['yes', 'partial', 'no'] },
+        { feature: 'Delivery management', values: ['yes', 'no', 'no'] },
+        { feature: 'Smartphone entry', values: ['yes', 'yes', 'yes'] },
+        { feature: 'Face recognition', values: ['no', 'yes', 'no'] },
+        { feature: 'Smart home integration', values: ['no', 'partial', 'yes'] },
+        { feature: 'No cloud subscription', values: ['no', 'yes', 'yes'] },
+      ],
+    },
+    installationImages: [
+      {
+        image: '/images/installations/1.jpg',
+        tag: 'Residential',
+        title: '48-Unit Apartment Block',
+        desc: 'Full ButterflyMX intercom deployment'
+      },
+      {
+        image: '/images/installations/2.jpg',
+        tag: 'Commercial',
+        title: 'Office Complex',
+        desc: 'Multi-entry system'
+      },
+      {
+        image: '/images/installations/6.jpg',
+        tag: 'Community',
+        title: 'Gated Development',
+        desc: 'Perimeter security'
+      },
+      {
+        image: '/images/installations/4.jpg',
+        tag: 'Student',
+        title: 'Student Accommodation',
+        desc: '200+ unit rollout'
+      },
+      {
+        image: '/images/installations/5.jpg',
+        tag: 'New Build',
+        title: 'BTR Development',
+        desc: 'Phase 1 of 3 buildings'
+      }
+    ],
+  },
+  'butterflymx/access-control': {
+    title: 'ButterflyMX Access Control & Security',
+    subtitle: 'Unified Cloud Security',
+    description: 'Cloud-managed access readers and security cameras that share the same dashboard as your intercom — unified building security with no gaps.',
+    brandName: 'ButterflyMX',
+    brandSlug: 'butterflymx',
+    categorySlug: 'access-control',
+    heroImage: 'https://butterflymx.com/wp-content/uploads/2023/02/butterflymx-single-gang-reader.png',
+    products: ['butterfly/access-control-reader', 'butterfly/camera'],
+    highlights: [
+      { value: '3-in-1', label: 'Access methods' },
+      { value: '99.9%', label: 'Cloud uptime' },
+      { value: 'Unified', label: 'Dashboard' },
+      { value: '30 day', label: 'Cloud recording' },
+    ],
+    crossBrandComparison: {
+      headers: [
+        { brand: 'ButterflyMX', tag: 'Cloud · Unified', featured: true },
+        { brand: 'Akuvox', tag: 'AI · Multi-door' },
+        { brand: 'DoorBird', tag: 'Encrypted · IP' },
+      ],
+      rows: [
+        { feature: 'Unified dashboard with intercom', values: ['yes', 'yes', 'no'] },
+        { feature: 'Cloud video recording', values: ['yes', 'no', 'no'] },
+        { feature: 'Smartphone access', values: ['yes', 'yes', 'partial'] },
+        { feature: 'RFID + PIN + BLE', values: ['yes', 'yes', 'partial'] },
+        { feature: 'Multi-door controllers', values: ['no', 'yes', 'yes'] },
+        { feature: 'Face recognition', values: ['no', 'yes', 'no'] },
+        { feature: 'No subscription', values: ['no', 'yes', 'yes'] },
+      ],
+    },
+    installationImages: [
+      {
+        image: '/images/installations/7.jpg',
+        tag: 'Residential',
+        title: '48-Unit Apartment Block',
+        desc: 'Full ButterflyMX access control deployment'
+      },
+      {
+        image: '/images/installations/6.jpg',
+        tag: 'Commercial',
+        title: 'Office Complex',
+        desc: 'Multi-entry system'
+      },
+      {
+        image: '/images/installations/8.jpg',
+        tag: 'Community',
+        title: 'Gated Development',
+        desc: 'Perimeter security'
+      },
+      {
+        image: '/images/installations/4.jpg',
+        tag: 'Student',
+        title: 'Student Accommodation',
+        desc: '200+ unit rollout'
+      },
+      {
+        image: '/images/installations/5.jpg',
+        tag: 'New Build',
+        title: 'BTR Development',
+        desc: 'Phase 1 of 3 buildings'
+      }
+    ],
+  },
+  'doorbird/intercoms': {
+    title: 'DoorBird IP Video Intercoms',
+    subtitle: 'German-Engineered Premium',
+    description: 'Handcrafted from marine-grade V4A stainless steel with 4K cameras, native smart home integration, and zero subscription fees — DoorBird is the choice for properties where craftsmanship matters.',
+    brandName: 'DoorBird',
+    brandSlug: 'doorbird',
+    categorySlug: 'intercoms',
+    heroImage: '/images/products/doorbird/D21DKV.jpeg',
+    products: ['doorbird/d210x-push-button', 'doorbird/d21dkv-keypad-station', 'doorbird/d21dkh-horizontal-keypad', 'doorbird/d31tdh-display'],
+    highlights: [
+      { value: 'V4A steel', label: 'Marine-grade' },
+      { value: '4K UHD', label: 'Camera' },
+      { value: '£0/month', label: 'No subscription' },
+      { value: '20+ years', label: 'Lifespan' },
+    ],
+    crossBrandComparison: {
+      headers: [
+        { brand: 'DoorBird', tag: 'Premium · Open', featured: true },
+        { brand: 'Akuvox', tag: 'AI · Face Rec' },
+        { brand: 'ButterflyMX', tag: 'Cloud · Managed' },
+      ],
+      rows: [
+        { feature: 'V4A stainless steel', values: ['yes', 'no', 'no'] },
+        { feature: '4K camera', values: ['yes', 'no', 'partial'] },
+        { feature: 'HomeKit / KNX / Control4', values: ['yes', 'partial', 'no'] },
+        { feature: 'No cloud subscription', values: ['yes', 'yes', 'no'] },
+        { feature: 'Open HTTP API', values: ['yes', 'yes', 'no'] },
+        { feature: 'Custom finishes (RAL/brass)', values: ['yes', 'no', 'no'] },
+        { feature: 'AI face recognition', values: ['no', 'yes', 'no'] },
+        { feature: 'Cloud management portal', values: ['partial', 'yes', 'yes'] },
+      ],
+    },
+    installationImages: [
+      {
+        image: '/images/installations/8.jpg',
+        tag: 'Residential',
+        title: '48-Unit Apartment Block',
+        desc: 'Full DoorBird intercom deployment'
+      },
+      {
+        image: '/images/installations/7.jpg',
+        tag: 'Commercial',
+        title: 'Office Complex',
+        desc: 'Multi-entry system'
+      },
+      {
+        image: '/images/installations/6.jpg',
+        tag: 'Community',
+        title: 'Gated Development',
+        desc: 'Perimeter security'
+      },
+      {
+        image: '/images/installations/4.jpg',
+        tag: 'Student',
+        title: 'Student Accommodation',
+        desc: '200+ unit rollout'
+      },
+      {
+        image: '/images/installations/5.jpg',
+        tag: 'New Build',
+        title: 'BTR Development',
+        desc: 'Phase 1 of 3 buildings'
+      }
+    ],
+  },
+  'doorbird/access-control': {
+    title: 'DoorBird Access Control',
+    subtitle: 'Encrypted I/O Controllers',
+    description: 'Network-based IP controllers with AES-128 encryption — keeping door relay switching safely inside the building, far from tampering hands.',
+    brandName: 'DoorBird',
+    brandSlug: 'doorbird',
+    categorySlug: 'access-control',
+    heroImage: 'https://www.doorbird.com/web-interface/media/productImage.php?ean=4260423860346',
+    products: ['doorbird/a1081-access-controller'],
+    highlights: [
+      { value: 'AES-128', label: 'Encryption' },
+      { value: '3 relays', label: 'Per controller' },
+      { value: 'Tamper-proof', label: 'Inside mount' },
+      { value: 'PoE', label: 'Powered' },
+    ],
+    crossBrandComparison: {
+      headers: [
+        { brand: 'DoorBird', tag: 'Encrypted · IP', featured: true },
+        { brand: 'Akuvox', tag: 'Cloud · Multi-door' },
+        { brand: 'ButterflyMX', tag: 'Cloud · Unified' },
+      ],
+      rows: [
+        { feature: 'AES encrypted communication', values: ['yes', 'partial', 'yes'] },
+        { feature: 'Tamper-proof (indoor mount)', values: ['yes', 'partial', 'no'] },
+        { feature: 'Multi-relay (3 outputs)', values: ['yes', 'yes', 'no'] },
+        { feature: 'Smart home triggers', values: ['yes', 'partial', 'no'] },
+        { feature: 'HTTP API', values: ['yes', 'yes', 'no'] },
+        { feature: 'Cloud management', values: ['partial', 'yes', 'yes'] },
+        { feature: 'Face recognition readers', values: ['no', 'yes', 'no'] },
+      ],
+    },
+    installationImages: [
+      {
+        image: '/images/installations/8.jpg',
+        tag: 'Residential',
+        title: '48-Unit Apartment Block',
+        desc: 'Full DoorBird access control deployment'
+      },
+      {
+        image: '/images/installations/7.jpg',
+        tag: 'Commercial',
+        title: 'Office Complex',
+        desc: 'Multi-entry system'
+      },
+      {
+        image: '/images/installations/1.jpg',
+        tag: 'Community',
+        title: 'Gated Development',
+        desc: 'Perimeter security'
+      },
+      {
+        image: '/images/installations/4.jpg',
+        tag: 'Student',
+        title: 'Student Accommodation',
+        desc: '200+ unit rollout'
+      },
+      {
+        image: '/images/installations/5.jpg',
+        tag: 'New Build',
+        title: 'BTR Development',
+        desc: 'Phase 1 of 3 buildings'
+      }
+    ],
+  },
+  'doorbird/apartment-stations': {
+    title: 'DoorBird Indoor Stations',
+    subtitle: 'Premium Indoor Monitors',
+    description: 'Elegant indoor video stations that pair with any DoorBird intercom — see visitors, communicate, and unlock without reaching for your phone.',
+    brandName: 'DoorBird',
+    brandSlug: 'doorbird',
+    categorySlug: 'apartment-stations',
+    heroImage: '/images/products/doorbird/D1101KH.png',
+    products: ['doorbird/d1101kh-indoor-station'],
+    highlights: [
+      { value: 'HD video', label: 'Live feed' },
+      { value: 'PoE', label: 'Single cable' },
+      { value: 'SIP', label: 'Protocol' },
+      { value: '0', label: 'Subscription fees' },
+    ],
+    crossBrandComparison: {
+      headers: [
+        { brand: 'DoorBird', tag: 'Premium · SIP', featured: true },
+        { brand: 'Akuvox', tag: 'Smart · Range', featured: false },
+        { brand: 'Smartphone Only', tag: 'No hardware' },
+      ],
+      rows: [
+        { feature: 'Dedicated wall panel', values: ['yes', 'yes', 'no'] },
+        { feature: 'HD video', values: ['yes', 'yes', 'yes'] },
+        { feature: 'Always on', values: ['yes', 'yes', 'no'] },
+        { feature: 'PoE powered', values: ['yes', 'yes', 'no'] },
+        { feature: 'Smart home control', values: ['no', 'yes', 'no'] },
+        { feature: 'Budget option', values: ['no', 'yes', 'yes'] },
+      ],
+    },
+    installationImages: [
+      {
+        image: '/images/installations/7.jpg',
+        tag: 'Residential',
+        title: '48-Unit Apartment Block',
+        desc: 'Full DoorBird indoor station deployment'
+      },
+      {
+        image: '/images/installations/6.jpg',
+        tag: 'Commercial',
+        title: 'Office Complex',
+        desc: 'Multi-entry system'
+      },
+      {
+        image: '/images/installations/8.jpg',
+        tag: 'Community',
+        title: 'Gated Development',
+        desc: 'Perimeter security'
+      },
+      {
+        image: '/images/installations/4.jpg',
+        tag: 'Student',
+        title: 'Student Accommodation',
+        desc: '200+ unit rollout'
+      },
+      {
+        image: '/images/installations/5.jpg',
+        tag: 'New Build',
+        title: 'BTR Development',
+        desc: 'Phase 1 of 3 buildings'
+      }
+    ],
+  },
+  'akuvox/software': {
+    title: 'Akuvox SmartPlus App',
+    subtitle: 'Mobile Access & Control',
+    description: 'The SmartPlus app turns every resident\'s smartphone into a video intercom, access key, and building management tool — connecting to all Akuvox hardware for seamless control from anywhere.',
+    brandName: 'Akuvox',
+    brandSlug: 'akuvox',
+    categorySlug: 'software',
+    heroImage: '/images/products/akuvox/smartplus-app.png',
+    products: ['akuvox/smartplus-app'],
+    highlights: [
+      { value: 'iOS + Android', label: 'Platform' },
+      { value: 'Free', label: 'Download' },
+      { value: 'Video call', label: 'From anywhere' },
+      { value: 'Multi-site', label: 'Support' },
+    ],
+    crossBrandComparison: {
+      headers: [
+        { brand: 'Akuvox SmartPlus', tag: 'Full ecosystem', featured: true },
+        { brand: 'DoorBird App', tag: 'Premium · IP' },
+        { brand: 'ButterflyMX App', tag: 'Cloud · SaaS' },
+      ],
+      rows: [
+        { feature: 'Video intercom calls', values: ['yes', 'yes', 'yes'] },
+        { feature: 'Remote door unlock', values: ['yes', 'yes', 'yes'] },
+        { feature: 'Face recognition management', values: ['yes', 'no', 'no'] },
+        { feature: 'Indoor station pairing', values: ['yes', 'partial', 'no'] },
+        { feature: 'Free (no subscription)', values: ['yes', 'yes', 'no'] },
+        { feature: 'Multi-site management', values: ['yes', 'partial', 'yes'] },
+        { feature: 'Smart home triggers', values: ['partial', 'yes', 'no'] },
+      ],
+    },
+    installationImages: [
+      {
+        image: '/images/installations/akuvox/software-1.jpg',
+        tag: 'Software',
+        title: 'SmartPlus App',
+        desc: 'Mobile access & control'
+      },
+      {
+        image: '/images/installations/akuvox/software-2.jpg',
+        tag: 'Software',
+        title: 'Cloud Management',
+        desc: 'Remote admin tools'
+      }
+    ],
+  },
+  'doorbird/software': {
+    title: 'DoorBird App',
+    subtitle: 'Premium Remote Access',
+    description: 'The DoorBird app delivers live video, two-way audio, and remote door control for all DoorBird intercoms — with local image storage, smart home triggers, and zero subscription fees.',
+    brandName: 'DoorBird',
+    brandSlug: 'doorbird',
+    categorySlug: 'software',
+    heroImage: '/images/products/doorbird/doorbird-app.png',
+    products: ['doorbird/doorbird-app'],
+    highlights: [
+      { value: 'iOS + Android', label: 'Platform' },
+      { value: '£0/month', label: 'No subscription' },
+      { value: '4K', label: 'Live view' },
+      { value: 'HomeKit', label: 'Native support' },
+    ],
+    crossBrandComparison: {
+      headers: [
+        { brand: 'DoorBird App', tag: 'Premium · Open', featured: true },
+        { brand: 'Akuvox SmartPlus', tag: 'AI · Ecosystem' },
+        { brand: 'ButterflyMX App', tag: 'Cloud · SaaS' },
+      ],
+      rows: [
+        { feature: 'Live 4K video', values: ['yes', 'no', 'no'] },
+        { feature: 'Local image storage', values: ['yes', 'no', 'no'] },
+        { feature: 'HomeKit integration', values: ['yes', 'no', 'no'] },
+        { feature: 'HTTP API triggers', values: ['yes', 'yes', 'no'] },
+        { feature: 'No subscription', values: ['yes', 'yes', 'no'] },
+        { feature: 'Multi-device support', values: ['yes', 'yes', 'yes'] },
+        { feature: 'Face recognition', values: ['no', 'yes', 'no'] },
+      ],
+    },
+    installationImages: [
+      {
+        image: '/images/installations/doorbird/software-1.jpg',
+        tag: 'Software',
+        title: 'DoorBird App',
+        desc: 'Premium remote access'
+      },
+      {
+        image: '/images/installations/doorbird/software-2.jpg',
+        tag: 'Software',
+        title: 'Cloud Management',
+        desc: 'Remote admin tools'
+      }
+    ],
+  },
+};
+
 export const products: Record<string, ProductData> = {
-  
+
+  'butterfly/video-intercom-panel': {
+    slug: 'video-intercom-panel',
+    brand: 'ButterflyMX',
+    brandSlug: 'butterfly',
+    model: 'Video Intercom Panel',
+    eyebrow: 'ButterflyMX · Flagship — Cloud Video Intercom',
+    title: 'The building\u2019s front door, managed entirely from the cloud.',
+    tagline: '\u2014 smartphone video entry for modern multi-tenant buildings.',
+    description: 'The ButterflyMX Video Intercom Panel is a cloud-connected video entry system that lets residents grant access via their smartphone from anywhere. Property managers control the entire system from a web dashboard \u2014 no on-site hardware management required.',
+    image: 'https://butterflymx.com/wp-content/uploads/2024/07/butterflymx-video-intercoms.webp',
+    meta: [
+      { value: '10,000', unit: '+', label: 'Buildings globally' },
+      { value: '99.9', unit: '%', label: 'Cloud uptime' },
+      { value: 'HD', unit: '', label: 'Video quality' },
+    ],
+    stats: [
+      { value: '10,000', unit: '+', label: 'Buildings' },
+      { value: '99.9', unit: '%', label: 'Cloud uptime' },
+      { value: 'HD', unit: '', label: 'Video call quality' },
+      { value: '<3', unit: 's', label: 'Entry time' },
+    ],
+    features: [
+      { tag: 'SMARTPHONE ENTRY', title: 'Open the door from anywhere on Earth.', body: 'Residents receive a video call on their smartphone when a visitor buzzes. They see, speak to, and grant access from anywhere \u2014 at home, at work, or on holiday.', icon: 'smartphone' },
+      { tag: 'CLOUD MANAGED', title: 'Zero on-site hardware management.', body: 'Property managers add/remove residents, issue virtual keys, and manage delivery access from a web dashboard. No server room, no IT staff, no site visits.', icon: 'cloud' },
+      { tag: 'DELIVERY ACCESS', title: 'One-time PINs for couriers and guests.', body: 'Generate time-limited PINs for deliveries, dog walkers, cleaners. The system logs every entry with photo, timestamp, and method used.', icon: 'package' },
+      { tag: 'VIDEO CALLING', title: 'HD video with two-way audio.', body: 'Crystal-clear video and audio let residents verify visitors before granting access. Night vision ensures visibility at all hours.', icon: 'video' },
+      { tag: 'AUDIT TRAIL', title: 'Every entry logged with photo evidence.', body: 'Timestamped photo logs of every door event. Exportable reports for compliance, disputes, and building management.', icon: 'log' },
+      { tag: 'INTEGRATIONS', title: 'Works with property management software.', body: 'Native integrations with Yardi, RealPage, Entrata, and more. Tenant directories sync automatically \u2014 no manual data entry.', icon: 'integration' },
+    ],
+    useCases: [
+      { mark: 'Build-to-Rent', title: 'Purpose-built rental blocks.', desc: 'The ideal entry system for BTR developments where resident turnover is high and property managers need remote control over access credentials.', stats: [{ value: '60%', label: 'Less admin time' }, { value: '0', label: 'Key handovers' }] },
+      { mark: 'Student Housing', title: 'University accommodations.', desc: 'Students manage their own access via smartphone. No physical keys to lose, no locksmith callouts. Batch credential management for yearly intake.', stats: [{ value: '100%', label: 'Self-service' }, { value: '85%', label: 'Fewer lockouts' }] },
+      { mark: 'Co-Living Spaces', title: 'Shared living developments.', desc: 'Flexible access for short and long-term residents. Virtual keys issued and revoked instantly as residents come and go.', stats: [{ value: '<1min', label: 'New resident setup' }, { value: '24/7', label: 'Remote management' }] },
+    ],
+    specs: [
+      { category: 'Hardware', rows: [
+        { key: 'Display', value: '11.6" IPS touchscreen \u00b7 1080p' },
+        { key: 'Camera', value: 'HD wide-angle \u00b7 IR night vision' },
+        { key: 'Audio', value: 'Full-duplex \u00b7 noise cancellation' },
+        { key: 'Protection', value: 'IP65 weather rated' },
+        { key: 'Mounting', value: 'Surface or flush mount' },
+        { key: 'Dimensions', value: '332 \u00d7 175 \u00d7 45 mm' },
+      ]},
+      { category: 'Connectivity & Platform', rows: [
+        { key: 'Network', value: 'PoE (802.3af) \u00b7 Wi-Fi backup' },
+        { key: 'Platform', value: 'Cloud-hosted \u00b7 99.9% SLA' },
+        { key: 'App', value: 'iOS + Android \u00b7 ButterflyMX app' },
+        { key: 'PMS integration', value: 'Yardi \u00b7 RealPage \u00b7 Entrata \u00b7 AppFolio' },
+        { key: 'Access methods', value: 'Smartphone \u00b7 PIN \u00b7 Virtual key \u00b7 QR code' },
+        { key: 'Directory', value: 'Unlimited residents \u00b7 auto-sync' },
+      ]},
+    ],
+    comparison: {
+      headers: [
+        { brand: 'ButterflyMX', tag: 'Cloud \u00b7 Smartphone', featured: true },
+        { brand: 'Traditional Intercom', tag: 'Wired \u00b7 Analogue' },
+        { brand: 'Budget IP Intercom', tag: 'Basic' },
+      ],
+      rows: [
+        { feature: 'Smartphone video entry', values: ['yes', 'no', 'partial'] },
+        { feature: 'Cloud management', values: ['yes', 'no', 'no'] },
+        { feature: 'Delivery PIN codes', values: ['yes', 'no', 'no'] },
+        { feature: 'Property management integration', values: ['yes', 'no', 'no'] },
+        { feature: 'Photo audit trail', values: ['yes', 'no', 'partial'] },
+        { feature: 'No on-site server', values: ['yes', 'no', 'partial'] },
+        { feature: 'Remote resident management', values: ['yes', 'no', 'no'] },
+      ],
+    },
+    testimonials: [
+      { quote: 'We eliminated key handovers entirely. New tenants get access via the app before they even move in. It\u2019s transformed our operations.', name: 'Sarah Mitchell', role: 'Operations Manager \u00b7 Urban Living', initials: 'SM' },
+      { quote: 'The delivery PIN feature alone justified the investment. No more missed packages, no more angry residents. Couriers enter, deliver, leave \u2014 all logged.', name: 'James Parker', role: 'Building Manager \u00b7 Riverside Quay', initials: 'JP' },
+      { quote: 'Managing 400 units across 3 buildings from one dashboard. Resident move-ins and move-outs are handled in minutes, not hours.', name: 'Lisa Chen', role: 'Property Director \u00b7 Apex Residential', initials: 'LC' },
+    ],
+    faqs: [
+      { question: 'Is there a monthly subscription?', answer: 'Yes \u2014 ButterflyMX operates on a SaaS model. The subscription includes cloud hosting, app access, automatic updates, PMS integrations, and 24/7 platform support. Pricing is per-unit.' },
+      { question: 'What happens if the internet goes down?', answer: 'The panel has local fallback capabilities. Residents can still use PIN codes at the panel, and the system queues events for upload when connectivity is restored.' },
+      { question: 'Can residents have multiple devices?', answer: 'Yes \u2014 each resident can have the app installed on multiple devices (phone, tablet). All household members can receive video calls and grant access independently.' },
+      { question: 'How long does installation take?', answer: 'A typical 50-unit building takes 1\u20132 days. We handle cabling, mounting, configuration, and resident onboarding. The cloud platform means minimal on-site setup.' },
+    ],
+  },
+
+  'butterfly/front-desk-station': {
+    slug: 'front-desk-station',
+    brand: 'ButterflyMX',
+    brandSlug: 'butterfly',
+    model: 'Front Desk Station',
+    eyebrow: 'ButterflyMX \u00b7 Concierge \u2014 Cloud Reception Console',
+    title: 'A virtual concierge that works 24/7, even when the desk is unstaffed.',
+    tagline: '\u2014 cloud-managed front desk for staffed and unstaffed lobbies.',
+    description: 'The ButterflyMX Front Desk Station gives on-site staff a dedicated console to manage visitor entry, package notifications, and building-wide announcements \u2014 or operates autonomously when the desk is unstaffed, routing calls to residents\u2019 smartphones.',
+    image: '/images/products/butterfly/front-desk-station.png',
+    meta: [
+      { value: '24/7', unit: '', label: 'Operation' },
+      { value: 'Unified', unit: '', label: 'Dashboard' },
+      { value: 'HD', unit: '', label: 'Video feeds' },
+    ],
+    stats: [
+      { value: '24', unit: '/7', label: 'Always on' },
+      { value: '100', unit: '%', label: 'Calls handled' },
+      { value: '<2', unit: 's', label: 'Response time' },
+      { value: 'HD', unit: '', label: 'Video quality' },
+    ],
+    features: [
+      { tag: 'DUAL MODE', title: 'Staffed or unstaffed \u2014 it adapts.', body: 'When concierge staff are present, calls route to the desk station. After hours, calls route directly to residents\u2019 smartphones. Seamless handover, zero gaps.', icon: 'clock' },
+      { tag: 'VISITOR MANAGEMENT', title: 'Pre-register guests, log walk-ins.', body: 'Staff can pre-register expected visitors, grant temporary access, and maintain a digital visitor log with photo evidence for every entry.', icon: 'log' },
+      { tag: 'PACKAGE ALERTS', title: 'Notify residents of deliveries.', body: 'When a package arrives, staff log it and residents receive instant notifications. No more lost parcels, no more lobby clutter.', icon: 'package' },
+      { tag: 'MULTI-CAMERA', title: 'View all entry points from one screen.', body: 'The desk station displays live feeds from all ButterflyMX cameras and intercoms. One screen, full building visibility.', icon: 'video' },
+    ],
+    useCases: [
+      { mark: 'Luxury Residential', title: 'High-end apartments with concierge.', desc: 'Gives concierge staff a professional digital console that matches the building\u2019s premium positioning. Video verification of every visitor before granting access.', stats: [{ value: '100%', label: 'Visitor verified' }, { value: '0', label: 'Unauthorised entries' }] },
+      { mark: 'Mixed-Use Buildings', title: 'Residential + commercial lobbies.', desc: 'Manage residential and commercial tenants from one console. Different access rules for offices vs apartments, all from the same interface.', stats: [{ value: '2-in-1', label: 'Management' }, { value: 'Unified', label: 'Platform' }] },
+    ],
+    specs: [
+      { category: 'Hardware', rows: [
+        { key: 'Display', value: '10.1" IPS touchscreen' },
+        { key: 'Camera', value: 'HD \u00b7 120\u00b0 wide angle' },
+        { key: 'Audio', value: 'Full-duplex \u00b7 built-in speaker + mic' },
+        { key: 'Mounting', value: 'Desktop stand or VESA wall mount' },
+        { key: 'Dimensions', value: '280 \u00d7 195 \u00d7 38 mm' },
+      ]},
+      { category: 'Platform', rows: [
+        { key: 'Mode', value: 'Staffed (manual) or unstaffed (auto-route)' },
+        { key: 'Cameras', value: 'Live view from all ButterflyMX devices' },
+        { key: 'Notifications', value: 'Push \u00b7 SMS \u00b7 email alerts' },
+        { key: 'Directory', value: 'Full building directory with search' },
+        { key: 'Packages', value: 'Log, notify, track delivery status' },
+      ]},
+    ],
+    comparison: {
+      headers: [
+        { brand: 'ButterflyMX Desk', tag: 'Cloud \u00b7 Smart', featured: true },
+        { brand: 'Traditional Concierge Phone', tag: 'Analogue' },
+        { brand: 'No Front Desk', tag: 'Intercom Only' },
+      ],
+      rows: [
+        { feature: 'Video verification', values: ['yes', 'no', 'partial'] },
+        { feature: 'After-hours auto-routing', values: ['yes', 'no', 'yes'] },
+        { feature: 'Package management', values: ['yes', 'no', 'no'] },
+        { feature: 'Digital visitor log', values: ['yes', 'no', 'no'] },
+        { feature: 'Multi-camera view', values: ['yes', 'no', 'no'] },
+        { feature: 'Cloud management', values: ['yes', 'no', 'partial'] },
+      ],
+    },
+    testimonials: [
+      { quote: 'Our concierge team loves it. They can see who\u2019s at every entrance without leaving the desk. After 10pm it handles everything automatically.', name: 'David Osei', role: 'Facilities Manager \u00b7 The Residence', initials: 'DO' },
+      { quote: 'Package tracking alone saved us 4 hours a week of staff time. Residents get notified instantly and complaints about lost deliveries dropped to zero.', name: 'Karen Walsh', role: 'Building Manager \u00b7 Harbour Point', initials: 'KW' },
+    ],
+    faqs: [
+      { question: 'Can it work without a concierge on-site?', answer: 'Yes \u2014 in unstaffed mode, visitor calls route directly to residents\u2019 smartphones. The system operates autonomously 24/7 regardless of staffing.' },
+      { question: 'Does it integrate with the intercom panel?', answer: 'Yes \u2014 the Front Desk Station, Video Intercom Panel, and Access Readers all share the same ButterflyMX platform. One dashboard, one app, unified management.' },
+      { question: 'Can multiple staff members use it?', answer: 'Yes \u2014 staff log in with individual credentials for accountability. Multiple stations can be deployed across different desk positions.' },
+    ],
+  },
 
   'butterfly/access-control-reader': {
     slug: 'access-control-reader',

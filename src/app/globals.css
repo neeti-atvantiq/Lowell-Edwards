@@ -1959,3 +1959,175 @@ section.quote-section { background: #FFFFFF; }
   .contact-form-row { grid-template-columns: 1fr; gap: 14px; }
   .contact-hero { padding: 100px 0 64px; }
 }
+/* =====================================================
+   COMPACT PRODUCTS EXTENSION & FILTERS
+===================================================== */
+
+/* Filter Bar Styling */
+.prod-filter-bar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(26,26,46,.08);
+}
+.prod-filter-tab {
+  font-family: var(--fb);
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: .04em;
+  color: var(--c65);
+  background: var(--bg2);
+  border: 1px solid var(--gborder2);
+  padding: 10px 20px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all .3s var(--ease);
+  display: inline-flex;
+  align-items: center;
+}
+.prod-filter-tab:hover {
+  border-color: var(--gborder);
+  color: var(--cream);
+}
+.prod-filter-tab.active {
+  background: var(--cream);
+  color: #FFFFFF;
+  border-color: var(--cream);
+}
+
+/* Explicit Category Grouping */
+.cat-group {
+  margin-bottom: 64px;
+}
+.cat-group:last-child {
+  margin-bottom: 0;
+}
+.cat-group-header {
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(26,26,46,.08);
+}
+.cat-group-title {
+  font-family: var(--fd);
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--cream);
+}
+
+/* Compact Card Adjustments */
+.prod-card.compact .prod-image {
+  background: #FFFFFF;
+  border-bottom: 1px solid rgba(26,26,46,.04);
+}
+.prod-card.compact .prod-top {
+  padding: 0 24px 16px;
+}
+.prod-card.compact .prod-meta {
+  padding: 22px 24px 8px;
+}
+
+/* Divided Features Area */
+.prod-features-compact {
+  padding: 0 24px 24px;
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Space between Entry vs App features */
+}
+.feature-group-label {
+  font-family: var(--fb);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+  opacity: .8;
+}
+.feature-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.feature-chip {
+  font-family: var(--fb);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--c65);
+  background: var(--bg2);
+  border: 1px solid rgba(26,26,46,.08);
+  padding: 5px 11px;
+  border-radius: 100px;
+  letter-spacing: .02em;
+  transition: all .2s var(--ease);
+}
+.prod-card:hover .feature-chip {
+  border-color: rgba(217,28,28,.15);
+  color: var(--cream);
+  background: #FFF5F5;
+}
+
+/* All Products Footer & Buttons (Replicated exact classes) */
+.ap-card-footer {
+  padding: 0 24px 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-top: 1px solid rgba(26,26,46,.08);
+  padding-top: 18px;
+  margin-top: auto;
+}
+.ap-card-cta {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--fb);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-decoration: none;
+  transition: gap .3s var(--ease);
+}
+.ap-card-cta:hover {
+  gap: 14px;
+}
+.ap-card-cta svg {
+  transition: transform .3s var(--ease);
+}
+.ap-card-cta:hover svg {
+  transform: translateX(4px);
+}
+.ap-card-quote {
+  font-family: var(--fb);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--c65);
+  background: transparent;
+  border: 1px solid rgba(26,26,46,.12);
+  padding: 8px 16px;
+  border-radius: 100px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all .25s var(--ease);
+  white-space: nowrap;
+}
+.ap-card-quote:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(122,36,38,.04);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .cat-group { margin-bottom: 48px; }
+  .cat-group-title { font-size: 26px; }
+  .prod-filter-bar { padding-bottom: 16px; overflow-x: auto; flex-wrap: nowrap; -webkit-overflow-scrolling: touch;}
+  .prod-filter-tab { white-space: nowrap; flex-shrink: 0; padding: 8px 16px; font-size: 12px; }
+}

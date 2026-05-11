@@ -1,130 +1,276 @@
 'use client';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
 
-type Brand = 'all' | 'bmx' | 'akv' | 'db';
-
-type Card = {
-  brand: Exclude<Brand, 'all'>;
-  image: string;
-  badge: string;
-  spec: string;
-  brandLabel: string;
-  model: string;
-  sub: string;
-  href: string;
-};
-
-export const cards: Card[] = [
-  // --- BUTTERFLYMX (Access Control & Camera ONLY) ---
-  { brand: 'bmx', image: 'https://butterflymx.com/wp-content/uploads/2023/02/butterflymx-single-gang-reader.png', badge: 'ButterflyMX', spec: 'RFID · KEYPAD', brandLabel: 'ButterflyMX', model: 'Access Control Reader', sub: 'Keypad · RFID fob · Key card', href: '/product/butterfly/access-control-reader' },
-  { brand: 'bmx', image: 'https://butterflymx.com/wp-content/uploads/2024/08/butterflymx-dome-security-camera-features.webp', badge: 'ButterflyMX', spec: 'CLOUD · POE', brandLabel: 'ButterflyMX', model: 'Smart Camera', sub: 'Unified CCTV · Cloud recording', href: '/product/butterfly/camera' },
-
-  // --- AKUVOX INTERCOM MODELS (X915, X912, S532) ---
-  { brand: 'akv', image: 'https://www.akuvox.com/uploads/202012/2020123119053400.png', badge: 'Akuvox', spec: 'AI · TOUCHLESS', brandLabel: 'Akuvox', model: 'X915 Flagship Panel', sub: 'Tri-camera · 50k faces · 3D anti-spoof', href: '/product/akuvox/x915-flagship-panel' },
-  { brand: 'akv', image: '/images/products/akuvox/X912.png', badge: 'Akuvox', spec: 'MODULAR', brandLabel: 'Akuvox', model: 'X912 Modular Intercom', sub: 'Snap-fit modules · expandable', href: '/product/akuvox/x912-intercom-panel' },
-  { brand: 'akv', image: '/images/products/akuvox/S532.png', badge: 'Akuvox', spec: 'COMPACT', brandLabel: 'Akuvox', model: 'S532 Access Terminal', sub: 'Face + RFID + PIN · 5" screen', href: '/product/akuvox/s532-body-temperature' },
-
-  // --- AKUVOX APARTMENT STATIONS (C313, S562) ---
-  { brand: 'akv', image: '/images/products/akuvox/C313.png', badge: 'Akuvox', spec: '7" · POE', brandLabel: 'Akuvox', model: 'C313 Indoor Monitor', sub: 'Wall-mounted · SIP · HD Touchscreen', href: '/product/akuvox/c313-indoor-monitor' },
-  { brand: 'akv', image: '/images/products/akuvox/S562.png', badge: 'Akuvox', spec: '10" · SMART', brandLabel: 'Akuvox', model: 'S562 Indoor Station', sub: 'Premium Android OS · Smart home control', href: '/product/akuvox/s562-indoor-station' },
-
-  // --- AKUVOX ACCESS CONTROL (A02s, A08, A094) ---
-  { brand: 'akv', image: '/images/products/akuvox/a02.png', badge: 'Akuvox', spec: 'RFID · PIN', brandLabel: 'Akuvox', model: 'A02S Access Reader', sub: 'Slim mullion reader · Cloud ready', href: '/product/akuvox/a02s-indoor-phone' },
-  { brand: 'akv', image: 'https://www.akuvox.com/uploads/images/9d537ac8c4fcaea6a45dbe8ed0952389.png', badge: 'Akuvox', spec: '2-DOOR · CLOUD', brandLabel: 'Akuvox', model: 'A08 Access Controller', sub: 'Web-managed 2-door hub · Offline cache', href: '/product/akuvox/a08-access-controller' },
-  { brand: 'akv', image: 'https://www.akuvox.com/uploads/202301/2023011116260311.png', badge: 'Akuvox', spec: '4-DOOR · DIN', brandLabel: 'Akuvox', model: 'A094 Access Controller', sub: 'Enterprise 4-door hub · Anti-passback', href: '/product/akuvox/a094-access-controller' },
-
-  // --- AKUVOX APP ---
-  { brand: 'akv', image: '/images/products/akuvox/smartplus.png', badge: 'Akuvox', spec: 'IOS · ANDROID', brandLabel: 'Akuvox', model: 'SmartPlus App', sub: 'Mobile entry · Video calls · Cloud', href: '/product/akuvox/smartplus-app' },
-
-  // --- DOORBIRD INTERCOM PANELS (D210X, D21DKV, D21DKH, D31TDH) ---
-  { brand: 'db', image: '/images/products/doorbird/D210X.jpeg', badge: 'DoorBird', spec: '4K · V4A', brandLabel: 'DoorBird', model: 'D210X Push Button', sub: '1-6 buttons · 4K · stainless steel', href: '/product/doorbird/d210x-push-button' },
-  { brand: 'db', image: 'https://www.doorbird.com/shop/media/4260423870840/4260423870840.png', badge: 'DoorBird', spec: '4K · KEYPAD', brandLabel: 'DoorBird', model: 'D21DKV Keypad Station', sub: '4K video + backlit keypad · dual relay', href: '/product/doorbird/d21dkv-keypad-station' },
-  { brand: 'db', image: '/images/products/doorbird/D21DKH.jpeg', badge: 'DoorBird', spec: 'HORIZONTAL', brandLabel: 'DoorBird', model: 'D21DKH Gate Keypad', sub: 'Landscape format · 4K + keypad', href: '/product/doorbird/d21dkh-horizontal-keypad' },
-  { brand: 'db', image: 'https://www.doorbird.com/web-interface/media/productImage.php?ean=4251489601011', badge: 'DoorBird', spec: 'DIRECTORY · 4K', brandLabel: 'DoorBird', model: 'D31TDH Display Intercom', sub: 'Touchscreen search · V4A steel', href: '/product/doorbird/d31tdh-display' },
-
-  // --- DOORBIRD APT STATIONS ---
-  { brand: 'db', image: 'https://www.doorbird.com/shop/media/4260423867550/transparent_4260423867550.png', badge: 'DoorBird', spec: 'GLASS · 7"', brandLabel: 'DoorBird', model: 'A1101 Indoor Station', sub: 'Flush-mount glass · HomeKit scenes', href: '/product/doorbird/d1101fh-indoor-station' },
-
-  // --- DOORBIRD ACCESS CONTROL ---
-  { brand: 'db', image: 'https://www.doorbird.com/web-interface/media/productImage.php?ean=4260423860346', badge: 'DoorBird', spec: 'I/O CONTROLLER', brandLabel: 'DoorBird', model: 'A1081 Access Controller', sub: 'Network IP I/O Door Controller', href: '/product/doorbird/a1081-access-controller' },
-
-  // --- DOORBIRD APP ---
-  { brand: 'db', image: 'https://www.doorbird.com/images/en_phone_live.png', badge: 'DoorBird', spec: 'LOCAL STORAGE', brandLabel: 'DoorBird', model: 'DoorBird App', sub: 'iOS/Android · No subscription fees', href: '/product/doorbird/doorbird-app' },
+const hardwareCategories = [
+  {
+    id: 'intercoms',
+    title: 'Intercoms & Entry Systems',
+    brands: [
+      {
+        cert: 'Authorised Partner',
+        brand: 'Akuvox',
+        type: 'AI Smart Intercom',
+        image: 'https://www.akuvox.com/uploads/202012/2020123119053400.png',
+        href: '/products/akuvox/intercoms',
+        featureGroups: [
+          {
+            label: 'Entry Features',
+            items: ['App', 'Facial Recognition', 'Fobs', 'PIN Codes', 'Bluetooth', 'Landlines']
+          },
+          {
+            label: 'App Features',
+            items: ['User PINs', 'Delivery PINs', 'Guest PINs', 'Add/Remove Family & Tenants']
+          }
+        ]
+      },
+      {
+        cert: 'Authorised Reseller',
+        brand: 'ButterflyMX',
+        type: 'Video Intercom',
+        image: 'https://butterflymx.com/wp-content/uploads/2021/11/11-surface-intercom-butterflymx-jpg.webp',
+        href: '/products/butterflymx/intercoms',
+        featureGroups: [
+          {
+            label: 'Entry Features',
+            items: ['App', 'Fobs', 'PIN Codes', 'Landlines']
+          },
+          {
+            label: 'App Features',
+            items: ['User PINs', 'Delivery PINs', 'Guest PINs']
+          }
+        ]
+      },
+      {
+        cert: 'Certified Installer',
+        brand: 'DoorBird',
+        type: 'IP Video Station',
+        image: '/images/products/doorbird/D21DKV.jpeg',
+        href: '/products/doorbird/intercoms',
+        featureGroups: [
+          {
+            label: 'Entry Features',
+            items: ['App', 'Fobs', 'PIN Codes (Some Models)']
+          },
+          {
+            label: 'App Features',
+            items: ['Fixed PINs (Keypad Models)']
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'access-control',
+    title: 'Access Control (Secondary Doors)',
+    brands: [
+      {
+        cert: 'Authorised Partner',
+        brand: 'Akuvox',
+        type: 'Smart Readers',
+        image: 'https://www.akuvox.com/uploads/images/9d537ac8c4fcaea6a45dbe8ed0952389.png',
+        href: '/products/akuvox/access-control',
+        featureGroups: [
+          {
+            label: 'General Features',
+            items: ['Keypad', 'Fob', 'Bluetooth', 'Facial Rec', 'App Integration', 'Shares Info via Cloud']
+          }
+        ]
+      },
+      {
+        cert: 'Authorised Reseller',
+        brand: 'ButterflyMX',
+        type: 'Access Readers',
+        image: 'https://butterflymx.com/wp-content/uploads/2023/02/butterflymx-single-gang-reader.png',
+        href: '/products/butterflymx/access-control',
+        featureGroups: [
+          {
+            label: 'General Features',
+            items: ['Keypad', 'Fob', 'App Integration', 'Shares Info via Cloud']
+          }
+        ]
+      },
+      {
+        cert: 'Certified Installer',
+        brand: 'DoorBird',
+        type: 'I/O Controllers',
+        image: 'https://www.doorbird.com/web-interface/media/productImage.php?ean=4260423860346',
+        href: '/products/doorbird/access-control',
+        featureGroups: [
+          {
+            label: 'General Features',
+            items: ['Keypad', 'Fob', 'App Integration', 'Independent System']
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'apartment-stations',
+    title: 'Apartment Stations (In-Unit)',
+    brands: [
+      {
+        cert: 'Authorised Partner',
+        brand: 'Akuvox',
+        type: 'Indoor Monitors',
+        image: '/images/products/akuvox/S562.png',
+        href: '/products/akuvox/apartment-stations',
+        featureGroups: [
+          {
+            label: 'General Features',
+            items: ['7" - 10" Screens', 'Doorbell Option', 'View & Talk to Visitors', 'Retrofit Friendly', 'Wired or WiFi']
+          }
+        ]
+      },
+      {
+        cert: 'Certified Installer',
+        brand: 'DoorBird',
+        type: 'Indoor Stations',
+        image: '/images/products/doorbird/D1101KH.png',
+        href: '/products/doorbird/apartment-stations',
+        featureGroups: [
+          {
+            label: 'General Features',
+            items: ['4" & 7" Screens', 'View & Talk to Visitors', 'Wired or WiFi']
+          }
+        ]
+      }
+    ]
+  }
 ];
 
-export default function Gallery() {
-  const [filter, setFilter] = useState<Brand>('all');
-  const visible = cards
-    .map((c, i) => ({ ...c, origIndex: i }))
-    .filter((c) => filter === 'all' || c.brand === filter);
+export default function Products() {
+  const [filter, setFilter] = useState('all');
+
+  useEffect(() => {
+    const obs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add('in');
+            obs.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: '0px 0px -8% 0px' }
+    );
+    document.querySelectorAll('.reveal').forEach((el) => obs.observe(el));
+    return () => obs.disconnect();
+  }, [filter]);
+
+  const visibleCategories = filter === 'all' 
+    ? hardwareCategories 
+    : hardwareCategories.filter(c => c.id === filter);
 
   return (
-    <section className="section gallery" id="gallery">
-      <div className="gallery-inner">
-        <div className="gallery-intro reveal">
-          <div className="gallery-intro-text">
-            <div className="tag">Product Range</div>
-            <div className="gallery-intro-title">
-              Explore the hardware<br />we <em>supply &amp; install</em>
-            </div>
-            <div className="gallery-intro-desc">
-              Every device below is available through us as a certified integrator — supplied, installed, and maintained by our UK team.
-            </div>
-          </div>
-          <div className="gallery-tabs">
-            {(['all', 'bmx', 'akv', 'db'] as Brand[]).map((b) => (
-              <button
-                key={b}
-                type="button"
-                className={`g-tab ${filter === b ? 'active' : ''}`}
-                onClick={() => setFilter(b)}
-              >
-                {b === 'all' ? 'All Products' : b === 'bmx' ? 'ButterflyMX' : b === 'akv' ? 'Akuvox' : 'DoorBird'}
-              </button>
-            ))}
-          </div>
+    <section className="section products" id="products">
+      <div className="wrap">
+        <div className="products-header reveal">
+          <div className="tag">Systems We Integrate</div>
+          <h2 className="h2">
+            The right hardware<br />for your building
+          </h2>
+        </div>
+        
+        <div className="integrator-note reveal" style={{ transitionDelay: '.1s' }}>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+            <circle cx="12" cy="12" r="10" />
+            <line x1="12" y1="8" x2="12" y2="12" />
+            <line x1="12" y1="16" x2="12.01" y2="16" />
+          </svg>
+          We are certified authorised integrators and resellers for each of the systems below. Our
+          role is to assess your building&apos;s specific requirements, recommend the most suitable
+          solution, then manage the complete process from supply and installation through to
+          long-term maintenance.
         </div>
 
-        <div className="gallery-grid reveal" style={{ transitionDelay: '.1s' }}>
-          {visible.map((c) => (
-            <div className={`g-card ${c.brand}`} key={`${c.brand}-${c.origIndex}`} data-brand={c.brand}>
-              <div className="g-img-area">
-                <div className="g-img-bg" />
-                <div className="g-badge">{c.badge}</div>
-                <div className="g-img-wrap">
-                  <Image
-                    src={c.image}
-                    alt={c.model}
-                    width={300} // Set fixed width
-                    height={500} // Set fixed height
-                    className="g-product-image"
-                  />
-                </div>
-                <Link href={c.href} className="g-view-btn">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
-                    <circle cx="12" cy="12" r="3" />
-                  </svg>
-                  View Product
-                </Link>
-                <div className="g-specs"><span className="g-spec">{c.spec}</span></div>
-                <span className="g-index">{String(c.origIndex + 1).padStart(2, '0')}</span>
+        {/* Filter Bar */}
+        <div className="prod-filter-bar reveal">
+          <button
+            className={`prod-filter-tab ${filter === 'all' ? 'active' : ''}`}
+            onClick={() => setFilter('all')}
+          >
+            All Hardware
+          </button>
+          <button
+            className={`prod-filter-tab ${filter === 'intercoms' ? 'active' : ''}`}
+            onClick={() => setFilter('intercoms')}
+          >
+            Intercoms
+          </button>
+          <button
+            className={`prod-filter-tab ${filter === 'access-control' ? 'active' : ''}`}
+            onClick={() => setFilter('access-control')}
+          >
+            Access Control
+          </button>
+          <button
+            className={`prod-filter-tab ${filter === 'apartment-stations' ? 'active' : ''}`}
+            onClick={() => setFilter('apartment-stations')}
+          >
+            Apartment Stations
+          </button>
+        </div>
+
+        {/* Dynamic Category Loop */}
+        <div className="compact-categories-wrapper">
+          {visibleCategories.map((category) => (
+            <div className="cat-group reveal in" key={category.id}>
+              
+              {/* Explicit Category Heading */}
+              <div className="cat-group-header">
+                <h3 className="cat-group-title">{category.title}</h3>
               </div>
-              <div className="g-info">
-                <div className="g-info-left">
-                  <div className="g-prod-brand">{c.brandLabel}</div>
-                  <div className="g-prod-model">{c.model}</div>
-                  <div className="g-prod-sub">{c.sub}</div>
-                </div>
-                <a href="#quote" className="g-info-btn">
-                  Quote
-                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                    <polyline points="12,5 19,12 12,19" />
-                  </svg>
-                </a>
+              
+              <div className="prod-grid">
+                {category.brands.map((p, pIdx) => (
+                  <div className="prod-card compact" key={`${category.id}-${p.brand}-${pIdx}`}>
+                    
+                    <div className="prod-image">
+                      <Image
+                        src={p.image}
+                        alt={p.brand}
+                        width={800}
+                        height={600}
+                        style={{ display: 'block', width: '100%', height: '100%', objectFit: 'contain', padding: '24px' }}
+                      />
+                    </div>
+                    
+                    <div className="prod-meta">
+                      <span className="prod-cert">{p.cert}</span>
+                    </div>
+                    
+                    <div className="prod-top">
+                      <div className="prod-brand">{p.brand}</div>
+                      <div className="prod-type">{p.type}</div>
+                    </div>
+                    
+                    {/* Divided Features Area */}
+                    <div className="prod-features-compact">
+                      {p.featureGroups.map((group, gIdx) => (
+                        <div className="feature-group" key={gIdx}>
+                          <div className="feature-group-label">{group.label}:</div>
+                          <div className="feature-chip-list">
+                            {group.items.map((feat) => (
+                              <span className="feature-chip" key={feat}>{feat}</span>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Exact match to 'All Products' card buttons */}
+                    <div className="ap-card-footer">
+                      <Link href={p.href} className="ap-card-cta">
+                        View Details
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
+                      </Link>
+                      <Link href="/contact" className="ap-card-quote">Quote</Link>
+                    </div>
+                    
+                  </div>
+                ))}
               </div>
             </div>
           ))}

@@ -9,7 +9,7 @@ const cards = [
     title: 'See Every Visitor Before You Open',
     body: 'HD video intercom lets residents and managers see and speak to any visitor before granting access — from their phone, from anywhere in the world. No more opening blind.',
     fact: 'Real-time HD video to any device',
-    image: '/images/solutions/solution-01.jpg',
+    image: '/images/solutions/solution-01.png',
   },
   {
     n: '02',
@@ -20,17 +20,17 @@ const cards = [
   },
   {
     n: '03',
-    title: 'Manage Access Remotely & Instantly',
-    body: 'Grant or revoke access credentials in seconds from any device. Onboarding a new tenant or locking out a former occupant takes moments — no site visit, no locksmith, no delay.',
-    fact: 'Zero on-site visits required',
-    image: '/images/solutions/solution-03.jpg',
-  },
-  {
-    n: '04',
     title: 'Zero-Touch Visitor Management',
     body: 'Issue temporary access codes for contractors, cleaners, or guests with defined time windows. Access expires automatically — no physical handover of keys, no loose ends.',
     fact: 'Auto-expiring access codes',
     image: '/images/solutions/solution-05.jpg',
+  },
+  {
+    n: '04',
+    title: 'Manage Access Remotely & Instantly',
+    body: 'Grant or revoke access credentials in seconds from any device. Onboarding a new tenant or locking out a former occupant takes moments — no site visit, no locksmith, no delay.',
+    fact: 'Zero on-site visits required',
+    image: '/images/solutions/solution-03.jpg',
   },
   {
     n: '05',
