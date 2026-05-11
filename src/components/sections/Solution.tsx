@@ -16,7 +16,7 @@ const cards = [
     title: 'Secure Deliveries & Complete Audit Trail',
     body: 'Couriers use a dedicated delivery PIN or QR code, while every entry event is logged — who, when, and how. Time-stamped video records provide irrefutable evidence for accountability, compliance, and dispute resolution.',
     fact: 'Time-stamped, court-admissible logs',
-    image: '/images/solutions/solution-02.jpg',
+    image: '/images/solutions/solution-01.jpg',
   },
   {
     n: '03',
