@@ -234,7 +234,7 @@ export default function Products() {
                         alt={p.brand}
                         width={800}
                         height={600}
-                        style={{ display: 'block', width: '100%', height: '115%', objectFit: 'cover', padding: '24px' }}
+                        style={{ display: 'block', width: '105%', height: '115%', objectFit: 'cover', padding: '24px' }}
                       />
                     </div>
                     
