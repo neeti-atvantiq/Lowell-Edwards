@@ -58,7 +58,7 @@ export default function Products() {
         <div className="products-header reveal">
           <div className="tag">Systems We Integrate</div>
           <h2 className="h2">
-            The right hardware<br />for your building
+            The right hardware for your building
           </h2>
         </div>
         <div className="integrator-note reveal" style={{ transitionDelay: '.1s' }}>

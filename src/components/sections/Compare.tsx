@@ -38,7 +38,7 @@ export default function Compare() {
       <div className="wrap">
         <div className="comp-header-section reveal">
           <div className="tag" style={{ justifyContent: 'center' }}>Product Comparison</div>
-          <h2 className="h2" style={{ textAlign: 'center' }}>Compare systems<br />side by side</h2>
+          <h2 className="h2" style={{ textAlign: 'center' }}>Compare systems side by side</h2>
           <p
             className="body-lg"
             style={{ textAlign: 'center', marginTop: 18, maxWidth: 480, marginLeft: 'auto', marginRight: 'auto' }}

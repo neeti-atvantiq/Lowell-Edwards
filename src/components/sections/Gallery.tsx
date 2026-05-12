@@ -70,7 +70,7 @@ const hardwareCategories = [
         brand: 'Akuvox',
         type: 'Smart Readers',
         image: 'https://www.akuvox.com/uploads/images/9d537ac8c4fcaea6a45dbe8ed0952389.png',
-        href: '/products/akuvox/access-control',
+        href: '/gallery/access_control/akuvox',
         featureGroups: [
           {
             label: 'General Features',
@@ -83,7 +83,7 @@ const hardwareCategories = [
         brand: 'ButterflyMX',
         type: 'Access Readers',
         image: 'https://butterflymx.com/wp-content/uploads/2023/02/butterflymx-single-gang-reader.png',
-        href: '/products/butterflymx/access-control',
+        href: '/gallery/access_control/butterfly',
         featureGroups: [
           {
             label: 'General Features',
@@ -164,17 +164,18 @@ export default function Products() {
     : hardwareCategories.filter(c => c.id === filter);
 
   return (
-    <section className="section products" id="products">
+    <section className="section gallery" id="products">
       <div className="wrap">
         <div className="products-header reveal">
           <div className="tag">Systems We Integrate</div>
           <h2 className="h2">
-            The right hardware<br />for your building
+            Explore the hardware
+            we <em className="em">supply & install</em>
           </h2>
         </div>
         
         <div className="integrator-note reveal" style={{ transitionDelay: '.1s' }}>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+          {/* <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
             <circle cx="12" cy="12" r="10" />
             <line x1="12" y1="8" x2="12" y2="12" />
             <line x1="12" y1="16" x2="12.01" y2="16" />
@@ -182,7 +183,7 @@ export default function Products() {
           We are certified authorised integrators and resellers for each of the systems below. Our
           role is to assess your building&apos;s specific requirements, recommend the most suitable
           solution, then manage the complete process from supply and installation through to
-          long-term maintenance.
+          long-term maintenance. */}
         </div>
 
         {/* Filter Bar */}

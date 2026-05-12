@@ -11,21 +11,22 @@ const cards = [
     fact: 'Real-time HD video to any device',
     image: '/images/solutions/solution-01.png',
   },
+  
   {
     n: '02',
-    title: 'Secure Deliveries & Complete Audit Trail',
-    body: 'Couriers use a dedicated delivery PIN or QR code, while every entry event is logged — who, when, and how. Time-stamped video records provide irrefutable evidence for accountability, compliance, and dispute resolution.',
-    fact: 'Time-stamped, court-admissible logs',
-    image: '/images/solutions/solution-01.jpg',
+    title: 'Secure Package & Visitor Management',
+    body: 'Couriers use a delivery PIN or QR code for secure package drop-off, with every delivery logged and time-stamped. Temporary access codes for guests or contractors expire automatically—no keys, no loose ends.',
+    fact: 'Time-stamped delivery & auto-expiring codes',
+    image: '/images/solutions/solution-02.jpg',
   },
   {
     n: '03',
-    title: 'Zero-Touch Visitor Management',
-    body: 'Issue temporary access codes for contractors, cleaners, or guests with defined time windows. Access expires automatically — no physical handover of keys, no loose ends.',
-    fact: 'Auto-expiring access codes',
-    image: '/images/solutions/solution-05.jpg',
+    title: 'Complete Audit Trail',
+    body: 'Every entry event is logged — who, when, and how. Time-stamped video records provide irrefutable evidence for insurance claims, tenant disputes, and compliance audits.',
+    fact: 'Court-admissible video logs',
+    image: '/images/solutions/solution-04.png',
   },
-  {
+{
     n: '04',
     title: 'Manage Access Remotely & Instantly',
     body: 'Grant or revoke access credentials in seconds from any device. Onboarding a new tenant or locking out a former occupant takes moments — no site visit, no locksmith, no delay.',

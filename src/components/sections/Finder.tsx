@@ -37,8 +37,8 @@ export default function Finder() {
           <div className="finder-grid">
             <div className="finder-text">
               <div className="tag">Intercom Finder</div>
-              <h2 className="h2">Find the right
-system for<em className="em"> your building
+              <h2 className="h2">Find the right<br />
+system for<em className="em"> your <br /> building
 </em></h2>
               <p className="body-lg">Answer three questions and we&apos;ll recommend the most suitable product and service tier — then generate a personalised quote from our team.</p>
               <div className="finder-trust">

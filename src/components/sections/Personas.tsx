@@ -119,7 +119,7 @@ export default function Personas() {
                 />
               </div>
               <div className="persona-top">
-                <div className="persona-icon">{p.icon}</div>
+                {/* <div className="persona-icon">{p.icon}</div> */}
                 <div className="persona-title">{p.title}</div>
                 <div className="persona-subtitle">{p.sub}</div>
               </div>
