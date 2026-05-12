@@ -78,7 +78,7 @@ export default function ComparePage() {
             <div className="inner-hero-content">
               <div className="tag">Platform Comparison</div>
               <h1 className="h2">
-                Compare leading systems by feature depth, fit, and long-term <em className="em">operational value</em>
+                Compare leading <br/>systems by feature depth, <br/>fit, and long-term <br/><em className="em">operational value</em>
               </h1>
               <p className="body-lg">
                 Every building profile is different. Use this expanded matrix as a decision guide,
@@ -111,7 +111,7 @@ export default function ComparePage() {
           <div className="narrative-intro-grid">
             <div>
               <div className="tag">Decision Guide</div>
-              <h2 className="h3">Choose by building profile, not by brand name alone</h2>
+              <h2 className="h3">Choose by building profile, not by <br/>brand name alone</h2>
             </div>
             <p className="body-lg narrative-intro-copy">
               The right platform depends on resident experience goals, integration depth,

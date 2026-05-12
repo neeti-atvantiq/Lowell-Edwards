@@ -74,7 +74,7 @@ export default function SolutionPage() {
             <div className="inner-hero-content">
               <div className="tag">Building Security Solution</div>
               <h1 className="h2">
-                One integrated system for entry, delivery, and <em className="em">daily control</em>
+                One integrated system <br/>for entry, delivery, and<br/> <em className="em">daily control</em>
               </h1>
               <p className="body-lg">
                 We design modern intercom and access control setups that solve the real problems
@@ -120,7 +120,7 @@ export default function SolutionPage() {
           <div className="narrative-intro-grid">
             <div>
               <div className="tag">Core Capabilities</div>
-              <h2 className="h3">Built around the workflows your teams run every day</h2>
+              <h2 className="h3">Built around the workflows your<br/> teams run every day</h2>
             </div>
             <p className="body-lg narrative-intro-copy">
               Rather than forcing a building to adapt to disconnected tools, we shape the system
@@ -161,7 +161,7 @@ export default function SolutionPage() {
         <div className="wrap">
           <div className="flow-header">
             <div className="tag">Implementation Approach</div>
-            <h2 className="h3">From survey to live handover with minimal disruption</h2>
+            <h2 className="h3">From survey to live handover with<br/> minimal disruption</h2>
           </div>
           <div className="flow-grid">
             <article className="flow-step">
