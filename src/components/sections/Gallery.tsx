@@ -12,7 +12,7 @@ const hardwareCategories = [
         cert: 'Authorised Partner',
         brand: 'Akuvox',
         type: 'AI Smart Intercom',
-        image: '/gallery/intercom/akuvox.png',
+        image: '/images/gallery/intercom/akuvox.png',
         href: '/products/akuvox/intercoms',
         featureGroups: [
           {
@@ -234,7 +234,7 @@ export default function Products() {
                         alt={p.brand}
                         width={800}
                         height={600}
-                        style={{ display: 'block', width: '100%', height: '115%', objectFit: 'cover', padding: '24px' }}
+                        style={{ display: 'block', width: '105%', height: '115%', objectFit: 'cover', padding: '24px' }}
                       />
                     </div>
                     
