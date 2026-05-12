@@ -12,7 +12,7 @@ const hardwareCategories = [
         cert: 'Authorised Partner',
         brand: 'Akuvox',
         type: 'AI Smart Intercom',
-        image: 'https://www.akuvox.com/uploads/202012/2020123119053400.png',
+        image: '/gallery/intercom/akuvox.png',
         href: '/products/akuvox/intercoms',
         featureGroups: [
           {
@@ -29,7 +29,7 @@ const hardwareCategories = [
         cert: 'Authorised Reseller',
         brand: 'ButterflyMX',
         type: 'Video Intercom',
-        image: 'https://butterflymx.com/wp-content/uploads/2021/11/11-surface-intercom-butterflymx-jpg.webp',
+        image: '/images/gallery/intercom/butterfly.png',
         href: '/products/butterflymx/intercoms',
         featureGroups: [
           {
@@ -46,7 +46,7 @@ const hardwareCategories = [
         cert: 'Certified Installer',
         brand: 'DoorBird',
         type: 'IP Video Station',
-        image: '/images/products/doorbird/D21DKV.jpeg',
+        image: '/images/gallery/intercom/doorbird.png',
         href: '/products/doorbird/intercoms',
         featureGroups: [
           {
@@ -69,8 +69,8 @@ const hardwareCategories = [
         cert: 'Authorised Partner',
         brand: 'Akuvox',
         type: 'Smart Readers',
-        image: 'https://www.akuvox.com/uploads/images/9d537ac8c4fcaea6a45dbe8ed0952389.png',
-        href: '/gallery/access_control/akuvox',
+        image: '/images/gallery/access_control/akuvok.jpeg',
+        href: '/products/akuvox/access-control',
         featureGroups: [
           {
             label: 'General Features',
@@ -82,8 +82,8 @@ const hardwareCategories = [
         cert: 'Authorised Reseller',
         brand: 'ButterflyMX',
         type: 'Access Readers',
-        image: 'https://butterflymx.com/wp-content/uploads/2023/02/butterflymx-single-gang-reader.png',
-        href: '/gallery/access_control/butterfly',
+        image: '/images/gallery/access_control/butterfly.png',
+        href: '/products/butterflymx/access-control',
         featureGroups: [
           {
             label: 'General Features',
@@ -95,7 +95,7 @@ const hardwareCategories = [
         cert: 'Certified Installer',
         brand: 'DoorBird',
         type: 'I/O Controllers',
-        image: 'https://www.doorbird.com/web-interface/media/productImage.php?ean=4260423860346',
+        image: '/images/gallery/access_control/doorbird.png',
         href: '/products/doorbird/access-control',
         featureGroups: [
           {
@@ -114,7 +114,7 @@ const hardwareCategories = [
         cert: 'Authorised Partner',
         brand: 'Akuvox',
         type: 'Indoor Monitors',
-        image: '/images/products/akuvox/S562.png',
+        image: '/images/gallery/aparment/akuvox.png',
         href: '/products/akuvox/apartment-stations',
         featureGroups: [
           {
@@ -127,7 +127,7 @@ const hardwareCategories = [
         cert: 'Certified Installer',
         brand: 'DoorBird',
         type: 'Indoor Stations',
-        image: '/images/products/doorbird/D1101KH.png',
+        image: '/images/gallery/aparment/doorbird.png',
         href: '/products/doorbird/apartment-stations',
         featureGroups: [
           {
@@ -234,7 +234,7 @@ export default function Products() {
                         alt={p.brand}
                         width={800}
                         height={600}
-                        style={{ display: 'block', width: '100%', height: '100%', objectFit: 'contain', padding: '24px' }}
+                        style={{ display: 'block', width: '100%', height: '115%', objectFit: 'cover', padding: '24px' }}
                       />
                     </div>
                     
