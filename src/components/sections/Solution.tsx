@@ -151,7 +151,6 @@ export default function Solution() {
               </div>
             ))}
           </div>
-
           {/* Right Arrow */}
           <button 
             onClick={() => scroll('right')} 
