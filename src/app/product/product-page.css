@@ -599,7 +599,7 @@
 /* ─── Brand cards ─── */
 .ap-brand-grid { display: grid; gap: 22px; }
 .ap-brand-grid-3 { grid-template-columns: repeat(3, 1fr); }
-.ap-brand-grid-2 { grid-template-columns: repeat(2, 1fr); max-width: 900px; }
+.ap-brand-grid-2 { grid-template-columns: repeat(2, 1fr); max-width: 900px; margin-inline: auto;  }
 .ap-brand-card { background: var(--bg); border: 1px solid var(--gborder2); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; text-decoration: none; transition: transform .4s var(--ease), border-color .35s, box-shadow .4s; position: relative; }
 .ap-brand-card::before { content: ''; position: absolute; top: -1px; left: -1px; width: 0; height: 3px; background: var(--gold); z-index: 2; transition: width .5s var(--ease); border-top-left-radius: 16px; }
 .ap-brand-card:hover { transform: translateY(-8px); border-color: rgba(122,36,38,.22); box-shadow: 0 32px 64px -32px rgba(26,26,46,.18); }
@@ -607,7 +607,7 @@
 
 .ap-brand-card-img { position: relative; width: 100%; aspect-ratio: 4/3; background: var(--bg2); display: flex; align-items: center; justify-content: center; overflow: hidden; border-bottom: 1px solid var(--gborder2); }
 .ap-brand-card-badge { position: absolute; top: 14px; left: 14px; font-family: var(--fb); font-size: 10px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--gold); background: var(--bg); padding: 4px 12px; border-radius: 100px; border: 1px solid var(--gborder2); z-index: 2; }
-.ap-brand-card-product { object-fit: contain; padding: 36px; transition: transform .6s var(--ease); }
+.ap-brand-card-product { object-fit: contain; padding: 36px; transition: transform .6s var(--ease); width: 100%; height: 100%;}
 .ap-brand-card:hover .ap-brand-card-product { transform: scale(1.07); }
 
 .ap-brand-card-body { padding: 24px; display: flex; flex-direction: column; gap: 16px; flex: 1; }

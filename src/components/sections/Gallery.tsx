@@ -224,7 +224,7 @@ export default function Products() {
                 <h3 className="cat-group-title">{category.title}</h3>
               </div>
               
-              <div className="prod-grid">
+              <div className={`prod-grid prod-grid-${category.brands.length}`}>
                 {category.brands.map((p, pIdx) => (
                   <div className="prod-card compact" key={`${category.id}-${p.brand}-${pIdx}`}>
                     

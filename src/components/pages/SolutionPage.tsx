@@ -9,7 +9,7 @@ const solutionStories = [
     body: 'HD video intercom lets residents and managers see and speak to any visitor before granting access from their phone, from anywhere in the world.',
     detail: 'This removes guesswork at the entrance and gives front-of-house teams, residents, and remote managers the same live context before a door is released.',
     fact: 'Real-time HD video to any device',
-    image: '/images/solutions/solution-01.jpg',
+    image: '/images/solutions/solution-01.png',
   },
   {
     n: '02',

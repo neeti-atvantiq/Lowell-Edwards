@@ -14,7 +14,7 @@ const solutionCategories = [
       {
         name: 'Akuvox',
         tagline: 'AI-powered face recognition entry',
-        image: 'https://www.akuvox.com/uploads/202012/2020123119053400.png',
+        image: '/images/gallery/intercom/akuvox.png',
         link: '/products/akuvox/intercoms',
         entryFeatures: ['App', 'Facial Recg', 'Fobs', 'Pin codes', 'BlueTooth', 'Landlines'],
         appFeatures: ['User pin codes', 'Delivery Pin codes', 'Guest Pin codes', 'User Add/Remove FAMILY & TENANTS']
@@ -22,7 +22,7 @@ const solutionCategories = [
       {
         name: 'ButterflyMX',
         tagline: 'Cloud-first smartphone video entry',
-        image: 'https://butterflymx.com/wp-content/uploads/2023/02/butterflymx-single-gang-reader.png',
+        image: '/images/gallery/intercom/butterfly.png',
         link: '/products/butterflymx/intercoms',
         entryFeatures: ['App', 'Fobs', 'Pin Codes', 'Landlines'],
         appFeatures: ['User Pin Codes', 'Delivery Pin Codes', 'Guest Pin Codes']
@@ -30,7 +30,7 @@ const solutionCategories = [
       {
         name: 'DoorBird',
         tagline: 'German-engineered premium IP intercoms',
-        image: '/images/products/doorbird/D21DKV.jpeg',
+        image: '/images/gallery/intercom/doorbird.png',
         link: '/products/doorbird/intercoms',
         entryFeatures: ['App', 'Fobs', 'Pin Codes (some models)'],
         appFeatures: ['Fix Pin codes on keypad models']
@@ -46,21 +46,21 @@ const solutionCategories = [
       {
         name: 'Akuvox',
         tagline: 'Multi-modal readers & controllers',
-        image: 'https://www.akuvox.com/uploads/images/9d537ac8c4fcaea6a45dbe8ed0952389.png',
+        image: '/images/gallery/access_control/akuvok.jpeg',
         link: '/products/akuvox/access-control',
         generalFeatures: ['Keypad', 'Fob', 'Bluetooth', 'Facial Rec', 'APP Integration', 'Shares Info']
       },
       {
         name: 'ButterflyMX',
         tagline: 'Unified cloud access platform',
-        image: 'https://butterflymx.com/wp-content/uploads/2023/02/butterflymx-single-gang-reader.png',
+        image: '/images/gallery/access_control/butterfly.png',
         link: '/products/butterflymx/access-control',
         generalFeatures: ['Keypad', 'Fob', 'APP Integration', 'Shares Info']
       },
       {
         name: 'DoorBird',
         tagline: 'AES-encrypted I/O controllers',
-        image: 'https://www.doorbird.com/web-interface/media/productImage.php?ean=4260423860346',
+        image: '/images/gallery/access_control/doorbird.png',
         link: '/products/doorbird/access-control',
         generalFeatures: ['Keypad', 'Fob', 'APP Integration', 'Independent']
       }
@@ -75,14 +75,14 @@ const solutionCategories = [
       {
         name: 'Akuvox',
         tagline: 'Smart screens from 7" to 10"',
-        image: '/images/products/akuvox/S562.png',
+        image: '/images/gallery/aparment/akuvox.png',
         link: '/products/akuvox/apartment-stations',
         generalFeatures: ['7" - 10" Screens', 'Doorbell option', 'View & Talk to Visitors', 'Retrofit friendly', 'Wired or WiFi']
       },
       {
         name: 'DoorBird',
         tagline: 'Premium indoor video panels',
-        image: '/images/products/doorbird/D1101KH.png',
+        image: '/images/gallery/aparment/doorbird.png',
         link: '/products/doorbird/apartment-stations',
         generalFeatures: ['4" & 7" Screens', 'View & Talk to visitors', 'Wired or WiFi']
       }
@@ -250,9 +250,10 @@ export default function SolutionsPage() {
                     <Image
                       src={brand.image}
                       alt={`${brand.name} ${category.title}`}
-                      fill
                       className="ap-brand-card-product"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      width={800}
+                      height={600}
+                      style={{ objectFit: 'cover', padding: '30px', width: '100%', height: '100%' }}
                     />
                   </div>
                   <div className="ap-brand-card-body">
