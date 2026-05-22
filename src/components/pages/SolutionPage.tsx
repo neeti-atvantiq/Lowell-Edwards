@@ -14,11 +14,11 @@ const solutionStories = [
   {
     n: '02',
     eyebrow: 'Delivery Control',
-    title: 'Secure Package Delivery, Every Time',
-    body: 'Couriers use a dedicated delivery PIN or QR code. Every delivery is logged with time-stamped video evidence for complete accountability.',
-    detail: 'Instead of relying on manual handover or unsecured lobbies, buildings gain a controlled process with clear records for residents and management teams.',
+    title: 'Secure Package & Visitor Management',
+    body: 'Couriers use a delivery PIN or QR code for secure package drop-off, with every delivery logged and time-stamped. Temporary access codes for guests or contractors expire automatically—no keys, no loose ends.',
+    detail: 'This keeps keys out of circulation and reduces friction for recurring services while preserving tighter control over when access starts and stops.',
     fact: 'Time-stamped delivery proof',
-    image: '/images/solutions/solution-02.jpg',
+    image: '/images/solutions/solution-02.png',
   },
   {
     n: '03',
@@ -45,16 +45,7 @@ const solutionStories = [
     body: 'Issue temporary access codes for contractors, cleaners, and guests with defined time windows so access expires automatically.',
     detail: 'This keeps keys out of circulation and reduces friction for recurring services while preserving tighter control over when access starts and stops.',
     fact: 'Auto-expiring access credentials',
-    image: '/images/solutions/solution-05.jpg',
-  },
-  {
-    n: '06',
-    eyebrow: 'Premium Entry Experience',
-    title: 'Touchless Face Recognition Entry',
-    body: 'For premium buildings, AI-powered face recognition offers fast keyless entry for approved residents and trusted staff.',
-    detail: 'Used selectively in the right environments, it creates a high-end arrival experience while keeping access practical, secure, and easy to manage.',
-    fact: 'AI-powered hygienic entry',
-    image: '/images/solutions/solution-06.jpg',
+    image: '/images/solutions/solution-05.png',
   },
 ];
 

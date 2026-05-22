@@ -22,19 +22,19 @@ const fitCards = [
     brand: 'ButterflyMX',
     tag: 'Most Popular',
     body: 'Best for multifamily and mixed-use buildings prioritizing resident app adoption and delivery workflows.',
-    image: '/images/products/butterfly.jpg',
+    image: '/images/products/butterfly_img.png',
   },
   {
     brand: 'Akuvox',
     tag: 'Enterprise',
     body: 'Ideal for complex sites needing broader integration capabilities, portfolio control, and advanced credentialing.',
-    image: '/images/products/akuvox.jpg',
+    image: '/images/products/akuvox_img.png',
   },
   {
     brand: 'DoorBird',
     tag: 'Premium Design',
     body: 'Great for design-led projects that need robust access control with high-end architectural presentation.',
-    image: '/images/products/doorbird.jpg',
+    image: '/images/products/doorbird_img.jpg',
   },
 ];
 

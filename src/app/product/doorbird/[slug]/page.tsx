@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import DoorBirdProductPage from '@/components/pages/DoorBirdProductPage';
 import { products } from '@/data/products';
 
-const doorbirdSlugs = ['d101s-ip-station', 'd2101v-surface-station', 'd210x-push-button', 'd21dkv-keypad-station', 'd21dkh-horizontal-keypad', 'd1101kh-indoor-station'];
+const doorbirdSlugs = ['d31tdh-display', 'a1121-access-controller', 'a1101-indoor-station'];
 
 export function generateStaticParams() {
   return doorbirdSlugs.map((slug) => ({ slug }));
@@ -13,6 +13,7 @@ type Props = { params: Promise<{ slug: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
+  if (!doorbirdSlugs.includes(slug)) return {};
   const product = products[`doorbird/${slug}`];
   if (!product) return {};
   return {
@@ -23,6 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function Page({ params }: Props) {
   const { slug } = await params;
+  if (!doorbirdSlugs.includes(slug)) notFound();
   const product = products[`doorbird/${slug}`];
   if (!product) notFound();
   return <DoorBirdProductPage product={product} />;

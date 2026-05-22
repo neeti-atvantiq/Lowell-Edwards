@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import AkuvoxProductPage from '@/components/pages/AkuvoxProductPage';
 import { products } from '@/data/products';
 
-const akuvoxSlugs = ['r29-face-recognition', 'e16c-multi-tenant-station', 'x915-flagship-panel', 'x912-intercom-panel', 's532-body-temperature', 'c313-indoor-monitor', 's562-indoor-station', 'a02s-indoor-phone', 'smartplus-app'];
+const akuvoxSlugs = ['x915-flagship-panel', 'x912-intercom-panel', 's532-body-temperature', 'a02s-indoor-phone', 'a08-access-controller', 'a01-access-controller', 's562-indoor-station', 'c313-indoor-monitor'];
 
 export function generateStaticParams() {
   return akuvoxSlugs.map((slug) => ({ slug }));
@@ -13,6 +13,7 @@ type Props = { params: Promise<{ slug: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
+  if (!akuvoxSlugs.includes(slug)) return {};
   const product = products[`akuvox/${slug}`];
   if (!product) return {};
   return {
@@ -23,6 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function Page({ params }: Props) {
   const { slug } = await params;
+  if (!akuvoxSlugs.includes(slug)) notFound();
   const product = products[`akuvox/${slug}`];
   if (!product) notFound();
   return <AkuvoxProductPage product={product} />;

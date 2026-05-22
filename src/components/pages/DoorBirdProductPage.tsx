@@ -301,7 +301,7 @@ export default function DoorBirdProductPage({ product }: { product: ProductData 
 
           <div className="pp-inst-grid reveal">
             {[
-              { title: 'Mayfair House · Private Residence', location: 'D2101V · brass finish · recessed flush mount', image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&h=900&q=80&auto=format&fit=crop', featured: true },
+              { title: 'Mayfair House · Private Residence', location: 'Brass finish · recessed flush mount', image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&h=900&q=80&auto=format&fit=crop', featured: true },
               { title: 'The Old Rectory · Cotswolds', location: 'Stone gatepost integration', image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&h=600&q=80&auto=format&fit=crop' },
               { title: 'Hartford Boutique · Edinburgh', location: 'Hospitality · 12 rooms · brand engraved', image: 'https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&h=600&q=80&auto=format&fit=crop' },
               { title: 'Belgravia Townhouse · London', location: 'Grade II listed · bronze finish', image: 'https://images.unsplash.com/photo-1480796927426-f609979314bd?w=600&h=600&q=80&auto=format&fit=crop' },

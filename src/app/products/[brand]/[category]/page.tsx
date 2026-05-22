@@ -7,13 +7,11 @@ const validRoutes = [
   { brand: 'akuvox', category: 'intercoms' },
   { brand: 'akuvox', category: 'access-control' },
   { brand: 'akuvox', category: 'apartment-stations' },
-  { brand: 'akuvox', category: 'software' },
   { brand: 'butterflymx', category: 'intercoms' },
   { brand: 'butterflymx', category: 'access-control' },
   { brand: 'doorbird', category: 'intercoms' },
   { brand: 'doorbird', category: 'access-control' },
   { brand: 'doorbird', category: 'apartment-stations' },
-  { brand: 'doorbird', category: 'software' },
 ];
 
 export function generateStaticParams() {
@@ -24,6 +22,8 @@ type Props = { params: Promise<{ brand: string; category: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { brand, category } = await params;
+  const isValidRoute = validRoutes.some((route) => route.brand === brand && route.category === category);
+  if (!isValidRoute) return {};
   const key = `${brand}/${category}`;
   const cat = categories[key];
   if (!cat) return {};
@@ -35,6 +35,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function Page({ params }: Props) {
   const { brand, category } = await params;
+  const isValidRoute = validRoutes.some((route) => route.brand === brand && route.category === category);
+  if (!isValidRoute) notFound();
   const key = `${brand}/${category}`;
   const cat = categories[key];
   if (!cat) notFound();

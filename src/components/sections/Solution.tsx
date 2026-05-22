@@ -17,14 +17,14 @@ const cards = [
     title: 'Secure Package & Visitor Management',
     body: 'Couriers use a delivery PIN or QR code for secure package drop-off, with every delivery logged and time-stamped. Temporary access codes for guests or contractors expire automatically—no keys, no loose ends.',
     fact: 'Time-stamped delivery & auto-expiring codes',
-    image: '/images/solutions/solution-02.jpg',
+    image: '/images/solutions/solution-02.png',
   },
   {
     n: '03',
     title: 'Complete Audit Trail',
     body: 'Every entry event is logged — who, when, and how. Time-stamped video records provide irrefutable evidence for insurance claims, tenant disputes, and compliance audits.',
     fact: 'Court-admissible video logs',
-    image: '/images/solutions/solution-04.png',
+    image: '/images/solutions/solution-04.jpg',
   },
 {
     n: '04',
@@ -38,7 +38,7 @@ const cards = [
     title: 'Touchless Face Recognition Entry',
     body: 'For premium buildings, AI-powered face recognition provides frictionless, keyless entry for registered residents — secure, hygienic, and effortlessly modern.',
     fact: 'AI-powered, hygienic entry',
-    image: '/images/solutions/solution-06.jpg',
+    image: '/images/solutions/solution-05.png',
   },
 ];
 

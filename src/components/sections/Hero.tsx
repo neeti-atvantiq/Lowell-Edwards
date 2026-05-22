@@ -2,7 +2,7 @@ import ImageSlider from '@/components/ui/ImageSlider';
 
 const heroImages = [
   '/images/hero/hero1.png',
-  '/images/hero/hero2.jpeg',
+  '/images/hero/hero2.png',
   '/images/hero/hero3.png',
 ];
 

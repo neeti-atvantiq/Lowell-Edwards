@@ -18,7 +18,7 @@ export default function Footer() {
               Lowell Edwards<span style={{ color: 'var(--gold)' }}>.</span>
             </div>
             <p>
-              Certified authorised integrators for leading video intercom and access control systems. Supplying, installing, and maintaining building security solutions across the UK.
+              Certified authorised integrators for leading video intercom and access control systems. Supplying, installing, and maintaining building security solutions.
 
 
             </p>

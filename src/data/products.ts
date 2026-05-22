@@ -141,7 +141,7 @@ export const categories: Record<string, CategoryData> = {
     brandSlug: 'akuvox',
     categorySlug: 'access-control',
     heroImage: 'https://www.akuvox.com/uploads/images/9d537ac8c4fcaea6a45dbe8ed0952389.png',
-    products: ['akuvox/a02s-indoor-phone', 'akuvox/a08-access-controller', 'akuvox/a094-access-controller'],
+    products: ['akuvox/a02s-indoor-phone', 'akuvox/a08-access-controller', 'akuvox/a01-access-controller'],
     highlights: [
       { value: '50,000', label: 'User capacity' },
       { value: 'Cloud', label: 'Managed' },
@@ -397,8 +397,8 @@ export const categories: Record<string, CategoryData> = {
     brandName: 'DoorBird',
     brandSlug: 'doorbird',
     categorySlug: 'intercoms',
-    heroImage: '/images/products/doorbird/D21DKV.jpeg',
-    products: ['doorbird/d210x-push-button', 'doorbird/d21dkv-keypad-station', 'doorbird/d21dkh-horizontal-keypad', 'doorbird/d31tdh-display'],
+    heroImage: 'https://www.doorbird.com/web-interface/media/productImage.php?ean=4251489601011',
+    products: ['doorbird/d31tdh-display'],
     highlights: [
       { value: 'V4A steel', label: 'Marine-grade' },
       { value: '4K UHD', label: 'Camera' },
@@ -462,8 +462,8 @@ export const categories: Record<string, CategoryData> = {
     brandName: 'DoorBird',
     brandSlug: 'doorbird',
     categorySlug: 'access-control',
-    heroImage: 'https://www.doorbird.com/web-interface/media/productImage.php?ean=4260423860346',
-    products: ['doorbird/a1081-access-controller'],
+    heroImage: 'https://www.doorbird.com/shop/media/4260423872028/A1121_surface_steel_front.png',
+    products: ['doorbird/a1121-access-controller'],
     highlights: [
       { value: 'AES-128', label: 'Encryption' },
       { value: '3 relays', label: 'Per controller' },
@@ -526,8 +526,8 @@ export const categories: Record<string, CategoryData> = {
     brandName: 'DoorBird',
     brandSlug: 'doorbird',
     categorySlug: 'apartment-stations',
-    heroImage: '/images/products/doorbird/D1101KH.png',
-    products: ['doorbird/d1101kh-indoor-station'],
+    heroImage: 'https://www.doorbird.com/shop/media/4260423860902/A1101_Indoor_Station_rgb.jpg',
+    products: ['doorbird/a1101-indoor-station'],
     highlights: [
       { value: 'HD video', label: 'Live feed' },
       { value: 'PoE', label: 'Single cable' },
@@ -916,16 +916,16 @@ export const products: Record<string, ProductData> = {
     ],
   },
 
-  'doorbird/d1101kh-indoor-station': {
-    slug: 'd1101kh-indoor-station',
+  'doorbird/a1101-indoor-station': {
+    slug: 'a1101-indoor-station',
     brand: 'DoorBird',
     brandSlug: 'doorbird',
-    model: 'D1101KH Indoor Station',
+    model: 'A1101 Apartment Station',
     eyebrow: 'DoorBird · Premium — Stainless Steel IP Video Station',
     title: 'German-engineered stainless steel doorbell with IP65 resilience.',
     tagline: '— the premium smart doorbell for architecturally-conscious homes.',
-    description: 'The DoorBird D1101KH is a surface-mounted IP video door station crafted from V4A marine-grade stainless steel. With a 180° fisheye camera, native HomeKit/KNX/Control4 integration, and IP65 weatherproofing, it\'s the smart doorbell for premium residential properties.',
-    image: '/images/products/doorbird/D1101KH.png',
+    description: 'The DoorBird A1101 is a premium indoor apartment station with live video, two-way audio, and one-tap unlock. It pairs with DoorBird intercom systems to give residents an always-available in-unit panel without relying on smartphones.',
+    image: 'https://www.doorbird.com/shop/media/4260423860902/DoorBird_A1101_indoor-station_rgb.jpg',
     meta: [
       { value: '180', unit: '°', label: 'Fisheye camera' },
       { value: 'IP65', unit: '', label: 'Weather sealed' },
@@ -971,7 +971,7 @@ export const products: Record<string, ProductData> = {
     ],
     comparison: {
       headers: [
-        { brand: 'DoorBird D101S', tag: 'Premium · IP', featured: true },
+        { brand: 'DoorBird A1101', tag: 'Premium · Indoor', featured: true },
         { brand: 'Ring / Nest', tag: 'Consumer' },
         { brand: 'Generic IP Doorbell', tag: 'Budget' },
       ],
@@ -993,8 +993,8 @@ export const products: Record<string, ProductData> = {
     faqs: [
       { question: 'Does it require a cloud subscription?', answer: 'No. DoorBird stores video events locally on-device. The free DoorBird app provides remote access, push notifications, and live view — no monthly fees ever.' },
       { question: 'Does it work with Apple HomeKit?', answer: 'Yes — native HomeKit Secure Video support is built in. You can view the camera in the Apple Home app, get rich notifications, and use it in automations.' },
-      { question: 'What finishes are available?', answer: 'The D101S comes in brushed stainless steel as standard. DoorBird also offers RAL powder-coated options (50+ colours) and brass/titanium finishes for custom projects.' },
-      { question: 'Can it control a gate and a door?', answer: 'Yes — the D101S has multiple relay outputs. One can control an electric strike (front door) while another triggers a gate motor. Both are controllable from the app.' },
+      { question: 'What finishes are available?', answer: 'The A1101 is available in premium finishes including brushed options and selected custom variants for high-end projects.' },
+      { question: 'Can it control a gate and a door?', answer: 'The A1101 works with paired DoorBird systems, so residents can trigger approved doors and gates directly from the station interface.' },
       { question: 'How does it compare to Ring or Nest?', answer: 'DoorBird is a professional-grade IP device — wired power (no battery), stainless steel, open API, and local storage. Ring/Nest are consumer products with plastic housings, batteries, and mandatory cloud subscriptions.' },
     ],
   },
@@ -1076,7 +1076,7 @@ export const products: Record<string, ProductData> = {
       { quote: 'The combination of face + fingerprint for our server room gives us the multi-factor we needed without slowing anyone down.', name: 'Michael Torres', role: 'IT Director · DataSecure Ltd', initials: 'MT' },
     ],
     faqs: [
-      { question: 'What makes the X915 different from the R29?', answer: 'The X915 has a tri-camera system (RGB + IR + ToF) for true 3D face recognition, a 10" display vs 7", 50,000 face capacity vs 10,000, fingerprint reader, Wi-Fi 6, and a dedicated NPU. It\'s the flagship vs the mid-range.' },
+      { question: 'What makes the X915 a flagship model?', answer: 'The X915 combines tri-camera 3D anti-spoofing, a 10" display, 50,000 face capacity, fingerprint support, Wi-Fi 6, and a dedicated NPU for high-performance on-device recognition.' },
       { question: 'Can it detect masks and photos?', answer: 'Yes. The ToF (Time-of-Flight) depth sensor creates a 3D map of the face in real-time. Flat images (photos, screens) and masks are immediately detected and rejected.' },
       { question: 'Does it work without internet?', answer: 'Absolutely. All AI processing happens on-device. The panel works completely offline — internet is only needed for remote management and smartphone app notifications.' },
       { question: 'How long does face enrollment take?', answer: 'Under 3 seconds per person. Residents simply look at the camera from 1 metre away. Bulk enrollment is also supported via admin upload of photos.' },
@@ -1313,11 +1313,11 @@ export const products: Record<string, ProductData> = {
     },
     testimonials: [
       { quote: 'Our elderly residents love the C313 — big screen, simple buttons, always on. No smartphone gymnastics needed.', name: 'Karen Price', role: 'Warden · Elm Court Sheltered Housing', initials: 'KP' },
-      { quote: 'Installed in every unit of our 80-apartment building. Pairs perfectly with the R29 at the front door.', name: 'David Okonkwo', role: 'Property Director · Greenfield Residences', initials: 'DO' },
+      { quote: 'Installed in every unit of our 80-apartment building. Pairs perfectly with our Akuvox entry system at the front door.', name: 'David Okonkwo', role: 'Property Director · Greenfield Residences', initials: 'DO' },
       { quote: 'The concierge uses the C313 to monitor all entry points. One screen, all doors, total visibility.', name: 'Maria Santos', role: 'Building Manager · Skyline Tower', initials: 'MS' },
     ],
     faqs: [
-      { question: 'Does it work with all Akuvox door stations?', answer: 'Yes — the C313 is compatible with the entire Akuvox outdoor range including R29, E16C, X915, X912, and S532.' },
+      { question: 'Does it work with all Akuvox door stations?', answer: 'Yes — the C313 is compatible with Akuvox door station deployments used across our intercom range.' },
       { question: 'Can I still use the smartphone app?', answer: 'Absolutely. The C313 and smartphone app work simultaneously — calls ring on both. Whichever you answer first takes the call.' },
       { question: 'Is it PoE or does it need a separate power supply?', answer: 'PoE is standard — one ethernet cable provides both power and data. A 12V DC adapter is available as an alternative for locations without PoE switches.' },
     ],
@@ -1807,7 +1807,7 @@ export const products: Record<string, ProductData> = {
     eyebrow: 'Akuvox · Enterprise — 2-Door Controller',
     title: 'Professional cloud-based 2-door access controller.',
     tagline: '— high-security door management with full offline redundancy.',
-    description: 'The A08 is a smart, cloud-based access control unit that manages up to 2 doors. It connects seamlessly to Wiegand or RS485 readers and integrates with the Akuvox SmartPlus cloud for remote management across multiple sites.',
+    description: 'The A08 is a smart, cloud-based access control unit that manages up to 2 doors. It connects seamlessly to Wiegand or RS485 readers and integrates with the Akuvox cloud platform for remote management across multiple sites.',
     image: 'https://www.akuvox.com/uploads/images/9d537ac8c4fcaea6a45dbe8ed0952389.png',
     meta: [
       { value: '2', unit: 'Door', label: 'Management' },
@@ -1867,20 +1867,20 @@ export const products: Record<string, ProductData> = {
     ],
     faqs: [
       { question: 'Can I use my existing key fobs?', answer: 'Yes, if your existing readers output standard Wiegand (26/34 bit) or OSDP via RS485, the A08 can interface with them and read your existing credentials.' },
-      { question: 'Do I need an on-site server?', answer: 'No. The A08 connects directly to the Akuvox SmartPlus Cloud. All administration is done via a secure web browser.' },
+      { question: 'Do I need an on-site server?', answer: 'No. The A08 connects directly to the Akuvox cloud platform. All administration is done via a secure web browser.' },
     ],
   },
 
-  'akuvox/a094-access-controller': {
-    slug: 'a094-access-controller',
+  'akuvox/a01-access-controller': {
+    slug: 'a01-access-controller',
     brand: 'Akuvox',
     brandSlug: 'akuvox',
-    model: 'A094 Access Controller',
+    model: 'A01 Access Controller',
     eyebrow: 'Akuvox · Infrastructure — 4-Door Controller',
     title: 'The powerhouse of building security.',
     tagline: '— unified control for 4 doors in a single DIN-rail mountable unit.',
-    description: 'The A094 is a professional-grade 4-door access controller designed for medium to large enterprises. It features high-capacity storage, global anti-passback, and extensive I/O for fire alarms and auxiliary sensors.',
-    image: 'https://www.akuvox.com/uploads/202301/2023011116260311.png',
+    description: 'The A01 is a professional-grade 4-door access controller designed for medium to large enterprises. It features high-capacity storage, global anti-passback, and extensive I/O for fire alarms and auxiliary sensors.',
+    image: 'https://www.akuvox.com/uploads/202107/2021070813551430.png',
     meta: [
       { value: '4', unit: 'Door', label: 'Control' },
       { value: '50,000', unit: '', label: 'Card capacity' },
@@ -1899,7 +1899,7 @@ export const products: Record<string, ProductData> = {
        { tag: 'MULTI-READER', title: 'Comprehensive I/O.', body: 'Connect up to 4 Wiegand readers or an array of RS485/OSDP readers. Includes dedicated inputs for exit buttons, door sensors, and fire alarms.', icon: 'integration' },
     ],
     useCases: [
-      { mark: 'Corporate HQ', title: 'Enterprise access.', desc: 'Manage hundreds of employees across multiple floors. The A094 scales easily by networking multiple units together via the cloud.', stats: [{ value: '50k', label: 'Users' }, { value: 'Advanced', label: 'Access logic' }] },
+      { mark: 'Corporate HQ', title: 'Enterprise access.', desc: 'Manage hundreds of employees across multiple floors. The A01 scales easily by networking multiple units together via the cloud.', stats: [{ value: '50k', label: 'Users' }, { value: 'Advanced', label: 'Access logic' }] },
       { mark: 'Data Centres', title: 'High-security environments.', desc: 'Utilise the interlocking (mantrap) features to ensure only one secure door is open at a time in sensitive server areas.', stats: [{ value: 'Mantrap', label: 'Support' }, { value: 'OSDP', label: 'Encryption' }] },
     ],
     specs: [
@@ -1919,7 +1919,7 @@ export const products: Record<string, ProductData> = {
     ],
     comparison: {
       headers: [
-        { brand: 'Akuvox A094', tag: '4-Door Enterprise', featured: true },
+        { brand: 'Akuvox A01', tag: '4-Door Enterprise', featured: true },
         { brand: 'Akuvox A08', tag: '2-Door Compact' },
         { brand: 'Legacy Panel', tag: 'Serial RS485' },
       ],
@@ -1931,11 +1931,11 @@ export const products: Record<string, ProductData> = {
       ],
     },
     testimonials: [
-      { quote: 'The A094 is our go-to for commercial fit-outs. It fits perfectly into standard electrical enclosures and the wiring layout is incredibly logical.', name: 'Mark Evans', role: 'Security Integrator', initials: 'ME' },
+      { quote: 'The A01 is our go-to for commercial fit-outs. It fits perfectly into standard electrical enclosures and the wiring layout is incredibly logical.', name: 'Mark Evans', role: 'Security Integrator', initials: 'ME' },
     ],
     faqs: [
       { question: 'What is anti-passback?', answer: 'Anti-passback prevents a user from passing their card back to another person to use. The system requires an "exit" swipe before it will accept another "entry" swipe from the same card.' },
-      { question: 'Does it supply power to the locks?', answer: 'The A094 provides dry contact relays. You will need a separate, appropriately rated power supply for your magnetic locks or electric strikes.' },
+      { question: 'Does it supply power to the locks?', answer: 'The A01 provides dry contact relays. You will need a separate, appropriately rated power supply for your magnetic locks or electric strikes.' },
     ],
   },
 
@@ -1988,7 +1988,7 @@ export const products: Record<string, ProductData> = {
     comparison: {
       headers: [
         { brand: 'DoorBird D31TDH', tag: 'Touch Directory', featured: true },
-        { brand: 'DoorBird D210X', tag: 'Push Button' },
+        { brand: 'Legacy Push-Button Panel', tag: 'Button Directory' },
         { brand: 'Generic Touch Panel', tag: 'Plastic Build' },
       ],
       rows: [
@@ -2148,16 +2148,16 @@ export const products: Record<string, ProductData> = {
       { question: 'Do I need the app if I have an indoor station?', answer: 'No, but they work great together. You can use the physical indoor station while at home, and rely on the smartphone app when you are out in the garden or at work.' },
     ],
   },
-  'doorbird/a1081-access-controller': {
-    slug: 'a1081-access-controller',
+  'doorbird/a1121-access-controller': {
+    slug: 'a1121-access-controller',
     brand: 'DoorBird',
     brandSlug: 'doorbird',
-    model: 'A1081 Network I/O Controller',
+    model: 'A1121 Network I/O Controller',
     eyebrow: 'DoorBird · Security — Encrypted Door Controller',
     title: 'Tamper-proof security for your doors and gates.',
     tagline: '— keep the switching relays safely inside the building.',
-    description: 'The DoorBird A1081 is an IP I/O Door Controller that provides tamper-proof control of your doors, gates, and elevators. Mounted securely inside the building, it communicates with your exterior DoorBird intercom via encrypted network traffic, ensuring that ripping the intercom off the wall cannot trigger the door strike.',
-    image: 'https://www.doorbird.com/web-interface/media/productImage.php?ean=4260423860346',
+    description: 'The DoorBird A1121 is an IP I/O Door Controller that provides tamper-proof control of your doors, gates, and elevators. Mounted securely inside the building, it communicates with your exterior DoorBird intercom via encrypted network traffic, ensuring that ripping the intercom off the wall cannot trigger the door strike.',
+    image: 'https://www.doorbird.com/shop/media/4260423872059/4260423872066.png',
     meta: [
       { value: '3', unit: '', label: 'Relay outputs' },
       { value: 'AES', unit: '', label: 'Encrypted' },
@@ -2170,14 +2170,14 @@ export const products: Record<string, ProductData> = {
       { value: '128-bit', unit: '', label: 'Encryption' },
     ],
     features: [
-      { tag: 'TAMPER PROOF', title: 'Relays stay inside.', body: 'By placing the A1081 securely inside the building, you separate the physical door strike wiring from the exterior intercom panel. Sabotaging the outdoor panel will not open the door.', icon: 'shield' },
+      { tag: 'TAMPER PROOF', title: 'Relays stay inside.', body: 'By placing the A1121 securely inside the building, you separate the physical door strike wiring from the exterior intercom panel. Sabotaging the outdoor panel will not open the door.', icon: 'shield' },
       { tag: 'NETWORKED', title: 'Encrypted IP communication.', body: 'Communicates with the DoorBird intercom over your local network using AES-128 encryption. No direct wiring required between the intercom and the door controller.', icon: 'integration' },
       { tag: 'MULTI-RELAY', title: 'Control up to three doors.', body: 'Features three independently configurable relays. Use one for the pedestrian gate, one for the driveway gate, and one for a garage door—all triggered from the app.', icon: 'layout' },
       { tag: 'SMART INTEGRATION', title: 'HTTP API and Smart Home.', body: 'Can be triggered by third-party smart home systems, smart locks, or custom API calls independently of the intercom panel.', icon: 'cloud' },
     ],
     useCases: [
       { mark: 'High Security', title: 'Tamper-resistant entries.', desc: 'For street-facing gates and doors where vandalism is a risk. Keeps the physical unlocking mechanism out of reach from intruders.', stats: [{ value: 'Inside', label: 'Mounting' }, { value: 'Zero', label: 'Exposed wires' }] },
-      { mark: 'Gate Automation', title: 'Complex gate systems.', desc: 'Mount the A1081 near the gate motor controller inside the property, connected via standard Ethernet, eliminating long analog wire runs to the intercom.', stats: [{ value: 'PoE', label: 'Network' }, { value: '3', label: 'Outputs' }] },
+      { mark: 'Gate Automation', title: 'Complex gate systems.', desc: 'Mount the A1121 near the gate motor controller inside the property, connected via standard Ethernet, eliminating long analog wire runs to the intercom.', stats: [{ value: 'PoE', label: 'Network' }, { value: '3', label: 'Outputs' }] },
       { mark: 'Elevator Control', title: 'Call the lift.', desc: 'Use one of the relays to trigger an elevator call when a resident unlocks the front door, ensuring the lift is waiting for them.', stats: [{ value: 'Custom', label: 'Triggers' }, { value: 'API', label: 'Support' }] },
     ],
     specs: [
@@ -2198,7 +2198,7 @@ export const products: Record<string, ProductData> = {
     ],
     comparison: {
       headers: [
-        { brand: 'DoorBird A1081', tag: 'Network / Encrypted', featured: true },
+        { brand: 'DoorBird A1121', tag: 'Network / Encrypted', featured: true },
         { brand: 'Direct Wiring', tag: 'Vulnerable' },
         { brand: 'Standard Relay', tag: 'Analog' },
       ],
@@ -2211,12 +2211,12 @@ export const products: Record<string, ProductData> = {
       ],
     },
     testimonials: [
-      { quote: 'We never wire the door strike directly to the outdoor panel on street-facing properties. The A1081 goes in the comms rack, completely securing the building perimeter.', name: 'Richard Hale', role: 'Security Integrator', initials: 'RH' },
+      { quote: 'We never wire the door strike directly to the outdoor panel on street-facing properties. The A1121 goes in the comms rack, completely securing the building perimeter.', name: 'Richard Hale', role: 'Security Integrator', initials: 'RH' },
       { quote: 'Used the three relays to control the pedestrian gate, the main driveway gates, and the garage door. All connected to one DoorBird intercom on the street.', name: 'Marcus D.', role: 'Homeowner', initials: 'MD' },
     ],
     faqs: [
-      { question: 'Why do I need this instead of wiring the lock to the intercom?', answer: 'Wiring a lock directly to an outdoor intercom means if a thief removes the intercom from the wall, they can short the wires and open the door. The A1081 moves the switching relay inside the secure area of the building, preventing this attack.' },
-      { question: 'Can I use multiple A1081 controllers?', answer: 'Yes, you can pair multiple A1081 controllers to a single DoorBird door station over the network, allowing you to control many doors or gates from one intercom.' },
+      { question: 'Why do I need this instead of wiring the lock to the intercom?', answer: 'Wiring a lock directly to an outdoor intercom means if a thief removes the intercom from the wall, they can short the wires and open the door. The A1121 moves the switching relay inside the secure area of the building, preventing this attack.' },
+      { question: 'Can I use multiple A1121 controllers?', answer: 'Yes, you can pair multiple A1121 controllers to a single DoorBird door station over the network, allowing you to control many doors or gates from one intercom.' },
       { question: 'Does it work with standard electric strikes?', answer: 'Yes, the relays can switch any standard low-voltage electric strike or magnetic lock (up to 24V DC / 1A).' },
     ],
   },

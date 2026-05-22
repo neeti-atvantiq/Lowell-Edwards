@@ -46,7 +46,7 @@ const hardwareCategories = [
         cert: 'Certified Installer',
         brand: 'DoorBird',
         type: 'IP Video Station',
-        image: '/images/gallery/intercom/doorbird.png',
+        image: '/images/gallery/intercom/doorbird.jpg',
         href: '/products/doorbird/intercoms',
         featureGroups: [
           {
@@ -69,7 +69,7 @@ const hardwareCategories = [
         cert: 'Authorised Partner',
         brand: 'Akuvox',
         type: 'Smart Readers',
-        image: '/images/gallery/access_control/akuvok.jpeg',
+        image: '/images/gallery/access_control/akuvox.png',
         href: '/products/akuvox/access-control',
         featureGroups: [
           {

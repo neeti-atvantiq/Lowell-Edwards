@@ -30,7 +30,7 @@ const solutionCategories = [
       {
         name: 'DoorBird',
         tagline: 'German-engineered premium IP intercoms',
-        image: '/images/gallery/intercom/doorbird.png',
+        image: '/images/gallery/intercom/doorbird.jpg',
         link: '/products/doorbird/intercoms',
         entryFeatures: ['App', 'Fobs', 'Pin Codes (some models)'],
         appFeatures: ['Fix Pin codes on keypad models']
@@ -46,7 +46,7 @@ const solutionCategories = [
       {
         name: 'Akuvox',
         tagline: 'Multi-modal readers & controllers',
-        image: '/images/gallery/access_control/akuvok.jpeg',
+        image: '/images/gallery/access_control/akuvox.png',
         link: '/products/akuvox/access-control',
         generalFeatures: ['Keypad', 'Fob', 'Bluetooth', 'Facial Rec', 'APP Integration', 'Shares Info']
       },
@@ -198,7 +198,7 @@ export default function SolutionsPage() {
                   <span>Akuvox</span>
                 </div>
                 <div className="ap-hero-brand-card ap-hero-brand-2">
-                  <Image src="/images/products/doorbird/D21DKV.jpeg" alt="DoorBird" width={180} height={180} style={{ objectFit: 'contain' }} />
+                  <Image src="/images/gallery/aparment/doorbird.png" alt="DoorBird" width={180} height={180} style={{ objectFit: 'contain' }} />
                   <span>DoorBird</span>
                 </div>
                 <div className="ap-hero-brand-card ap-hero-brand-3">

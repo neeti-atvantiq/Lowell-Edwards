@@ -16,8 +16,8 @@ type Persona = {
 const personas: Persona[] = [
   {
     mark: 'For Residents',
-    img: '/images/Personas/tenants.jpg',
-    img2x: '/images/Personas/tenants.jpg',
+    img: '/images/Personas/tenants.png',
+    img2x: '/images/Personas/tenants.png',
     alt: 'Modern apartment building exterior with balconies',
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
