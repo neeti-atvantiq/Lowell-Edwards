@@ -10,6 +10,7 @@ const hardwareCategories = [
     brands: [
       {
         cert: 'Authorised Partner',
+        certLogo: '/images/products/cert/akuvox.png',
         brand: 'Akuvox',
         type: 'AI Smart Intercom',
         image: '/images/gallery/intercom/akuvox.png',
@@ -27,6 +28,7 @@ const hardwareCategories = [
       },
       {
         cert: 'Authorised Reseller',
+        certLogo: '/images/products/cert/butterfly.png',
         brand: 'ButterflyMX',
         type: 'Video Intercom',
         image: '/images/gallery/intercom/butterfly.png',
@@ -44,6 +46,7 @@ const hardwareCategories = [
       },
       {
         cert: 'Certified Installer',
+        certLogo: '/images/products/cert/doorbird.png',
         brand: 'DoorBird',
         type: 'IP Video Station',
         image: '/images/gallery/intercom/doorbird.jpg',
@@ -67,6 +70,7 @@ const hardwareCategories = [
     brands: [
       {
         cert: 'Authorised Partner',
+        certLogo: '/images/products/cert/akuvox.png',
         brand: 'Akuvox',
         type: 'Smart Readers',
         image: '/images/gallery/access_control/akuvox.png',
@@ -80,6 +84,7 @@ const hardwareCategories = [
       },
       {
         cert: 'Authorised Reseller',
+        certLogo: '/images/products/cert/butterfly.png',
         brand: 'ButterflyMX',
         type: 'Access Readers',
         image: '/images/gallery/access_control/butterfly.png',
@@ -93,6 +98,7 @@ const hardwareCategories = [
       },
       {
         cert: 'Certified Installer',
+        certLogo: '/images/products/cert/doorbird.png',
         brand: 'DoorBird',
         type: 'I/O Controllers',
         image: '/images/gallery/access_control/doorbird.png',
@@ -112,6 +118,7 @@ const hardwareCategories = [
     brands: [
       {
         cert: 'Authorised Partner',
+        certLogo: '/images/products/cert/akuvox.png',
         brand: 'Akuvox',
         type: 'Indoor Monitors',
         image: '/images/gallery/aparment/akuvox.png',
@@ -125,6 +132,7 @@ const hardwareCategories = [
       },
       {
         cert: 'Certified Installer',
+        certLogo: '/images/products/cert/doorbird.png',
         brand: 'DoorBird',
         type: 'Indoor Stations',
         image: '/images/gallery/aparment/doorbird.png',
@@ -239,7 +247,15 @@ export default function Products() {
                     </div>
                     
                     <div className="prod-meta">
-                      <span className="prod-cert">{p.cert}</span>
+                      <span className="prod-cert">
+                        <Image
+                          src={p.certLogo}
+                          alt={p.cert}
+                          width={80}
+                          height={80}
+                          className="cert-logo"
+                        />
+                      </span>
                     </div>
                     
                     <div className="prod-top">

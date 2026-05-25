@@ -4,6 +4,7 @@ const products = [
   {
     klass: 'bmx',
     cert: 'Authorised Reseller',
+    certLogo: '/images/products/cert/butterfly.png',
     ref: 'Series 02',
     brand: 'ButterflyMX',
     type: 'Video Intercom & Smart Access',
@@ -20,6 +21,7 @@ const products = [
   {
     klass: 'akv',
     cert: 'Authorised Partner',
+      certLogo: '/images/products/cert/akuvox.png',
     ref: 'Series 04',
     brand: 'Akuvox',
     type: 'AI Face Recognition Intercom',
@@ -36,6 +38,7 @@ const products = [
   {
     klass: 'db',
     cert: 'Certified Installer',
+      certLogo: '/images/products/cert/doorbird.png',
     ref: 'Series 07',
     brand: 'DoorBird',
     type: 'Premium IP Video Door Station',
@@ -85,9 +88,16 @@ export default function Products() {
                 />
               </div>
               <div className="prod-meta">
-                <span className="prod-cert">{p.cert}</span>
-                {/* <span className="prod-ref">{p.ref}</span> */}
-              </div>
+                                    <span className="prod-cert">
+                                      <Image
+                                        src={p.certLogo}
+                                        alt={p.cert}
+                                        width={80}
+                                        height={80}
+                                        className="cert-logo"
+                                      />
+                                    </span>
+                                  </div>
               <div className="prod-top">
                 <div className="prod-brand">{p.brand}</div>
                 <div className="prod-type">{p.type}</div>

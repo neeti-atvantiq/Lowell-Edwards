@@ -341,7 +341,7 @@ export default function BrandCategoryPage({ category }: { category: CategoryData
       </section>
 
       {/* Use Cases — with images */}
-      {categoryProducts.length > 0 && (
+      {/* {categoryProducts.length > 0 && (
         <section className="section cat-usecases">
           <div className="wrap">
             <div className="section-header reveal">
@@ -383,7 +383,7 @@ export default function BrandCategoryPage({ category }: { category: CategoryData
             </div>
           </div>
         </section>
-      )}
+      )} */}
 
       {/* Animated Counter Strip */}
       <div className="cat-counter-strip" ref={countersRef}>

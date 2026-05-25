@@ -291,6 +291,7 @@ section.products { background: #F5F7FA; }
 .prod-meta { display: flex; align-items: center; justify-content: space-between; padding: 22px 36px 0; font-family: var(--fb); }
 .prod-cert { display: inline-flex; align-items: center; gap: 8px; font-size: 9.5px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); }
 .prod-cert::before { content: ''; width: 10px; height: 1px; background: var(--gold); }
+.cert-logo { width: 44px; height: 44px; object-fit: contain; border-radius: 4px; flex-shrink: 0; }
 .prod-ref { font-family: var(--fd); font-style: italic; font-size: 12px; color: var(--gold); opacity: .55; letter-spacing: .04em; }
 .prod-top { padding: 14px 36px 24px; }
 .prod-brand { font-family: var(--fd); font-size: 28px; font-weight: 600; color: var(--cream); letter-spacing: -.01em; margin-bottom: 4px; line-height: 1.1; }

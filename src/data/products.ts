@@ -102,10 +102,10 @@ export const categories: Record<string, CategoryData> = {
     },
     installationImages: [
       {
-        image: '/images/installations/8.jpg',
+        image: '/images/installations/11.jpg',
         tag: 'Residential',
         title: '48-Unit Apartment Block',
-        desc: 'Full Akuvox intercom deployment'
+        desc: 'Full Akuvox access control deployment'
       },
       {
         image: '/images/installations/2.jpg',
@@ -114,7 +114,7 @@ export const categories: Record<string, CategoryData> = {
         desc: 'Multi-entry system'
       },
       {
-        image: '/images/installations/6.jpg',
+        image: '/images/installations/10.jpg',
         tag: 'Community',
         title: 'Gated Development',
         desc: 'Perimeter security'
@@ -167,7 +167,7 @@ export const categories: Record<string, CategoryData> = {
     },
     installationImages: [
       {
-        image: '/images/installations/8.jpg',
+        image: '/images/installations/11.jpg',
         tag: 'Residential',
         title: '48-Unit Apartment Block',
         desc: 'Full Akuvox access control deployment'
@@ -179,7 +179,7 @@ export const categories: Record<string, CategoryData> = {
         desc: 'Multi-entry system'
       },
       {
-        image: '/images/installations/6.jpg',
+        image: '/images/installations/10.jpg',
         tag: 'Community',
         title: 'Gated Development',
         desc: 'Perimeter security'
@@ -231,10 +231,10 @@ export const categories: Record<string, CategoryData> = {
     },
     installationImages: [
       {
-        image: '/images/installations/1.jpg',
+        image: '/images/installations/11.jpg',
         tag: 'Residential',
         title: '48-Unit Apartment Block',
-        desc: 'Full Akuvox indoor station deployment'
+        desc: 'Full Akuvox access control deployment'
       },
       {
         image: '/images/installations/2.jpg',
@@ -243,7 +243,7 @@ export const categories: Record<string, CategoryData> = {
         desc: 'Multi-entry system'
       },
       {
-        image: '/images/installations/3.jpg',
+        image: '/images/installations/10.jpg',
         tag: 'Community',
         title: 'Gated Development',
         desc: 'Perimeter security'
@@ -295,31 +295,31 @@ export const categories: Record<string, CategoryData> = {
     },
     installationImages: [
       {
-        image: '/images/installations/1.jpg',
+        image: 'https://butterflymx.com/wp-content/uploads/2018/12/8in-intercom-install.webp',
         tag: 'Residential',
         title: '48-Unit Apartment Block',
-        desc: 'Full ButterflyMX intercom deployment'
+        desc: 'Full ButterflyMX access control deployment'
       },
       {
-        image: '/images/installations/2.jpg',
+        image: 'https://butterflymx.com/wp-content/uploads/2018/12/bullet-camera-install.webp',
         tag: 'Commercial',
         title: 'Office Complex',
         desc: 'Multi-entry system'
       },
       {
-        image: '/images/installations/6.jpg',
+        image: 'https://butterflymx.com/wp-content/uploads/2018/12/butterflymx-gated-communities-visitor.webp',
         tag: 'Community',
         title: 'Gated Development',
         desc: 'Perimeter security'
       },
       {
-        image: '/images/installations/4.jpg',
+        image: 'https://butterflymx.com/wp-content/uploads/2018/12/8in-butterflymx-installation.webp',
         tag: 'Student',
         title: 'Student Accommodation',
         desc: '200+ unit rollout'
       },
       {
-        image: '/images/installations/5.jpg',
+        image: 'https://butterflymx.com/wp-content/uploads/2018/12/8in-butterflymx-academy-installation.webp',
         tag: 'New Build',
         title: 'BTR Development',
         desc: 'Phase 1 of 3 buildings'
@@ -359,31 +359,31 @@ export const categories: Record<string, CategoryData> = {
     },
     installationImages: [
       {
-        image: '/images/installations/7.jpg',
+        image: 'https://butterflymx.com/wp-content/uploads/2018/12/8in-intercom-install.webp',
         tag: 'Residential',
         title: '48-Unit Apartment Block',
         desc: 'Full ButterflyMX access control deployment'
       },
       {
-        image: '/images/installations/6.jpg',
+        image: 'https://butterflymx.com/wp-content/uploads/2018/12/bullet-camera-install.webp',
         tag: 'Commercial',
         title: 'Office Complex',
         desc: 'Multi-entry system'
       },
       {
-        image: '/images/installations/8.jpg',
+        image: 'https://butterflymx.com/wp-content/uploads/2018/12/butterflymx-gated-communities-visitor.webp',
         tag: 'Community',
         title: 'Gated Development',
         desc: 'Perimeter security'
       },
       {
-        image: '/images/installations/4.jpg',
+        image: 'https://butterflymx.com/wp-content/uploads/2018/12/8in-butterflymx-installation.webp',
         tag: 'Student',
         title: 'Student Accommodation',
         desc: '200+ unit rollout'
       },
       {
-        image: '/images/installations/5.jpg',
+        image: 'https://butterflymx.com/wp-content/uploads/2018/12/8in-butterflymx-academy-installation.webp',
         tag: 'New Build',
         title: 'BTR Development',
         desc: 'Phase 1 of 3 buildings'
@@ -442,13 +442,13 @@ export const categories: Record<string, CategoryData> = {
         desc: 'Perimeter security'
       },
       {
-        image: '/images/installations/4.jpg',
+        image: '/images/installations/12.jpg',
         tag: 'Student',
         title: 'Student Accommodation',
         desc: '200+ unit rollout'
       },
       {
-        image: '/images/installations/5.jpg',
+        image: '/images/installations/9.jpg',
         tag: 'New Build',
         title: 'BTR Development',
         desc: 'Phase 1 of 3 buildings'
@@ -491,7 +491,7 @@ export const categories: Record<string, CategoryData> = {
         image: '/images/installations/8.jpg',
         tag: 'Residential',
         title: '48-Unit Apartment Block',
-        desc: 'Full DoorBird access control deployment'
+        desc: 'Full DoorBird intercom deployment'
       },
       {
         image: '/images/installations/7.jpg',
@@ -500,19 +500,19 @@ export const categories: Record<string, CategoryData> = {
         desc: 'Multi-entry system'
       },
       {
-        image: '/images/installations/1.jpg',
+        image: '/images/installations/6.jpg',
         tag: 'Community',
         title: 'Gated Development',
         desc: 'Perimeter security'
       },
       {
-        image: '/images/installations/4.jpg',
+        image: '/images/installations/12.jpg',
         tag: 'Student',
         title: 'Student Accommodation',
         desc: '200+ unit rollout'
       },
       {
-        image: '/images/installations/5.jpg',
+        image: '/images/installations/9.jpg',
         tag: 'New Build',
         title: 'BTR Development',
         desc: 'Phase 1 of 3 buildings'
@@ -551,31 +551,31 @@ export const categories: Record<string, CategoryData> = {
     },
     installationImages: [
       {
-        image: '/images/installations/7.jpg',
+        image: '/images/installations/8.jpg',
         tag: 'Residential',
         title: '48-Unit Apartment Block',
-        desc: 'Full DoorBird indoor station deployment'
+        desc: 'Full DoorBird intercom deployment'
       },
       {
-        image: '/images/installations/6.jpg',
+        image: '/images/installations/7.jpg',
         tag: 'Commercial',
         title: 'Office Complex',
         desc: 'Multi-entry system'
       },
       {
-        image: '/images/installations/8.jpg',
+        image: '/images/installations/6.jpg',
         tag: 'Community',
         title: 'Gated Development',
         desc: 'Perimeter security'
       },
       {
-        image: '/images/installations/4.jpg',
+        image: '/images/installations/12.jpg',
         tag: 'Student',
         title: 'Student Accommodation',
         desc: '200+ unit rollout'
       },
       {
-        image: '/images/installations/5.jpg',
+        image: '/images/installations/9.jpg',
         tag: 'New Build',
         title: 'BTR Development',
         desc: 'Phase 1 of 3 buildings'
