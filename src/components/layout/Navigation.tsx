@@ -1,9 +1,11 @@
 'use client';
 import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Navigation() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -22,11 +24,11 @@ export default function Navigation() {
 
         {/* Desktop Links */}
         <div className="nav-links">
-          <Link href="/solution">Solutions</Link>
-          <Link href="/products">Products</Link>
-          <Link href="/why-us">Why Us</Link>
-          <Link href="/compare">Compare</Link>
-          <Link href="/contact">Contact Us</Link>
+          <Link href="/solution" className={pathname.startsWith('/solution') ? 'active' : ''}>Solutions</Link>
+          <Link href="/products" className={pathname.startsWith('/products') ? 'active' : ''}>Products</Link>
+          <Link href="/why-us" className={pathname.startsWith('/why-us') ? 'active' : ''}>Why Us</Link>
+          <Link href="/compare" className={pathname.startsWith('/compare') ? 'active' : ''}>Compare</Link>
+          <Link href="/contact" className={pathname.startsWith('/contact') ? 'active' : ''}>Contact Us</Link>
         </div>
 
         <div className="nav-right">
@@ -57,11 +59,11 @@ export default function Navigation() {
 
       {/* Mobile Dropdown ONLY */}
       <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
-        <Link href="/solution" onClick={() => setMenuOpen(false)}>Solutions</Link>
-        <Link href="/products" onClick={() => setMenuOpen(false)}>Products</Link>
-        <Link href="/why-us" onClick={() => setMenuOpen(false)}>Why Us</Link>
-        <Link href="/compare" onClick={() => setMenuOpen(false)}>Compare</Link>
-        <Link href="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
+        <Link href="/solution" className={pathname.startsWith('/solution') ? 'active' : ''} onClick={() => setMenuOpen(false)}>Solutions</Link>
+        <Link href="/products" className={pathname.startsWith('/products') ? 'active' : ''} onClick={() => setMenuOpen(false)}>Products</Link>
+        <Link href="/why-us" className={pathname.startsWith('/why-us') ? 'active' : ''} onClick={() => setMenuOpen(false)}>Why Us</Link>
+        <Link href="/compare" className={pathname.startsWith('/compare') ? 'active' : ''} onClick={() => setMenuOpen(false)}>Compare</Link>
+        <Link href="/contact" className={pathname.startsWith('/contact') ? 'active' : ''} onClick={() => setMenuOpen(false)}>Contact</Link>
 
         {/* FIXED BUTTON STYLE */}
         <div className="mobile-cta">

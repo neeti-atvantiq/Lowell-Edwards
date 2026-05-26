@@ -86,7 +86,7 @@ export default function Solution() {
         <div className="solution-header reveal">
           <div className="tag" style={{ justifyContent: 'center' }}>The Solution</div>
           <h2 className="h2" style={{ textAlign: 'center' }}>
-            One system. Every problem <em className="em">solved.</em>
+            One system. Solves every <em className="em">probelem.</em>
           </h2>
           <p
             className="body-lg"

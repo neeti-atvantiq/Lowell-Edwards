@@ -7,12 +7,10 @@ import Ticker from '@/components/sections/Ticker';
 import Solution from '@/components/sections/Solution';
 import LTE from '@/components/sections/LTE';
 import Personas from '@/components/sections/Personas';
-import Finder from '@/components/sections/Finder';
 import Products from '@/components/sections/Products';
 import Gallery from '@/components/sections/Gallery';
 import Installations from '@/components/sections/Installations';
 import WhyUs from '@/components/sections/WhyUs';
-import Compare from '@/components/sections/Compare';
 import CTAStrip from '@/components/sections/CTAStrip';
 import Quote from '@/components/sections/Quote';
 import ChatBot from '@/components/ui/ChatBot';
@@ -41,14 +39,12 @@ export default function Home() {
         <Hero />
         <Ticker />
         <Solution />
+        <Installations />
         <LTE />
         <Personas />
-        <Finder />
         <Products />
         <Gallery />
-        <Installations />
         <WhyUs />
-        <Compare />
         <CTAStrip />
         <Quote />
       </main>

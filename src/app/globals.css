@@ -1,3 +1,20 @@
+/* Highlight active nav link */
+.nav-links a.active,
+.mobile-menu a.active {
+  color: var(--gold);
+  position: relative;
+}
+
+.nav-links a.active::after {
+  content: '';
+  display: block;
+  margin: 0 auto;
+  width: 60%;
+  height: 1.5px;
+  background: var(--gold);
+  border-radius: 2px;
+  margin-top: 5px;
+}
 /* =====================================================
    GLOBAL STYLES — Lowell Edwards Home Integration, Inc.
    Full port from source HTML — red rebased.
@@ -1337,20 +1354,6 @@ section.quote-section { background: #FFFFFF; }
 .wu-compare-head-cell.wu-us-col {
   background: var(--gold);
   position: relative;
-}
-.wu-compare-head-cell.wu-us-col::before {
-  content: 'OUR APPROACH';
-  position: absolute;
-  top: -10px; left: 50%;
-  transform: translateX(-50%);
-  font-family: var(--fb);
-  font-size: 9px; font-weight: 700;
-  letter-spacing: .18em;
-  background: var(--cream);
-  color: var(--gold2);
-  padding: 4px 10px;
-  border-radius: 100px;
-  border: 1px solid var(--gold);
 }
 .wu-compare-row {
   display: grid;

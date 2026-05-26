@@ -54,7 +54,7 @@ const personas: Persona[] = [
     title: 'Property Management',
     sub: 'Control · Efficiency · Accountability',
     feats: [
-      'Manage all building entry points from a single cloud dashboard',
+      'Manage all building entry points from a single cloud admin dashboard',
       'Instantly grant or revoke access for tenants, contractors, and staff',
       'Full audit log — every entry event recorded with time and credentials',
       '24-hour maintenance support — we resolve most faults remotely',
@@ -136,11 +136,11 @@ export default function Personas() {
                     </div>
                   ))}
                 </div>
-                <div className="persona-tiers">
+                {/* <div className="persona-tiers">
                   {p.tiers.map((t, k) => (
                     <span key={k} className={`tier-badge ${t.c}`}>{t.l}</span>
                   ))}
-                </div>
+                </div> */}
               </div>
             </div>
           ))}

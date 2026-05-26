@@ -48,8 +48,8 @@ export default function Installations() {
                 />
               </div>
               <div className="inst-meta">
-                <h3>{item.title}</h3>
-                <p>{item.location}</p>
+                {/* <h3>{item.title}</h3> */}
+                <h3>{item.location}</h3>
               </div>
             </article>
           ))}
