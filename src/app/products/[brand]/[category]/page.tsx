@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import BrandCategoryPage from '@/components/pages/BrandCategoryPage';
+import Breadcrumb from '@/components/ui/Breadcrumb';
 import { categories } from '@/data/products';
 
 const validRoutes = [
@@ -40,5 +41,16 @@ export default async function Page({ params }: Props) {
   const key = `${brand}/${category}`;
   const cat = categories[key];
   if (!cat) notFound();
-  return <BrandCategoryPage category={cat} />;
+  const brandLabel = brand.charAt(0).toUpperCase() + brand.slice(1);
+  const categoryLabel = category.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+  return (
+    <>
+      <Breadcrumb items={[
+        { label: 'Products', href: '/products' },
+        { label: brandLabel, href: `/products` },
+        { label: categoryLabel },
+      ]} />
+      <BrandCategoryPage category={cat} />
+    </>
+  );
 }

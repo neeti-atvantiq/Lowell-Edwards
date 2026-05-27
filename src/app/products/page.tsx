@@ -1,4 +1,5 @@
 import AllProductsPage from '@/components/pages/AllProductsPage';
+import Breadcrumb from '@/components/ui/Breadcrumb';
 
 export const metadata = {
   title: 'All Products — ButterflyMX, Akuvox & DoorBird · Lowell Edwards Home Integration',
@@ -6,5 +7,10 @@ export const metadata = {
 };
 
 export default function ProductsPage() {
-  return <AllProductsPage />;
+  return (
+    <>
+      <Breadcrumb items={[{ label: 'Products' }]} />
+      <AllProductsPage />
+    </>
+  );
 }

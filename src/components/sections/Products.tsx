@@ -92,20 +92,20 @@ export default function Products() {
                   style={{ display: 'block', width: '100%', height: '100%', objectFit: 'cover' }}
                 />
               </div>
-              <div className="prod-meta">
-                                    <span className="prod-cert">
-                                      <Image
-                                        src={p.certLogo}
-                                        alt={p.cert}
-                                        width={80}
-                                        height={80}
-                                        className="cert-logo"
-                                      />
-                                    </span>
-                                  </div>
               <div className="prod-top">
-                <div className="prod-brand">{p.brand}</div>
-                <div className="prod-type">{p.type}</div>
+                <div className="prod-top-left">
+                  <div className="prod-brand">{p.brand}</div>
+                  <div className="prod-type">{p.type}</div>
+                </div>
+                <span className="prod-cert">
+                  <Image
+                    src={p.certLogo}
+                    alt={p.cert}
+                    width={80}
+                    height={80}
+                    className="cert-logo"
+                  />
+                </span>
               </div>
               <div className="prod-body">
                 <div className="prod-divider" />

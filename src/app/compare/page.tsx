@@ -3,6 +3,7 @@ import Navigation from '@/components/layout/Navigation';
 import Footer from '@/components/layout/Footer';
 import ChatBot from '@/components/ui/ChatBot';
 import ComparePage from '@/components/pages/ComparePage';
+import Breadcrumb from '@/components/ui/Breadcrumb';
 
 export const metadata: Metadata = {
   title: 'Compare Systems | Lowell Edwards Home Integration, Inc.',
@@ -13,6 +14,7 @@ export default function CompareRoutePage() {
   return (
     <>
       <Navigation />
+      <Breadcrumb items={[{ label: 'Compare Systems' }]} />
       <ComparePage />
       <Footer />
       <ChatBot />
