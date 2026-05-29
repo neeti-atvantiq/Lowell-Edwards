@@ -114,18 +114,6 @@ export default function BrandCategoryPage({ category }: { category: CategoryData
 
   return (
     <>
-      {/* Breadcrumb */}
-      <div className="pp-breadcrumb">
-        <div className="wrap">
-          <div className="pp-breadcrumb-inner">
-            <Link href="/">Home</Link>
-            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="9,18 15,12 9,6"/></svg>
-            <Link href="/products">Products</Link>
-            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="9,18 15,12 9,6"/></svg>
-            <span className="pp-breadcrumb-current">{category.title}</span>
-          </div>
-        </div>
-      </div>
 
       {/* Hero Section */}
       <section className="cat-hero" ref={heroRef}>
