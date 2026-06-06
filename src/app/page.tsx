@@ -40,10 +40,10 @@ export default function Home() {
         <Ticker />
         <Solution />
         <Installations />
-        <LTE />
         <Personas />
         <Products />
-        <Gallery />
+        {/* <Gallery /> */}
+        <LTE />
         <WhyUs />
         <CTAStrip />
         <Quote />

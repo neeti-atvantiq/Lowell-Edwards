@@ -23,7 +23,7 @@ const cards = [
     n: '03',
     title: 'Complete Audit Trail',
     body: 'Every entry event is logged — who, when, and how. Time-stamped video records provide irrefutable evidence for insurance claims, tenant disputes, and compliance audits.',
-    fact: 'Court-admissible video logs',
+    fact: 'Extensive Photo Logs',
     image: '/images/solutions/solution-04.jpg',
   },
 {
@@ -38,7 +38,14 @@ const cards = [
     title: 'Touchless Face Recognition Entry',
     body: 'For premium buildings, AI-powered face recognition provides frictionless, keyless entry for registered residents — secure, hygienic, and effortlessly modern.',
     fact: 'AI-powered, hygienic entry',
-    image: '/images/solutions/solution-05.png',
+    image: '/images/solutions/solution-05.jpeg',
+  },
+  {
+    n: '06',
+    title: 'Support Standard Phone Calls',
+    body: 'Residents without smartphones can still talk to and unlock doors for visitors through a standard phone call — ensuring every occupant has full access control regardless of their device.',
+    fact: 'No smartphone required',
+    image: '/images/solutions/solution-06.jpeg',
   },
 ];
 
@@ -256,7 +263,7 @@ export default function Solution() {
 
         .slider-card-title {
           font-family: var(--fd);
-          font-size: 22px;
+          font-size: 24px;
           font-weight: 600;
           color: var(--cream);
           margin-bottom: 12px;
@@ -265,9 +272,9 @@ export default function Solution() {
 
         .slider-card-body {
           font-family: var(--fb);
-          font-size: 14px;
+          font-size: 15px;
           font-weight: 300;
-          line-height: 1.65;
+          line-height: 1.7;
           color: var(--c65);
           margin-bottom: 28px;
         }

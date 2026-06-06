@@ -8,12 +8,16 @@ type Installation = {
 };
 
 const installations: Installation[] = [
-  { title: 'Riverside Apartments', location: 'Hoboken', image: '/images/installations/8.jpg' },
+  { title: 'Riverside Apartments', location: 'North Bergen', image: '/images/installations/8.jpg' },
   { title: 'Westbrook Offices', location: 'Weehawken', image: '/images/installations/2.jpg' },
-  { title: 'Crown Plaza Residences', location: 'Hackensack', image: '/images/installations/7.jpg' },
+  { title: 'Crown Plaza Residences', location: 'Hoboken', image: '/images/installations/7.jpg' },
   { title: 'North Gate Student Living', location: 'New York City', image: '/images/installations/4.jpg' },
   { title: 'Elm Street Mixed Use', location: 'Manhattan', image: '/images/installations/5.jpg' },
   { title: 'Canal View Towers', location: 'Brooklyn', image: '/images/installations/6.jpg' },
+  {title: 'Parkside Gated Community', location: 'Hackensack', image: '/images/installations/9.jpg' },
+  {title: 'Harborfront Condominiums', location: 'Westchester', image: '/images/installations/11.jpg' },
+  {title: 'Lakeside Office Park', location: 'Montclair', image: '/images/installations/10.jpg' },
+  {title: 'Maplewood Student Housing', location: 'Guttenberg', image: '/images/installations/12.jpg' },
 ];
 
 const marqueeItems = [...installations, ...installations];

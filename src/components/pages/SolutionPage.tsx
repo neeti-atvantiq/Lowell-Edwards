@@ -47,6 +47,15 @@ const solutionStories = [
     fact: 'Auto-expiring access credentials',
     image: '/images/solutions/solution-05.png',
   },
+  {
+    n: '06',
+    eyebrow: 'Universal Accessibility',
+    title: 'Support Standard Phone Calls',
+    body: 'Residents without smartphones can still talk to and unlock doors for visitors through a standard phone call.',
+    detail: 'This ensures every occupant — regardless of age, tech literacy, or device — retains full access control and can communicate with visitors at the entrance.',
+    fact: 'No smartphone required',
+    image: '/images/solutions/solution-06.jpeg',
+  },
 ];
 
 const outcomes = [

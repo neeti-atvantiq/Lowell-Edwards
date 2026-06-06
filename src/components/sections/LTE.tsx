@@ -10,8 +10,8 @@ export default function LTE() {
           <div className="lte-content reveal">
             <div className="tag">Always-On Connectivity</div>
             <h2 className="h2">
-              LTE internet service —<br />
-              <em className="em">connectivity guaranteed.</em>
+              Free LTE Installation —<br />
+              <em className="em lte-subheading">Lower Internet Costs. Reliable Connectivity. <br/>Seamless Installations.</em>
             </h2>
             <p className="body-lg" style={{ marginTop: 20, marginBottom: 36, maxWidth: 540 }}>
               Every video intercom and access control system depends on a reliable internet
@@ -59,7 +59,7 @@ export default function LTE() {
                 </span>
                 <div className="lte-feat-text">
                   <div className="lte-feat-title">Cut your internet bill in half with greater reliability!</div>
-                  <div className="lte-feat-body">Switch to LTE for backup and primary service—enjoy lower costs and more reliable uptime than traditional wired internet alone.</div>
+                  <div className="lte-feat-body">Switch to LTE —enjoy lower costs and more reliable uptime than traditional wired internet alone.</div>
                 </div>
               </li>
               <li className="lte-feat">

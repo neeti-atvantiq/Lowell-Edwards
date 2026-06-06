@@ -61,13 +61,13 @@ export default function ContactPage() {
                 <div className="contact-card-content">
                   <h3 className="contact-card-title">Phone</h3>
                   <p className="contact-card-detail">
-                    <a href="tel:+12015551234" className="contact-link">201-555-1234</a>
+                    <a href="tel:+12015253300" className="contact-link">201-525-3300</a>
                   </p>
                   <div className="contact-hours">
                     <h4 className="hours-title">Calling Hours</h4>
                     <ul className="hours-list">
-                      <li><span>Mon-Fri:</span> 8:00 AM - 6:00 PM</li>
-                      <li><span>Saturday:</span> 9:00 AM - 4:00 PM</li>
+                      <li><span>Mon-Fri:</span> 10:00 AM - 7:00 PM</li>
+                      <li><span>Saturday:</span> By appointment</li>
                       <li><span>Sunday:</span> Closed</li>
                     </ul>
                     <div className="hours-emergency">
@@ -123,19 +123,20 @@ export default function ContactPage() {
                 <div className="contact-card-content">
                   <h3 className="contact-card-title">Location & Email</h3>
                   <p className="contact-card-detail" style={{ marginBottom: 16 }}>
-                    Hackensack, NJ<br />
-                    Serving Northern New Jersey<br />
-                    and surrounding areas
+                    15 Warren St. Suite 25<br /> 
+Hackensack, NJ 07601<br />
+Serving Northern New Jersey, <br />
+New York Metro and surrounding areas
                   </p>
                   <div className="contact-hours" style={{ marginTop: 16, paddingTop: 16 }}>
                     <h4 className="hours-title">Direct Contact</h4>
                     <p className="contact-card-detail">
-                      <a href="mailto:info@lowell-edwards.com" className="contact-link" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                      <a href="mailto:info@lowelledwards.com" className="contact-link" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                           <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                           <polyline points="22,6 12,13 2,6"></polyline>
                         </svg>
-                        info@lowell-edwards.com
+                        info@lowelledwards.com
                       </a>
                     </p>
                   </div>

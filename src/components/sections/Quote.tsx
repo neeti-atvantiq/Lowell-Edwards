@@ -91,18 +91,19 @@ export default function Quote() {
                 </div>
                 <div className="qf-field">
                   <label className="qf-label">Phone Number</label>
-                  <input className="qf-input" type="tel" placeholder="+1 7700 000 000" value={form.phone} onChange={onChange('phone')} />
+                  <input className="qf-input" type="tel" placeholder="+1 201-525-3300" value={form.phone} onChange={onChange('phone')} />
                 </div>
                 <div className="qf-field">
                   <label className="qf-label">Building Type</label>
                   <select className="qf-select" value={form.buildingType} onChange={onChange('buildingType')}>
                     <option value="">Select building type…</option>
-                    <option>Residential apartment block</option>
-                    <option>Commercial office</option>
-                    <option>Mixed-use development</option>
-                    <option>Student accommodation</option>
-                    <option>Gated community / estate</option>
-                    <option>Industrial / warehouse</option>
+                    <option>Residential Condominium Building</option>
+                    <option>Residential Cooperative Building</option>
+                    <option>Residential Rental Building</option>
+                    <option>Residence</option>
+                    <option>Gated Community</option>
+                    <option>Commercial Office</option>
+                    <option>Industrial/Warehouse</option>
                   </select>
                 </div>
                 <div className="qf-row">
@@ -120,11 +121,9 @@ export default function Quote() {
                     <label className="qf-label">Priority Need</label>
                     <select className="qf-select" value={form.priority} onChange={onChange('priority')}>
                       <option value="">Select…</option>
-                      <option>Package security</option>
-                      <option>Access control</option>
-                      <option>Remote management</option>
-                      <option>Face recognition</option>
-                      <option>Full building solution</option>
+                      <option>Immediate Installation</option>
+                      <option>Future Planning</option>
+                      <option>Project in development</option>
                     </select>
                   </div>
                 </div>
@@ -132,7 +131,7 @@ export default function Quote() {
                   <label className="qf-label">Additional Notes</label>
                   <textarea
                     className="qf-textarea"
-                    placeholder="Tell us about your building or any specific requirements…"
+                    placeholder="Please tell us if you have any additional Doors or garage doors for the system. Any special entry needs and package rooms."
                     value={form.notes}
                     onChange={onChange('notes')}
                   />

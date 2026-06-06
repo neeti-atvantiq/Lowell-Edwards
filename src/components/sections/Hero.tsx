@@ -13,34 +13,6 @@ export default function Hero() {
         <ImageSlider images={heroImages} interval={6000} />
       </div>
       
-      {/* Floating Badges */}
-      <div className="hero-badges">
-        <div className="hero-badge badge-cloud">
-          <div className="badge-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </div>
-          <div className="badge-text">
-            <div className="badge-label">Cloud-Based</div>
-            <div className="badge-sub">Remote Access</div>
-          </div>
-        </div>
-        
-        <div className="hero-badge badge-app">
-          <div className="badge-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="5" y="2" width="14" height="20" rx="2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M12 18h.01" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </div>
-          <div className="badge-text">
-            <div className="badge-label">App Control</div>
-            <div className="badge-sub">iOS & Android</div>
-          </div>
-        </div>
-      </div>
-      
       <div className="hero-veil" />
       <div className="hero-inner">
         <div className="hero-text-col">
@@ -78,7 +50,7 @@ export default function Hero() {
           <p
             className="body-lg hero-desc"
             style={{
-              fontSize: 17,
+              fontSize: 19,
               maxWidth: 580,
               lineHeight: 1.75,
               marginBottom: 40,

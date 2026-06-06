@@ -10,9 +10,9 @@ const credentials = [
     ],
   },
   {
-    label: 'Compliance & Standards',
-    name: 'GDPR · BS 7671',
-    sub: 'ICO registered · NICEIC approved',
+    label: 'Factory-Trained and Certified Technicians',
+    name: 'Hands-on training direct from manufacturers',
+    sub: 'ButterflyMX · Akuvox · DoorBird certified',
   },
 ];
 
@@ -56,14 +56,14 @@ const promises = [
   { title: '24-hour response SLA', body: 'A real engineer responds within 24 hours of your enquiry. No automated holding emails, no "we\'ll be in touch shortly," no dropped leads.', meta: 'Written into every quote' },
   { title: '1-year installation guarantee', body: 'If anything fails because of how we installed it within the first year, we fix it free. No debate, no surcharge, no callout fee. This is on top of the manufacturer warranty.', meta: 'No-quibble policy' },
   { title: 'Itemised, no-surprise pricing', body: 'Every quote is itemised line by line — hardware, labour, integrations, contingency. What you see on day one is what you pay on day fifty. No hidden fees, no scope creep.', meta: 'Fixed-fee structure' },
-  { title: 'GDPR & ICO documentation included', body: 'For biometric and CCTV-integrated installs, we provide the Data Protection Impact Assessment, draft consent forms, and ICO registration guidance as part of the install — not as an extra.', meta: 'Compliance-ready handover' },
-  { title: 'Same engineer, year 1 to year 10', body: 'The engineer who surveys your property is the one who installs it — and the one who picks up the phone five years later. We don\'t subcontract; we don\'t rotate.', meta: 'Continuity guaranteed' },
+  // { title: 'GDPR & ICO documentation included', body: 'For biometric and CCTV-integrated installs, we provide the Data Protection Impact Assessment, draft consent forms, and ICO registration guidance as part of the install — not as an extra.', meta: 'Compliance-ready handover' },
+  // { title: 'Same engineer, year 1 to year 10', body: 'The engineer who surveys your property is the one who installs it — and the one who picks up the phone five years later. We don\'t subcontract; we don\'t rotate.', meta: 'Continuity guaranteed' },
   { title: 'Honest "wrong tool" recommendations', body: 'If the brand we\'d love to sell you isn\'t right for your building, we\'ll say so. We sell three systems precisely so we can recommend the one that actually fits — not the one with the best margin.', meta: 'Vendor-neutral advice' },
 ];
 
 const compareRows = [
   { feature: 'Free site survey', us: '✓', them: '✗' },
-  { feature: 'Engineer-led install', us: 'Same engineer who scoped it', them: 'Subcontractor network' },
+  // { feature: 'Engineer-led install', us: 'Same engineer who scoped it', them: 'Subcontractor network' },
   { feature: 'Vendor-neutral advice', us: '3 brands, honest fit', them: '✗' },
   { feature: 'Building regulations', us: 'NICEIC-approved + 17th Edition', them: 'Variable' },
   { feature: 'Listed-building expertise', us: '✓', them: '✗' },
@@ -196,7 +196,7 @@ export default function WhyUsPage() {
       </section>
 
       {/* PROCESS TIMELINE */}
-      <section className="section wu-process">
+      {/* <section className="section wu-process">
         <div className="wrap">
           <div className="section-header wu-section-header">
             <div className="tag">How we work</div>
@@ -214,7 +214,7 @@ export default function WhyUsPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* PROMISES */}
       <section className="section wu-promises">

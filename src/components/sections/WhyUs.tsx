@@ -34,12 +34,21 @@ export default function WhyUs() {
               <div className="sla-pill-val">&lt;24h</div>
               <div className="sla-pill-label">Guaranteed<br />Response SLA</div>
             </div>
-          </div>
+            <div className="sla-pill" >
+              <div className="sla-pill-val">1</div>
+              <div className="sla-pill-label">Year<br />Installation Guarantee</div>
+            </div>
+            </div>
 
           {/* B2: Track Record */}
           <div className="bc b2" style={{ padding: '40px 44px' }}>
+            <div className="bento-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+              </svg>
+            </div>
             <div className="bento-tag">Track Record</div>
-            <div className="bento-h" style={{ marginBottom: 32 }}>
+            <div className="bento-h" style={{ marginBottom: -50 }}>
               Numbers that speak<br />for themselves
             </div>
             <div className="b2-stats">
@@ -51,14 +60,14 @@ export default function WhyUs() {
                 <div className="b2-stat-num">98<span>%</span></div>
                 <div className="b2-stat-label">Customer satisfaction score</div>
               </div>
-              <div>
+              {/* <div>
                 <div className="b2-stat-num">1<span style={{ fontSize: 28 }}>yr</span></div>
                 <div className="b2-stat-label">Workmanship install warranty</div>
               </div>
               <div>
                 <div className="b2-stat-num">24<span style={{ fontSize: 28 }}>h</span></div>
                 <div className="b2-stat-label">Maximum maintenance response</div>
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -92,8 +101,7 @@ export default function WhyUs() {
             <div className="bento-h">Networks designed for intercom uptime</div>
             <div className="bento-p">
               We design and install network infrastructure specifically for intercom reliability —
-              with failover capabilities built in from day one to keep your building secure even
-              during outages.
+              with remote service capabilities built in from day one to keep your building secure with self healing and fast remote service.
             </div>
           </div>
 
