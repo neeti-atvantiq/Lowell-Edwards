@@ -78,9 +78,9 @@ export default function AboutUsPage() {
             <div className="wu-hero-content">
               <div className="tag">About Lowell/Edwards</div>
               <h1 className="h1">
-                Since 1978, building<br />
-                <em className="em">trusted entrances.</em><br />
-                Since 2019, focused on <em className="em">intercoms.</em>
+                Reliable installation,<br />
+                <em className="em">thoughtful integration,</em><br />
+                lasting <em className="em">support.</em>
               </h1>
               <p className="wu-hero-desc">
                 Lowell/Edwards has been providing reliable technology installation services for residential and commercial properties for nearly five decades. In 2019 we narrowed our focus to what we do best — modern intercom, video entry, and access control systems for the buildings that need them.
