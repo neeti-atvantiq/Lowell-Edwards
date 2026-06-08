@@ -11,8 +11,18 @@ const solutionStories = [
     fact: 'Real-time HD video to any device',
     image: '/images/solutions/solution-01.png',
   },
+
   {
     n: '02',
+    eyebrow: 'Touchless Entry',
+    title: 'Touchless Face Recognition Entry',
+    body: 'For premium buildings, AI-powered face recognition enables frictionless, keyless entry for registered residents without cards, fobs, or PINs.',
+    detail: 'Residents move through entrances faster while property teams maintain strict enrollment control, helping reduce tailgating pressure at busy access points.',
+    fact: 'AI-powered keyless resident entry',
+    image: '/images/solutions/solution-05.jpeg',
+  },
+  {
+    n: '03',
     eyebrow: 'Delivery Control',
     title: 'Secure Package & Visitor Management',
     body: 'Couriers use a delivery PIN or QR code for secure package drop-off, with every delivery logged and time-stamped. Temporary access codes for guests or contractors expire automatically—no keys, no loose ends.',
@@ -21,7 +31,7 @@ const solutionStories = [
     image: '/images/solutions/solution-02.png',
   },
   {
-    n: '03',
+    n: '04',
     eyebrow: 'Remote Administration',
     title: 'Manage Access Remotely and Instantly',
     body: 'Grant or revoke access credentials in seconds from any device. Onboarding and offboarding happen without waiting on a site visit.',
@@ -30,22 +40,13 @@ const solutionStories = [
     image: '/images/solutions/solution-03.jpg',
   },
   {
-    n: '04',
+    n: '05',
     eyebrow: 'Audit and Compliance',
     title: 'Complete Audit Trail for Compliance',
     body: 'Every entry event is logged with who, when, and how. This protects your team with documented records for disputes and reporting.',
     detail: 'For premium residential and mixed-use properties, that means stronger evidence for incident reviews, service disputes, insurance conversations, and internal governance.',
     fact: 'Video-backed event history',
     image: '/images/solutions/solution-04.jpg',
-  },
-  {
-    n: '05',
-    eyebrow: 'Touchless Entry',
-    title: 'Touchless Face Recognition Entry',
-    body: 'For premium buildings, AI-powered face recognition enables frictionless, keyless entry for registered residents without cards, fobs, or PINs.',
-    detail: 'Residents move through entrances faster while property teams maintain strict enrollment control, helping reduce tailgating pressure at busy access points.',
-    fact: 'AI-powered keyless resident entry',
-    image: '/images/solutions/solution-05.jpeg',
   },
   {
     n: '06',

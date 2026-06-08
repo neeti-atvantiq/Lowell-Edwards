@@ -132,8 +132,8 @@ hr.rule { border: none; border-top: 1px solid var(--c10); }
 .hero-veil { position: absolute; inset: 0; pointer-events: none; z-index: 1; background: linear-gradient(105deg, rgba(10, 8, 20, .68) 0%, rgba(10, 8, 20, .42) 35%, rgba(10, 8, 20, .12) 65%, rgba(10, 8, 20, 0) 90%); }
 .hero-inner { position: relative; z-index: 2; max-width: 1180px; margin: 0 auto; width: 100%; padding: 40px 44px; }
 .hero-text-col { max-width: 660px; }
-.hero-eyebrow { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; font-family: var(--fb); font-size: 14px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: #FF6B6B; text-shadow: 0 1px 12px rgba(0,0,0,.8); }
-.hero-eyebrow::before { content: ''; width: 32px; height: 1px; background:#FF6B6B ; }
+.hero-eyebrow { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; font-family: var(--fb); font-size: 14px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: var(--gold2); text-shadow: 0 1px 12px rgba(187, 187, 187, 0.624); }
+.hero-eyebrow::before { content: ''; width: 32px; height: 1px; background:var(--gold2) ; }
 .hero-service-tagline {
   display: inline-flex;
   align-items: center;
@@ -163,7 +163,7 @@ hr.rule { border: none; border-top: 1px solid var(--c10); }
   box-shadow: 0 0 0 5px rgba(217,28,28,.2);
 }
 .hero h1 { color: #FFFFFF; text-shadow: 0 2px 32px rgba(0,0,0,.5); margin-bottom: 24px; }
-.em { color: #FF8080; }
+.hero h1 .em { color: var(--gold2); }
 .hero-desc { color: rgba(255,255,255,.85); margin-bottom: 42px; max-width: 480px; text-shadow: 0 1px 12px rgba(0,0,0,.7); }
 .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
 .hero .btn-outline { color: #FFFFFF !important; border-color: rgba(255,255,255,.45) !important; background: rgba(255,255,255,.10) !important; backdrop-filter: blur(8px); }
@@ -319,7 +319,7 @@ section.products { background: #F5F7FA; }
 .prod-meta { display: none; }
 .prod-cert { display: inline-flex; align-items: center; gap: 8px; font-size: 9.5px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); }
 .prod-cert::before { content: none; }
-.cert-logo { width: 44px; height: 44px; object-fit: contain; border-radius: 4px; flex-shrink: 0; }
+.cert-logo { width: 64px; height: 64px; object-fit: contain; border-radius: 6px; flex-shrink: 0; }
 .prod-ref { font-family: var(--fd); font-style: italic; font-size: 12px; color: var(--gold); opacity: .55; letter-spacing: .04em; }
 .prod-top { padding: 22px 36px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
 .prod-top-left { flex: 1; min-width: 0; }
