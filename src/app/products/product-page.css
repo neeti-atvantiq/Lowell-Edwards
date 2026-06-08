@@ -640,12 +640,29 @@
   .ap-brand-grid-3, .ap-brand-grid-2 { grid-template-columns: 1fr; }
   .ap-cat-section { padding: 48px 0; }
   .ap-cat-nav { top: 0; }
-  .ap-cat-nav-link { padding: 7px 14px; font-size: 11.5px; }
+  .ap-cat-nav-inner { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; justify-content: flex-start; padding: 4px 0; scrollbar-width: none; }
+  .ap-cat-nav-inner::-webkit-scrollbar { display: none; }
+  .ap-cat-nav-link { padding: 7px 14px; font-size: 11.5px; white-space: nowrap; flex-shrink: 0; }
+  /* Sticky CTA mobile */
+  .pp-sticky-cta { padding: 10px 14px; gap: 10px; }
+  .pp-sticky-cta-name { font-size: 12px; }
+  .pp-sticky-cta-price { font-size: 10.5px; }
+  .pp-sticky-cta .btn { padding: 10px 16px !important; font-size: 11px !important; }
+  /* Hide floating stats on mobile */
+  .cat-prod-float-stats { display: none; }
+  /* Hide ButterflyMX chips on mobile */
+  .bmx-hero-float, .bmx-chip { display: none; }
+  /* Reduce category quote form padding */
+  .cat-quote-form { padding: 32px 24px !important; }
 }
 @media (max-width: 480px) {
   .ap-hero-stats { flex-direction: column; gap: 12px; }
   .ap-hero-brand-stack { max-width: 260px; gap: 10px; }
   .ap-hero-brand-3 { grid-column: span 2; }
+  .pp-sticky-cta { flex-direction: column; align-items: stretch; padding: 10px 12px; }
+  .pp-sticky-cta-info { text-align: center; }
+  .pp-sticky-cta .btn { width: 100%; justify-content: center; }
+  .cat-quote-form { padding: 24px 18px !important; }
 }
 .min-link-btn {
   font-family: var(--fb);

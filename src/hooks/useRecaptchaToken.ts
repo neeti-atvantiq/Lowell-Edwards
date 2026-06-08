@@ -1,0 +1,19 @@
+'use client';
+import { useCallback } from 'react';
+import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
+
+export function useRecaptchaToken() {
+  const { executeRecaptcha } = useGoogleReCaptcha();
+
+  return useCallback(
+    async (action: string): Promise<string | null> => {
+      if (!executeRecaptcha) return null;
+      try {
+        return await executeRecaptcha(action);
+      } catch {
+        return null;
+      }
+    },
+    [executeRecaptcha]
+  );
+}

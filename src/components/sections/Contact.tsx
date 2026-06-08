@@ -1,18 +1,51 @@
 'use client';
 import { useState } from 'react';
 import Image from 'next/image';
+import { useRecaptchaToken } from '@/hooks/useRecaptchaToken';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
+    appointmentDate: '',
+    appointmentTime: '',
     message: ''
   });
+  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState<string>('');
+  const getRecaptchaToken = useRecaptchaToken();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    if (status === 'submitting') return;
+
+    setStatus('submitting');
+    setErrorMessage('');
+
+    const recaptchaToken = await getRecaptchaToken('contact');
+    if (!recaptchaToken) {
+      setStatus('error');
+      setErrorMessage('Could not verify reCAPTCHA. Please refresh and try again.');
+      return;
+    }
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...formData, recaptchaToken }),
+      });
+      const data = (await res.json().catch(() => ({}))) as { ok?: boolean; error?: string };
+      if (!res.ok || !data.ok) {
+        throw new Error(data.error || 'Submission failed');
+      }
+      setStatus('success');
+      setFormData({ name: '', email: '', phone: '', appointmentDate: '', appointmentTime: '', message: '' });
+    } catch (err) {
+      setStatus('error');
+      setErrorMessage(err instanceof Error ? err.message : 'Submission failed');
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -70,46 +103,14 @@ export default function ContactPage() {
                       <li><span>Saturday:</span> By appointment</li>
                       <li><span>Sunday:</span> Closed</li>
                     </ul>
-                    <div className="hours-emergency">
+                    {/* <div className="hours-emergency">
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <circle cx="12" cy="12" r="10"></circle>
                         <polyline points="12 6 12 12 16 14"></polyline>
                       </svg>
                       <span>24/7 Emergency</span>
-                    </div>
+                    </div> */}
                   </div>
-                </div>
-              </div>
-
-              <div className="contact-card contact-card-schedule">
-                <div className="contact-card-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                    <line x1="16" y1="2" x2="16" y2="6"></line>
-                    <line x1="8" y1="2" x2="8" y2="6"></line>
-                    <line x1="3" y1="10" x2="21" y2="10"></line>
-                  </svg>
-                </div>
-                <div className="contact-card-content">
-                  <h3 className="contact-card-title">Schedule a Call</h3>
-                  <p className="contact-card-detail">
-                    Book a consultation at your convenience.
-                  </p>
-                  <a 
-                    href="https://calendly.com/lowell-edwards" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="btn btn-gold"
-                    style={{ marginTop: 16, fontSize: 12, padding: '12px 24px', width: '100%', justifyContent: 'center' }}
-                  >
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                      <line x1="16" y1="2" x2="16" y2="6"></line>
-                      <line x1="8" y1="2" x2="8" y2="6"></line>
-                      <line x1="3" y1="10" x2="21" y2="10"></line>
-                    </svg>
-                    Schedule on Calendly
-                  </a>
                 </div>
               </div>
 
@@ -149,8 +150,8 @@ New York Metro and surrounding areas
             <div className="contact-form-section">
               <div className="contact-form-wrap">
                 <div className="contact-form-header" style={{ textAlign: 'center', marginBottom: 36 }}>
-                  <h2 className="contact-form-title" style={{ marginBottom: 8 }}>Send Us a Message</h2>
-                  <p className="contact-form-sub" style={{ margin: 0 }}>Fill out the form below and we&apos;ll get back to you within 24 hours.</p>
+                  <h2 className="contact-form-title" style={{ marginBottom: 8 }}>Schedule a Meeting</h2>
+                  <p className="contact-form-sub" style={{ margin: 0 }}>Pick a date and time that works for you. We&apos;ll confirm by email at <a href="mailto:info@lowelledwards.com" className="contact-link">info@lowelledwards.com</a> within 24 hours.</p>
                 </div>
                 <form onSubmit={handleSubmit}>
                   <div className="contact-form-row">
@@ -191,6 +192,32 @@ New York Metro and surrounding areas
                       required
                     />
                   </div>
+                  <div className="contact-form-row">
+                    <div className="contact-form-field">
+                      <label htmlFor="appointmentDate" className="contact-form-label">Date of Appointment *</label>
+                      <input
+                        type="date"
+                        id="appointmentDate"
+                        name="appointmentDate"
+                        value={formData.appointmentDate}
+                        onChange={handleChange}
+                        className="contact-form-input"
+                        required
+                      />
+                    </div>
+                    <div className="contact-form-field">
+                      <label htmlFor="appointmentTime" className="contact-form-label">Time Requested for Appointment *</label>
+                      <input
+                        type="time"
+                        id="appointmentTime"
+                        name="appointmentTime"
+                        value={formData.appointmentTime}
+                        onChange={handleChange}
+                        className="contact-form-input"
+                        required
+                      />
+                    </div>
+                  </div>
                   <div className="contact-form-field">
                     <label htmlFor="message" className="contact-form-label">Message</label>
                     <textarea
@@ -203,13 +230,31 @@ New York Metro and surrounding areas
                       required
                     />
                   </div>
-                  <button type="submit" className="contact-form-submit">
+                  <button type="submit" className="contact-form-submit" disabled={status === 'submitting'}>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <line x1="22" y1="2" x2="11" y2="13"></line>
-                      <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                      <line x1="16" y1="2" x2="16" y2="6"></line>
+                      <line x1="8" y1="2" x2="8" y2="6"></line>
+                      <line x1="3" y1="10" x2="21" y2="10"></line>
                     </svg>
-                    Send Message
+                    {status === 'submitting' ? 'Sending…' : 'Request Meeting'}
                   </button>
+                  {status === 'success' && (
+                    <p role="status" style={{ marginTop: 16, color: '#1f6b3a', fontSize: 14 }}>
+                      Thanks — your meeting request has been sent. We&apos;ll confirm by email within 24 hours.
+                    </p>
+                  )}
+                  {status === 'error' && (
+                    <p role="alert" style={{ marginTop: 16, color: '#b3261e', fontSize: 14 }}>
+                      {errorMessage || 'Something went wrong. Please try again or call us.'}
+                    </p>
+                  )}
+                  <p style={{ marginTop: 16, fontSize: 11, color: '#6b6b6b', lineHeight: 1.5 }}>
+                    This site is protected by reCAPTCHA and the Google{' '}
+                    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>Privacy Policy</a>{' '}
+                    and{' '}
+                    <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>Terms of Service</a> apply.
+                  </p>
                 </form>
               </div>
             </div>

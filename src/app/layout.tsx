@@ -1,6 +1,7 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Outfit } from "next/font/google";
 import "./globals.css";
+import RecaptchaProvider from "@/components/providers/RecaptchaProvider";
 
 const cormorantGaramond = Cormorant_Garamond({
   subsets: ["latin"],
@@ -22,6 +23,12 @@ export const metadata: Metadata = {
   description: "Certified home integration specialists in Hackensack, NJ. ButterflyMX, Akuvox, DoorBird authorised integrators. Smart video intercoms, access control, and building integration.",
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -29,7 +36,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-theme="estate" className={`${cormorantGaramond.variable} ${outfit.variable}`}>
-      <body>{children}</body>
+      <body>
+        <RecaptchaProvider>{children}</RecaptchaProvider>
+      </body>
     </html>
   );
 }

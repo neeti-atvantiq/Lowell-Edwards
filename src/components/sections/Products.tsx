@@ -9,7 +9,7 @@ const products = [
     brand: 'ButterflyMX',
     type: 'Video Intercom & Smart Access',
     image: '/images/products/butterfly_img.png',
-    desc: 'Cloud-managed video intercom purpose-built for residential buildings. Residents open doors via smartphone; managers control entire portfolios from a single dashboard; couriers use dedicated delivery access codes. The most widely deployed solution in UK apartment blocks.',
+    desc: 'Cloud-managed video intercom purpose-built for residential buildings. Residents open doors via smartphone; managers control entire portfolios from a single dashboard; couriers use dedicated delivery access codes.',
     specs: [
       'HD video call to any smartphone',
       'QR code & mobile key entry',

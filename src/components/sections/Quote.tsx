@@ -1,8 +1,12 @@
 'use client';
 import { useState } from 'react';
+import { useRecaptchaToken } from '@/hooks/useRecaptchaToken';
 
 export default function Quote() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+  const getRecaptchaToken = useRecaptchaToken();
   const [form, setForm] = useState({
     first: '', last: '', company: '', email: '', phone: '',
     buildingType: '', units: '', priority: '', notes: '',
@@ -13,9 +17,36 @@ export default function Quote() {
     (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) =>
       setForm({ ...form, [k]: e.target.value });
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    if (submitting) return;
+
+    setSubmitting(true);
+    setErrorMessage('');
+
+    const recaptchaToken = await getRecaptchaToken('quote');
+    if (!recaptchaToken) {
+      setSubmitting(false);
+      setErrorMessage('Could not verify reCAPTCHA. Please refresh and try again.');
+      return;
+    }
+
+    try {
+      const res = await fetch('/api/quote', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...form, recaptchaToken }),
+      });
+      const data = (await res.json().catch(() => ({}))) as { ok?: boolean; error?: string };
+      if (!res.ok || !data.ok) {
+        throw new Error(data.error || 'Submission failed');
+      }
+      setSubmitted(true);
+    } catch (err) {
+      setErrorMessage(err instanceof Error ? err.message : 'Submission failed');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -136,14 +167,24 @@ export default function Quote() {
                     onChange={onChange('notes')}
                   />
                 </div>
-                <button type="submit" className="qf-submit">
+                <button type="submit" className="qf-submit" disabled={submitting}>
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                     <line x1="22" y1="2" x2="11" y2="13" />
                     <polygon points="22,2 15,22 11,13 2,9" />
                   </svg>
-                  Request My Free Quote
+                  {submitting ? 'Sending…' : 'Request My Free Quote'}
                 </button>
+                {errorMessage && (
+                  <div role="alert" style={{ marginTop: 12, color: '#b3261e', fontSize: 13 }}>
+                    {errorMessage}
+                  </div>
+                )}
                 <div className="qf-privacy">🔒 Your details are kept private. No spam, ever.</div>
+                <div className="qf-privacy" style={{ marginTop: 6, fontSize: 11, opacity: 0.75 }}>
+                  Protected by reCAPTCHA —{' '}
+                  <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>Privacy</a>{' '}·{' '}
+                  <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>Terms</a>
+                </div>
               </form>
             )}
           </div>

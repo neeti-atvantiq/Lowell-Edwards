@@ -67,7 +67,7 @@ const compareRows = [
   { feature: 'Vendor-neutral advice', us: '3 brands, honest fit', them: '✗' },
   { feature: 'Building regulations', us: 'NICEIC-approved + 17th Edition', them: 'Variable' },
   { feature: 'Listed-building expertise', us: '✓', them: '✗' },
-  { feature: 'GDPR / DPIA documentation', us: 'Included for biometric installs', them: '✗' },
+  //{ feature: 'GDPR / DPIA documentation', us: 'Included for biometric installs', them: '✗' },
   { feature: 'Installation guarantee', us: '1 year, no quibble', them: 'Hardware only' },
   { feature: 'Support contact', us: 'Same engineer, US-based', them: 'Ticket queue' },
   { feature: 'Response SLA', us: '<24 hours, guaranteed', them: 'Variable' },

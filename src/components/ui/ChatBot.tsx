@@ -54,7 +54,7 @@ const flow: Record<string, FlowNode> = {
   survey:
     {
       reply:
-        'We offer free site surveys for all projects. One of our UK engineers will visit your building, assess your entry points, and produce a fully costed specification. Would you like to arrange one?',
+        'We offer free site surveys for all projects. One of our engineers will visit your building, assess your entry points, and produce a fully costed specification. Would you like to arrange one?',
       next: [
         { label: 'Yes — book a survey', key: 'get_quote' },
         { label: '💷 Quote first please', key: 'get_quote' },

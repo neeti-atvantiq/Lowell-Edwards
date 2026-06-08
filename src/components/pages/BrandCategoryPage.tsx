@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { CategoryData, ProductData, products } from '@/data/products';
+import CategoryQuoteForm from '@/components/forms/CategoryQuoteForm';
 
 export default function BrandCategoryPage({ category }: { category: CategoryData }) {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -526,37 +527,7 @@ export default function BrandCategoryPage({ category }: { category: CategoryData
               </div>
             </div>
 
-            <form className="cat-quote-form reveal" onSubmit={(e) => e.preventDefault()}>
-              <div className="cat-form-row">
-                <div className="cat-form-group">
-                  <label htmlFor="name">Full Name</label>
-                  <input type="text" id="name" name="name" placeholder="Your name" required />
-                </div>
-                <div className="cat-form-group">
-                  <label htmlFor="email">Email</label>
-                  <input type="email" id="email" name="email" placeholder="you@company.com" required />
-                </div>
-              </div>
-              <div className="cat-form-row">
-                <div className="cat-form-group">
-                  <label htmlFor="phone">Phone</label>
-                  <input type="tel" id="phone" name="phone" placeholder="07xxx xxx xxx" />
-                </div>
-                <div className="cat-form-group">
-                  <label htmlFor="units">Number of Units</label>
-                  <input type="text" id="units" name="units" placeholder="e.g. 24 apartments" />
-                </div>
-              </div>
-              <div className="cat-form-group">
-                <label htmlFor="message">Project Details</label>
-                <textarea id="message" name="message" rows={4} placeholder={`Tell us about your building and what you need from ${category.brandName}...`} />
-              </div>
-              <button type="submit" className="btn btn-gold" style={{ width: '100%', justifyContent: 'center', padding: '16px 28px', marginTop: '24px' }}>
-                Request Free Quote
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-              </button>
-              <p className="cat-form-note">No obligation · Free site survey · 24h response</p>
-            </form>
+            <CategoryQuoteForm brand={category.brandName} category={category.subtitle} />
           </div>
         </div>
       </section>

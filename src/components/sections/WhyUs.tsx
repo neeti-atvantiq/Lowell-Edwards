@@ -54,7 +54,7 @@ export default function WhyUs() {
             <div className="b2-stats">
               <div>
                 <div className="b2-stat-num">500<span>+</span></div>
-                <div className="b2-stat-label">Buildings secured across the UK</div>
+                <div className="b2-stat-label">Buildings secured across the New Jersey / New York Metro Area</div>
               </div>
               <div>
                 <div className="b2-stat-num">98<span>%</span></div>

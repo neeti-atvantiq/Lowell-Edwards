@@ -348,6 +348,33 @@ export default function Solution() {
           .slider-btn {
             display: none;
           }
+          .slider-card {
+            width: 320px;
+          }
+          .slider-card-image {
+            height: 210px;
+          }
+          .slider-card-content {
+            padding: 24px 22px 22px;
+          }
+          .slider-card-title {
+            font-size: 20px;
+          }
+        }
+        @media (max-width: 480px) {
+          .slider-card {
+            width: 88vw;
+            max-width: 88vw;
+          }
+          .slider-card-image {
+            height: 190px;
+          }
+          .slider-card-title {
+            font-size: 18px;
+          }
+          .slider-card-body {
+            font-size: 14px;
+          }
         }
       `}} />
     </section>

@@ -40,12 +40,12 @@ const solutionStories = [
   },
   {
     n: '05',
-    eyebrow: 'Guest and Contractor Access',
-    title: 'Zero-Touch Visitor Management',
-    body: 'Issue temporary access codes for contractors, cleaners, and guests with defined time windows so access expires automatically.',
-    detail: 'This keeps keys out of circulation and reduces friction for recurring services while preserving tighter control over when access starts and stops.',
-    fact: 'Auto-expiring access credentials',
-    image: '/images/solutions/solution-05.png',
+    eyebrow: 'Touchless Entry',
+    title: 'Touchless Face Recognition Entry',
+    body: 'For premium buildings, AI-powered face recognition enables frictionless, keyless entry for registered residents without cards, fobs, or PINs.',
+    detail: 'Residents move through entrances faster while property teams maintain strict enrollment control, helping reduce tailgating pressure at busy access points.',
+    fact: 'AI-powered keyless resident entry',
+    image: '/images/solutions/solution-05.jpeg',
   },
   {
     n: '06',

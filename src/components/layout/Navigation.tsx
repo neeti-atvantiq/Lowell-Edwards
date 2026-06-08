@@ -27,7 +27,7 @@ export default function Navigation() {
           <Link href="/solution" className={pathname.startsWith('/solution') ? 'active' : ''}>Solutions</Link>
           <Link href="/products" className={pathname.startsWith('/products') ? 'active' : ''}>Products</Link>
           <Link href="/why-us" className={pathname.startsWith('/why-us') ? 'active' : ''}>Why Us</Link>
-          <Link href="/compare" className={pathname.startsWith('/compare') ? 'active' : ''}>Compare</Link>
+          <Link href="/about" className={pathname.startsWith('/about') ? 'active' : ''}>About Us</Link>
           <Link href="/contact" className={pathname.startsWith('/contact') ? 'active' : ''}>Contact Us</Link>
         </div>
 
@@ -62,7 +62,7 @@ export default function Navigation() {
         <Link href="/solution" className={pathname.startsWith('/solution') ? 'active' : ''} onClick={() => setMenuOpen(false)}>Solutions</Link>
         <Link href="/products" className={pathname.startsWith('/products') ? 'active' : ''} onClick={() => setMenuOpen(false)}>Products</Link>
         <Link href="/why-us" className={pathname.startsWith('/why-us') ? 'active' : ''} onClick={() => setMenuOpen(false)}>Why Us</Link>
-        <Link href="/compare" className={pathname.startsWith('/compare') ? 'active' : ''} onClick={() => setMenuOpen(false)}>Compare</Link>
+        <Link href="/about" className={pathname.startsWith('/about') ? 'active' : ''} onClick={() => setMenuOpen(false)}>About Us</Link>
         <Link href="/contact" className={pathname.startsWith('/contact') ? 'active' : ''} onClick={() => setMenuOpen(false)}>Contact</Link>
 
         {/* FIXED BUTTON STYLE */}
