@@ -60,7 +60,7 @@ export default function Hero() {
             <a
               href="#quote"
               className="btn btn-outline"
-              style={{ fontSize: 13, padding: '16px 36px', letterSpacing: '.1em' }}
+              style={{ fontSize: 13, padding: '16px 36px', letterSpacing: '.1em', background: 'rgba(12, 12, 12, 0.12)' }}
             >
               Get a Free Quote
             </a>
