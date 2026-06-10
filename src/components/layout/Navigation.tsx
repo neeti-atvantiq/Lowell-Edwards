@@ -3,11 +3,13 @@ import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
+import ServiceModal from '@/components/forms/ServiceModal';
 
 export default function Navigation() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [serviceOpen, setServiceOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -19,7 +21,7 @@ export default function Navigation() {
     <nav id="nav" className={scrolled ? 'solid scrolled' : ''}>
       <div className="nav-inner">
         <Link href="/" className="nav-logo" style={{ gap: 0 }}>
-          <Image src="/logo.jpg" alt="Lowell Edwards logo" width={270} height={55} loading="eager"/>
+          <Image src="/logo.jpg" alt="Lowell Edwards logo" width={300} height={60} loading="eager"/>
         </Link>
 
         {/* Desktop Links */}
@@ -34,7 +36,7 @@ export default function Navigation() {
         <div className="nav-right">
           {/* KEEP EXACTLY SAME */}
           <a href="tel:2015253300" className="nav-phone">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 010 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.9v2.02z" />
             </svg>
             201-525-3300
@@ -44,9 +46,9 @@ export default function Navigation() {
             Get a Quote
           </Link>
 
-          <Link href="/#lte" className="btn btn-gold" style={{ padding: '10px 20px', fontSize: 11.5 }}>
+          <button onClick={() => setServiceOpen(true)} className="btn btn-gold" style={{ padding: '10px 20px', fontSize: 11.5 }}>
             Request Service
-          </Link>
+          </button>
 
           {/* ONLY NEW THING */}
           <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
@@ -68,9 +70,11 @@ export default function Navigation() {
         {/* FIXED BUTTON STYLE */}
         <div className="mobile-cta">
           <Link href="/#quote" className="btn btn-gold" onClick={() => setMenuOpen(false)}>Get a Quote</Link>
-          <Link href="/#lte" className="btn btn-gold" onClick={() => setMenuOpen(false)}>Request Service</Link>
+          <button className="btn btn-gold" onClick={() => { setMenuOpen(false); setServiceOpen(true); }}>Request Service</button>
         </div>
       </div>
+
+      <ServiceModal open={serviceOpen} onClose={() => setServiceOpen(false)} />
     </nav>
   );
 }

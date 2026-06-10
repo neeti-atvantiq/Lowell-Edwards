@@ -17,7 +17,7 @@ const credentials = [
 ];
 
 const stats = [
-  { num: '500', unit: '+', label: 'Buildings Secured', context: 'Across the US — apartments, offices, heritage homes, healthcare' },
+  { num: '300', unit: '+', label: 'Buildings Secured', context: 'Across the US — apartments, offices, heritage homes, healthcare' },
   { num: '98', unit: '%', label: 'Customer Satisfaction', context: 'Based on post-install surveys across 18 months of projects' },
   { num: '<24', unit: 'h', label: 'Response Time SLA', context: 'Real engineer responds — guaranteed, no automated email systems' },
   { num: '1', unit: 'yr', label: 'Installation Guarantee', context: 'If our workmanship fails in year one, we fix it free — no debate' },
@@ -92,7 +92,7 @@ export default function WhyUsPage() {
           <div className="wu-hero-grid">
             <div className="wu-hero-content">
               <div className="tag">Why Lowell Edwards</div>
-              <h1 className="h1">Anyone can sell hardware.<br /><em className="em">We secure buildings with proven <br/> installs and guaranteed work.</em></h1>
+              <h1 className="h1">  Anyone can sell hardware.<br />  <em className="em">We secure buildings with <br/>proven, guaranteed installs.</em></h1>
               <p className="wu-hero-desc">
                 The smartest intercom in the world is only as good as the engineer who installed it. We&apos;re the certified integrator that property managers, developers, and luxury homeowners call when they want it done once, done properly, and done by people who&apos;ll pick up the phone in three years&apos; time.
               </p>

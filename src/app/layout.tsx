@@ -1,20 +1,17 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, Outfit } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import RecaptchaProvider from "@/components/providers/RecaptchaProvider";
 
-const cormorantGaramond = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
-  variable: "--font-cormorant-garamond",
+const futurist = localFont({
+  src: "../assets/fonts/FUTRST.ttf",
+  variable: "--font-futurist",
   display: "swap",
 });
 
-const outfit = Outfit({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-outfit",
+const basset = localFont({
+  src: "../assets/fonts/BASSET.ttf",
+  variable: "--font-basset",
   display: "swap",
 });
 
@@ -35,7 +32,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-theme="estate" className={`${cormorantGaramond.variable} ${outfit.variable}`}>
+    <html lang="en" data-theme="estate" className={`${futurist.variable} ${basset.variable}`}>
       <body>
         <RecaptchaProvider>{children}</RecaptchaProvider>
       </body>

@@ -38,9 +38,9 @@ export default function Home() {
       <main>
         <Hero />
         <Ticker />
+        <WhyUs />
         <Solution />
         <Installations />
-        <WhyUs />
         <Personas />
         <Products />
         {/* <Gallery /> */}

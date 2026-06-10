@@ -92,8 +92,8 @@ const solutionCategories = [
 
 const heroStats = [
   { value: '3', label: 'Premium brands' },
-  { value: '500+', label: 'Installations' },
-  { value: '10,000+', label: 'Units deployed' },
+  { value: '300+', label: 'Installations' },
+  { value: '5,000+', label: 'Units deployed' },
   { value: '24/7', label: 'Support' },
 ];
 

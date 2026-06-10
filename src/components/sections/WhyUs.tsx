@@ -4,15 +4,21 @@ export default function WhyUs() {
       <div className="wrap">
         <div className="why-header reveal">
           <div className="tag" style={{ justifyContent: 'center' }}>Why Choose Us</div>
-          <h2 className="h2" style={{ textAlign: 'center' }}>
-            More than a supplier —<br />a <em className="em">long-term partner</em>
+          <h2 className="h2" style={{ textAlign: 'center', whiteSpace: 'nowrap' }}>
+            Certified Home Integration Specialists <br /><span className="em">Hackensack, NJ</span>
           </h2>
           <p
-            className="body-lg"
-            style={{ textAlign: 'center', marginTop: 18, maxWidth: 500, marginLeft: 'auto', marginRight: 'auto' }}
+            style={{
+              textAlign: 'center',
+              marginTop: 12,
+              fontFamily: 'var(--fb)',
+              fontSize: 15,
+              fontWeight: 400,
+              letterSpacing: '.03em',
+              color: 'rgba(22,26,32,.55)',
+            }}
           >
-            Every system we install comes with our full service commitment. We don&apos;t disappear
-            after the invoice is paid.
+            Proudly serving Northern New Jersey &amp; the NY Metro Area for over 30 years
           </p>
         </div>
         <div className="bento reveal" style={{ transitionDelay: '.1s' }}>
@@ -53,7 +59,7 @@ export default function WhyUs() {
             </div>
             <div className="b2-stats">
               <div>
-                <div className="b2-stat-num">500<span>+</span></div>
+                <div className="b2-stat-num">300<span>+</span></div>
                 <div className="b2-stat-label">Buildings secured across the New Jersey / New York Metro Area</div>
               </div>
               <div>

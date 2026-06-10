@@ -2,8 +2,8 @@ import ImageSlider from '@/components/ui/ImageSlider';
 
 const heroImages = [
   '/images/hero/hero1.png',
-  '/images/hero/hero2.png',
-  '/images/hero/hero3.png',
+  '/images/hero/heroimg2.png',
+  '/images/hero/heroimg3.png',
 ];
 
 export default function Hero() {
@@ -16,15 +16,13 @@ export default function Hero() {
       <div className="hero-veil" />
       <div className="hero-inner">
         <div className="hero-text-col">
-          <div className="hero-eyebrow">Certified Home Integration Specialists · Hackensack, NJ</div>
-          <div className="hero-service-tagline">Proudly serving Northern New Jersey and the New York Metro Area for over 30 years</div>
           <h1
             className="h1"
             style={{
               fontSize: 'clamp(40px,5.8vw,80px)',
               lineHeight: 1.03,
               letterSpacing: '-.025em',
-              marginBottom: 26,
+              marginBottom: 36,
               textShadow: '0 2px 32px rgba(0,0,0,.65)',
             }}
           >
@@ -36,16 +34,6 @@ export default function Hero() {
               Safer buildings.
             </em>
             <br />
-            <span
-              style={{
-                fontSize: '.68em',
-                fontStyle: 'normal',
-                color: 'rgba(245,240,232,.68)',
-                fontWeight: 500,
-              }}
-            >
-              Zero compromise.
-            </span>
           </h1>
           <p
             className="body-lg hero-desc"
@@ -53,12 +41,13 @@ export default function Hero() {
               fontSize: 19,
               maxWidth: 580,
               lineHeight: 1.75,
-              marginBottom: 40,
+              marginBottom: 52,
               textShadow: '0 1px 12px rgba(0,0,0,.7)',
             }}
           >
             Video intercoms and access control systems supplied, installed, and maintained by a
-            dedicated local team. Onsite or remote — we respond within 24 hours, guaranteed.
+            dedicated local team. 
+            {/* Onsite or remote — we respond within 24 hours, guaranteed. */}
           </p>
           <div className="hero-actions">
             <a

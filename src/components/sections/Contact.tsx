@@ -12,6 +12,21 @@ export default function ContactPage() {
     appointmentTime: '',
     message: ''
   });
+  const [timeHour, setTimeHour] = useState('');
+  const [timeMinute, setTimeMinute] = useState('');
+  const [timePeriod, setTimePeriod] = useState('AM');
+
+  const updateTime = (hour: string, minute: string, period: string) => {
+    if (!hour || !minute) {
+      setFormData(prev => ({ ...prev, appointmentTime: '' }));
+      return;
+    }
+    let h = parseInt(hour, 10);
+    if (period === 'PM' && h !== 12) h += 12;
+    if (period === 'AM' && h === 12) h = 0;
+    const val = `${String(h).padStart(2, '0')}:${minute}`;
+    setFormData(prev => ({ ...prev, appointmentTime: val }));
+  };
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState<string>('');
   const getRecaptchaToken = useRecaptchaToken();
@@ -97,7 +112,7 @@ export default function ContactPage() {
                     <a href="tel:+12015253300" className="contact-link">201-525-3300</a>
                   </p>
                   <div className="contact-hours">
-                    <h4 className="hours-title">Calling Hours</h4>
+                    <h4 className="hours-title">Business Hours</h4>
                     <ul className="hours-list">
                       <li><span>Mon-Fri:</span> 10:00 AM - 7:00 PM</li>
                       <li><span>Saturday:</span> By appointment</li>
@@ -150,7 +165,7 @@ New York Metro and surrounding areas
             <div className="contact-form-section">
               <div className="contact-form-wrap">
                 <div className="contact-form-header" style={{ textAlign: 'center', marginBottom: 36 }}>
-                  <h2 className="contact-form-title" style={{ marginBottom: 8 }}>Schedule a Meeting</h2>
+                  <h2 className="contact-form-title" style={{ marginBottom: 8 }}>Book a Consultation</h2>
                   <p className="contact-form-sub" style={{ margin: 0 }}>Pick a date and time that works for you. We&apos;ll confirm by email at <a href="mailto:info@lowelledwards.com" className="contact-link">info@lowelledwards.com</a> within 24 hours.</p>
                 </div>
                 <form onSubmit={handleSubmit}>
@@ -194,7 +209,7 @@ New York Metro and surrounding areas
                   </div>
                   <div className="contact-form-row">
                     <div className="contact-form-field">
-                      <label htmlFor="appointmentDate" className="contact-form-label">Date of Appointment *</label>
+                      <label htmlFor="appointmentDate" className="contact-form-label">Date</label>
                       <input
                         type="date"
                         id="appointmentDate"
@@ -206,16 +221,42 @@ New York Metro and surrounding areas
                       />
                     </div>
                     <div className="contact-form-field">
-                      <label htmlFor="appointmentTime" className="contact-form-label">Time Requested for Appointment *</label>
-                      <input
-                        type="time"
-                        id="appointmentTime"
-                        name="appointmentTime"
-                        value={formData.appointmentTime}
-                        onChange={handleChange}
-                        className="contact-form-input"
-                        required
-                      />
+                      <label className="contact-form-label">Time</label>
+                      <div style={{ display: 'flex', gap: 8 }}>
+                        <select
+                          className="contact-form-input"
+                          value={timeHour}
+                          onChange={(e) => { setTimeHour(e.target.value); updateTime(e.target.value, timeMinute, timePeriod); }}
+                          required
+                          style={{ flex: 1 }}
+                        >
+                          <option value="" disabled>Hr</option>
+                          {[10,11,12,1,2,3,4,5,6,7].map(h => (
+                            <option key={h} value={String(h)}>{h}</option>
+                          ))}
+                        </select>
+                        <select
+                          className="contact-form-input"
+                          value={timeMinute}
+                          onChange={(e) => { setTimeMinute(e.target.value); updateTime(timeHour, e.target.value, timePeriod); }}
+                          required
+                          style={{ flex: 1 }}
+                        >
+                          <option value="" disabled>Min</option>
+                          {['00','15','30','45'].map(m => (
+                            <option key={m} value={m}>{m}</option>
+                          ))}
+                        </select>
+                        <select
+                          className="contact-form-input"
+                          value={timePeriod}
+                          onChange={(e) => { setTimePeriod(e.target.value); updateTime(timeHour, timeMinute, e.target.value); }}
+                          style={{ flex: 1 }}
+                        >
+                          <option value="AM">AM</option>
+                          <option value="PM">PM</option>
+                        </select>
+                      </div>
                     </div>
                   </div>
                   <div className="contact-form-field">
