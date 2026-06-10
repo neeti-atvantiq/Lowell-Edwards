@@ -27,12 +27,7 @@ export default function Hero() {
             }}
           >
             Smarter access.<br />
-            <em
-              className="em"
-              style={{ fontStyle: 'italic' }}
-            >
               Safer buildings.
-            </em>
             <br />
           </h1>
           <p
