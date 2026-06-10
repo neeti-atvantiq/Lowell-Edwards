@@ -93,16 +93,15 @@ export default function Personas() {
     <section className="section personas" id="personas">
       <div className="wrap">
         <div className="personas-header reveal">
-          <div className="tag" style={{ justifyContent: 'center' }}>Built for Every Stakeholder</div>
+          <div className="tag" style={{ justifyContent: 'center' }}>A Custom Fit for Every Role</div>
           <h2 className="h2" style={{ textAlign: 'center' }}>
-            A solution for every<br />person in the building
+            Designed for everyone <br/>in the building
           </h2>
           <p
             className="body-lg"
-            style={{ textAlign: 'center', marginTop: 18, maxWidth: 540, marginLeft: 'auto', marginRight: 'auto' }}
+            style={{ textAlign: 'center', marginTop: 18, maxWidth: 650, marginLeft: 'auto', marginRight: 'auto' }}
           >
-            Whether you&apos;re a tenant, a property manager, or a developer — there is a tier and a
-            system designed specifically for your needs and budget.
+            Whether you are a tenant, property manager, or developer, we offer customizable system with tailored features designed to fit your unique needs and budget.
           </p>
         </div>
         <div className="personas-grid reveal" style={{ transitionDelay: '.1s' }}>

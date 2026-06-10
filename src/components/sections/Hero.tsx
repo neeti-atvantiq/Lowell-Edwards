@@ -26,7 +26,7 @@ export default function Hero() {
               textShadow: '0 2px 32px rgba(0,0,0,.65)',
             }}
           >
-            Smarter access.<br />
+            Smarter intercom access.<br />
               Safer buildings.
             <br />
           </h1>

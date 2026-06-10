@@ -61,9 +61,9 @@ export default function Products() {
     <section className="section products" id="products">
       <div className="wrap">
         <div className="products-header reveal">
-          <div className="tag">Systems We Integrate</div>
+          <div className="tag">Extensive Selection</div>
           <h2 className="h2">
-            The right hardware for your building
+            Equipment choices optimized for your building
           </h2>
         </div>
         <div className="integrator-note reveal" style={{ transitionDelay: '.1s' }}>
@@ -73,12 +73,10 @@ export default function Products() {
             <line x1="12" y1="16" x2="12.01" y2="16" />
           </svg>
           <span>
-            <strong>We are certified authorised integrators and resellers for each of the systems below.</strong>
+            <strong>As a certified integrator and reseller, we deliver end-to-end management of your building systems.</strong>
             <br />
             <span style={{ fontSize: '0.93em', display: 'inline-block', marginTop: 2 }}>
-              Our role is to assess your building&apos;s specific requirements, recommend the most suitable
-              solution, then manage the complete process from supply and installation through to
-              long-term maintenance.
+               We assess your facility’s unique needs, recommend the ideal solution, and handle every phase—from expert supply and installation to long-term maintenance—ensuring optimal performance.
             </span>
           </span>
         </div>

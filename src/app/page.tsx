@@ -39,8 +39,8 @@ export default function Home() {
         <Hero />
         <Ticker />
         <WhyUs />
-        <Solution />
         <Installations />
+        <Solution />
         <Personas />
         <Products />
         {/* <Gallery /> */}

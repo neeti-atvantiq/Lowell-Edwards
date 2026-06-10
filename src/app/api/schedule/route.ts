@@ -8,7 +8,12 @@ interface RequestBody {
   company?: string;
   email?: string;
   phone?: string;
-  buildingType?: string;
+  streetAddress?: string;
+  apartment?: string;
+  city?: string;
+  state?: string;
+  zipCode?: string;
+  requestType?: string;
 }
 
 function isEmail(s: string): boolean {
@@ -27,22 +32,30 @@ export async function POST(req: NextRequest) {
   const company = (body.company ?? '').trim();
   const email = (body.email ?? '').trim();
   const phone = (body.phone ?? '').trim();
-  const buildingType = (body.buildingType ?? '').trim();
+  const streetAddress = (body.streetAddress ?? '').trim();
+  const apartment = (body.apartment ?? '').trim();
+  const city = (body.city ?? '').trim();
+  const state = (body.state ?? '').trim();
+  const zipCode = (body.zipCode ?? '').trim();
+  const requestType = (body.requestType ?? '').trim();
 
-  if (!name || !email || !phone || !buildingType) {
+  if (!name || !email || !phone || !streetAddress || !city || !state || !zipCode || !requestType) {
     return NextResponse.json({ ok: false, error: 'Missing required fields' }, { status: 400 });
   }
   if (!isEmail(email)) {
     return NextResponse.json({ ok: false, error: 'Invalid email address' }, { status: 400 });
   }
 
-  const subject = `Service Request from ${name}`;
+  const address = [streetAddress, apartment, `${city}, ${state} ${zipCode}`].filter(Boolean).join(', ');
+
+  const subject = `Service Request (${requestType}) from ${name}`;
   const text = [
     `Name: ${name}`,
     `Company: ${company || '—'}`,
     `Email: ${email}`,
     `Phone: ${phone}`,
-    `Building Type: ${buildingType}`,
+    `Address: ${address}`,
+    `Request Type: ${requestType}`,
   ].join('\n');
 
   const html = `
@@ -52,7 +65,8 @@ export async function POST(req: NextRequest) {
       <tr><td style="padding:6px 12px;font-weight:600">Company</td><td style="padding:6px 12px">${company || '—'}</td></tr>
       <tr><td style="padding:6px 12px;font-weight:600">Email</td><td style="padding:6px 12px">${email}</td></tr>
       <tr><td style="padding:6px 12px;font-weight:600">Phone</td><td style="padding:6px 12px">${phone}</td></tr>
-      <tr><td style="padding:6px 12px;font-weight:600">Building Type</td><td style="padding:6px 12px">${buildingType}</td></tr>
+      <tr><td style="padding:6px 12px;font-weight:600">Address</td><td style="padding:6px 12px">${address}</td></tr>
+      <tr><td style="padding:6px 12px;font-weight:600">Request Type</td><td style="padding:6px 12px">${requestType}</td></tr>
     </table>
   `;
 

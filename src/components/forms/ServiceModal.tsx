@@ -1,17 +1,38 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
+import { State, City } from 'country-state-city';
 
 type Props = {
   open: boolean;
   onClose: () => void;
 };
 
-const initial = { name: '', company: '', email: '', phone: '', buildingType: '' };
+const initial = {
+  name: '',
+  company: '',
+  email: '',
+  phone: '',
+  state: '',
+  city: '',
+  streetAddress: '',
+  apartment: '',
+  zipCode: '',
+  requestType: '',
+};
 
 export default function ServiceModal({ open, onClose }: Props) {
   const [form, setForm] = useState(initial);
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
+
+  // US states from library
+  const usStates = useMemo(() => State.getStatesOfCountry('US'), []);
+
+  // Cities for selected state
+  const cities = useMemo(() => {
+    if (!form.state) return [];
+    return City.getCitiesOfState('US', form.state);
+  }, [form.state]);
 
   useEffect(() => {
     if (open) {
@@ -22,8 +43,14 @@ export default function ServiceModal({ open, onClose }: Props) {
     return () => { document.body.style.overflow = ''; };
   }, [open]);
 
-  const onChange = (k: keyof typeof initial) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) =>
-    setForm({ ...form, [k]: e.target.value });
+  const onChange = (k: keyof typeof initial) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const val = e.target.value;
+    if (k === 'state') {
+      setForm({ ...form, state: val, city: '' });
+    } else {
+      setForm({ ...form, [k]: val });
+    }
+  };
 
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -53,62 +80,117 @@ export default function ServiceModal({ open, onClose }: Props) {
     <div className="service-modal-overlay" onClick={onClose}>
       <div className="service-modal" onClick={(e) => e.stopPropagation()}>
         <button className="service-modal-close" onClick={onClose} aria-label="Close">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M18 6L6 18M6 6l12 12" />
           </svg>
         </button>
 
         {status === 'success' ? (
-          <div style={{ textAlign: 'center', padding: '40px 20px' }}>
-            <h3 className="qf-title" style={{ fontSize: 26, marginBottom: 12 }}>Request Received</h3>
-            <p className="qf-sub" style={{ marginBottom: 24 }}>We&apos;ll be in touch within 24 hours.</p>
-            <button className="qf-submit" onClick={onClose} style={{ maxWidth: 200, margin: '0 auto' }}>Close</button>
+          <div className="sm-success">
+            <div className="sm-success-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </div>
+            <h3 className="sm-title">Request Received</h3>
+            <p className="sm-sub">We&apos;ll be in touch within 24 hours.</p>
+            <button className="sm-submit" onClick={onClose}>Close</button>
           </div>
         ) : (
-          <form onSubmit={onSubmit}>
-            <h3 className="qf-title" style={{ fontSize: 26, marginBottom: 6 }}>Request Service</h3>
-            <p className="qf-sub">Fill in your details and we&apos;ll get back to you shortly.</p>
+          <form onSubmit={onSubmit} className="sm-form">
+            <div className="sm-header">
+              <h3 className="sm-title">Request Service</h3>
+              <p className="sm-sub">Fill in your details and we&apos;ll get back to you shortly.</p>
+            </div>
 
-            <div className="qf-row">
-              <div className="qf-field" style={{ marginBottom: 0 }}>
-                <label className="qf-label">Name</label>
-                <input className="qf-input" type="text" placeholder="Your full name" required value={form.name} onChange={onChange('name')} />
+            {/* Section: Personal Info */}
+            <div className="sm-section-label">Contact Information</div>
+            <div className="sm-row">
+              <div className="sm-field">
+                <label className="sm-label">Full Name <span className="sm-req">*</span></label>
+                <input className="sm-input" type="text" placeholder="John Doe" required value={form.name} onChange={onChange('name')} />
               </div>
-              <div className="qf-field" style={{ marginBottom: 0 }}>
-                <label className="qf-label">Company</label>
-                <input className="qf-input" type="text" placeholder="Company name" value={form.company} onChange={onChange('company')} />
+              <div className="sm-field">
+                <label className="sm-label">Company</label>
+                <input className="sm-input" type="text" placeholder="Company name (optional)" value={form.company} onChange={onChange('company')} />
+              </div>
+            </div>
+            <div className="sm-row">
+              <div className="sm-field">
+                <label className="sm-label">Email <span className="sm-req">*</span></label>
+                <input className="sm-input" type="email" placeholder="you@company.com" required value={form.email} onChange={onChange('email')} />
+              </div>
+              <div className="sm-field">
+                <label className="sm-label">Phone <span className="sm-req">*</span></label>
+                <input className="sm-input" type="tel" placeholder="201-555-0000" required value={form.phone} onChange={onChange('phone')} />
               </div>
             </div>
 
-            <div className="qf-row">
-              <div className="qf-field" style={{ marginBottom: 0 }}>
-                <label className="qf-label">Email</label>
-                <input className="qf-input" type="email" placeholder="you@company.com" required value={form.email} onChange={onChange('email')} />
+            {/* Section: Address */}
+            <div className="sm-section-label">Service Address</div>
+            <div className="sm-row">
+              <div className="sm-field">
+                <label className="sm-label">State <span className="sm-req">*</span></label>
+                <div className="sm-select-wrap">
+                  <select className="sm-select" required value={form.state} onChange={onChange('state')}>
+                    <option value="" disabled>Select state</option>
+                    {usStates.map((s) => (
+                      <option key={s.isoCode} value={s.isoCode}>{s.name}</option>
+                    ))}
+                  </select>
+                  <svg className="sm-select-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="6 9 12 15 18 9" /></svg>
+                </div>
               </div>
-              <div className="qf-field" style={{ marginBottom: 0 }}>
-                <label className="qf-label">Phone Number</label>
-                <input className="qf-input" type="tel" placeholder="(201) 555-0000" required value={form.phone} onChange={onChange('phone')} />
+              <div className="sm-field">
+                <label className="sm-label">City <span className="sm-req">*</span></label>
+                <div className="sm-select-wrap">
+                  <select className="sm-select" required value={form.city} onChange={onChange('city')} disabled={!form.state}>
+                    <option value="" disabled>{form.state ? 'Select city' : 'Select state first'}</option>
+                    {cities.map((c) => (
+                      <option key={c.name} value={c.name}>{c.name}</option>
+                    ))}
+                  </select>
+                  <svg className="sm-select-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="6 9 12 15 18 9" /></svg>
+                </div>
               </div>
             </div>
-
-            <div className="qf-field">
-              <label className="qf-label">Building Type</label>
-              <select className="qf-select" required value={form.buildingType} onChange={onChange('buildingType')}>
-                <option value="" disabled>Select building type</option>
-                <option value="Residential">Residential</option>
-                <option value="Commercial">Commercial</option>
-                <option value="Mixed-Use">Mixed-Use</option>
-                <option value="Gated Community">Gated Community</option>
-                <option value="Student Housing">Student Housing</option>
-                <option value="Other">Other</option>
-              </select>
+            <div className="sm-row">
+              <div className="sm-field sm-field-wide">
+                <label className="sm-label">Street Address <span className="sm-req">*</span></label>
+                <input className="sm-input" type="text" placeholder="123 Main St" required value={form.streetAddress} onChange={onChange('streetAddress')} />
+              </div>
+              <div className="sm-field sm-field-narrow">
+                <label className="sm-label">Apt / Suite</label>
+                <input className="sm-input" type="text" placeholder="Apt 4B" value={form.apartment} onChange={onChange('apartment')} />
+              </div>
+            </div>
+            <div className="sm-row">
+              <div className="sm-field sm-field-narrow">
+                <label className="sm-label">ZIP Code <span className="sm-req">*</span></label>
+                <input className="sm-input" type="text" placeholder="07601" required value={form.zipCode} onChange={onChange('zipCode')} maxLength={10} />
+              </div>
+              <div className="sm-field">
+                <label className="sm-label">Request Type <span className="sm-req">*</span></label>
+                <div className="sm-select-wrap">
+                  <select className="sm-select" required value={form.requestType} onChange={onChange('requestType')}>
+                    <option value="" disabled>Select type</option>
+                    <option value="General">General</option>
+                    <option value="Internet">Internet</option>
+                    <option value="Intercom">Intercom</option>
+                  </select>
+                  <svg className="sm-select-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="6 9 12 15 18 9" /></svg>
+                </div>
+              </div>
             </div>
 
             {status === 'error' && (
-              <p style={{ color: '#c0392b', fontSize: 13, marginBottom: 12 }}>{errorMessage}</p>
+              <div className="sm-error">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                {errorMessage}
+              </div>
             )}
 
-            <button className="qf-submit" type="submit" disabled={status === 'submitting'}>
+            <button className="sm-submit" type="submit" disabled={status === 'submitting'}>
               {status === 'submitting' ? 'Sending…' : 'Submit Request'}
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M5 12h14M12 5l7 7-7 7" />

@@ -103,7 +103,7 @@ export default function SolutionPage() {
         </div>
       </section>
 
-      <section className="section solution-outcomes">
+      {/* <section className="section solution-outcomes">
         <div className="wrap">
           <div className="outcomes-grid">
             {outcomes.map((item) => (
@@ -114,7 +114,7 @@ export default function SolutionPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="section narrative-intro-section" id="solutions">
         <div className="wrap">

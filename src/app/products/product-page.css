@@ -1058,3 +1058,130 @@
   .cat-counter-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
   .cat-counter-num { font-size: 28px; }
 }
+
+/* =====================================================
+   ENHANCED MOBILE RESPONSIVE — Product Pages
+   Additional fixes for proper mobile display.
+===================================================== */
+
+@media (max-width: 768px) {
+  /* Section padding override for product pages */
+  .section { padding: 48px 0; }
+
+  /* BMX hero content */
+  .bmx-hero-content, .akv-hero-content, .db-hero-content { max-width: 100%; }
+  .bmx-desc, .akv-hero-desc, .db-hero-desc { max-width: 100%; font-size: 14.5px; }
+  .bmx-tagline { font-size: 17px; }
+
+  /* Stats strips mobile */
+  .bmx-stats { padding: 36px 0; }
+  .akv-stats-bar, .db-stats-bar { padding: 36px 0; }
+  .bmx-stat-num { font-size: 36px; }
+
+  /* Feature cards mobile padding */
+  .bmx-feat-card, .akv-feature-card, .db-feature-card { padding: 28px 24px; }
+  .bmx-feat-title, .akv-feature-title, .db-feature-title { font-size: 19px; }
+
+  /* Use case cards */
+  .bmx-uc-body, .akv-uc-content, .db-uc-content { padding: 22px 20px 26px; }
+
+  /* Testimonials */
+  .bmx-test-card, .akv-test-card, .db-test-card { padding: 28px 24px; }
+  .bmx-test-quote, .akv-test-quote, .db-test-quote { font-size: 15px; }
+
+  /* FAQ */
+  .bmx-faq-q { font-size: 17px; gap: 16px; padding: 20px 0; }
+  .bmx-faq-a-inner { font-size: 13.5px; }
+
+  /* Quote form on product pages */
+  .bmx-quote-form, .akv-quote-form, .db-quote-form { padding: 28px 20px; }
+  .bmx-qf-title, .akv-qf-title, .db-qf-title { font-size: 22px; }
+
+  /* Installations grid */
+  .pp-inst-grid { gap: 14px; }
+  .pp-inst-item { aspect-ratio: 16/10; }
+
+  /* Sticky CTA mobile improvements */
+  .pp-sticky-cta { padding: 10px 16px; }
+
+  /* Product page breadcrumb */
+  .pp-breadcrumb { padding-top: 40px; padding-bottom: 16px; }
+  .pp-breadcrumb-inner { font-size: 11px; flex-wrap: wrap; }
+
+  /* Section headers */
+  .section-header { margin-bottom: 40px; }
+  .pp-h2 { font-size: clamp(26px, 6vw, 38px); }
+
+  /* Category hero adjustments */
+  .cat-hero-content { max-width: 100%; }
+  .cat-hero-desc { max-width: 100%; font-size: 14.5px; }
+  .cat-hero-brand-badge { font-size: 9.5px; padding: 5px 12px; }
+
+  /* Category product showcase */
+  .cat-prod-image-area { max-width: 100%; }
+  .cat-prod-float-stats { display: none; }
+
+  /* Category quote */
+  .cat-quote-form { padding: 28px 20px !important; }
+}
+
+@media (max-width: 480px) {
+  /* Section further reduced */
+  .section { padding: 36px 0; }
+
+  /* Hero titles tighter */
+  .bmx-hero-title, .akv-hero-title, .db-hero-title { font-size: clamp(26px, 7vw, 36px); }
+  .bmx-tagline { font-size: 15px; }
+
+  /* Meta items wrap */
+  .bmx-meta, .akv-hero-specs, .db-hero-specs { gap: 16px; flex-direction: row; flex-wrap: wrap; }
+  .bmx-meta-item, .akv-hero-spec, .db-hero-spec { min-width: calc(50% - 16px); }
+  .bmx-meta-val, .akv-hero-spec-val, .db-hero-spec-val { font-size: 19px; }
+
+  /* Feature cards */
+  .bmx-feat-card, .akv-feature-card, .db-feature-card { padding: 24px 20px; }
+  .bmx-feat-icon, .akv-feature-icon, .db-feature-icon { width: 44px; height: 44px; margin-bottom: 18px; }
+  .bmx-feat-title, .akv-feature-title, .db-feature-title { font-size: 17px; }
+  .bmx-feat-body, .akv-feature-body, .db-feature-body { font-size: 13px; }
+
+  /* Stats */
+  .bmx-stat-num { font-size: 28px; }
+  .bmx-stat-num .em { font-size: 16px; }
+  .bmx-stat-label { font-size: 11px; }
+
+  /* Testimonials */
+  .bmx-test-card, .akv-test-card, .db-test-card { padding: 24px 20px; }
+  .bmx-test-quote, .akv-test-quote, .db-test-quote { font-size: 14px; margin-bottom: 22px; }
+
+  /* FAQ */
+  .bmx-faq-q { font-size: 16px; padding: 18px 0; }
+  .bmx-faq-plus { width: 26px; height: 26px; }
+
+  /* Quote form */
+  .bmx-quote-form, .akv-quote-form, .db-quote-form { padding: 24px 16px; }
+  .bmx-qf-title, .akv-qf-title, .db-qf-title { font-size: 20px; }
+
+  /* PP H2 */
+  .pp-h2 { font-size: clamp(22px, 6vw, 32px); }
+
+  /* Category hero */
+  .cat-hero { padding: 36px 0 48px; }
+  .cat-hero-title { font-size: clamp(24px, 7vw, 36px); }
+  .cat-hero-desc { font-size: 14px; }
+  .cat-hero-brand-badge { font-size: 9px; }
+
+  /* Category product */
+  .cat-prod-tabs { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .cat-prod-tab { flex-shrink: 0; white-space: nowrap; }
+
+  /* Installations */
+  .pp-inst-item { aspect-ratio: 16/9; }
+  .pp-inst-item:first-child { aspect-ratio: 16/9; }
+
+  /* Breadcrumb */
+  .pp-breadcrumb { padding-top: 32px; padding-bottom: 14px; }
+  .pp-breadcrumb-inner { font-size: 10.5px; gap: 6px; }
+
+  /* Product images overflow prevention */
+  .bmx-device-img, .akv-hero-device, .db-hero-device { max-width: 100%; }
+}
