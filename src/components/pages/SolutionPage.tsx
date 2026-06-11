@@ -73,7 +73,7 @@ export default function SolutionPage() {
         <div className="wrap">
           <div className="split-hero-grid">
             <div className="inner-hero-content">
-              <div className="tag">Building Security Solution</div>
+              <div className="tag">Building Security Solutions</div>
               <h1 className="h2">
                 <span className="tight-o">O</span>ne integrated system<br/>for entry, delivery, and<br/> <em className="em">daily control</em>
               </h1>

@@ -52,7 +52,7 @@ export default function Solution() {
           </h2>
           <p
             className="body-lg"
-            style={{ textAlign: 'center', marginTop: 18, maxWidth: 580, marginLeft: 'auto', marginRight: 'auto', marginBottom: 48 }}
+            style={{ textAlign: 'center', marginTop: 18, maxWidth: 650, marginLeft: 'auto', marginRight: 'auto', marginBottom: 48 }}
           >
             Modern video intercom and access control transforms how buildings are secured — giving
             managers full visibility and control from anywhere, at any time.

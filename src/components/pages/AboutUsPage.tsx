@@ -65,7 +65,7 @@ const components = [
 const values = [
   { title: 'Clean Installation', body: 'Concealed cable routing, weather-rated mounts, and finishes that disappear into the architecture rather than fight it.' },
   { title: 'Dependable Performance', body: 'Systems configured for the way the property is actually used — not just powered up and walked away from.' },
-  { title: 'Long-Term Support', body: 'The team that installs your system is the team you call when you need to add a door, swap a unit, or move a resident over.' },
+  { title: 'Long-Term Support', body: 'Our support team stays available when you need to add a door, swap a unit, or update resident access.' },
 ];
 
 export default function AboutUsPage() {
@@ -120,7 +120,7 @@ export default function AboutUsPage() {
                 </div>
                 <div className="wu-credential-text">
                   <div className="wu-credential-label">Since 2019</div>
-                  <div className="wu-credential-name">Specialised in intercom and access</div>
+                  <div className="wu-credential-name">Specialized in intercom and access</div>
                   <div className="wu-credential-sub">Certified by ButterflyMX, Akuvox, and DoorBird — three brands, one team</div>
                 </div>
               </div>

@@ -4,7 +4,7 @@
 
 section.solution { background: #F5F7FA; }
 .solution .h2 {justify-self: center;}
-.solution-header { text-align: center; max-width: 580px; margin: 0 auto 64px; }
+.solution-header { text-align: center; max-width: 680px; margin: 0 auto 64px; }
 .solution-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 .sol-card { background: #FFFFFF; border: 1px solid rgba(26,26,46,.08); border-radius: 10px; padding: 36px 32px 30px; position: relative; overflow: hidden; isolation: isolate; box-shadow: 0 2px 16px rgba(26,26,46,.06); transition: transform .45s var(--ease), border-color .4s var(--ease), box-shadow .4s var(--ease); }
 .sol-card::before { content: ''; position: absolute; top: -1px; left: -1px; width: 48px; height: 2px; background: var(--gold); transition: width .55s var(--ease); z-index: 2; }

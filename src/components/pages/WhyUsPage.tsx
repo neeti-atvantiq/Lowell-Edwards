@@ -34,7 +34,7 @@ const pillars = [
     num: 'ii. Guarantees',
     title: 'Promises we actually keep.',
     body: 'A 24-hour response SLA, a 1-year installation guarantee, and the original engineer answering when something needs attention. Our promises sit on top of full manufacturer warranties.',
-    points: ['24-hour response, guaranteed', '1-year installation guarantee', 'Stacks with manufacturer warranty (2–5 years)', 'Same engineer, year 1 to year 10'],
+    points: ['24-hour response, guaranteed', '1-year installation guarantee', 'Stacks with manufacturer warranty (2–5 years)'],
   },
   {
     num: 'iii. Expertise',
@@ -69,7 +69,7 @@ const compareRows = [
   { feature: 'Listed-building expertise', us: '✓', them: '✗' },
   //{ feature: 'GDPR / DPIA documentation', us: 'Included for biometric installs', them: '✗' },
   { feature: 'Installation guarantee', us: '1 year, no quibble', them: 'Hardware only' },
-  { feature: 'Support contact', us: 'Same engineer, US-based', them: 'Ticket queue' },
+  { feature: 'Support contact', us: 'US-based', them: 'Ticket queue' },
   { feature: 'Response SLA', us: '<24 hours, guaranteed', them: 'Variable' },
 ];
 
@@ -97,7 +97,7 @@ export default function WhyUsPage() {
                 The smartest intercom in the world is only as good as the engineer who installed it. We&apos;re the certified integrator that property managers, developers, and luxury homeowners call when they want it done once, done properly, and done by people who&apos;ll pick up the phone in three years&apos; time.
               </p>
               <blockquote className="wu-hero-quote">
-                The engineer who scopes your install is the same one who fits it — and the same one you&apos;ll speak to in five years if anything ever needs attention.
+                From initial survey to long-term support, our team keeps every installation clear, consistent, and properly documented.
               </blockquote>
               <div className="wu-hero-cta">
                 <Link href="/contact" className="btn btn-gold">

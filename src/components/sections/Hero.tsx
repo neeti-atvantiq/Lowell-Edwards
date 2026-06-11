@@ -40,7 +40,7 @@ export default function Hero() {
               textShadow: '0 1px 12px rgba(0,0,0,.7)',
             }}
           >
-            Video intercoms and access control systems supplied, installed, and maintained by a
+            Video intercoms and access control systems supplied, installed, and maintained by our
             dedicated local team. 
             {/* Onsite or remote — we respond within 24 hours, guaranteed. */}
           </p>

@@ -57,11 +57,11 @@ export default function Quote() {
           <div className="reveal">
             <div className="tag">Request a Quote</div>
             <h2 className="h2">
-              A personalised<br/> solution, <em className="em">built for <br/>your building</em>
+              A personalized<br/> solution, <em className="em">built for <br/>your building</em>
             </h2>
             <p className="body-lg" style={{ marginTop: 22 }}>
               We don&apos;t do off-the-shelf packages. Our team reviews your building&apos;s specific
-              requirements and produces a detailed, itemised specification — at no cost and with
+              requirements and produces a detailed, itemized specification — at no cost and with
               zero obligation.
             </p>
             <div className="quote-benefits">

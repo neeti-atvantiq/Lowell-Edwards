@@ -26,11 +26,11 @@ const products = [
     brand: 'Akuvox',
     type: 'AI Face Recognition Intercom',
     image: '/images/products/akuvox_img.png',
-    desc: 'AI-powered SIP intercom with touchless face recognition entry. Designed for both small and large residential buildings. Integrates with existing wiring systems and supports BlueTooth and PIN backup access methods with full audit logging.',
+    desc: 'AI-powered SIP intercom with touchless face recognition entry. Designed for both small and large residential buildings. Integrates with existing wiring systems and supports Bluetooth and PIN backup access methods with full audit logging.',
     specs: [
       'AI face recognition — touchless entry',
       'Access Control system integration',
-      'BlueTooth & PIN ~backup access~Code Access',
+      'Bluetooth & PIN ~ Backup access & Code Access',
       'Multi-tenant door station support',
       'Full entry audit log',
       'Standard phone support',

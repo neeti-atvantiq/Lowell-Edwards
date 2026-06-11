@@ -27,13 +27,13 @@ export default function Installations() {
     <section className="section installations" id="installations">
       <div className="wrap">
         <div className="installations-head reveal">
-          <div className="tag">Our Installations</div>
-          <h2 className="h2">
-            Real sites. Real deployments.<br />
-            <em>Built to perform at scale.</em>
+          <div className="tag" style={{ justifyContent: 'center' }}>Recent Installations</div>
+          <h2 className="h2" style={{ whiteSpace: 'normal' }}>
+            Real sites. Real installations.<br />
+            <em>Replace antiquated intercoms without rewiring or wall repair.</em>
           </h2>
-          <p className="body-lg">
-            A quick look at recent door-entry and access-control projects delivered by our team.
+          <p className="body-lg" style={{ textAlign: 'center', maxWidth: 600, marginLeft: 'auto', marginRight: 'auto' }}>
+           A quick look at some of our recent intercom and access-control projects.
           </p>
         </div>
       </div>

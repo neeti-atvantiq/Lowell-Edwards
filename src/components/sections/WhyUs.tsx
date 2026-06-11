@@ -13,9 +13,9 @@ export default function WhyUs() {
               marginTop: 12,
               fontFamily: 'var(--fb)',
               fontSize: 15,
-              fontWeight: 400,
+              fontWeight: 600,
               letterSpacing: '.03em',
-              color: 'rgba(22,26,32,.55)',
+              color: 'rgba(22,26,32,.85)',
             }}
           >
             Proudly serving Northern New Jersey &amp; the NY Metro Area for over 30 years

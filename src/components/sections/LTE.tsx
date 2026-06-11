@@ -33,7 +33,7 @@ export default function LTE() {
                   </span>
                   <div className="lte-feat-text">
                     <div className="lte-feat-title">Free installation and router with intercom orders</div>
-                    <div className="lte-feat-body">Order any video intercom and get professional LTE router installation at no extra cost—hardware and setup are both included.</div>
+                    <div className="lte-feat-body">Order any video intercom and get professional LTE router installation at no extra cost — hardware and setup are both included.</div>
                   </div>
                 </li>
               <li className="lte-feat">
@@ -59,7 +59,7 @@ export default function LTE() {
                 </span>
                 <div className="lte-feat-text">
                   <div className="lte-feat-title">Cut your internet bill in half with greater reliability!</div>
-                  <div className="lte-feat-body">Switch to LTE —enjoy lower costs and more reliable uptime than traditional wired internet alone.</div>
+                  <div className="lte-feat-body">Switch to LTE — enjoy lower costs and more reliable uptime than traditional wired internet alone.</div>
                 </div>
               </li>
               <li className="lte-feat">

@@ -108,7 +108,7 @@ export default function Personas() {
           {personas.map((p, i) => (
             <div className="persona-card" key={i}>
               <div className="persona-image">
-                <span className="persona-image-mark">{p.mark}</span>
+                {/* <span className="persona-image-mark">{p.mark}</span> */}
                 <Image
                   src={p.img}
                   alt={p.alt}
