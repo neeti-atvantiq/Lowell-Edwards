@@ -107,7 +107,8 @@ export default function WhyUs() {
             <div className="bento-h">Networks designed for intercom uptime</div>
             <div className="bento-p">
               We design and install network infrastructure specifically for intercom reliability —
-              with remote service capabilities built in from day one to keep your building secure with self healing and fast remote service.
+              self-healing, with remote service built in from day one, so a network hiccup never
+              takes your front door offline.
             </div>
           </div>
 

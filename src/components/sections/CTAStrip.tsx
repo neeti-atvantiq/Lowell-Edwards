@@ -7,7 +7,7 @@ export default function CTAStrip() {
         <div className="cta-strip-inner">
           <div>
             <h2>Ready to secure your building?</h2>
-            <p>Get a personalized quote — no obligation, no sales pressure. Just the right solution for your building.</p>
+            <p>Get a personalized quote from a local engineer — no obligation, no sales pressure, no call centers.</p>
           </div>
           <div className="cta-strip-actions">
             <a href="tel:2015253300" className="btn-dark">

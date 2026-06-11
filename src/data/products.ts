@@ -1006,7 +1006,7 @@ export const products: Record<string, ProductData> = {
       { tag: 'MULTI-MODAL', title: 'Face, PIN, QR, RFID, BLE.', body: 'Multiple authentication methods available simultaneously as backups for visitors and edge cases.', icon: 'key' },
     ],
     useCases: [
-      { mark: 'Premium Residential', title: 'Luxury apartment complexes.', desc: 'The flagship panel for premium developments where touchless entry and cutting-edge technology are expected.', stats: [{ value: '0', label: 'Credentials needed' }, { value: '<500ms', label: 'Entry time' }] },
+      { mark: 'Premium Residential', title: 'Luxury apartment complexes.', desc: 'The flagship panel for premium developments where residents expect to walk up and have the door simply open.', stats: [{ value: '0', label: 'Credentials needed' }, { value: '<500ms', label: 'Entry time' }] },
       { mark: 'High-Security', title: 'Data centers & secure facilities.', desc: '3D anti-spoofing prevents photos, masks, and deepfakes from gaining entry.', stats: [{ value: '3D', label: 'Liveness detection' }, { value: '0', label: 'Spoof breaches' }] },
     ],
     specs: [

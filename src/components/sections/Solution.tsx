@@ -48,14 +48,14 @@ export default function Solution() {
         <div className="solution-header reveal">
           <div className="tag" style={{ justifyContent: 'center' }}>The Solution</div>
           <h2 className="h2" style={{ textAlign: 'center' }}>
-            Intercom system that solves every <em className="em">problem</em>
+            One intercom system, every entry <em className="em">problem solved</em>
           </h2>
           <p
             className="body-lg"
             style={{ textAlign: 'center', marginTop: 18, maxWidth: 580, marginLeft: 'auto', marginRight: 'auto', marginBottom: 48 }}
           >
-            Modern video intercom and access control puts every entrance in plain view — giving
-            managers full visibility and control from anywhere, at any time.
+            Residents see and speak with visitors before letting them in. Managers watch every
+            entrance from one dashboard. Nobody waits around for a buzzer or hands out spare keys.
           </p>
         </div>
 

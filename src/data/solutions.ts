@@ -10,15 +10,15 @@ export const solutionCards: SolutionCard[] = [
   {
     n: '01',
     title: 'See Every Visitor Before You Open',
-    body: 'HD video intercom lets residents and managers see and speak to any visitor before granting access — from their phone, from anywhere in the world. No more opening blind.',
+    body: 'HD video intercom lets residents and managers see and speak with any visitor before granting access — from their phone, from anywhere. No more buzzing in strangers.',
     fact: 'Real-time HD video to any device',
     image: '/images/solutions/solution-01.png',
   },
   {
     n: '02',
     title: 'Touchless Face Recognition Entry',
-    body: 'For premium buildings, AI-powered face recognition provides frictionless, keyless entry for registered residents — secure, hygienic, and effortlessly modern.',
-    fact: 'AI-powered, hygienic entry',
+    body: 'For premium buildings, AI-powered face recognition opens the door as registered residents walk up — no key, no fob, no phone out of pocket.',
+    fact: 'Hands-free entry for residents',
     image: '/images/solutions/solution-05.jpeg',
   },
   {
@@ -44,8 +44,8 @@ export const solutionCards: SolutionCard[] = [
   },
   {
     n: '06',
-    title: 'Support Standard Phone Calls',
-    body: 'Residents without smartphones can still talk to and unlock doors for visitors through a standard phone call — ensuring every occupant has full access control regardless of their device.',
+    title: 'Works Without a Smartphone',
+    body: 'Residents without smartphones can still talk to visitors and unlock the door through a standard phone call — every occupant gets full access control, whatever device they carry.',
     fact: 'No smartphone required',
     image: '/images/solutions/solution-06.jpeg',
   },

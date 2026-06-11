@@ -26,8 +26,8 @@ export default function Hero() {
               textShadow: '0 2px 32px rgba(0,0,0,.65)',
             }}
           >
-            Smarter intercom access.<br />
-              Safer buildings.
+            See every visitor.<br />
+              Secure every door.
             <br />
           </h1>
           <p
@@ -40,8 +40,9 @@ export default function Hero() {
               textShadow: '0 1px 12px rgba(0,0,0,.7)',
             }}
           >
-            Video intercoms and access control systems supplied, installed, and maintained by a
-            dedicated local team. 
+            New Jersey&apos;s certified ButterflyMX, Akuvox, and DoorBird integrator. Video
+            intercoms and access control for apartments, offices, and gated communities — designed,
+            installed, and supported by one local team.
             {/* Onsite or remote — we respond within 24 hours, guaranteed. */}
           </p>
           <div className="hero-actions">

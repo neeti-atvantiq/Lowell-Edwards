@@ -16,8 +16,8 @@ const basset = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Lowell Edwards Home Integration, Inc. — Smart Access & Building Integration",
-  description: "Certified home integration specialists in Hackensack, NJ. ButterflyMX, Akuvox, DoorBird authorized integrators. Smart video intercoms, access control, and building integration.",
+  title: "Lowell Edwards — Video Intercom & Access Control Installation in NJ & NY",
+  description: "Certified ButterflyMX, Akuvox, and DoorBird integrator in Hackensack, NJ. We design, install, and support video intercoms and access control for apartments, offices, and gated communities across the NY metro area. Free quotes, 24-hour response.",
 };
 
 export const viewport: Viewport = {

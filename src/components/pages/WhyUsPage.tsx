@@ -17,7 +17,7 @@ const credentials = [
 ];
 
 const stats = [
-  { num: '300', unit: '+', label: 'Buildings Secured', context: 'Across the US — apartments, offices, historic homes, healthcare' },
+  { num: '300', unit: '+', label: 'Buildings Secured', context: 'Across the NJ/NY metro area — apartments, condos, offices, and gated communities' },
   { num: '98', unit: '%', label: 'Customer Satisfaction', context: 'Based on post-install surveys across 18 months of projects' },
   { num: '<24', unit: 'h', label: 'Response Time SLA', context: 'Real engineer responds — guaranteed, no automated email systems' },
   { num: '1', unit: 'yr', label: 'Installation Guarantee', context: 'If our workmanship fails in year one, we fix it free — no debate' },
@@ -94,7 +94,7 @@ export default function WhyUsPage() {
               <div className="tag">Why Lowell Edwards</div>
               <h1 className="h1">  Anyone can sell hardware.<br />  <em className="em">We secure buildings with <br/>proven, guaranteed installs.</em></h1>
               <p className="wu-hero-desc">
-                The smartest intercom in the world is only as good as the engineer who installed it. We&apos;re the certified integrator that property managers, developers, and luxury homeowners call when they want it done once, done right, and done by people who&apos;ll pick up the phone in three years&apos; time.
+                The smartest intercom in the world is only as good as the engineer who installed it. We&apos;re the certified integrator that property managers, developers, and luxury homeowners call when they want it done once, done right, and done by people who&apos;ll still pick up the phone three years from now.
               </p>
               <blockquote className="wu-hero-quote">
                 The engineer who scopes your install is the same one who fits it — and the same one you&apos;ll speak to in five years if anything ever needs attention.
@@ -221,8 +221,8 @@ export default function WhyUsPage() {
         <div className="wrap">
           <div className="section-header wu-section-header">
             <div className="tag">Our Promises</div>
-            <h2 className="h2">Six guarantees, <em className="em">written down.</em></h2>
-            <p className="body-lg">Marketing language is cheap. Specific commitments aren&apos;t. Here are six promises we make in writing as part of every quote.</p>
+            <h2 className="h2">Four guarantees, <em className="em">written down.</em></h2>
+            <p className="body-lg">Marketing language is cheap. Specific commitments aren&apos;t. Here are four promises we make in writing as part of every quote.</p>
           </div>
           <div className="wu-promises-grid">
             {promises.map((p, i) => (

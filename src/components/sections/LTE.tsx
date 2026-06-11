@@ -58,8 +58,8 @@ export default function LTE() {
                   </svg>
                 </span>
                 <div className="lte-feat-text">
-                  <div className="lte-feat-title">Cut your internet bill in half — with better reliability.</div>
-                  <div className="lte-feat-body">Switch to LTE —enjoy lower costs and more reliable uptime than traditional wired internet alone.</div>
+                  <div className="lte-feat-title">Cut your internet bill in half — with better reliability</div>
+                  <div className="lte-feat-body">Switch to LTE and pay less for a connection that stays up more — no cable company, no truck rolls, no surprise rate hikes.</div>
                 </div>
               </li>
               <li className="lte-feat">
