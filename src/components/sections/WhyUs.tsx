@@ -4,7 +4,7 @@ export default function WhyUs() {
       <div className="wrap">
         <div className="why-header reveal">
           <div className="tag" style={{ justifyContent: 'center' }}>Why Choose Us</div>
-          <h2 className="h2" style={{ textAlign: 'center', whiteSpace: 'nowrap' }}>
+          <h2 className="h2" style={{ textAlign: 'center' }}>
             Certified Home Integration Specialists <br /><span className="em">Hackensack, NJ</span>
           </h2>
           <p
@@ -47,14 +47,14 @@ export default function WhyUs() {
             </div>
 
           {/* B2: Track Record */}
-          <div className="bc b2" style={{ padding: '40px 44px' }}>
+          <div className="bc b2">
             <div className="bento-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
                 <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
               </svg>
             </div>
             <div className="bento-tag">Track Record</div>
-            <div className="bento-h" style={{ marginBottom: -50 }}>
+            <div className="bento-h">
               Numbers that speak<br />for themselves
             </div>
             <div className="b2-stats">

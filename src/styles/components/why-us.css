@@ -23,7 +23,8 @@ section.why { background: #FFFFFF; }
 .bento-tag { font-family: var(--fb); font-size: 9.5px; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; opacity: .75; }
 .bento-h { font-family: var(--fd); font-size: 22px; font-weight: 600; color: var(--cream); line-height: 1.2; margin-bottom: 12px; }
 .bento-p { font-family: var(--fb); font-size: 13px; font-weight: 300; line-height: 1.72; color: var(--c65); }
-.b2-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 36px; height: 100%; align-content: center; }
+.b2-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 36px; height: auto; align-content: start; margin-top: 14px; }
+.b2 .bento-h { margin-bottom: 60px; }
 .b2-stat-num { font-family: var(--fd); font-size: 52px; font-weight: 600; letter-spacing: -.04em; color: var(--cream); line-height: 1; }
 .b2-stat-num span { color: var(--gold); }
 .b2-stat-label { font-family: var(--fb); font-size: 11.5px; font-weight: 300; color: var(--c45); margin-top: 8px; }
