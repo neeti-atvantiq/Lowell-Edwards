@@ -67,7 +67,7 @@ export default function CategoryQuoteForm({ brand, category, placeholderMessage 
       <div className="cat-form-row">
         <div className="cat-form-group">
           <label htmlFor="cat-phone">Phone</label>
-          <input type="tel" id="cat-phone" name="phone" placeholder="07xxx xxx xxx" value={form.phone} onChange={onChange('phone')} />
+          <input type="tel" id="cat-phone" name="phone" placeholder="(201) 555-0123" value={form.phone} onChange={onChange('phone')} />
         </div>
         <div className="cat-form-group">
           <label htmlFor="cat-units">Number of Units</label>

@@ -57,18 +57,18 @@ export default function Quote() {
           <div className="reveal">
             <div className="tag">Request a Quote</div>
             <h2 className="h2">
-              A personalised<br/> solution, <em className="em">built for <br/>your building</em>
+              A personalized<br/> solution, <em className="em">built for <br/>your building</em>
             </h2>
             <p className="body-lg" style={{ marginTop: 22 }}>
               We don&apos;t do off-the-shelf packages. Our team reviews your building&apos;s specific
-              requirements and produces a detailed, itemised specification — at no cost and with
+              requirements and produces a detailed, itemized specification — at no cost and with
               zero obligation.
             </p>
             <div className="quote-benefits">
               {[
                 {
                   t: 'Detailed specification included',
-                  s: "Itemised scope of work so you know exactly what you're getting before committing",
+                  s: "Itemized scope of work so you know exactly what you're getting before committing",
                 },
                 {
                   t: 'Free site survey for larger projects',
@@ -114,8 +114,8 @@ export default function Quote() {
                   </div>
                 </div>
                 <div className="qf-field">
-                  <label className="qf-label">Company / Organisation</label>
-                  <input className="qf-input" placeholder="Acme Property Management Ltd" value={form.company} onChange={onChange('company')} />
+                  <label className="qf-label">Company / Organization</label>
+                  <input className="qf-input" placeholder="Acme Property Management LLC" value={form.company} onChange={onChange('company')} />
                 </div>
                 <div className="qf-field">
                   <label className="qf-label">Email Address</label>
@@ -175,7 +175,7 @@ export default function Quote() {
                   <label className="qf-label">Additional Notes</label>
                   <textarea
                     className="qf-textarea"
-                    placeholder="Please tell us if you have any additional Doors or garage doors for the system. Any special entry needs and package rooms."
+                    placeholder="Tell us about any additional doors, garage entrances, package rooms, or special entry needs."
                     value={form.notes}
                     onChange={onChange('notes')}
                   />

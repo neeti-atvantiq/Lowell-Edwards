@@ -22,12 +22,12 @@ export default function ChatBot() {
       const node = key ? flow[key] : undefined;
       const out = node
         ? node.reply
-        : 'Thanks for reaching out. One of our team will get back to you shortly — or you can call us directly on 0800 123 4567 to speak with an engineer right now.';
+        : 'Thanks for reaching out. Someone from our team will get back to you shortly — or call us at 201-525-3300 to speak with an engineer right away.';
       setMsgs((m) => [...m, { from: 'bot', text: out }]);
       if (node?.next?.length) setQuicks(node.next);
       else if (!node) setQuicks([
         { label: '📋 Book a survey', key: 'survey' },
-        { label: '💷 Get a quote', key: 'get_quote' },
+        { label: '💲 Get a quote', key: 'get_quote' },
         { label: '🏠 Residential', key: 'residential' },
         { label: '🏢 Commercial', key: 'office' },
       ]);

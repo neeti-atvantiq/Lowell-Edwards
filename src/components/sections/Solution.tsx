@@ -54,7 +54,7 @@ export default function Solution() {
             className="body-lg"
             style={{ textAlign: 'center', marginTop: 18, maxWidth: 580, marginLeft: 'auto', marginRight: 'auto', marginBottom: 48 }}
           >
-            Modern video intercom and access control transforms how buildings are secured — giving
+            Modern video intercom and access control puts every entrance in plain view — giving
             managers full visibility and control from anywhere, at any time.
           </p>
         </div>

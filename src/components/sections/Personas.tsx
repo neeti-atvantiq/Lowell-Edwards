@@ -101,7 +101,7 @@ export default function Personas() {
             className="body-lg"
             style={{ textAlign: 'center', marginTop: 18, maxWidth: 650, marginLeft: 'auto', marginRight: 'auto' }}
           >
-            Whether you are a tenant, property manager, or developer, we offer customizable system with tailored features designed to fit your unique needs and budget.
+            Whether you are a tenant, property manager, or developer, we offer customizable systems with features tailored to your needs and budget.
           </p>
         </div>
         <div className="personas-grid reveal" style={{ transitionDelay: '.1s' }}>

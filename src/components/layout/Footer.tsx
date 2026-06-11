@@ -11,7 +11,7 @@ export default function Footer() {
               <Image src="/logo.jpg" alt="Lowell Edwards logo" width={220} height={45} />
             </Link>
             <p>
-              Certified authorised integrators for leading video intercom and access control systems. Supplying, installing, and maintaining building security solutions.
+              Certified authorized integrators for leading video intercom and access control systems. Supplying, installing, and maintaining building security solutions.
             </p>
             <a href="tel:2015253300" className="footer-phone">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

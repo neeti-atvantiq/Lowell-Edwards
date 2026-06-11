@@ -14,13 +14,13 @@ export default function Finder() {
       return;
     }
     let rec = 'ButterflyMX Video Intercom';
-    let sub = 'Ideal for residential apartment blocks — cloud-managed, mobile app entry, and package delivery built in.';
+    let sub = 'Ideal for residential apartment buildings — cloud-managed, mobile app entry, and package delivery built in.';
     if (priority === 'Face recognition entry') {
       rec = 'Akuvox Face Recognition System';
-      sub = 'AI-powered touchless entry — perfect for offices, student accommodation, and high-security buildings.';
+      sub = 'AI-powered touchless entry — perfect for offices, student housing, and high-security buildings.';
     } else if (priority === 'Package delivery security') {
       rec = 'ButterflyMX with Package Room';
-      sub = 'Dedicated delivery management with secure lobby access codes — eliminates parcel theft completely.';
+      sub = 'Dedicated delivery management with secure lobby access codes — puts an end to package theft.';
     } else if (type === 'Commercial office building') {
       rec = 'Akuvox Enterprise Intercom';
       sub = 'SIP-compatible, face recognition ready, and multi-tenant — designed for commercial environments.';
@@ -41,9 +41,9 @@ export default function Finder() {
               <h2 className="h2">Find the right<br />
 system for<em className="em"> your <br /> building
 </em></h2>
-              <p className="body-lg">Answer three questions and we&apos;ll recommend the most suitable product and service tier — then generate a personalised quote from our team.</p>
+              <p className="body-lg">Answer three questions and we&apos;ll recommend the most suitable product and service tier — then generate a personalized quote from our team.</p>
               <div className="finder-trust">
-                {['No obligation — completely free', 'Instant product recommendation', 'Personalised quote within 1 business day'].map((t) => (
+                {['No obligation — completely free', 'Instant product recommendation', 'Personalized quote within 1 business day'].map((t) => (
                   <div className="finder-trust-item" key={t}>
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                       <polyline points="20,6 9,17 4,12" />
@@ -61,11 +61,11 @@ system for<em className="em"> your <br /> building
                   onChange={setType}
                   placeholder="Select your building type…"
                   options={[
-                    { value: 'Residential apartment block', label: 'Residential apartment block' },
+                    { value: 'Residential apartment building', label: 'Residential apartment building' },
                     { value: 'Commercial office building', label: 'Commercial office building' },
                     { value: 'Gated community / estate', label: 'Gated community / estate' },
                     { value: 'Mixed-use development', label: 'Mixed-use development' },
-                    { value: 'Student accommodation', label: 'Student accommodation' },
+                    { value: 'Student housing', label: 'Student housing' },
                     { value: 'Industrial / warehouse', label: 'Industrial / warehouse' },
                   ]}
                 />

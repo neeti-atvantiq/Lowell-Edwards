@@ -25,7 +25,7 @@ export const hardwareCategories: HardwareCategory[] = [
     title: 'Intercoms & Entry Systems',
     brands: [
       {
-        cert: 'Authorised Partner',
+        cert: 'Authorized Partner',
         certLogo: '/images/products/cert/akuvox.png',
         brand: 'Akuvox',
         type: 'AI Smart Intercom',
@@ -43,7 +43,7 @@ export const hardwareCategories: HardwareCategory[] = [
         ]
       },
       {
-        cert: 'Authorised Reseller',
+        cert: 'Authorized Reseller',
         certLogo: '/images/products/cert/butterfly.png',
         brand: 'ButterflyMX',
         type: 'Video Intercom',
@@ -85,7 +85,7 @@ export const hardwareCategories: HardwareCategory[] = [
     title: 'Access Control (Secondary Doors)',
     brands: [
       {
-        cert: 'Authorised Partner',
+        cert: 'Authorized Partner',
         certLogo: '/images/products/cert/akuvox.png',
         brand: 'Akuvox',
         type: 'Smart Readers',
@@ -99,7 +99,7 @@ export const hardwareCategories: HardwareCategory[] = [
         ]
       },
       {
-        cert: 'Authorised Reseller',
+        cert: 'Authorized Reseller',
         certLogo: '/images/products/cert/butterfly.png',
         brand: 'ButterflyMX',
         type: 'Access Readers',
@@ -133,7 +133,7 @@ export const hardwareCategories: HardwareCategory[] = [
     title: 'Apartment Stations (In-Unit)',
     brands: [
       {
-        cert: 'Authorised Partner',
+        cert: 'Authorized Partner',
         certLogo: '/images/products/cert/akuvox.png',
         brand: 'Akuvox',
         type: 'Indoor Monitors',

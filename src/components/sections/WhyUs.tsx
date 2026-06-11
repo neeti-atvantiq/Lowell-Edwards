@@ -34,7 +34,7 @@ export default function WhyUs() {
             <div className="bento-h">Diagnose &amp; resolve faults without a site visit</div>
             <div className="bento-p">
               Our engineers remotely access, diagnose, and resolve most faults — saving you time and
-              minimising disruption to building residents and operations.
+              minimizing disruption to building residents and operations.
             </div>
             <div className="sla-pill">
               <div className="sla-pill-val">&lt;24h</div>

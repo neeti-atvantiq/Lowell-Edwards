@@ -71,7 +71,7 @@ export const categories: Record<string, CategoryData> = {
   'akuvox/intercoms': {
     title: 'Akuvox Intercoms & Entry Systems',
     subtitle: 'AI-Powered Entry',
-    description: 'Akuvox delivers advanced AI-powered intercom systems on the market — featuring face recognition, touchless entry, and platforms that scale from single doors to entire campuses.',
+    description: 'Akuvox builds some of the most advanced AI-powered intercoms in the industry — face recognition, touchless entry, and platforms that scale from a single door to an entire campus.',
     brandName: 'Akuvox',
     brandSlug: 'akuvox',
     categorySlug: 'intercoms',
@@ -102,7 +102,7 @@ export const categories: Record<string, CategoryData> = {
       {
         image: '/images/installations/11.jpg',
         tag: 'Residential',
-        title: '48-Unit Apartment Block',
+        title: '48-Unit Apartment Building',
         desc: 'Full Akuvox access control deployment'
       },
       {
@@ -120,13 +120,13 @@ export const categories: Record<string, CategoryData> = {
       {
         image: '/images/installations/4.jpg',
         tag: 'Student',
-        title: 'Student Accommodation',
+        title: 'Student Housing',
         desc: '200+ unit rollout'
       },
       {
         image: '/images/installations/5.jpg',
         tag: 'New Build',
-        title: 'BTR Development',
+        title: 'Build-to-Rent Community',
         desc: 'Phase 1 of 3 buildings'
       }
         ],
@@ -164,7 +164,7 @@ export const categories: Record<string, CategoryData> = {
       {
         image: '/images/installations/11.jpg',
         tag: 'Residential',
-        title: '48-Unit Apartment Block',
+        title: '48-Unit Apartment Building',
         desc: 'Full Akuvox access control deployment'
       },
       {
@@ -182,13 +182,13 @@ export const categories: Record<string, CategoryData> = {
       {
         image: '/images/installations/4.jpg',
         tag: 'Student',
-        title: 'Student Accommodation',
+        title: 'Student Housing',
         desc: '200+ unit rollout'
       },
       {
         image: '/images/installations/5.jpg',
         tag: 'New Build',
-        title: 'BTR Development',
+        title: 'Build-to-Rent Community',
         desc: 'Phase 1 of 3 buildings'
       }
     ],
@@ -226,7 +226,7 @@ export const categories: Record<string, CategoryData> = {
       {
         image: '/images/installations/11.jpg',
         tag: 'Residential',
-        title: '48-Unit Apartment Block',
+        title: '48-Unit Apartment Building',
         desc: 'Full Akuvox access control deployment'
       },
       {
@@ -244,13 +244,13 @@ export const categories: Record<string, CategoryData> = {
       {
         image: '/images/installations/4.jpg',
         tag: 'Student',
-        title: 'Student Accommodation',
+        title: 'Student Housing',
         desc: '200+ unit rollout'
       },
       {
         image: '/images/installations/5.jpg',
         tag: 'New Build',
-        title: 'BTR Development',
+        title: 'Build-to-Rent Community',
         desc: 'Phase 1 of 3 buildings'
       }
     ],
@@ -267,7 +267,7 @@ export const categories: Record<string, CategoryData> = {
     highlights: [
       { value: 'V4A steel', label: 'Marine-grade' },
       { value: '1080p HD', label: 'Camera' },
-      { value: '£0/month', label: 'No subscription' },
+      { value: '$0/month', label: 'No subscription' },
       { value: '20+ years', label: 'Lifespan' },
     ],
     crossBrandComparison: {
@@ -289,7 +289,7 @@ export const categories: Record<string, CategoryData> = {
       {
         image: '/images/installations/8.jpg',
         tag: 'Residential',
-        title: '48-Unit Apartment Block',
+        title: '48-Unit Apartment Building',
         desc: 'Full DoorBird intercom deployment'
       },
       {
@@ -307,13 +307,13 @@ export const categories: Record<string, CategoryData> = {
       {
         image: '/images/installations/12.jpg',
         tag: 'Student',
-        title: 'Student Accommodation',
+        title: 'Student Housing',
         desc: '200+ unit rollout'
       },
       {
         image: '/images/installations/9.jpg',
         tag: 'New Build',
-        title: 'BTR Development',
+        title: 'Build-to-Rent Community',
         desc: 'Phase 1 of 3 buildings'
       }
     ],
@@ -351,7 +351,7 @@ export const categories: Record<string, CategoryData> = {
       {
         image: '/images/installations/8.jpg',
         tag: 'Residential',
-        title: '48-Unit Apartment Block',
+        title: '48-Unit Apartment Building',
         desc: 'Full DoorBird intercom deployment'
       },
       {
@@ -369,13 +369,13 @@ export const categories: Record<string, CategoryData> = {
       {
         image: '/images/installations/12.jpg',
         tag: 'Student',
-        title: 'Student Accommodation',
+        title: 'Student Housing',
         desc: '200+ unit rollout'
       },
       {
         image: '/images/installations/9.jpg',
         tag: 'New Build',
-        title: 'BTR Development',
+        title: 'Build-to-Rent Community',
         desc: 'Phase 1 of 3 buildings'
       }
     ],
@@ -415,7 +415,7 @@ export const categories: Record<string, CategoryData> = {
       {
         image: 'https://butterflymx.com/wp-content/uploads/2018/12/8in-intercom-install.webp',
         tag: 'Residential',
-        title: '48-Unit Apartment Block',
+        title: '48-Unit Apartment Building',
         desc: 'Full ButterflyMX access control deployment'
       },
       {
@@ -433,13 +433,13 @@ export const categories: Record<string, CategoryData> = {
       {
         image: 'https://butterflymx.com/wp-content/uploads/2018/12/8in-butterflymx-installation.webp',
         tag: 'Student',
-        title: 'Student Accommodation',
+        title: 'Student Housing',
         desc: '200+ unit rollout'
       },
       {
         image: 'https://butterflymx.com/wp-content/uploads/2018/12/8in-butterflymx-academy-installation.webp',
         tag: 'New Build',
-        title: 'BTR Development',
+        title: 'Build-to-Rent Community',
         desc: 'Phase 1 of 3 buildings'
       }
     ],
@@ -479,7 +479,7 @@ export const categories: Record<string, CategoryData> = {
       {
         image: 'https://butterflymx.com/wp-content/uploads/2018/12/8in-intercom-install.webp',
         tag: 'Residential',
-        title: '48-Unit Apartment Block',
+        title: '48-Unit Apartment Building',
         desc: 'Full ButterflyMX access control deployment'
       },
       {
@@ -497,13 +497,13 @@ export const categories: Record<string, CategoryData> = {
       {
         image: 'https://butterflymx.com/wp-content/uploads/2018/12/8in-butterflymx-installation.webp',
         tag: 'Student',
-        title: 'Student Accommodation',
+        title: 'Student Housing',
         desc: '200+ unit rollout'
       },
       {
         image: 'https://butterflymx.com/wp-content/uploads/2018/12/8in-butterflymx-academy-installation.webp',
         tag: 'New Build',
-        title: 'BTR Development',
+        title: 'Build-to-Rent Community',
         desc: 'Phase 1 of 3 buildings'
       }
     ],
@@ -542,7 +542,7 @@ export const categories: Record<string, CategoryData> = {
       {
         image: '/images/installations/8.jpg',
         tag: 'Residential',
-        title: '48-Unit Apartment Block',
+        title: '48-Unit Apartment Building',
         desc: 'Full DoorBird intercom deployment'
       },
       {
@@ -560,13 +560,13 @@ export const categories: Record<string, CategoryData> = {
       {
         image: '/images/installations/12.jpg',
         tag: 'Student',
-        title: 'Student Accommodation',
+        title: 'Student Housing',
         desc: '200+ unit rollout'
       },
       {
         image: '/images/installations/9.jpg',
         tag: 'New Build',
-        title: 'BTR Development',
+        title: 'Build-to-Rent Community',
         desc: 'Phase 1 of 3 buildings'
       }
     ],
@@ -574,7 +574,7 @@ export const categories: Record<string, CategoryData> = {
   'akuvox/software': {
     title: 'Akuvox SmartPlus App',
     subtitle: 'Mobile Access & Control',
-    description: 'The SmartPlus app turns every resident\'s smartphone into a video intercom, access key, and building management tool — connecting to all Akuvox hardware for seamless control from anywhere.',
+    description: 'The SmartPlus app turns every resident\'s smartphone into a video intercom, access key, and building management tool — connecting to all Akuvox hardware so residents stay in control from anywhere.',
     brandName: 'Akuvox',
     brandSlug: 'akuvox',
     categorySlug: 'software',
@@ -628,7 +628,7 @@ export const categories: Record<string, CategoryData> = {
     products: ['doorbird/doorbird-app'],
     highlights: [
       { value: 'iOS + Android', label: 'Platform' },
-      { value: '£0/month', label: 'No subscription' },
+      { value: '$0/month', label: 'No subscription' },
       { value: '4K', label: 'Live view' },
       { value: 'HomeKit', label: 'Native support' },
     ],
@@ -692,13 +692,13 @@ export const products: Record<string, ProductData> = {
       { tag: 'SMARTPHONE ENTRY', title: 'Open the door from anywhere.', body: 'Residents receive a video call on their smartphone when a visitor buzzes. They see, speak to, and grant access from anywhere.', icon: 'smartphone' },
       { tag: 'CLOUD MANAGED', title: 'Zero on-site hardware management.', body: 'Property managers add/remove residents, issue virtual keys, and manage delivery access from a web dashboard.', icon: 'cloud' },
       { tag: 'DELIVERY ACCESS', title: 'One-time PINs for couriers.', body: 'Generate time-limited PINs for deliveries. The system logs every entry with photo, timestamp, and method used.', icon: 'package' },
-      { tag: 'VIDEO CALLING', title: 'HD video with two-way audio.', body: 'Crystal-clear video and audio let residents verify visitors before granting access. Night vision ensures visibility.', icon: 'video' },
+      { tag: 'VIDEO CALLING', title: 'HD video with two-way audio.', body: 'Sharp HD video and clean two-way audio let residents verify visitors before granting access. Night vision keeps coverage constant after dark.', icon: 'video' },
       { tag: 'AUDIT TRAIL', title: 'Every entry logged.', body: 'Timestamped photo logs of every door event. Exportable reports for compliance, disputes, and building management.', icon: 'log' },
       { tag: 'INTEGRATIONS', title: 'Works with property management software.', body: 'Native integrations with Yardi, RealPage, Entrata, and more. Tenant directories sync automatically.', icon: 'integration' },
     ],
     useCases: [
-      { mark: 'Build-to-Rent', title: 'Purpose-built rental blocks.', desc: 'The ideal entry system for BTR developments where resident turnover is high and property managers need remote control over access credentials.', stats: [{ value: '60%', label: 'Less admin time' }, { value: '0', label: 'Key handovers' }] },
-      { mark: 'Student Housing', title: 'University accommodations.', desc: 'Students manage their own access via smartphone. No physical keys to lose. Batch credential management for yearly intake.', stats: [{ value: '100%', label: 'Self-service' }, { value: '85%', label: 'Fewer lockouts' }] },
+      { mark: 'Build-to-Rent', title: 'Purpose-built rental blocks.', desc: 'The ideal entry system for build-to-rent communities where resident turnover is high and property managers need remote control over access credentials.', stats: [{ value: '60%', label: 'Less admin time' }, { value: '0', label: 'Key handovers' }] },
+      { mark: 'Student Housing', title: 'University housing.', desc: 'Students manage their own access via smartphone. No physical keys to lose. Batch credential management for every fall move-in.', stats: [{ value: '100%', label: 'Self-service' }, { value: '85%', label: 'Fewer lockouts' }] },
     ],
     specs: [
       { category: 'Hardware', rows: [
@@ -719,7 +719,7 @@ export const products: Record<string, ProductData> = {
     comparison: {
       headers: [
         { brand: 'ButterflyMX', tag: 'Cloud · Smartphone', featured: true },
-        { brand: 'Traditional Intercom', tag: 'Wired · Analogue' },
+        { brand: 'Traditional Intercom', tag: 'Wired · Analog' },
       ],
       rows: [
         { feature: 'Smartphone video entry', values: ['yes', 'no'] },
@@ -760,13 +760,13 @@ export const products: Record<string, ProductData> = {
       { value: 'HD', unit: '', label: 'Video quality' },
     ],
     features: [
-      { tag: 'DUAL MODE', title: 'Staffed or unstaffed \u2014 it adapts.', body: 'When concierge staff are present, calls route to the desk station. After hours, calls route directly to residents\u2019 smartphones. Seamless handover, zero gaps.', icon: 'clock' },
+      { tag: 'DUAL MODE', title: 'Staffed or unstaffed \u2014 it adapts.', body: 'When concierge staff are present, calls route to the desk station. After hours, calls route directly to residents\u2019 smartphones. The handoff is automatic — no gaps.', icon: 'clock' },
       { tag: 'VISITOR MANAGEMENT', title: 'Pre-register guests, log walk-ins.', body: 'Staff can pre-register expected visitors, grant temporary access, and maintain a digital visitor log with photo evidence for every entry.', icon: 'log' },
-      { tag: 'PACKAGE ALERTS', title: 'Notify residents of deliveries.', body: 'When a package arrives, staff log it and residents receive instant notifications. No more lost parcels, no more lobby clutter.', icon: 'package' },
+      { tag: 'PACKAGE ALERTS', title: 'Notify residents of deliveries.', body: 'When a package arrives, staff log it and residents receive instant notifications. No more lost packages, no more lobby clutter.', icon: 'package' },
       { tag: 'MULTI-CAMERA', title: 'View all entry points from one screen.', body: 'The desk station displays live feeds from all ButterflyMX cameras and intercoms. One screen, full building visibility.', icon: 'video' },
     ],
     useCases: [
-      { mark: 'Luxury Residential', title: 'High-end apartments with concierge.', desc: 'Gives concierge staff a professional digital console that matches the building\u2019s premium positioning. Video verification of every visitor before granting access.', stats: [{ value: '100%', label: 'Visitor verified' }, { value: '0', label: 'Unauthorised entries' }] },
+      { mark: 'Luxury Residential', title: 'High-end apartments with concierge.', desc: 'Gives concierge staff a professional digital console that matches the building\u2019s premium positioning. Video verification of every visitor before granting access.', stats: [{ value: '100%', label: 'Visitor verified' }, { value: '0', label: 'Unauthorized entries' }] },
       { mark: 'Mixed-Use Buildings', title: 'Residential + commercial lobbies.', desc: 'Manage residential and commercial tenants from one console. Different access rules for offices vs apartments, all from the same interface.', stats: [{ value: '2-in-1', label: 'Management' }, { value: 'Unified', label: 'Platform' }] },
     ],
     specs: [
@@ -788,7 +788,7 @@ export const products: Record<string, ProductData> = {
     comparison: {
       headers: [
         { brand: 'ButterflyMX Desk', tag: 'Cloud \u00b7 Smart', featured: true },
-        { brand: 'Traditional Concierge Phone', tag: 'Analogue' },
+        { brand: 'Traditional Concierge Phone', tag: 'Analog' },
         { brand: 'No Front Desk', tag: 'Intercom Only' },
       ],
       rows: [
@@ -802,7 +802,7 @@ export const products: Record<string, ProductData> = {
     },
     testimonials: [
       { quote: 'Our concierge team loves it. They can see who\u2019s at every entrance without leaving the desk. After 10pm it handles everything automatically.', name: 'David Osei', role: 'Facilities Manager \u00b7 The Residence', initials: 'DO' },
-      { quote: 'Package tracking alone saved us 4 hours a week of staff time. Residents get notified instantly and complaints about lost deliveries dropped to zero.', name: 'Karen Walsh', role: 'Building Manager \u00b7 Harbour Point', initials: 'KW' },
+      { quote: 'Package tracking alone saved us 4 hours a week of staff time. Residents get notified instantly and complaints about lost deliveries dropped to zero.', name: 'Karen Walsh', role: 'Building Manager \u00b7 Harbor Point', initials: 'KW' },
     ],
     faqs: [
       { question: 'Can it work without a concierge on-site?', answer: 'Yes \u2014 in unstaffed mode, visitor calls route directly to residents\u2019 smartphones. The system operates autonomously 24/7 regardless of staffing.' },
@@ -835,7 +835,7 @@ export const products: Record<string, ProductData> = {
     features: [
       { tag: 'MULTI-MODE', title: 'Three ways in — one device.', body: 'PIN code, RFID fob/card, or smartphone Bluetooth — residents choose how they enter. All three methods work simultaneously, no mode switching required.', icon: 'key' },
       { tag: 'CLOUD MANAGED', title: 'Add or revoke access in seconds.', body: 'Property managers control who can enter, when, and where — from any web browser. New tenants are activated instantly; ex-tenants are revoked in one click.', icon: 'cloud' },
-      { tag: 'UNIFIED PLATFORM', title: 'Same app as the video intercom.', body: 'Residents don\'t need a separate app. Their ButterflyMX app handles both the front door video intercom and secondary access points seamlessly.', icon: 'smartphone' },
+      { tag: 'UNIFIED PLATFORM', title: 'Same app as the video intercom.', body: 'Residents don\'t need a separate app. One ButterflyMX app covers the front-door video intercom and every secondary access point.', icon: 'smartphone' },
       { tag: 'SCHEDULING', title: 'Time-based access rules.', body: 'Set gym hours, restrict garage access overnight, allow cleaners entry only during business hours. All configurable from the cloud dashboard.', icon: 'clock' },
       { tag: 'AUDIT TRAIL', title: 'Know who entered, when, and where.', body: 'Every access event is logged with timestamp, method used, and location. Exportable reports for compliance, insurance, or disputes.', icon: 'log' },
     ],
@@ -851,7 +851,7 @@ export const products: Record<string, ProductData> = {
         { key: 'Bluetooth', value: 'BLE 5.0 · smartphone proximity unlock' },
         { key: 'Enclosure', value: 'Die-cast zinc alloy · IP65 · IK08' },
         { key: 'Dimensions', value: '120 × 80 × 22 mm' },
-        { key: 'Operating temp', value: '−30°C to +55°C' },
+        { key: 'Operating temp', value: '−22°F to 131°F' },
       ]},
       { category: 'Connectivity', rows: [
         { key: 'Connection', value: 'Wiegand 26/34 · RS-485 · TCP/IP' },
@@ -861,7 +861,7 @@ export const products: Record<string, ProductData> = {
       ]},
       { category: 'Compliance', rows: [
         { key: 'Certifications', value: 'CE · FCC · UL · RoHS' },
-        { key: 'Data privacy', value: 'GDPR compliant · encrypted credentials' },
+        { key: 'Data privacy', value: 'Encrypted credentials · privacy compliant' },
         { key: 'Cybersecurity', value: 'AES-128 encrypted RFID · rolling codes' },
         { key: 'Accessibility', value: 'ADA compliant mounting height' },
       ]},
@@ -884,7 +884,7 @@ export const products: Record<string, ProductData> = {
     },
     testimonials: [
       { quote: 'We installed readers at every secondary entrance and the garage. Residents love that their phone unlocks everything — no more carrying fobs for different doors.', name: 'Mark Chen', role: 'Facilities Manager · The Quarters', initials: 'MC' },
-      { quote: 'Being able to instantly revoke access when a tenant moves out is game-changing. No more re-coding locks or collecting fobs.', name: 'Lisa Park', role: 'Property Manager · Oak Residences', initials: 'LP' },
+      { quote: 'Being able to instantly revoke access when a tenant moves out has changed how we run the building. No more re-coding locks or collecting fobs.', name: 'Lisa Park', role: 'Property Manager · Oak Residences', initials: 'LP' },
       { quote: 'The cloud dashboard shows us exactly who accessed which door and when. We resolved a noise complaint dispute in 2 minutes flat.', name: 'Tom Wallace', role: 'Building Director · Metro Living', initials: 'TW' },
     ],
     faqs: [
@@ -917,7 +917,7 @@ export const products: Record<string, ProductData> = {
       { value: 'V4A', unit: '', label: 'Stainless steel' },
     ],
     features: [
-      { tag: 'PREMIUM MATERIALS', title: 'Marine-grade V4A stainless steel.', body: 'Not plastic — real stainless steel that withstands coastal salt air, extreme temperatures, and decades of use without discolouring or degrading.', icon: 'material' },
+      { tag: 'PREMIUM MATERIALS', title: 'Marine-grade V4A stainless steel.', body: 'Not plastic — real stainless steel that withstands coastal salt air, extreme temperatures, and decades of use without discoloring or degrading.', icon: 'material' },
       { tag: 'FISHEYE CAMERA', title: '180° panoramic field of view.', body: '1080p fisheye lens captures everything in front of the door — no blind spots. IR night vision ensures 24/7 coverage regardless of ambient light.', icon: 'video' },
       { tag: 'SMART HOME', title: 'Native HomeKit, KNX, Control4, Crestron.', body: 'Certified for Apple HomeKit out of the box. Also integrates natively with KNX, Control4, Crestron, Loxone, and all major home automation platforms.', icon: 'integration' },
       { tag: 'LOCAL STORAGE', title: 'On-device event storage — no subscription.', body: 'Video events are stored locally on the device itself. No cloud subscription required — your footage stays private and under your control.', icon: 'storage' },
@@ -925,7 +925,7 @@ export const products: Record<string, ProductData> = {
     ],
     useCases: [
       { mark: 'Private Residences', title: 'Architect-designed homes.', desc: 'High-end homes where the entrance hardware must match the architectural standard. DoorBird\'s stainless steel finish and clean lines complement contemporary and classic facades.', stats: [{ value: '50+', label: 'Finish options' }, { value: '0', label: 'Plastic components' }] },
-      { mark: 'Gated Estates', title: 'Perimeter entry points.', desc: 'Installed at gates, garden entrances, and driveways. The IP65 rating handles all weather extremes while the fisheye camera covers wide approaches.', stats: [{ value: '180°', label: 'Coverage' }, { value: 'IP65', label: 'All-weather' }] },
+      { mark: 'Gated Estates', title: 'Perimeter entry points.', desc: 'Installed at gates, side entrances, and driveways. The IP65 rating handles all weather extremes while the fisheye camera covers wide approaches.', stats: [{ value: '180°', label: 'Coverage' }, { value: 'IP65', label: 'All-weather' }] },
       { mark: 'Smart Homes', title: 'Home automation integrations.', desc: 'For homes running KNX, Control4, or Crestron — DoorBird is the video doorbell that integrates natively, not via cloud hacks. Doorbell triggers scenes, unlocks doors, and records events.', stats: [{ value: '15+', label: 'Platforms supported' }, { value: 'Local', label: 'Processing' }] },
     ],
     specs: [
@@ -934,7 +934,7 @@ export const products: Record<string, ProductData> = {
         { key: 'Camera', value: '1080p · 180° fisheye · IR night vision' },
         { key: 'Audio', value: 'Full-duplex · echo cancellation' },
         { key: 'Protection', value: 'IP65 weather · IK10 vandal' },
-        { key: 'Operating temp', value: '−40°C to +60°C' },
+        { key: 'Operating temp', value: '−40°F to 140°F' },
         { key: 'Mounting', value: 'Surface mount · 167 × 90 × 25 mm' },
       ]},
       { category: 'Connectivity & Integration', rows: [
@@ -965,9 +965,9 @@ export const products: Record<string, ProductData> = {
       ],
     },
     testimonials: [
-      { quote: 'We specified DoorBird for a £3M new build. The stainless finish matched the architectural metalwork perfectly, and the HomeKit integration means one app for everything.', name: 'Richard Hale', role: 'Architect · Hale & Partners', initials: 'RH' },
+      { quote: 'We specified DoorBird for a $3M new construction project. The stainless finish matched the architectural metalwork perfectly, and the HomeKit integration means one app for everything.', name: 'Richard Hale', role: 'Architect · Hale & Partners', initials: 'RH' },
       { quote: 'No subscription fees, local storage, and a proper open API. As a home automation installer, DoorBird is the only video doorbell I recommend to clients.', name: 'Nathan Cole', role: 'Smart Home Integrator · TechNest', initials: 'NC' },
-      { quote: 'Installed 18 months ago on an exposed coastal property. Salt air, driving rain, winter frost — still looks and works like new. Build quality is exceptional.', name: 'Patricia Shaw', role: 'Homeowner · Cornwall', initials: 'PS' },
+      { quote: 'Installed 18 months ago on an exposed coastal property. Salt air, driving rain, winter frost — still looks and works like new. Build quality is exceptional.', name: 'Patricia Shaw', role: 'Homeowner · Bay Head, NJ', initials: 'PS' },
     ],
     faqs: [
       { question: 'Does it require a cloud subscription?', answer: 'No. DoorBird stores video events locally on-device. The free DoorBird app provides remote access, push notifications, and live view — no monthly fees ever.' },
@@ -984,7 +984,7 @@ export const products: Record<string, ProductData> = {
     brandSlug: 'akuvox',
     model: 'X915 Flagship Panel',
     eyebrow: 'Akuvox · Flagship — AI Face Recognition Panel',
-    title: 'The ultimate AI face recognition panel with 8" touchscreen.',
+    title: 'The flagship AI face recognition panel with an 8" touchscreen.',
     tagline: '— 3D anti-spoofing for 99.9% accuracy in under 500ms.',
     description: 'The Akuvox X915 is the flagship face recognition panel featuring an 8" IPS display and advanced camera system (RGB + IR + ToF) for 3D anti-spoofing. Supports up to 50,000 face templates with on-device AI processing for touchless, secure entry.',
     image: 'https://www.akuvox.com/uploads/202012/2020123119053400.png',
@@ -1007,15 +1007,15 @@ export const products: Record<string, ProductData> = {
     ],
     useCases: [
       { mark: 'Premium Residential', title: 'Luxury apartment complexes.', desc: 'The flagship panel for premium developments where touchless entry and cutting-edge technology are expected.', stats: [{ value: '0', label: 'Credentials needed' }, { value: '<500ms', label: 'Entry time' }] },
-      { mark: 'High-Security', title: 'Data centres & secure facilities.', desc: '3D anti-spoofing prevents photos, masks, and deepfakes from gaining entry.', stats: [{ value: '3D', label: 'Liveness detection' }, { value: '0', label: 'Spoof breaches' }] },
+      { mark: 'High-Security', title: 'Data centers & secure facilities.', desc: '3D anti-spoofing prevents photos, masks, and deepfakes from gaining entry.', stats: [{ value: '3D', label: 'Liveness detection' }, { value: '0', label: 'Spoof breaches' }] },
     ],
     specs: [
       { category: 'Hardware', rows: [
         { key: 'Display', value: '8" IPS capacitive touch' },
         { key: 'Camera System', value: 'RGB + IR + Depth sensor' },
         { key: 'Face Capacity', value: '50,000 templates' },
-        { key: 'Enclosure', value: 'Die-cast aluminium · IP65 · IK10' },
-        { key: 'Operating Temp', value: '−30°C to +60°C' },
+        { key: 'Enclosure', value: 'Die-cast aluminum · IP65 · IK10' },
+        { key: 'Operating Temp', value: '−22°F to 140°F' },
       ]},
       { category: 'Connectivity & Software', rows: [
         { key: 'Network', value: 'Gigabit Ethernet' },
@@ -1037,7 +1037,7 @@ export const products: Record<string, ProductData> = {
       ],
     },
     testimonials: [
-      { quote: 'The camera system on the X915 is genuinely next-level. 3D anti-spoofing that actually works.', name: 'James Crawford', role: 'Security Director', initials: 'JC' },
+      { quote: 'The camera system on the X915 is in a class of its own. 3D anti-spoofing that actually works.', name: 'James Crawford', role: 'Security Director', initials: 'JC' },
     ],
     faqs: [
       { question: 'Can it detect masks and photos?', answer: 'Yes. The depth sensor creates a 3D map of the face in real-time. Flat images and masks are rejected.' },
@@ -1120,7 +1120,7 @@ export const products: Record<string, ProductData> = {
     model: 'S532 Hybrid Video Door Phone',
     eyebrow: 'Akuvox · Hybrid — IP & Analog Door Phone',
     title: 'The hybrid door phone bridging analog and IP technology.',
-    tagline: '— seamless upgrades for traditional intercom systems.',
+    tagline: '— a clean upgrade path for aging intercom systems.',
     description: 'The Akuvox S532 is a Linux-based video door phone that integrates IP technology with existing analog infrastructure. It features a 2.8" color LCD, physical keypad, and multiple access control methods (PIN, RFID, Bluetooth, NFC), making it an ideal choice for modernizing buildings without extensive rewiring.',
     image: '/images/products/akuvox/S532.png',
     meta: [
@@ -1135,7 +1135,7 @@ export const products: Record<string, ProductData> = {
       { value: 'IK08', unit: '', label: 'Impact rating' },
     ],
     features: [
-      { tag: 'HYBRID SYSTEM', title: 'IP-to-analog integration.', body: 'Built-in conversion module allows seamless upgrades from legacy analog systems to modern IP functionality without tearing out old wires.', icon: 'integration' },
+      { tag: 'HYBRID SYSTEM', title: 'IP-to-analog integration.', body: 'A built-in conversion module brings legacy analog wiring up to modern IP functionality without tearing out old wires.', icon: 'integration' },
       { tag: 'MULTI-ACCESS', title: 'PIN, RFID, NFC, BLE.', body: 'Comprehensive access credentials including physical keypad PIN entry, 13.56MHz & 125kHz RFID, Bluetooth, and NFC.', icon: 'key' },
       { tag: 'HD CAMERA', title: '2MP wide-angle lens.', body: 'Provides a 130° horizontal viewing angle with automatic high-intensity IR LEDs for clear vision in the dark.', icon: 'video' },
       { tag: 'RUGGED BUILD', title: 'IP66 & IK08 certification.', body: 'Housed in an aluminum die-cast body, ensuring robust protection against extreme weather and vandalism.', icon: 'shield' },
@@ -1173,7 +1173,7 @@ export const products: Record<string, ProductData> = {
       ],
     },
     testimonials: [
-      { quote: 'We deployed the S532 in an old residential block. We kept the legacy 2-wire infrastructure but gained full IP video calling to smartphones. Huge win.', name: 'Rachel Green', role: 'Building Manager', initials: 'RG' },
+      { quote: 'We deployed the S532 in an older apartment building. We kept the legacy 2-wire infrastructure but gained full IP video calling to smartphones. Huge win.', name: 'Rachel Green', role: 'Building Manager', initials: 'RG' },
     ],
     faqs: [
       { question: 'Does it support Bluetooth unlocking?', answer: 'Yes, it has built-in Bluetooth 5.0 for mobile access via the Akuvox app.' },
@@ -1221,7 +1221,7 @@ export const products: Record<string, ProductData> = {
         { key: 'Mounting', value: 'Wall-mount · flush or surface' },
         { key: 'Power', value: 'PoE (802.3af) · 12V DC' },
         { key: 'Dimensions', value: '210 × 148 × 22 mm' },
-        { key: 'Colour', value: 'White or black faceplate' },
+        { key: 'Color', value: 'White or black faceplate' },
       ]},
       { category: 'Connectivity & Software', rows: [
         { key: 'Network', value: 'Ethernet · Wi-Fi optional' },
@@ -1248,7 +1248,7 @@ export const products: Record<string, ProductData> = {
       ],
     },
     testimonials: [
-      { quote: 'Our elderly residents love the C313 — big screen, simple buttons, always on. No smartphone gymnastics needed.', name: 'Karen Price', role: 'Warden · Elm Court Sheltered Housing', initials: 'KP' },
+      { quote: 'Our elderly residents love the C313 — big screen, simple buttons, always on. No smartphone gymnastics needed.', name: 'Karen Price', role: 'Resident Services Director · Elm Court Senior Living', initials: 'KP' },
       { quote: 'Installed in every unit of our 80-apartment building. Pairs perfectly with our Akuvox entry system at the front door.', name: 'David Okonkwo', role: 'Property Director · Greenfield Residences', initials: 'DO' },
       { quote: 'The concierge uses the C313 to monitor all entry points. One screen, all doors, total visibility.', name: 'Maria Santos', role: 'Building Manager · Skyline Tower', initials: 'MS' },
     ],
@@ -1384,7 +1384,7 @@ export const products: Record<string, ProductData> = {
       ],
     },
     testimonials: [
-      { quote: 'Fitted A02 units on all our internal IT doors. We just ran a single Cat6 cable to each one. Very clean installation.', name: 'Ian McLeod', role: 'IT Manager', initials: 'IM' },
+      { quote: 'Installed A02 units on all our internal IT doors. We just ran a single Cat6 cable to each one. Very clean installation.', name: 'Ian McLeod', role: 'IT Manager', initials: 'IM' },
     ],
     faqs: [
       { question: 'Does the A02 require a separate control board?', answer: 'No, the A02 is a standalone terminal containing both the reader and the door relay controller.' },
@@ -1417,12 +1417,12 @@ export const products: Record<string, ProductData> = {
       { tag: 'REMOTE UNLOCK', title: 'Open doors from anywhere.', body: 'Grant access with a single tap — whether you\'re inside the apartment or across the world. Supports multiple doors.', icon: 'key' },
       { tag: 'VISITOR MANAGEMENT', title: 'Create access credentials.', body: 'Generate QR codes, temporary PINs, or time-limited access for visitors, deliveries, and service personnel.', icon: 'face' },
       { tag: 'HISTORY', title: 'Complete call and access log.', body: 'View missed calls, answered calls, and door unlock events. Screenshot captures from door cameras for every interaction.', icon: 'integration' },
-      { tag: 'MULTI-SITE', title: 'Manage multiple properties.', body: 'Control access across multiple buildings or locations from one app. Switch between home, office, and other properties seamlessly.', icon: 'building' },
+      { tag: 'MULTI-SITE', title: 'Manage multiple properties.', body: 'Control access across multiple buildings or locations from one app. Switch between home, office, and other properties in a tap.', icon: 'building' },
     ],
     useCases: [
       { mark: 'Remote Workers', title: 'Working from home or office.', desc: 'Never miss a delivery again. Answer the door from your desk at work, see the courier, and unlock remotely.', stats: [{ value: '0', label: 'Missed deliveries' }, { value: 'Any', label: 'Where access' }] },
       { mark: 'Property Managers', title: 'Multi-building oversight.', desc: 'Manage access across multiple buildings from one app. Grant temporary access to contractors without being on site.', stats: [{ value: 'Multi', label: 'Building support' }, { value: 'Remote', label: 'Management' }] },
-      { mark: 'Frequent Travellers', title: 'Always connected to home.', desc: 'See who\'s at your door whether you\'re in London or Tokyo. Grant access to cleaners, dog walkers, or family.', stats: [{ value: 'Global', label: 'Access' }, { value: 'Real-time', label: 'Notifications' }] },
+      { mark: 'Frequent Travelers', title: 'Always connected to home.', desc: 'See who\'s at your door whether you\'re in Manhattan or Tokyo. Grant access to cleaners, dog walkers, or family.', stats: [{ value: 'Global', label: 'Access' }, { value: 'Real-time', label: 'Notifications' }] },
     ],
     specs: [
       { category: 'App Details', rows: [
@@ -1458,12 +1458,12 @@ export const products: Record<string, ProductData> = {
       ],
     },
     testimonials: [
-      { quote: 'I answer my door from the office every day. Courier drops parcels in the lobby, I unlock remotely. No more missed deliveries.', name: 'Jake Morrison', role: 'Resident · Tower Bridge Apartments', initials: 'JM' },
-      { quote: 'Managing visitor access across 3 buildings from one app. QR codes for contractors are brilliant — no more key handovers.', name: 'Diane Foster', role: 'Operations Manager · City Living Group', initials: 'DF' },
+      { quote: 'I answer my door from the office every day. Courier drops packages in the lobby, I unlock remotely. No more missed deliveries.', name: 'Jake Morrison', role: 'Resident · Hudson View Apartments', initials: 'JM' },
+      { quote: 'Managing visitor access across 3 buildings from one app. QR codes for contractors are a lifesaver — no more key handovers.', name: 'Diane Foster', role: 'Operations Manager · City Living Group', initials: 'DF' },
       { quote: 'The Apple Watch integration means I can unlock the lobby door without even taking my phone out of my pocket.', name: 'Alex Ng', role: 'Resident · Meridian Tower', initials: 'AN' },
     ],
     faqs: [
-      { question: 'Is the app really free?', answer: 'Yes — completely free with no subscription fees. It works with any Akuvox hardware device purchased through an authorised dealer.' },
+      { question: 'Is the app really free?', answer: 'Yes — completely free with no subscription fees. It works with any Akuvox hardware device purchased through an authorized dealer.' },
       { question: 'Can multiple people use it for one apartment?', answer: 'Yes — up to 5 devices can be registered per unit. All family members can answer calls and unlock doors independently.' },
       { question: 'Does it work internationally?', answer: 'Yes — as long as you have internet connectivity, you can answer door calls and unlock from anywhere in the world.' },
     ],
@@ -1498,9 +1498,9 @@ export const products: Record<string, ProductData> = {
       { tag: 'LOCAL STORAGE', title: 'No cloud subscription needed.', body: 'Store events locally. No monthly fees. Your footage stays private on your own network.', icon: 'storage' },
     ],
     useCases: [
-      { mark: 'Converted Houses', title: 'Victorian/Georgian conversions.', desc: 'Townhouses split into 2-6 flats. Each flat gets their own button, their own call routing, their own smartphone access — one elegant panel.', stats: [{ value: '1-6', label: 'Units per panel' }, { value: 'Period', label: 'Suitable finishes' }] },
-      { mark: 'Small Apartment Blocks', title: 'Boutique buildings.', desc: 'Buildings with up to 6 units where a large touchscreen directory would be overkill. Individual buttons are intuitive for visitors.', stats: [{ value: 'Simple', label: 'Visitor experience' }, { value: '0', label: 'Learning curve' }] },
-      { mark: 'Mixed Commercial', title: 'Shop + residence above.', desc: 'Ground floor shop with residential above. Separate buttons for business and home — different hours, different access rules.', stats: [{ value: 'Separate', label: 'Access policies' }, { value: '24/7', label: 'Per-unit control' }] },
+      { mark: 'Converted Houses', title: 'Brownstone and townhouse conversions.', desc: 'Townhouses split into two to six units. Each unit gets its own button, its own call routing, its own smartphone access — one elegant panel.', stats: [{ value: '1-6', label: 'Units per panel' }, { value: 'Classic', label: 'Finish options' }] },
+      { mark: 'Small Apartment Buildings', title: 'Boutique buildings.', desc: 'Buildings with up to 6 units where a large touchscreen directory would be overkill. Individual buttons are intuitive for visitors.', stats: [{ value: 'Simple', label: 'Visitor experience' }, { value: '0', label: 'Learning curve' }] },
+      { mark: 'Mixed Commercial', title: 'Shop + residence above.', desc: 'Street-level retail with a residence above. Separate buttons for business and home — different hours, different access rules.', stats: [{ value: 'Separate', label: 'Access policies' }, { value: '24/7', label: 'Per-unit control' }] },
     ],
     specs: [
       { category: 'Hardware', rows: [
@@ -1509,7 +1509,7 @@ export const products: Record<string, ProductData> = {
         { key: 'Buttons', value: '1, 2, 3, 4, 5, or 6 button variants' },
         { key: 'Audio', value: 'Full-duplex · echo cancellation' },
         { key: 'Protection', value: 'IP65 weather · IK10 vandal' },
-        { key: 'Operating Temp', value: '−40°C to +60°C' },
+        { key: 'Operating Temp', value: '−40°F to 140°F' },
         { key: 'Mounting', value: 'Surface or flush mount' },
       ]},
       { category: 'Connectivity & Integration', rows: [
@@ -1538,14 +1538,14 @@ export const products: Record<string, ProductData> = {
       ],
     },
     testimonials: [
-      { quote: 'D2103V on our converted Georgian — 3 buttons for 3 flats, brushed brass finish. Looks like it\'s been there a hundred years.', name: 'Oliver Grant', role: 'Homeowner · Bath', initials: 'OG' },
-      { quote: 'Each flat routes to a different smartphone. My tenants manage their own access. Zero involvement from me.', name: 'Sandra Kemp', role: 'Landlord · Brighton', initials: 'SK' },
-      { quote: 'The 4K camera means we can actually identify visitors. Our old system was a blurry mess in comparison.', name: 'Phil Norris', role: 'Resident · Manchester', initials: 'PN' },
+      { quote: 'D2103V on our converted brownstone — three buttons, three units, brushed brass finish. Looks like it\'s been there a hundred years.', name: 'Oliver Grant', role: 'Homeowner · Hoboken', initials: 'OG' },
+      { quote: 'Each unit routes to a different smartphone. My tenants manage their own access. Zero involvement from me.', name: 'Sandra Kemp', role: 'Property Owner · Jersey City', initials: 'SK' },
+      { quote: 'The 4K camera means we can actually identify visitors. Our old system was a blurry mess in comparison.', name: 'Phil Norris', role: 'Resident · Fort Lee', initials: 'PN' },
     ],
     faqs: [
       { question: 'How many buttons can I get?', answer: 'The D210X series comes in 1-button (D2101V), 2-button (D2102V), 3-button (D2103V), 4-button (D2104V), 5-button (D2105V), and 6-button (D2106V) variants.' },
       { question: 'Can each button call a different phone?', answer: 'Yes — each button is independently configurable. It can call a smartphone, indoor station, SIP phone, or any combination simultaneously.' },
-      { question: 'What finishes are available?', answer: 'Standard brushed stainless steel, plus brass, bronze, anthracite, and full RAL colour matching for custom projects.' },
+      { question: 'What finishes are available?', answer: 'Standard brushed stainless steel, plus brass, bronze, anthracite, and full RAL color matching for custom projects.' },
     ],
   },
 
@@ -1572,15 +1572,15 @@ export const products: Record<string, ProductData> = {
     ],
     features: [
       { tag: 'DUAL FUNCTION', title: 'Intercom + keypad in one device.', body: 'Visitors press the bell for video calling. Residents enter their PIN for keyless entry. One panel, two functions, zero compromise.', icon: 'button' },
-      { tag: '4K CAMERA', title: 'Ultra-HD visitor identification.', body: 'See every detail of who\'s at the door. Day or night, the 4K sensor with IR illumination delivers crystal-clear footage.', icon: 'video' },
-      { tag: 'BACKLIT KEYPAD', title: 'Illuminated keys for night use.', body: 'Backlit capacitive keypad works in complete darkness. Customisable PIN codes managed via the cloud dashboard.', icon: 'key' },
+      { tag: '4K CAMERA', title: 'Ultra-HD visitor identification.', body: 'See every detail of who\'s at the door. Day or night, the 4K sensor with IR illumination captures every detail.', icon: 'video' },
+      { tag: 'BACKLIT KEYPAD', title: 'Illuminated keys for night use.', body: 'Backlit capacitive keypad works in complete darkness. Customizable PIN codes managed via the cloud dashboard.', icon: 'key' },
       { tag: 'DUAL RELAY', title: 'Control door and gate separately.', body: 'Two relay outputs mean you can control both a front door electric strike and a gate motor from one panel.', icon: 'layout' },
       { tag: 'SMART HOME', title: 'Full smart home integration.', body: 'HomeKit, KNX, Control4, Crestron — PIN entry and doorbell events trigger automations throughout the house.', icon: 'integration' },
     ],
     useCases: [
       { mark: 'Private Homes', title: 'Keyless entry for families.', desc: 'Family members use PIN codes — no keys to lose. Visitors use the video bell. Cleaners get temporary codes that auto-expire.', stats: [{ value: '0', label: 'Keys needed' }, { value: 'Temp', label: 'Codes available' }] },
       { mark: 'Small Offices', title: 'Office access control.', desc: 'Staff enter their PIN to unlock during office hours. After hours, visitors use the video intercom to reach someone inside.', stats: [{ value: 'Dual', label: 'Function' }, { value: '24/7', label: 'Access options' }] },
-      { mark: 'Holiday Lets', title: 'Short-term rental access.', desc: 'Set unique codes per guest booking that auto-activate on check-in day and expire on checkout. No key handovers needed.', stats: [{ value: 'Auto', label: 'Code management' }, { value: '0', label: 'Key handovers' }] },
+      { mark: 'Vacation Rentals', title: 'Short-term rental access.', desc: 'Set unique codes per guest booking that auto-activate on check-in day and expire on checkout. No key handovers needed.', stats: [{ value: 'Auto', label: 'Code management' }, { value: '0', label: 'Key handovers' }] },
     ],
     specs: [
       { category: 'Hardware', rows: [
@@ -1590,7 +1590,7 @@ export const products: Record<string, ProductData> = {
         { key: 'Audio', value: 'Full-duplex · echo cancellation' },
         { key: 'Protection', value: 'IP65 · IK10 vandal-rated' },
         { key: 'Relay Outputs', value: '2× independent (door + gate)' },
-        { key: 'Operating Temp', value: '−40°C to +55°C' },
+        { key: 'Operating Temp', value: '−40°F to 131°F' },
         { key: 'Mounting', value: 'Surface or flush mount' },
       ]},
       { category: 'Connectivity & Software', rows: [
@@ -1620,12 +1620,12 @@ export const products: Record<string, ProductData> = {
       ],
     },
     testimonials: [
-      { quote: 'PIN for the family, video bell for visitors, temporary codes for the Airbnb guests. All from one beautiful panel.', name: 'Julia Hart', role: 'Homeowner · Edinburgh', initials: 'JH' },
+      { quote: 'PIN for the family, video bell for visitors, temporary codes for the Airbnb guests. All from one beautiful panel.', name: 'Julia Hart', role: 'Homeowner · Montclair', initials: 'JH' },
       { quote: 'Eliminated keys entirely for our office. Staff use PINs, clients ring the bell. Two functions, one premium device.', name: 'Ben Wallace', role: 'Studio Director · Wallace Design', initials: 'BW' },
-      { quote: 'The backlit keypad is gorgeous at night. Guests compliment the entrance hardware — which never happened with our old system.', name: 'Catherine Price', role: 'Airbnb Host · London', initials: 'CP' },
+      { quote: 'The backlit keypad is gorgeous at night. Guests compliment the entrance hardware — which never happened with our old system.', name: 'Catherine Price', role: 'Airbnb Host · Asbury Park', initials: 'CP' },
     ],
     faqs: [
-      { question: 'How many PIN codes can be stored?', answer: 'Effectively unlimited via the cloud management dashboard. Each code can be assigned time restrictions (e.g., Mon-Fri 9am-5pm) and expiry dates.' },
+      { question: 'How many PIN codes can be stored?', answer: 'Effectively unlimited via the cloud management dashboard. Each code can be assigned time restrictions (e.g., Mon-Fri 9am-5pm) and expiration dates.' },
       { question: 'Can I change codes remotely?', answer: 'Yes — all PIN management is via the web dashboard or mobile app. Add, change, or revoke codes from anywhere without physical access to the device.' },
       { question: 'Is the keypad vandal-proof?', answer: 'Yes — capacitive touch behind stainless steel. No moving parts, no buttons to pry off. IK10 impact-rated and IP65 weather-sealed.' },
     ],
@@ -1639,7 +1639,7 @@ export const products: Record<string, ProductData> = {
     eyebrow: 'DoorBird · Horizontal — Landscape Keypad Intercom',
     title: 'Horizontal-mount video intercom with keypad for gates.',
     tagline: '— landscape orientation for pillars, rails, and wide mounts.',
-    description: 'The DoorBird D21DKH is the horizontal (landscape) variant of the keypad intercom. Designed for gate pillars, wide rails, and letterbox-style mounting where vertical panels don\'t fit. 4K video, backlit keypad, and full smart home integration.',
+    description: 'The DoorBird D21DKH is the horizontal (landscape) variant of the keypad intercom. Designed for gate pillars, wide rails, and slim horizontal recesses where vertical panels don\'t fit. 4K video, backlit keypad, and full smart home integration.',
     image: '/images/products/doorbird/D21DKH.jpeg',
     meta: [
       { value: 'Horizontal', unit: '', label: 'Orientation' },
@@ -1653,7 +1653,7 @@ export const products: Record<string, ProductData> = {
       { value: 'PIN', unit: '', label: 'Keypad' },
     ],
     features: [
-      { tag: 'HORIZONTAL', title: 'Landscape mounting for gates.', body: 'Purpose-designed for horizontal mounting on gate rails, wide pillars, and narrow letterbox positions where portrait panels can\'t fit.', icon: 'layout' },
+      { tag: 'HORIZONTAL', title: 'Landscape mounting for gates.', body: 'Purpose-designed for horizontal mounting on gate rails, wide pillars, and narrow horizontal openings where portrait panels can\'t fit.', icon: 'layout' },
       { tag: '4K + KEYPAD', title: 'Video intercom and PIN in one.', body: 'Full 4K video calling plus backlit keypad — visitors ring the bell, residents enter their PIN. Both in one weather-sealed unit.', icon: 'video' },
       { tag: 'GATE CONTROL', title: 'Built for gate automation.', body: 'Dual relay outputs designed with gate installations in mind. Control both pedestrian gate and vehicle gate from one panel.', icon: 'button' },
       { tag: 'IK10 RATED', title: 'Survives exposed locations.', body: '20-joule impact resistance for unsupervised gate locations. Salt-spray tested for coastal properties.', icon: 'shield' },
@@ -1661,7 +1661,7 @@ export const products: Record<string, ProductData> = {
     ],
     useCases: [
       { mark: 'Driveway Gates', title: 'Automated vehicle gates.', desc: 'Mounted on the gate pillar at car-window height. Driver enters PIN, gate opens. Visitor presses bell, resident sees them on their phone.', stats: [{ value: 'Car', label: 'Window height' }, { value: 'Auto', label: 'Gate opening' }] },
-      { mark: 'Coastal Properties', title: 'Salt-air environments.', desc: 'V4A stainless steel and IP65 sealing handles coastal salt spray. The horizontal format fits on sea-wall gates and promenade entrances.', stats: [{ value: 'V4A', label: 'Marine steel' }, { value: '20yr', label: 'Expected life' }] },
+      { mark: 'Coastal Properties', title: 'Salt-air environments.', desc: 'V4A stainless steel and IP65 sealing handles coastal salt spray. The horizontal format fits on shorefront gates and boardwalk entrances.', stats: [{ value: 'V4A', label: 'Marine steel' }, { value: '20yr', label: 'Expected life' }] },
       { mark: 'Commercial Yards', title: 'Service entrances.', desc: 'Delivery drivers enter a code, the barrier lifts. All entries are logged with 4K video for security and accountability.', stats: [{ value: '4K', label: 'Evidence grade' }, { value: '100%', label: 'Entry logged' }] },
     ],
     specs: [
@@ -1672,7 +1672,7 @@ export const products: Record<string, ProductData> = {
         { key: 'Keypad', value: 'Backlit capacitive · 12-key' },
         { key: 'Protection', value: 'IP65 · IK10 · salt-spray tested' },
         { key: 'Relay', value: '2× independent outputs' },
-        { key: 'Operating Temp', value: '−40°C to +55°C' },
+        { key: 'Operating Temp', value: '−40°F to 131°F' },
       ]},
       { category: 'Connectivity & Integration', rows: [
         { key: 'Network', value: 'PoE (802.3af) · Ethernet' },
@@ -1700,12 +1700,12 @@ export const products: Record<string, ProductData> = {
       ],
     },
     testimonials: [
-      { quote: 'Horizontal format was the only option for our gate rail. Fits perfectly and the keypad means no fumbling for remotes.', name: 'James Ashford', role: 'Homeowner · Devon', initials: 'JA' },
-      { quote: 'Coastal property — salt air is brutal on hardware. Two years on, the V4A steel is immaculate. Nothing else would survive.', name: 'Helen Murray', role: 'Homeowner · Cornwall', initials: 'HM' },
-      { quote: 'Delivery drivers love the keypad — enter code, gate opens, drop off, leave. All logged on 4K video.', name: 'Robert Drake', role: 'Estate Manager · Surrey', initials: 'RD' },
+      { quote: 'Horizontal format was the only option for our gate rail. Fits perfectly and the keypad means no fumbling for remotes.', name: 'James Ashford', role: 'Homeowner · Spring Lake, NJ', initials: 'JA' },
+      { quote: 'Coastal property — salt air is brutal on hardware. Two years on, the V4A steel is immaculate. Nothing else would survive.', name: 'Helen Murray', role: 'Homeowner · Long Beach Island, NJ', initials: 'HM' },
+      { quote: 'Delivery drivers love the keypad — enter code, gate opens, drop off, leave. All logged on 4K video.', name: 'Robert Drake', role: 'Estate Manager · Saddle River', initials: 'RD' },
     ],
     faqs: [
-      { question: 'Why horizontal instead of vertical?', answer: 'Gate pillars, wide rails, and letterbox-slot positions often can\'t accommodate a vertical panel. The D21DKH is purpose-designed for these horizontal mounting scenarios.' },
+      { question: 'Why horizontal instead of vertical?', answer: 'Gate pillars, wide rails, and low horizontal openings often can\'t accommodate a vertical panel. The D21DKH is purpose-designed for these horizontal mounting scenarios.' },
       { question: 'Is it the same internally as the vertical D21DKV?', answer: 'Yes — identical electronics, camera, and keypad. Only the housing orientation differs. Same 4K quality, same smart home integration.' },
       { question: 'Can I control both a gate and a door?', answer: 'Yes — dual relay outputs let you control a pedestrian gate and a vehicle gate (or door and gate) independently from one panel.' },
     ],
@@ -1719,7 +1719,7 @@ export const products: Record<string, ProductData> = {
     eyebrow: 'Akuvox · Enterprise — 2-Door Controller',
     title: 'Professional cloud-based 2-door access controller.',
     tagline: '— high-security door management with full offline redundancy.',
-    description: 'The A08 is a smart, cloud-based access control unit that manages up to 2 doors. It connects seamlessly to Wiegand or RS485 readers and integrates with the Akuvox cloud platform for remote management across multiple sites.',
+    description: 'The A08 is a smart, cloud-based access control unit that manages up to 2 doors. It connects directly to Wiegand or RS485 readers and integrates with the Akuvox cloud platform for remote management across multiple sites.',
     image: 'https://www.akuvox.com/uploads/images/9d537ac8c4fcaea6a45dbe8ed0952389.png',
     meta: [
       { value: '2', unit: 'Door', label: 'Management' },
@@ -1940,7 +1940,7 @@ export const products: Record<string, ProductData> = {
        { tag: 'DURABLE', title: 'Built for the outdoors.', body: 'Vandal-resistant housing and IP67 weather rating ensures the camera performs flawlessly in rain, snow, and extreme temperatures.', icon: 'shield' },
     ],
     useCases: [
-      { mark: 'Package Rooms', title: 'Theft prevention.', desc: 'Point a camera at your package room to deter theft and monitor courier drops. Review footage easily if a resident reports a missing parcel.', stats: [{ value: '100%', label: 'Visibility' }, { value: 'Easy', label: 'Review' }] },
+      { mark: 'Package Rooms', title: 'Theft prevention.', desc: 'Point a camera at your package room to deter theft and monitor courier drops. Review footage easily if a resident reports a missing package.', stats: [{ value: '100%', label: 'Visibility' }, { value: 'Easy', label: 'Review' }] },
       { mark: 'Parking Gates', title: 'Tailgating monitoring.', desc: 'Monitor vehicle entrances to see if unauthorized vehicles are tailgating residents into the garage.', stats: [{ value: '24/7', label: 'Recording' }, { value: 'HD', label: 'License plates' }] },
     ],
     specs: [
@@ -1971,7 +1971,7 @@ export const products: Record<string, ProductData> = {
       ],
     },
     testimonials: [
-      { quote: 'Having the cameras on the same dashboard as our intercoms is a game changer. When an incident happens at the front door, we match the door log to the video instantly.', name: 'Tom H.', role: 'Building Director', initials: 'TH' },
+      { quote: 'Having the cameras on the same dashboard as our intercoms saves us real time. When an incident happens at the front door, we match the door log to the video instantly.', name: 'Tom H.', role: 'Building Director', initials: 'TH' },
     ],
     faqs: [
       { question: 'Do I need a separate NVR (recorder)?', answer: 'No. The ButterflyMX camera is completely cloud-based. It connects directly to the internet and stores footage on ButterflyMX secure servers.' },
@@ -1996,7 +1996,7 @@ export const products: Record<string, ProductData> = {
     stats: [
       { value: 'iOS', unit: '', label: '14.0+' },
       { value: 'Android', unit: '', label: '7.0+' },
-      { value: '£0', unit: '/mo', label: 'Monthly fees' },
+      { value: '$0', unit: '/mo', label: 'Monthly fees' },
       { value: '50', unit: '', label: 'Free image history' },
     ],
     features: [
@@ -2004,11 +2004,11 @@ export const products: Record<string, ProductData> = {
       { tag: 'NO SUBSCRIPTION', title: 'Zero monthly fees.', body: 'Unlike consumer doorbells, DoorBird does not force you into a cloud subscription. Core functionality and local event logs are completely free.', icon: 'shield' },
       { tag: 'VISITOR HISTORY', title: 'Log of your last 50 visitors.', body: 'The app stores the 50 most recent visitor events (including a high-res photo and timestamp) locally on the device for free.', icon: 'log' },
       { tag: 'DOOR & GATE', title: 'Control multiple relays.', body: 'If your DoorBird station is wired to both a pedestrian gate and a driveway gate, you can choose which one to open directly from the call screen.', icon: 'layout' },
-      { tag: 'MULTI-PROPERTY', title: 'Manage multiple homes.', body: 'Add your primary residence, holiday home, and office door panels all to the same app. Seamlessly switch between properties.', icon: 'building' },
+      { tag: 'MULTI-PROPERTY', title: 'Manage multiple homes.', body: 'Add your home, vacation house, and office door panels to the same app, and switch between them with one tap.', icon: 'building' },
     ],
     useCases: [
-      { mark: 'Homeowners', title: 'Never miss a delivery.', desc: 'Talk to the courier from your desk at work and ask them to leave the parcel in a safe place, or unlock the side gate remotely.', stats: [{ value: '0', label: 'Missed parcels' }, { value: '100%', label: 'Remote control' }] },
-      { mark: 'Holiday Lets', title: 'Remote property management.', desc: 'Check in on your Airbnb property, grant remote access to cleaners, and review visitor history without needing to be on site.', stats: [{ value: 'Remote', label: 'Management' }, { value: 'Free', label: 'History log' }] },
+      { mark: 'Homeowners', title: 'Never miss a delivery.', desc: 'Talk to the courier from your desk at work and ask them to leave the package in a safe place, or unlock the side gate remotely.', stats: [{ value: '0', label: 'Missed packages' }, { value: '100%', label: 'Remote control' }] },
+      { mark: 'Vacation Rentals', title: 'Remote property management.', desc: 'Check in on your Airbnb property, grant remote access to cleaners, and review visitor history without needing to be on site.', stats: [{ value: 'Remote', label: 'Management' }, { value: 'Free', label: 'History log' }] },
       { mark: 'Family Access', title: 'Multi-user households.', desc: 'Grant app access to the whole family. Everyone gets notifications and can answer the door independently from their own phones.', stats: [{ value: '8', label: 'Devices per panel' }, { value: 'Custom', label: 'Permissions' }] },
     ],
     specs: [
@@ -2043,14 +2043,14 @@ export const products: Record<string, ProductData> = {
       ],
     },
     testimonials: [
-      { quote: 'The fact that I don\'t have to pay £3 a month just to see who was at my door yesterday is why I chose DoorBird. The app does exactly what it needs to do.', name: 'James Carter', role: 'Homeowner', initials: 'JC' },
+      { quote: 'The fact that I don\'t have to pay $3 a month just to see who was at my door yesterday is why I chose DoorBird. The app does exactly what it needs to do.', name: 'James Carter', role: 'Homeowner', initials: 'JC' },
       { quote: 'I have my office, my house, and my parents\' house all on the same app. Super easy to switch between them and manage access.', name: 'Priya Patel', role: 'Business Owner', initials: 'PP' },
     ],
     faqs: [
       { question: 'Is the app really completely free?', answer: 'Yes. The DoorBird app is free to download, and all core features—live video, two-way audio, remote unlock, and the 50-visitor history log—have no monthly subscription fees.' },
       { question: 'How many smartphones can connect to one DoorBird?', answer: 'You can connect up to 8 smartphones or tablets to a single DoorBird IP video door station. All devices will receive push notifications simultaneously.' },
       { question: 'Does the app work if my internet goes down?', answer: 'If your home internet drops but your local Wi-Fi network is still up, the app will connect directly to the DoorBird via Local Area Network (LAN) mode, allowing you to answer the door while at home.' },
-      { question: 'Do I need the app if I have an indoor station?', answer: 'No, but they work great together. You can use the physical indoor station while at home, and rely on the smartphone app when you are out in the garden or at work.' },
+      { question: 'Do I need the app if I have an indoor station?', answer: 'No, but they work great together. You can use the physical indoor station while at home, and rely on the smartphone app when you are out in the yard or at work.' },
     ],
   },
   'doorbird/a1121-access-keypad': {
@@ -2078,7 +2078,7 @@ export const products: Record<string, ProductData> = {
       { tag: 'MULTI-MODAL', title: 'PIN, RFID, and BLE.', body: 'Supports up to 500 individual PIN codes, 125KHz or 13.56MHz RFID transponders, and Bluetooth Low Energy (BLE) via smartphone.', icon: 'key' },
       { tag: 'ILLUMINATED KEYPAD', title: 'Easy operation at night.', body: 'The 12-key module is fully backlit, ensuring the device can be easily operated in unlit environments like side alleys or underground garages.', icon: 'screen' },
       { tag: 'DUAL RELAYS', title: 'Control two access points.', body: 'Equipped with two configurable bistable latching relays, allowing you to trigger a door strike and an alarm system simultaneously.', icon: 'layout' },
-      { tag: 'NETWORKED', title: 'WiFi & PoE Support.', body: 'Connects to your local network via LAN (with PoE) or WiFi. Features an open API for seamless smart home integration (e.g., FIBARO, Control4).', icon: 'integration' },
+      { tag: 'NETWORKED', title: 'WiFi & PoE Support.', body: 'Connects to your local network via LAN (with PoE) or WiFi. Features an open API for smart home integration (e.g., FIBARO, Control4).', icon: 'integration' },
     ],
     useCases: [
       { mark: 'Secondary Doors', title: 'Side gates and garages.', desc: 'Enables secure access control in areas where the installation of an IP video door station is overkill, keeping hardware consistent across the property.', stats: [{ value: 'Consistent', label: 'Aesthetic' }, { value: 'IP65', label: 'Outdoor Ready' }] },
@@ -2117,7 +2117,7 @@ export const products: Record<string, ProductData> = {
     ],
     faqs: [
       { question: 'Does the A1121 have a camera?', answer: 'No, the A1121 is strictly an access control keypad and RFID reader. For video, you would use models like the D21DKV or D1101V.' },
-      { question: 'Does it work if the internet goes down?', answer: 'Yes, if there is temporarily no internet connection, all access functions within the local network continue to work seamlessly.' },
+      { question: 'Does it work if the internet goes down?', answer: 'Yes, if there is temporarily no internet connection, all access functions on the local network keep working without interruption.' },
     ],
   },
 };

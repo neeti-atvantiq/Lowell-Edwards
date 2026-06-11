@@ -31,7 +31,7 @@ export default function Products() {
             <line x1="12" y1="8" x2="12" y2="12" />
             <line x1="12" y1="16" x2="12.01" y2="16" />
           </svg>
-          We are certified authorised integrators and resellers for each of the systems below. Our
+          We are certified authorized integrators and resellers for each of the systems below. Our
           role is to assess your building&apos;s specific requirements, recommend the most suitable
           solution, then manage the complete process from supply and installation through to
           long-term maintenance. */}

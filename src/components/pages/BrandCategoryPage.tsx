@@ -425,7 +425,7 @@ export default function BrandCategoryPage({ category }: { category: CategoryData
           <div className="section-header reveal">
             <div className="pp-tag">Our Work</div>
             <h2 className="pp-h2">Recent {category.brandName} installations</h2>
-            <p className="pp-body-lg">Real projects completed by our certified engineering team across London and the South East.</p>
+            <p className="pp-body-lg">Real projects completed by our certified engineering team across Northern New Jersey and the New York metro area.</p>
           </div>
 
           <div className="cat-inst-grid reveal">
@@ -500,7 +500,7 @@ export default function BrandCategoryPage({ category }: { category: CategoryData
                   </div>
                   <div>
                     <strong>24-hour response</strong>
-                    <p>We respond to every enquiry within one business day.</p>
+                    <p>We respond to every inquiry within one business day.</p>
                   </div>
                 </div>
                 <div className="cat-qb-item">
@@ -509,7 +509,7 @@ export default function BrandCategoryPage({ category }: { category: CategoryData
                   </div>
                   <div>
                     <strong>Certified installer</strong>
-                    <p>Authorised {category.brandName} partner — genuine hardware, full warranty.</p>
+                    <p>Authorized {category.brandName} partner — genuine hardware, full warranty.</p>
                   </div>
                 </div>
               </div>

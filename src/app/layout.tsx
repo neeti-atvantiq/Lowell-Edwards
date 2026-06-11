@@ -17,7 +17,7 @@ const basset = localFont({
 
 export const metadata: Metadata = {
   title: "Lowell Edwards Home Integration, Inc. — Smart Access & Building Integration",
-  description: "Certified home integration specialists in Hackensack, NJ. ButterflyMX, Akuvox, DoorBird authorised integrators. Smart video intercoms, access control, and building integration.",
+  description: "Certified home integration specialists in Hackensack, NJ. ButterflyMX, Akuvox, DoorBird authorized integrators. Smart video intercoms, access control, and building integration.",
 };
 
 export const viewport: Viewport = {

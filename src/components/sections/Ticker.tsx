@@ -1,6 +1,6 @@
 const items = [
   '✦ Certified Integrators',
-  '✦ ButterflyMX Authorised Reseller',
+  '✦ ButterflyMX Authorized Reseller',
   '✦ Akuvox Partner',
   '✦ DoorBird Certified Installer',
   '✦ LTE Internet',

@@ -28,7 +28,7 @@ export const solutionCategories: SolutionCategory[] = [
         tagline: 'AI-powered face recognition entry',
         image: '/images/gallery/intercom/akuvox.png',
         link: '/products/akuvox/intercoms',
-        entryFeatures: ['App', 'Facial Recg', 'Fobs', 'Pin codes', 'BlueTooth', 'Landlines'],
+        entryFeatures: ['App', 'Facial Recg', 'Fobs', 'Pin codes', 'Bluetooth', 'Landlines'],
         appFeatures: ['User pin codes', 'Delivery Pin codes', 'Guest Pin codes', 'User Add/Remove FAMILY & TENANTS']
       },
       {

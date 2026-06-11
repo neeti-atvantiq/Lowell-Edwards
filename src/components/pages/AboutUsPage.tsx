@@ -10,7 +10,7 @@ const heritage = [
   {
     year: '2019',
     title: 'Where we focused.',
-    body: 'After years of broad-spectrum installation work, we committed to a single discipline: modern intercom and access systems. Today every project we take on involves video entry, mobile access, or building-wide integration — and every engineer on the team specialises in it.',
+    body: 'After years of broad-spectrum installation work, we committed to a single discipline: modern intercom and access systems. Today every project we take on involves video entry, mobile access, or building-wide integration — and every engineer on the team specializes in it.',
     meta: 'Intercom Practice Launched',
   },
 ];
@@ -54,7 +54,7 @@ const properties = [
 const components = [
   { title: 'Video Calling', body: 'HD video at the door, mirrored to in-unit stations and resident phones.' },
   { title: 'Mobile Access', body: 'Open the door from anywhere with a smartphone — no fobs, no keys, no fuss.' },
-  { title: 'Keypads & PINs', body: 'Permanent or temporary access codes for residents, staff, and trades.' },
+  { title: 'Keypads & PINs', body: 'Permanent or temporary access codes for residents, staff, and contractors.' },
   { title: 'Card & Fob Readers', body: 'Traditional credentials where they still make the most sense.' },
   { title: 'Door Release', body: 'Quiet electric strikes and maglocks integrated cleanly with existing hardware.' },
   { title: 'Integrated Cameras', body: 'Entry cameras tied into the intercom and to building CCTV where required.' },
@@ -98,7 +98,7 @@ export default function AboutUsPage() {
                 </Link>
                 <span className="wu-hero-cta-note">
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12" /></svg>
-                  Hackensack, NJ · Serving the tri-state region
+                  Hackensack, NJ · Serving the tri-state area
                 </span>
               </div>
             </div>
@@ -111,7 +111,7 @@ export default function AboutUsPage() {
                 <div className="wu-credential-text">
                   <div className="wu-credential-label">Since 1978</div>
                   <div className="wu-credential-name">Nearly 50 years of installation craft</div>
-                  <div className="wu-credential-sub">Residential and commercial technology projects across the tri-state region</div>
+                  <div className="wu-credential-sub">Residential and commercial technology projects across the tri-state area</div>
                 </div>
               </div>
               <div className="wu-credential-card">
@@ -120,7 +120,7 @@ export default function AboutUsPage() {
                 </div>
                 <div className="wu-credential-text">
                   <div className="wu-credential-label">Since 2019</div>
-                  <div className="wu-credential-name">Specialised in intercom and access</div>
+                  <div className="wu-credential-name">Specialized in intercom and access</div>
                   <div className="wu-credential-sub">Certified by ButterflyMX, Akuvox, and DoorBird — three brands, one team</div>
                 </div>
               </div>
@@ -155,7 +155,7 @@ export default function AboutUsPage() {
         <div className="wrap">
           <div className="section-header wu-section-header">
             <div className="tag">What we do</div>
-            <h2 className="h2">Four disciplines, <em className="em">one specialism.</em></h2>
+            <h2 className="h2">Four disciplines, <em className="em">one specialty.</em></h2>
             <p className="body-lg">Every project we take on falls into one or more of these areas — and every engineer on the team is trained across all four.</p>
           </div>
           <div className="au-services-grid">
@@ -245,7 +245,7 @@ export default function AboutUsPage() {
           <div className="wu-bottom-cta-inner">
             <div className="tag wu-bottom-tag">Ready to talk?</div>
             <h2 className="h2">Make building access <em className="em">simpler, safer,</em><br />and more convenient for everyone.</h2>
-            <p className="wu-bottom-cta-desc">Tell us about your property and an engineer will come back within 24 hours with an itemised proposal — no obligation, no automated systems, no sales pressure.</p>
+            <p className="wu-bottom-cta-desc">Tell us about your property and an engineer will come back within 24 hours with an itemized proposal — no obligation, no automated systems, no sales pressure.</p>
             <div className="wu-bottom-cta-actions">
               <Link href="/contact" className="btn btn-gold">
                 <span>Get a Free Quote</span>

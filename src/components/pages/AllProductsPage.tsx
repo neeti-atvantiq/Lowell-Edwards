@@ -61,7 +61,7 @@ export default function SolutionsPage() {
             <div className="ap-hero-content reveal">
               <div className="ap-hero-eyebrow">
                 <span className="ap-hero-badge">Lowell Edwards</span>
-                <span className="ap-hero-label">· Product Catalogue</span>
+                <span className="ap-hero-label">· Product Catalog</span>
               </div>
               <h1 className="ap-hero-title">
                 Every product.<br />
