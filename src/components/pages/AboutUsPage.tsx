@@ -45,7 +45,7 @@ const services = [
 const properties = [
   { icon: 'building', title: 'Apartment Buildings', body: 'Multifamily intercoms with mobile app entry and tenant directories.' },
   { icon: 'home', title: 'Luxury Residences', body: 'Discreet, design-led video entry for single-family and townhome owners.' },
-  { icon: 'briefcase', title: 'Office Properties', body: 'Visitor management, credentialed access, and after-hours entry control.' },
+  { icon: 'briefcase', title: <><span className="tight-o">O</span>ffice Properties</>, body: 'Visitor management, credentialed access, and after-hours entry control.' },
   { icon: 'gate', title: 'Gated Entrances', body: 'Driveway, garage, and perimeter gate control with remote release.' },
   { icon: 'sparkle', title: 'Amenity Spaces', body: 'Gym, lounge, rooftop, and package-room access for residents only.' },
   { icon: 'layers', title: 'Multi-Entrance Facilities', body: 'Unified access across lobbies, side doors, service entries, and gates.' },
@@ -224,7 +224,7 @@ export default function AboutUsPage() {
         <div className="wrap">
           <div className="section-header wu-section-header">
             <div className="tag">Why it matters</div>
-            <h2 className="h2">Three things we <em className="em">refuse to compromise on.</em></h2>
+            <h2 className="h2" style={{ whiteSpace: 'pre-line' }}>Three things we <em className="em">refuse to compromise on.</em></h2>
             <p className="body-lg">Decades of experience taught us where projects go wrong. These are the three principles we built the company around.</p>
           </div>
           <div className="au-values-grid">
