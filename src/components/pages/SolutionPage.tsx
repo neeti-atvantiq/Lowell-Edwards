@@ -75,7 +75,7 @@ export default function SolutionPage() {
             <div className="inner-hero-content">
               <div className="tag">Building Security Solution</div>
               <h1 className="h2">
-                One integrated system <br/>for entry, delivery, and<br/> <em className="em">daily control</em>
+                <span className="tight-o">O</span>ne integrated system<br/>for entry, delivery, and<br/> <em className="em">daily control</em>
               </h1>
               <p className="body-lg">
                 We design modern intercom and access control setups that solve the real problems
@@ -139,7 +139,7 @@ export default function SolutionPage() {
               <div className="story-copy">
                 <div className="story-index">{story.n}</div>
                 <div className="story-eyebrow">{story.eyebrow}</div>
-                <h3 className="h3 story-title">{story.title}</h3>
+                <h3 className="h3 story-title">{story.title.split('O').map((part, i, arr) => <span key={i}>{i > 0 && <span className="tight-o">O</span>}{part}</span>)}</h3>
                 <p className="body-lg story-body">{story.body}</p>
                 <p className="body-md story-detail">{story.detail}</p>
                 <div className="story-fact-bar">{story.fact}</div>

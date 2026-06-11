@@ -38,7 +38,7 @@ const pillars = [
   },
   {
     num: 'iii. Expertise',
-    title: 'Three certifications. One responsibility.',
+    title: <>Three certifications. <span className='tight-o'>O</span>ne responsibility.</>,
     body: 'We\'re certified by ButterflyMX, Akuvox, and DoorBird — three brands with very different strengths. Most installers carry one. Carrying all three means we recommend the right system, not just the one we sell.',
     points: ['Triple-certified integrator', 'Site-specific engineer training per brand', 'NICEIC-approved electrical work', 'ICO-registered for biometric installs'],
   },
@@ -274,7 +274,7 @@ export default function WhyUsPage() {
         <div className="wrap">
           <div className="wu-bottom-cta-inner">
             <div className="tag wu-bottom-tag">Ready to start?</div>
-            <h2 className="h2">Three brands. <em className="em">One integrator.</em><br />One quote, scoped properly.</h2>
+            <h2 className="h2">Three brands. <em className="em"><span className='tight-o'>O</span>ne integrator.</em><br /><span className='tight-o'>O</span>ne quote, scoped properly.</h2>
             <p className="wu-bottom-cta-desc">Tell us about your property and an engineer will come back within 24 hours with an itemised proposal — no obligation, no automated systems, no sales pressure.</p>
             <div className="wu-bottom-cta-actions">
               <Link href="/contact" className="btn btn-gold">

@@ -45,7 +45,10 @@ img { display: block; max-width: 100%; }
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 button { font-family: inherit; }
-
+.tight-o {
+  display: inline-block;
+  margin-right: -0.12em;
+}
 /* TYPOGRAPHY */
 .fd { font-family: var(--fd); }
 .tag { display: inline-flex; align-items: center; gap: 12px; font-family: var(--fb); font-size: 10.5px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-bottom: 22px; }

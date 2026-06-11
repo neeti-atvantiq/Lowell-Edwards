@@ -36,7 +36,7 @@ const services = [
   },
   {
     num: 'iv. Building-Wide Integration',
-    title: 'One system for every entrance.',
+    title: <><span className='tight-o'>O</span>ne systems for every entrance.</>,
     body: 'For larger properties, a main lobby intercom is only the start. We bring side doors, service entrances, garage gates, amenity spaces, and cameras together into one coherent system that property managers can actually administer.',
     points: ['Multi-entrance configuration', 'Camera and CCTV integration', 'Property-manager dashboards', 'Remote entry and visitor logs'],
   },

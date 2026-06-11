@@ -65,7 +65,7 @@ export default function SolutionsPage() {
               </div>
               <h1 className="ap-hero-title">
                 Every product.<br />
-                <em className="em">One integrator.</em>
+                <em className="em"><span className='tight-o'>O</span>ne integrator.</em>
               </h1>
               <p className="ap-hero-desc">
                 We install Akuvox, ButterflyMX, and DoorBird — the three leading intercom and access control platforms. 

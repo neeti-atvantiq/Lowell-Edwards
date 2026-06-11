@@ -7,7 +7,7 @@ type Persona = {
   img2x: string;
   alt: string;
   icon: ReactNode;
-  title: string;
+  title: ReactNode;
   sub: string;
   feats: string[];
   tiers: { c: string; l: string }[];
@@ -76,7 +76,7 @@ const personas: Persona[] = [
         <polyline points="22,8.5 12,15.5 2,8.5" />
       </svg>
     ),
-    title: 'Developers & Owners',
+    title: <>Developers & <span className='tight-o'>O</span>wners</>,
     sub: 'Asset value · Scalability · Future-proofing',
     feats: [
       'Increase property value and resident satisfaction with smart access',
