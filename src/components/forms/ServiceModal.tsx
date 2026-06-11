@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect, useMemo } from 'react';
 import { State, City } from 'country-state-city';
+import CustomSelect from '@/components/ui/CustomSelect';
 
 type Props = {
   open: boolean;
@@ -18,6 +19,7 @@ const initial = {
   apartment: '',
   zipCode: '',
   requestType: '',
+  notes: '',
 };
 
 export default function ServiceModal({ open, onClose }: Props) {
@@ -112,7 +114,7 @@ export default function ServiceModal({ open, onClose }: Props) {
               </div>
               <div className="sm-field">
                 <label className="sm-label">Company</label>
-                <input className="sm-input" type="text" placeholder="Company name (optional)" value={form.company} onChange={onChange('company')} />
+                <input className="sm-input" type="text" placeholder="Company name" value={form.company} onChange={onChange('company')} />
               </div>
             </div>
             <div className="sm-row">
@@ -131,27 +133,26 @@ export default function ServiceModal({ open, onClose }: Props) {
             <div className="sm-row">
               <div className="sm-field">
                 <label className="sm-label">State <span className="sm-req">*</span></label>
-                <div className="sm-select-wrap">
-                  <select className="sm-select" required value={form.state} onChange={onChange('state')}>
-                    <option value="" disabled>Select state</option>
-                    {usStates.map((s) => (
-                      <option key={s.isoCode} value={s.isoCode}>{s.name}</option>
-                    ))}
-                  </select>
-                  <svg className="sm-select-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="6 9 12 15 18 9" /></svg>
-                </div>
+                <CustomSelect
+                  value={form.state}
+                  onChange={(v) => setForm({ ...form, state: v, city: '' })}
+                  placeholder="Select state"
+                  required
+                  searchable
+                  options={usStates.map((s) => ({ value: s.isoCode, label: s.name }))}
+                />
               </div>
               <div className="sm-field">
                 <label className="sm-label">City <span className="sm-req">*</span></label>
-                <div className="sm-select-wrap">
-                  <select className="sm-select" required value={form.city} onChange={onChange('city')} disabled={!form.state}>
-                    <option value="" disabled>{form.state ? 'Select city' : 'Select state first'}</option>
-                    {cities.map((c) => (
-                      <option key={c.name} value={c.name}>{c.name}</option>
-                    ))}
-                  </select>
-                  <svg className="sm-select-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="6 9 12 15 18 9" /></svg>
-                </div>
+                <CustomSelect
+                  value={form.city}
+                  onChange={(v) => setForm({ ...form, city: v })}
+                  placeholder={form.state ? 'Select city' : 'Select state first'}
+                  required
+                  searchable
+                  disabled={!form.state}
+                  options={cities.map((c) => ({ value: c.name, label: c.name }))}
+                />
               </div>
             </div>
             <div className="sm-row">
@@ -171,16 +172,30 @@ export default function ServiceModal({ open, onClose }: Props) {
               </div>
               <div className="sm-field">
                 <label className="sm-label">Request Type <span className="sm-req">*</span></label>
-                <div className="sm-select-wrap">
-                  <select className="sm-select" required value={form.requestType} onChange={onChange('requestType')}>
-                    <option value="" disabled>Select type</option>
-                    <option value="General">General</option>
-                    <option value="Internet">Internet</option>
-                    <option value="Intercom">Intercom</option>
-                  </select>
-                  <svg className="sm-select-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="6 9 12 15 18 9" /></svg>
-                </div>
+                <CustomSelect
+                  value={form.requestType}
+                  onChange={(v) => setForm({ ...form, requestType: v })}
+                  placeholder="Select type"
+                  required
+                  options={[
+                    { value: 'General', label: 'General' },
+                    { value: 'Internet', label: 'Internet' },
+                    { value: 'Intercom', label: 'Intercom' },
+                  ]}
+                />
               </div>
+            </div>
+
+            {/* Notes */}
+            <div className="sm-field" style={{ marginBottom: 16 }}>
+              <label className="sm-label">Additional Notes</label>
+              <textarea
+                className="sm-input sm-textarea"
+                placeholder="Any special requirements or details…"
+                rows={3}
+                value={form.notes}
+                onChange={(e) => setForm({ ...form, notes: e.target.value })}
+              />
             </div>
 
             {status === 'error' && (

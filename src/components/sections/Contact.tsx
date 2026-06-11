@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { useRecaptchaToken } from '@/hooks/useRecaptchaToken';
+import CustomSelect from '@/components/ui/CustomSelect';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -223,39 +224,26 @@ New York Metro and surrounding areas
                     <div className="contact-form-field">
                       <label className="contact-form-label">Time</label>
                       <div style={{ display: 'flex', gap: 8 }}>
-                        <select
-                          className="contact-form-input"
+                        <CustomSelect
                           value={timeHour}
-                          onChange={(e) => { setTimeHour(e.target.value); updateTime(e.target.value, timeMinute, timePeriod); }}
+                          onChange={(v) => { setTimeHour(v); updateTime(v, timeMinute, timePeriod); }}
+                          placeholder="Hr"
                           required
-                          style={{ flex: 1 }}
-                        >
-                          <option value="" disabled>Hr</option>
-                          {[10,11,12,1,2,3,4,5,6,7].map(h => (
-                            <option key={h} value={String(h)}>{h}</option>
-                          ))}
-                        </select>
-                        <select
-                          className="contact-form-input"
+                          options={[1,2,3,4,5,6,7,8,9,10,11,12].map(h => ({ value: String(h), label: String(h) }))}
+                        />
+                        <CustomSelect
                           value={timeMinute}
-                          onChange={(e) => { setTimeMinute(e.target.value); updateTime(timeHour, e.target.value, timePeriod); }}
+                          onChange={(v) => { setTimeMinute(v); updateTime(timeHour, v, timePeriod); }}
+                          placeholder="Min"
                           required
-                          style={{ flex: 1 }}
-                        >
-                          <option value="" disabled>Min</option>
-                          {['00','15','30','45'].map(m => (
-                            <option key={m} value={m}>{m}</option>
-                          ))}
-                        </select>
-                        <select
-                          className="contact-form-input"
+                          options={['00','15','30','45'].map(m => ({ value: m, label: m }))}
+                        />
+                        <CustomSelect
                           value={timePeriod}
-                          onChange={(e) => { setTimePeriod(e.target.value); updateTime(timeHour, timeMinute, e.target.value); }}
-                          style={{ flex: 1 }}
-                        >
-                          <option value="AM">AM</option>
-                          <option value="PM">PM</option>
-                        </select>
+                          onChange={(v) => { setTimePeriod(v); updateTime(timeHour, timeMinute, v); }}
+                          placeholder="AM/PM"
+                          options={[{ value: 'AM', label: 'AM' }, { value: 'PM', label: 'PM' }]}
+                        />
                       </div>
                     </div>
                   </div>
@@ -278,11 +266,11 @@ New York Metro and surrounding areas
                       <line x1="8" y1="2" x2="8" y2="6"></line>
                       <line x1="3" y1="10" x2="21" y2="10"></line>
                     </svg>
-                    {status === 'submitting' ? 'Sending…' : 'Request Meeting'}
+                    {status === 'submitting' ? 'Sending…' : 'Submit Request'}
                   </button>
                   {status === 'success' && (
                     <p role="status" style={{ marginTop: 16, color: '#1f6b3a', fontSize: 14 }}>
-                      Thanks — your meeting request has been sent. We&apos;ll confirm by email within 24 hours.
+                      Thanks — your request has been sent. We&apos;ll confirm by email within 24 hours.
                     </p>
                   )}
                   {status === 'error' && (

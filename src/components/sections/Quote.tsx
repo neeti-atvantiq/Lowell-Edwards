@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { useRecaptchaToken } from '@/hooks/useRecaptchaToken';
+import CustomSelect from '@/components/ui/CustomSelect';
 
 export default function Quote() {
   const [submitted, setSubmitted] = useState(false);
@@ -126,36 +127,48 @@ export default function Quote() {
                 </div>
                 <div className="qf-field">
                   <label className="qf-label">Building Type</label>
-                  <select className="qf-select" value={form.buildingType} onChange={onChange('buildingType')}>
-                    <option value="">Select building type…</option>
-                    <option>Residential Condominium Building</option>
-                    <option>Residential Cooperative Building</option>
-                    <option>Residential Rental Building</option>
-                    <option>Residence</option>
-                    <option>Gated Community</option>
-                    <option>Commercial Office</option>
-                    <option>Industrial/Warehouse</option>
-                  </select>
+                  <CustomSelect
+                    value={form.buildingType}
+                    onChange={(v) => setForm({ ...form, buildingType: v })}
+                    placeholder="Select building type…"
+                    options={[
+                      { value: 'Residential Condominium Building', label: 'Residential Condominium Building' },
+                      { value: 'Residential Cooperative Building', label: 'Residential Cooperative Building' },
+                      { value: 'Residential Rental Building', label: 'Residential Rental Building' },
+                      { value: 'Residence', label: 'Residence' },
+                      { value: 'Gated Community', label: 'Gated Community' },
+                      { value: 'Commercial Office', label: 'Commercial Office' },
+                      { value: 'Industrial/Warehouse', label: 'Industrial/Warehouse' },
+                    ]}
+                  />
                 </div>
                 <div className="qf-row">
                   <div>
                     <label className="qf-label">Number of Units</label>
-                    <select className="qf-select" value={form.units} onChange={onChange('units')}>
-                      <option value="">Units…</option>
-                      <option>1–10</option>
-                      <option>11–50</option>
-                      <option>51–200</option>
-                      <option>200+</option>
-                    </select>
+                    <CustomSelect
+                      value={form.units}
+                      onChange={(v) => setForm({ ...form, units: v })}
+                      placeholder="Units…"
+                      options={[
+                        { value: '1–10', label: '1–10' },
+                        { value: '11–50', label: '11–50' },
+                        { value: '51–200', label: '51–200' },
+                        { value: '200+', label: '200+' },
+                      ]}
+                    />
                   </div>
                   <div>
                     <label className="qf-label">Priority Need</label>
-                    <select className="qf-select" value={form.priority} onChange={onChange('priority')}>
-                      <option value="">Select…</option>
-                      <option>Immediate Installation</option>
-                      <option>Future Planning</option>
-                      <option>Project in development</option>
-                    </select>
+                    <CustomSelect
+                      value={form.priority}
+                      onChange={(v) => setForm({ ...form, priority: v })}
+                      placeholder="Select…"
+                      options={[
+                        { value: 'Immediate Installation', label: 'Immediate Installation' },
+                        { value: 'Future Planning', label: 'Future Planning' },
+                        { value: 'Project in development', label: 'Project in development' },
+                      ]}
+                    />
                   </div>
                 </div>
                 <div className="qf-field">

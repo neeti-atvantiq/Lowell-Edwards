@@ -1,0 +1,38 @@
+/* =====================================================
+   STYLE INDEX — imports all CSS modules in order.
+   Import this single file in layout.tsx.
+===================================================== */
+
+/* 1. Global foundation (variables, resets, typography, buttons, layout) */
+@import './globals.css';
+
+/* 2. Component styles */
+@import './components/navigation.css';
+@import './components/hero.css';
+@import './components/ticker.css';
+@import './components/solution.css';
+@import './components/solution-slider.css';
+@import './components/lte.css';
+@import './components/personas.css';
+@import './components/products.css';
+@import './components/gallery.css';
+@import './components/installations.css';
+@import './components/why-us.css';
+@import './components/cta-strip.css';
+@import './components/quote.css';
+@import './components/finder.css';
+@import './components/service-modal.css';
+@import './components/custom-select.css';
+@import './components/chatbot.css';
+@import './components/footer.css';
+
+/* 3. Page-specific styles */
+@import './pages/contact.css';
+@import './pages/inner-pages.css';
+@import './pages/solution-page.css';
+@import './pages/why-us-page.css';
+@import './pages/compare-page.css';
+@import './pages/about-page.css';
+
+/* 4. Responsive overrides (must be last) */
+@import './responsive.css';

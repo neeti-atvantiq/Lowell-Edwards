@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import CustomSelect from '@/components/ui/CustomSelect';
 
 export default function Finder() {
   const [type, setType] = useState('');
@@ -55,37 +56,49 @@ system for<em className="em"> your <br /> building
             <div className="finder-form">
               <div>
                 <label className="finder-label">Building Type</label>
-                <select className="finder-select" value={type} onChange={(e) => setType(e.target.value)}>
-                  <option value="">Select your building type…</option>
-                  <option>Residential apartment block</option>
-                  <option>Commercial office building</option>
-                  <option>Gated community / estate</option>
-                  <option>Mixed-use development</option>
-                  <option>Student accommodation</option>
-                  <option>Industrial / warehouse</option>
-                </select>
+                <CustomSelect
+                  value={type}
+                  onChange={setType}
+                  placeholder="Select your building type…"
+                  options={[
+                    { value: 'Residential apartment block', label: 'Residential apartment block' },
+                    { value: 'Commercial office building', label: 'Commercial office building' },
+                    { value: 'Gated community / estate', label: 'Gated community / estate' },
+                    { value: 'Mixed-use development', label: 'Mixed-use development' },
+                    { value: 'Student accommodation', label: 'Student accommodation' },
+                    { value: 'Industrial / warehouse', label: 'Industrial / warehouse' },
+                  ]}
+                />
               </div>
               <div className="finder-row">
                 <div>
                   <label className="finder-label">Number of Units / Floors</label>
-                  <select className="finder-select" value={size} onChange={(e) => setSize(e.target.value)}>
-                    <option value="">Select size…</option>
-                    <option>1–10 units</option>
-                    <option>11–50 units</option>
-                    <option>51–200 units</option>
-                    <option>200+ units</option>
-                  </select>
+                  <CustomSelect
+                    value={size}
+                    onChange={setSize}
+                    placeholder="Select size…"
+                    options={[
+                      { value: '1–10 units', label: '1–10 units' },
+                      { value: '11–50 units', label: '11–50 units' },
+                      { value: '51–200 units', label: '51–200 units' },
+                      { value: '200+ units', label: '200+ units' },
+                    ]}
+                  />
                 </div>
                 <div>
                   <label className="finder-label">Priority Feature</label>
-                  <select className="finder-select" value={priority} onChange={(e) => setPriority(e.target.value)}>
-                    <option value="">Key requirement…</option>
-                    <option>HD video intercom</option>
-                    <option>Face recognition entry</option>
-                    <option>Remote access control</option>
-                    <option>Package delivery security</option>
-                    <option>Full building security</option>
-                  </select>
+                  <CustomSelect
+                    value={priority}
+                    onChange={setPriority}
+                    placeholder="Key requirement…"
+                    options={[
+                      { value: 'HD video intercom', label: 'HD video intercom' },
+                      { value: 'Face recognition entry', label: 'Face recognition entry' },
+                      { value: 'Remote access control', label: 'Remote access control' },
+                      { value: 'Package delivery security', label: 'Package delivery security' },
+                      { value: 'Full building security', label: 'Full building security' },
+                    ]}
+                  />
                 </div>
               </div>
               <button className="finder-submit" onClick={run}>

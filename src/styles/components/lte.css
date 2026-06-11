@@ -1,0 +1,28 @@
+/* =====================================================
+   LTE INTERNET SERVICE SECTION
+===================================================== */
+
+.lte-section { background: var(--bg2); position: relative; overflow: hidden; }
+.lte-section::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 60%; height: 1px; background: linear-gradient(90deg, transparent 0%, var(--gborder) 50%, transparent 100%); }
+.lte-grid {display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 64px;align-items: start;}
+.lte-content .tag { margin-bottom: 18px; }
+.lte-content .h2 { line-height: 1.05; }
+.lte-content .h2 .em { font-size: 0.6em; }
+.lte-features {display: grid;grid-template-columns: 1fr 1fr;gap: 20px 28px;}
+.lte-feat { display: flex; gap: 18px; align-items: flex-start; }
+.lte-feat-icon { flex-shrink: 0; width: 44px; height: 44px; border: 1px solid var(--gborder); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--gold); background: var(--bg); transition: border-color .3s var(--ease), background .3s var(--ease); }
+.lte-feat:hover .lte-feat-icon { border-color: var(--gold); background: rgba(122,36,38,.06); }
+.lte-feat-text { flex: 1; }
+.lte-feat-title { font-family: var(--fd); font-size: 17px; font-weight: 600; color: var(--cream); margin-bottom: 4px; line-height: 1.3; }
+.lte-feat-body { font-family: var(--fb); font-size: 13.5px; font-weight: 300; color: var(--c65); line-height: 1.6; }
+.lte-visual { background: var(--bg); border: 1px solid var(--gborder2); border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 24px; }
+.lte-stat-banner { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding-bottom: 24px; border-bottom: 1px solid var(--gborder2); }
+.lte-stat { text-align: center; }
+.lte-stat-num { font-family: var(--fd); font-size: 36px; font-weight: 600; color: var(--cream); line-height: 1; letter-spacing: -.02em; }
+.lte-stat-num .lte-stat-pct, .lte-stat-num .lte-stat-unit { font-size: 18px; color: var(--gold); margin-left: 1px; font-weight: 500; }
+.lte-stat-label { font-family: var(--fb); font-size: 11px; color: var(--c45); margin-top: 8px; letter-spacing: .04em; }
+.lte-illustration { flex: 1; display: flex; align-items: center; justify-content: center; min-height: 260px; color: var(--cream); }
+.lte-section .lte-feat-icon { border-color: rgba(103,0,1,.22); }
+.lte-section .lte-feat:hover .lte-feat-icon { border-color: #9A0002; background: rgba(103,0,1,.06); }
+.lte-section .lte-feat-icon svg { stroke: #9A0002; }
+.lte-section .lte-stat-num .lte-stat-pct, .lte-section .lte-stat-num .lte-stat-unit { color: #9A0002; }

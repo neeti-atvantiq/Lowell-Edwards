@@ -1,0 +1,164 @@
+/* =====================================================
+   CUSTOM SELECT DROPDOWN
+===================================================== */
+
+.cs-wrap { position: relative; width: 100%; }
+.cs-wrap.cs-disabled { opacity: .55; pointer-events: none; }
+
+/* Trigger button */
+.cs-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 13px 16px;
+  background: #FFFFFF;
+  border: 1px solid rgba(26,26,46,.12);
+  border-radius: 6px;
+  color: var(--cream);
+  font-family: var(--fb);
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  transition: border .2s var(--ease), box-shadow .2s var(--ease);
+}
+.cs-trigger:hover { border-color: rgba(26,26,46,.25); }
+.cs-trigger:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(103,0,1,.08); }
+.cs-open .cs-trigger { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(103,0,1,.08); }
+.cs-trigger:disabled { background: rgba(26,26,46,.03); color: var(--c25); cursor: not-allowed; }
+
+.cs-value { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cs-placeholder { color: rgba(26,26,46,.3); font-weight: 300; }
+
+/* Arrow icon */
+.cs-arrow {
+  flex-shrink: 0;
+  margin-left: 10px;
+  color: var(--c45);
+  transition: transform .2s var(--ease), color .2s;
+}
+.cs-open .cs-arrow { transform: rotate(180deg); color: var(--gold); }
+
+/* Dropdown panel */
+.cs-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #FFFFFF;
+  border: 1px solid rgba(26,26,46,.10);
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(26,26,46,.12), 0 2px 8px rgba(26,26,46,.06);
+  overflow: hidden;
+  padding: 0;
+  animation: csSlideDown .15s var(--ease);
+}
+@keyframes csSlideDown {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Search input */
+.cs-search-wrap {
+  position: relative;
+  padding: 8px 8px 6px;
+  border-bottom: 1px solid rgba(26,26,46,.08);
+}
+.cs-search-icon {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--c25);
+  pointer-events: none;
+}
+.cs-search {
+  width: 100%;
+  padding: 9px 12px 9px 32px;
+  background: rgba(26,26,46,.03);
+  border: 1px solid rgba(26,26,46,.08);
+  border-radius: 5px;
+  font-family: var(--fb);
+  font-size: 13px;
+  color: var(--cream);
+  outline: none;
+  transition: border .2s;
+}
+.cs-search:focus { border-color: var(--gold); }
+.cs-search::placeholder { color: var(--c25); font-weight: 300; }
+
+/* Options list */
+.cs-list {
+  max-height: 220px;
+  overflow-y: auto;
+  padding: 6px;
+  list-style: none;
+}
+
+/* Scrollbar inside dropdown */
+.cs-list::-webkit-scrollbar { width: 5px; }
+.cs-list::-webkit-scrollbar-track { background: transparent; }
+.cs-list::-webkit-scrollbar-thumb { background: rgba(26,26,46,.12); border-radius: 3px; }
+.cs-list::-webkit-scrollbar-thumb:hover { background: rgba(26,26,46,.22); }
+
+/* No results */
+.cs-no-results {
+  padding: 14px;
+  text-align: center;
+  font-family: var(--fb);
+  font-size: 13px;
+  color: var(--c25);
+  font-weight: 300;
+}
+
+/* Option items */
+.cs-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 14px;
+  border-radius: 5px;
+  font-family: var(--fb);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--cream);
+  cursor: pointer;
+  transition: background .12s, color .12s;
+  user-select: none;
+}
+.cs-option + .cs-option { margin-top: 2px; }
+.cs-option:hover,
+.cs-option.cs-focused { background: rgba(103,0,1,.06); color: var(--gold); }
+.cs-option.cs-selected { font-weight: 600; color: var(--gold); }
+.cs-option.cs-selected:hover,
+.cs-option.cs-selected.cs-focused { background: rgba(103,0,1,.09); }
+.cs-option.cs-option-disabled { color: var(--c25); cursor: not-allowed; }
+.cs-option.cs-option-disabled:hover { background: transparent; color: var(--c25); }
+
+/* Checkmark for selected */
+.cs-check { flex-shrink: 0; color: var(--gold); }
+
+/* ---- Context-specific sizing ---- */
+
+/* Inside quote form */
+.qf-row .cs-trigger,
+.qf-field .cs-trigger { padding: 13px 16px; }
+
+/* Inside service modal */
+.sm-field .cs-trigger { padding: 10px 13px; border-radius: 6px; font-size: 13px; }
+
+/* Inside contact form */
+.contact-form-field .cs-trigger { padding: 14px 16px; border-radius: 6px; }
+
+/* Inside finder */
+.finder-form .cs-trigger { padding: 14px 18px; border-radius: 0; }
+
+/* ---- Mobile ---- */
+@media (max-width: 768px) {
+  .cs-trigger { padding: 12px 14px; font-size: 13px; }
+  .cs-dropdown { max-height: 200px; }
+  .cs-option { padding: 12px 14px; font-size: 13px; }
+}

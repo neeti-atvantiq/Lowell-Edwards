@@ -1,0 +1,39 @@
+/* =====================================================
+   SERVICE MODAL
+===================================================== */
+
+.service-modal-overlay { position: fixed; inset: 0; z-index: 9999; background: rgba(10,8,20,.55); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); display: flex; align-items: center; justify-content: center; padding: 24px; animation: fadeIn .2s ease; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.service-modal { position: relative; width: 100%; max-width: 760px; max-height: calc(100vh - 48px); overflow-y: auto; background: #FAFBFC; border: 1px solid rgba(26,26,46,.08); box-shadow: 0 24px 64px rgba(26,26,46,.18); border-radius: 12px; padding: 30px 34px; animation: slideUp .25s ease; }
+@keyframes slideUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+.service-modal-close { position: absolute; top: 18px; right: 18px; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; background: rgba(26,26,46,.04); border: 1px solid rgba(26,26,46,.08); border-radius: 50%; cursor: pointer; color: var(--c45); transition: all .2s; }
+.service-modal-close:hover { color: var(--gold); border-color: var(--gold); background: rgba(103,0,1,.04); }
+
+/* Form elements */
+.sm-form { display: flex; flex-direction: column; gap: 0; }
+.sm-header { margin-bottom: 14px; }
+.sm-title { font-family: var(--fd); font-size: 28px; font-weight: 600; color: var(--cream); margin-bottom: 8px; letter-spacing: -.01em; }
+.sm-sub { font-family: var(--fb); font-size: 13.5px; font-weight: 300; color: var(--c45); letter-spacing: .02em; line-height: 1.5; }
+.sm-section-label { font-family: var(--fb); font-size: 10px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; margin-top: 2px; padding-bottom: 5px; border-bottom: 1px solid rgba(103,0,1,.08); }
+.sm-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 10px; }
+.sm-textarea { resize: vertical; min-height: 65px; font-family: var(--fb); }
+.sm-field { display: flex; flex-direction: column; gap: 4px; }
+.sm-field-wide { grid-column: span 1; flex: 1.5; }
+.sm-field-narrow { grid-column: span 1; flex: 0.8; }
+.sm-label { font-family: var(--fb); font-size: 10.5px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--c45); }
+.sm-req { color: var(--gold); font-weight: 700; }
+.sm-input { width: 100%; padding: 10px 13px; background: #FFFFFF; border: 1px solid rgba(26,26,46,.12); border-radius: 6px; color: var(--cream); font-family: var(--fb); font-size: 13px; outline: none; transition: border .2s, box-shadow .2s; }
+.sm-input:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(103,0,1,.06); }
+.sm-input::placeholder { color: rgba(26, 26, 46, 0.28); font-weight: 300; }
+.sm-input:disabled { background: rgba(26,26,46,.03); cursor: not-allowed; }
+.sm-select-wrap { position: relative; }
+.sm-select { width: 100%; padding: 12px 36px 12px 14px; background: #FFFFFF; border: 1px solid rgba(26,26,46,.12); border-radius: 6px; color: var(--cream); font-family: var(--fb); font-size: 14px; outline: none; transition: border .2s, box-shadow .2s; -webkit-appearance: none; appearance: none; cursor: pointer; }
+.sm-select:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(103,0,1,.06); }
+.sm-select:disabled { background: rgba(26,26,46,.03); color: var(--c25); cursor: not-allowed; }
+.sm-select-icon { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); pointer-events: none; color: var(--c45); }
+.sm-error { display: flex; align-items: center; gap: 8px; padding: 9px 12px; background: rgba(192,57,43,.06); border: 1px solid rgba(192,57,43,.15); border-radius: 6px; font-family: var(--fb); font-size: 12.5px; color: #c0392b; margin-bottom: 10px; }
+.sm-submit { width: 100%; padding: 13px 22px; background: var(--gold); color: #fff; font-family: var(--fb); font-size: 12px; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; border: none; border-radius: 6px; cursor: pointer; margin-top: 2px; transition: all .2s; display: flex; align-items: center; justify-content: center; gap: 10px; }
+.sm-submit:hover { background: var(--gold2); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(103,0,1,.2); }
+.sm-submit:disabled { opacity: .65; cursor: not-allowed; transform: none; box-shadow: none; }
+.sm-success { text-align: center; padding: 48px 20px; }
+.sm-success-icon { width: 56px; height: 56px; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; background: rgba(103,0,1,.06); border-radius: 50%; color: var(--gold); }

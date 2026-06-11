@@ -4,6 +4,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { CategoryData, ProductData, products } from '@/data/products';
 import CategoryQuoteForm from '@/components/forms/CategoryQuoteForm';
+import StickyCtaBar from '@/components/ui/StickyCtaBar';
+import { useRevealOnScroll } from '@/hooks/useRevealOnScroll';
 
 export default function BrandCategoryPage({ category }: { category: CategoryData }) {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -33,21 +35,7 @@ export default function BrandCategoryPage({ category }: { category: CategoryData
 
     
 
-  useEffect(() => {
-    const obs = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) {
-            e.target.classList.add('in');
-            obs.unobserve(e.target);
-          }
-        });
-      },
-      { threshold: 0.08, rootMargin: '0px 0px -60px 0px' }
-    );
-    document.querySelectorAll('.reveal').forEach((el) => obs.observe(el));
-    return () => obs.disconnect();
-  }, []);
+  useRevealOnScroll({ threshold: 0.08, rootMargin: '0px 0px -60px 0px' });
 
   // Parallax effect on hero
   useEffect(() => {
@@ -535,27 +523,5 @@ export default function BrandCategoryPage({ category }: { category: CategoryData
       {/* Sticky CTA */}
       <StickyCtaBar category={category} />
     </>
-  );
-}
-
-function StickyCtaBar({ category }: { category: CategoryData }) {
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setVisible(window.scrollY > 600);
-    };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  return (
-    <div className={`pp-sticky-cta${visible ? ' visible' : ''}`}>
-      <div className="pp-sticky-cta-info">
-        <div className="pp-sticky-cta-name">{category.brandName} — {category.subtitle}</div>
-        <div className="pp-sticky-cta-price"><span className="em">Free quote</span> · 24h response</div>
-      </div>
-      <a href="#quote" className="btn btn-gold" style={{ padding: '11px 20px', fontSize: '11.5px' }}>Get a Quote</a>
-    </div>
   );
 }

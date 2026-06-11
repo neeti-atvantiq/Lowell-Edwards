@@ -1,0 +1,222 @@
+/* =====================================================
+   ABOUT PAGE
+===================================================== */
+
+/* Heritage timeline (two-card story) */
+.au-heritage { background: var(--bg); }
+.au-heritage-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  position: relative;
+}
+.au-heritage-grid::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 32px; height: 1px;
+  background: var(--gold);
+  transform: translate(-50%, -50%);
+  opacity: .35;
+}
+.au-heritage-card {
+  background: linear-gradient(140deg, #FFFFFF 0%, #F8FAFD 100%);
+  border: 1px solid rgba(26,26,46,.08);
+  border-radius: 14px;
+  padding: 40px 36px;
+  position: relative;
+  overflow: hidden;
+  transition: transform .4s var(--ease), border-color .4s var(--ease), box-shadow .4s var(--ease);
+}
+.au-heritage-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(122,36,38,.22);
+  box-shadow: 0 28px 56px -28px rgba(26,26,46,.16);
+}
+.au-heritage-card::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 180px; height: 180px;
+  background: radial-gradient(circle, rgba(122,36,38,.06), transparent 70%);
+  transform: translate(40%, -40%);
+  pointer-events: none;
+}
+.au-heritage-year {
+  font-family: var(--fd);
+  font-size: clamp(54px, 6vw, 84px);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -.02em;
+  color: var(--gold);
+  margin-bottom: 4px;
+}
+.au-heritage-meta {
+  font-family: var(--fb);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--c45);
+  margin-bottom: 22px;
+}
+.au-heritage-title {
+  font-family: var(--fd);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--cream);
+  letter-spacing: -.005em;
+  line-height: 1.18;
+  margin-bottom: 12px;
+}
+.au-heritage-body {
+  font-family: var(--fb);
+  font-size: 14.5px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--c65);
+}
+
+/* Services — 2-column grid */
+.au-services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+/* Properties served grid */
+.au-properties-section { background: var(--bg2); }
+.au-properties-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.au-property-card {
+  background: var(--bg);
+  border: 1px solid rgba(26,26,46,.08);
+  border-radius: 12px;
+  padding: 28px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform .35s var(--ease), border-color .35s var(--ease), box-shadow .35s var(--ease);
+}
+.au-property-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(122,36,38,.22);
+  box-shadow: 0 18px 40px -22px rgba(26,26,46,.16);
+}
+.au-property-icon {
+  width: 44px; height: 44px;
+  background: rgba(122,36,38,.06);
+  border: 1px solid rgba(122,36,38,.18);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--gold);
+  margin-bottom: 4px;
+}
+.au-property-title {
+  font-family: var(--fd);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--cream);
+  letter-spacing: -.005em;
+  line-height: 1.2;
+}
+.au-property-body {
+  font-family: var(--fb);
+  font-size: 13.5px;
+  font-weight: 300;
+  line-height: 1.65;
+  color: var(--c65);
+}
+
+/* System components grid (4-col compact tiles) */
+.au-components-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.au-component-card {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFD 100%);
+  border: 1px solid rgba(26,26,46,.08);
+  border-radius: 12px;
+  padding: 22px 22px;
+  position: relative;
+  transition: transform .3s var(--ease), border-color .3s var(--ease);
+}
+.au-component-card::before {
+  content: '';
+  position: absolute;
+  top: 22px; left: 0;
+  width: 3px; height: 18px;
+  background: var(--gold);
+  border-radius: 0 2px 2px 0;
+  opacity: 0;
+  transition: opacity .3s var(--ease);
+}
+.au-component-card:hover { transform: translateY(-3px); border-color: rgba(122,36,38,.22); }
+.au-component-card:hover::before { opacity: 1; }
+.au-component-title {
+  font-family: var(--fd);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--cream);
+  margin-bottom: 6px;
+  letter-spacing: -.005em;
+}
+.au-component-body {
+  font-family: var(--fb);
+  font-size: 12.5px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--c65);
+}
+
+/* Values — 3 numbered editorial cards */
+.au-values-section { background: var(--bg); }
+.au-values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.au-value-card {
+  padding: 32px 28px;
+  background: var(--bg);
+  border: 1px solid rgba(26,26,46,.08);
+  border-radius: 12px;
+  position: relative;
+  transition: transform .35s var(--ease), border-color .35s var(--ease), box-shadow .35s var(--ease);
+}
+.au-value-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(122,36,38,.22);
+  box-shadow: 0 22px 44px -24px rgba(26,26,46,.16);
+}
+.au-value-num {
+  font-family: var(--fd);
+  font-style: italic;
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: -.01em;
+  margin-bottom: 16px;
+  line-height: 1;
+}
+.au-value-title {
+  font-family: var(--fd);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--cream);
+  letter-spacing: -.005em;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.au-value-body {
+  font-family: var(--fb);
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--c65);
+}

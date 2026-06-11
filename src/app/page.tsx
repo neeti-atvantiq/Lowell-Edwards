@@ -1,5 +1,5 @@
 'use client';
-import { useEffect } from 'react';
+import { useRevealOnScroll } from '@/hooks/useRevealOnScroll';
 import Navigation from '@/components/layout/Navigation';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
@@ -16,21 +16,7 @@ import Quote from '@/components/sections/Quote';
 import ChatBot from '@/components/ui/ChatBot';
 
 export default function Home() {
-  useEffect(() => {
-    const obs = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) {
-            e.target.classList.add('in');
-            obs.unobserve(e.target);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-    document.querySelectorAll('.reveal').forEach((el) => obs.observe(el));
-    return () => obs.disconnect();
-  }, []);
+  useRevealOnScroll();
 
   return (
     <>
