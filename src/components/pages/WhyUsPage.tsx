@@ -221,7 +221,7 @@ export default function WhyUsPage() {
         <div className="wrap">
           <div className="section-header wu-section-header">
             <div className="tag">Our Promises</div>
-            <h2 className="h2">Six guarantees, <em className="em">written down.</em></h2>
+            <h2 className="h2">Four guarantees, <em className="em">written down.</em></h2>
             <p className="body-lg">Marketing language is cheap. Specific commitments aren&apos;t. Here are six promises we make in writing as part of every quote.</p>
           </div>
           <div className="wu-promises-grid">
@@ -287,7 +287,7 @@ export default function WhyUsPage() {
               </Link>
               <a href="tel:2015253300" className="btn btn-outline wu-btn-frost">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.9v2.02z" /></svg>
-                <span>Call 201-525-3300</span>
+                <span>Call +1 201-525-3300</span>
               </a>
             </div>
           </div>
