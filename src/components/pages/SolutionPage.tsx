@@ -83,7 +83,7 @@ export default function SolutionPage() {
               </p>
               <div className="inner-hero-actions">
                 <Link href="/#quote" className="btn btn-gold">Request a Site Plan</Link>
-                <Link href="/compare" className="btn btn-outline">Compare Systems</Link>
+                {/* <Link href="/compare" className="btn btn-outline">Compare Systems</Link> */}
               </div>
             </div>
 

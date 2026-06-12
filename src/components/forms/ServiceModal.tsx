@@ -124,7 +124,7 @@ export default function ServiceModal({ open, onClose }: Props) {
               </div>
               <div className="sm-field">
                 <label className="sm-label">Phone <span className="sm-req">*</span></label>
-                <input className="sm-input" type="tel" placeholder="201-555-0000" required value={form.phone} onChange={onChange('phone')} />
+                <input className="sm-input" type="tel" placeholder="+1 201-525-3300" required value={form.phone} onChange={onChange('phone')} />
               </div>
             </div>
 

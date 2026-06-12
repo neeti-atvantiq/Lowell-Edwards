@@ -23,30 +23,32 @@ export default function Footer() {
           <div className="footer-col">
             <h5>Products</h5>
             <ul>
-              <li><Link href="/#products">Smart Video Intercom</Link></li>
-              <li><Link href="/#products">Face Recognition System</Link></li>
-              <li><Link href="/#products">Premium IP Door Station</Link></li>
-              <li><Link href="/#products">Access Control</Link></li>
-              <li><Link href="/compare">Compare Products</Link></li>
+              <li><Link href="/products#intercoms">Video Intercoms</Link></li>
+              <li><Link href="/products#access-control">Access Control</Link></li>
+              <li><Link href="/products#apartment-stations">Apartment Stations</Link></li>
+              <li><Link href="/products">All Products</Link></li>
             </ul>
           </div>
-          <div className="footer-col">
-            <h5>Solutions</h5>
+          {/* <div className="footer-col">
+            <h5>Brands</h5>
             <ul>
-              <li><Link href="/solution">Residential Buildings</Link></li>
-              <li><Link href="/solution">Commercial Offices</Link></li>
-              <li><Link href="/solution">Gated Communities</Link></li>
-              <li><Link href="/solution">Student Housing</Link></li>
-              <li><Link href="/solution">New Developments</Link></li>
+              <li><Link href="/products/akuvox/intercoms">Akuvox</Link></li>
+              <li><Link href="/products/butterflymx/intercoms">ButterflyMX</Link></li>
+              <li><Link href="/products/doorbird/intercoms">DoorBird</Link></li>
+            </ul>
+          </div> */}
+          <div className="footer-col">
+            <h5>Company</h5>
+            <ul>
+              <li><Link href="/about">About Us</Link></li>
+              <li><Link href="/why-us">Why Choose Us</Link></li>
+              <li><Link href="/solution">Our Solutions</Link></li>
             </ul>
           </div>
           <div className="footer-col">
             <h5>Support</h5>
             <ul>
               <li><Link href="/#quote">Get a Free Quote</Link></li>
-              <li><Link href="/#quote">Book a Site Survey</Link></li>
-              <li><Link href="/why-us">24hr Maintenance</Link></li>
-              <li><Link href="/why-us">Remote Support</Link></li>
               <li><Link href="/contact">Contact Us</Link></li>
             </ul>
           </div>
@@ -79,8 +81,7 @@ export default function Footer() {
         <hr className="rule" />
         <div className="footer-bottom">
           <div className="footer-legal">
-            © 2026 Lowell Edwards Home Integration ·{' '}
-            <a href="#">Privacy Policy</a> · <a href="#">Terms of Service</a>
+            © 2026 Lowell Edwards Home Integration · All rights reserved.
           </div>
           <div className="footer-certs">
             <span className="footer-cert">ButterflyMX Certified</span>

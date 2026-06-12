@@ -1792,7 +1792,7 @@ export const products: Record<string, ProductData> = {
     title: 'The sleek, glass-front RFID access terminal.',
     tagline: '— simplified, robust card access for modern buildings.',
     description: 'The Akuvox A01 is an access control terminal incorporating a door controller and an RFID reader in one standalone device. Equipped with a dual-frequency reader (125kHz and 13.56MHz) and a toughened glass front, it delivers secure, keyless entry.',
-    image: 'https://www.cohesiveglobal.com/marketing-materials/Akuvox/datasheet/A01-Access-Control-Unit.pdf', // Example placeholder, actual image would be utilized
+    image: 'https://www.akuvox.com/uploads/202107/2021070813551440.png', // Example placeholder, actual image would be utilized
     meta: [
       { value: 'RFID', unit: '', label: 'Reader' },
       { value: '20,000', unit: '', label: 'Card capacity' },

@@ -69,7 +69,7 @@ export default function SolutionsPage() {
               </h1>
               <p className="ap-hero-desc">
                 We install Akuvox, ButterflyMX, and DoorBird — the three leading intercom and access control platforms. 
-                Compare features, explore categories, and request a free quote.
+                Explore categories, and request a free quote.
               </p>
               <div className="ap-hero-stats">
                 {heroStats.map((s, i) => (
