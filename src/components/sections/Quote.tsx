@@ -198,12 +198,8 @@ export default function Quote() {
                   </div>
                 )}
                 <div className="qf-privacy">🔒 Your details are kept private. No spam, ever.</div>
-                <div className="qf-privacy" style={{ marginTop: 6, fontSize: 11, opacity: 0.75 }}>
-                  Protected by reCAPTCHA —{' '}
-                  <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>Privacy</a>{' '}·{' '}
-                  <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>Terms</a>
-                </div>
-            </form>
+              </form>
+            
           </div>
         </div>
       </div>
