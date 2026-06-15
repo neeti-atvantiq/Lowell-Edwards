@@ -125,7 +125,7 @@
   width: 60px;
 }
 .story-body { margin-bottom: 14px; }
-.story-detail { max-width: 56ch; }
+.story-detail { max-width: 80ch; }
 .story-fact-bar {
   margin-top: 24px;
   display: inline-flex;
