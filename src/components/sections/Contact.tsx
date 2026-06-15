@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { useRecaptchaToken } from '@/hooks/useRecaptchaToken';
 import CustomSelect from '@/components/ui/CustomSelect';
+import PhoneField from '@/components/ui/PhoneField';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -15,10 +16,10 @@ export default function ContactPage() {
   });
   const [timeHour, setTimeHour] = useState('');
   const [timeMinute, setTimeMinute] = useState('');
-  const [timePeriod, setTimePeriod] = useState('AM');
+  const [timePeriod, setTimePeriod] = useState('');
 
   const updateTime = (hour: string, minute: string, period: string) => {
-    if (!hour || !minute) {
+    if (!hour || !minute || !period) {
       setFormData(prev => ({ ...prev, appointmentTime: '' }));
       return;
     }
@@ -180,6 +181,7 @@ New York Metro and surrounding areas
                         value={formData.name}
                         onChange={handleChange}
                         className="contact-form-input"
+                        placeholder="Enter your name"
                         required
                       />
                     </div>
@@ -192,19 +194,17 @@ New York Metro and surrounding areas
                         value={formData.email}
                         onChange={handleChange}
                         className="contact-form-input"
+                        placeholder="Enter email address"
                         required
                       />
                     </div>
                   </div>
                   <div className="contact-form-field">
                     <label htmlFor="phone" className="contact-form-label">Phone</label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
+                    <PhoneField
                       value={formData.phone}
-                      onChange={handleChange}
-                      className="contact-form-input"
+                      onChange={(v) => setFormData((prev) => ({ ...prev, phone: v }))}
+                      placeholder="Enter phone number"
                       required
                     />
                   </div>
@@ -242,6 +242,7 @@ New York Metro and surrounding areas
                           value={timePeriod}
                           onChange={(v) => { setTimePeriod(v); updateTime(timeHour, timeMinute, v); }}
                           placeholder="AM/PM"
+                          required
                           options={[{ value: 'AM', label: 'AM' }, { value: 'PM', label: 'PM' }]}
                         />
                       </div>
@@ -255,6 +256,7 @@ New York Metro and surrounding areas
                       value={formData.message}
                       onChange={handleChange}
                       className="contact-form-textarea"
+                      placeholder="Tell us about your project"
                       rows={6}
                       required
                     />

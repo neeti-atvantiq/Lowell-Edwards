@@ -19,6 +19,7 @@
   font-family: var(--fb);
   font-size: 14px;
   line-height: 1.4;
+  box-sizing: border-box;
   text-align: left;
   cursor: pointer;
   outline: none;
@@ -145,16 +146,16 @@
 
 /* Inside quote form */
 .qf-row .cs-trigger,
-.qf-field .cs-trigger { padding: 13px 16px; }
+.qf-field .cs-trigger { padding: 13px 16px; font-size: 14px; }
 
 /* Inside service modal */
-.sm-field .cs-trigger { padding: 10px 13px; border-radius: 6px; font-size: 13px; }
+.sm-field .cs-trigger { padding: 13px 16px; border-radius: 6px; font-size: 14px; }
 
 /* Inside contact form */
-.contact-form-field .cs-trigger { padding: 14px 16px; border-radius: 6px; }
+.contact-form-field .cs-trigger { padding: 13px 16px; border-radius: 6px; font-size: 14px; }
 
 /* Inside finder */
-.finder-form .cs-trigger { padding: 14px 18px; border-radius: 0; }
+.finder-form .cs-trigger { padding: 13px 16px; border-radius: 6px; font-size: 14px; }
 
 /* ---- Mobile ---- */
 @media (max-width: 768px) {

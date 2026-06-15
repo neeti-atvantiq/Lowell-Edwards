@@ -35,7 +35,7 @@
 .chat-input-row { display: flex; gap: 8px; padding: 12px 14px; border-top: 1px solid rgba(26,26,46,.08); background: #FFFFFF; }
 .chat-input { flex: 1; padding: 10px 13px; background: #F5F7FA; border: 1px solid rgba(26,26,46,.12); color: var(--cream); font-family: var(--fb); font-size: 13px; outline: none; transition: border .2s; }
 .chat-input:focus { border-color: var(--gold); }
-.chat-input::placeholder { color: rgba(26,26,46,.35); }
+.chat-input::placeholder { color: rgba(26,26,46,.3); }
 .chat-send { width: 38px; height: 38px; background: var(--gold); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all .2s; }
 .chat-send:hover { background: var(--gold2); }
 .chat-send svg { color: #fff; }

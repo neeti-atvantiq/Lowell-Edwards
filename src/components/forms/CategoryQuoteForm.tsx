@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { useRecaptchaToken } from '@/hooks/useRecaptchaToken';
+import PhoneField from '@/components/ui/PhoneField';
 
 type Props = {
   brand: string;
@@ -57,21 +58,25 @@ export default function CategoryQuoteForm({ brand, category, placeholderMessage 
       <div className="cat-form-row">
         <div className="cat-form-group">
           <label htmlFor="cat-name">Full Name</label>
-          <input type="text" id="cat-name" name="name" placeholder="Your name" required value={form.name} onChange={onChange('name')} />
+          <input type="text" id="cat-name" name="name" placeholder="Enter your name" required value={form.name} onChange={onChange('name')} />
         </div>
         <div className="cat-form-group">
           <label htmlFor="cat-email">Email</label>
-          <input type="email" id="cat-email" name="email" placeholder="you@company.com" required value={form.email} onChange={onChange('email')} />
+          <input type="email" id="cat-email" name="email" placeholder="Enter email address" required value={form.email} onChange={onChange('email')} />
         </div>
       </div>
       <div className="cat-form-row">
         <div className="cat-form-group">
           <label htmlFor="cat-phone">Phone</label>
-          <input type="tel" id="cat-phone" name="phone" placeholder="07xxx xxx xxx" value={form.phone} onChange={onChange('phone')} />
+          <PhoneField
+            value={form.phone}
+            onChange={(v) => setForm({ ...form, phone: v })}
+            placeholder="Enter phone number"
+          />
         </div>
         <div className="cat-form-group">
           <label htmlFor="cat-units">Number of Units</label>
-          <input type="text" id="cat-units" name="units" placeholder="e.g. 24 apartments" value={form.units} onChange={onChange('units')} />
+          <input type="text" id="cat-units" name="units" placeholder="Enter number of units" value={form.units} onChange={onChange('units')} />
         </div>
       </div>
       <div className="cat-form-group">

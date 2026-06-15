@@ -2,6 +2,7 @@
 import { useState, useEffect, useMemo } from 'react';
 import { State, City } from 'country-state-city';
 import CustomSelect from '@/components/ui/CustomSelect';
+import PhoneField from '@/components/ui/PhoneField';
 
 type Props = {
   open: boolean;
@@ -110,21 +111,26 @@ export default function ServiceModal({ open, onClose }: Props) {
             <div className="sm-row">
               <div className="sm-field">
                 <label className="sm-label">Full Name <span className="sm-req">*</span></label>
-                <input className="sm-input" type="text" placeholder="John Doe" required value={form.name} onChange={onChange('name')} />
+                <input className="sm-input" type="text" placeholder="Enter full name" required value={form.name} onChange={onChange('name')} />
               </div>
               <div className="sm-field">
                 <label className="sm-label">Company</label>
-                <input className="sm-input" type="text" placeholder="Company name" value={form.company} onChange={onChange('company')} />
+                <input className="sm-input" type="text" placeholder="Enter company name" value={form.company} onChange={onChange('company')} />
               </div>
             </div>
             <div className="sm-row">
               <div className="sm-field">
                 <label className="sm-label">Email <span className="sm-req">*</span></label>
-                <input className="sm-input" type="email" placeholder="you@company.com" required value={form.email} onChange={onChange('email')} />
+                <input className="sm-input" type="email" placeholder="Enter email address" required value={form.email} onChange={onChange('email')} />
               </div>
               <div className="sm-field">
                 <label className="sm-label">Phone <span className="sm-req">*</span></label>
-                <input className="sm-input" type="tel" placeholder="+1 201-525-3300" required value={form.phone} onChange={onChange('phone')} />
+                <PhoneField
+                  value={form.phone}
+                  onChange={(v) => setForm({ ...form, phone: v })}
+                  placeholder="Enter phone number"
+                  required
+                />
               </div>
             </div>
 
@@ -158,17 +164,17 @@ export default function ServiceModal({ open, onClose }: Props) {
             <div className="sm-row">
               <div className="sm-field sm-field-wide">
                 <label className="sm-label">Street Address <span className="sm-req">*</span></label>
-                <input className="sm-input" type="text" placeholder="123 Main St" required value={form.streetAddress} onChange={onChange('streetAddress')} />
+                <input className="sm-input" type="text" placeholder="Enter street address" required value={form.streetAddress} onChange={onChange('streetAddress')} />
               </div>
               <div className="sm-field sm-field-narrow">
                 <label className="sm-label">Apt / Suite</label>
-                <input className="sm-input" type="text" placeholder="Apt 4B" value={form.apartment} onChange={onChange('apartment')} />
+                <input className="sm-input" type="text" placeholder="Enter apt / suite" value={form.apartment} onChange={onChange('apartment')} />
               </div>
             </div>
             <div className="sm-row">
               <div className="sm-field sm-field-narrow">
                 <label className="sm-label">ZIP Code <span className="sm-req">*</span></label>
-                <input className="sm-input" type="text" placeholder="07601" required value={form.zipCode} onChange={onChange('zipCode')} maxLength={10} />
+                <input className="sm-input" type="text" placeholder="Enter ZIP code" required value={form.zipCode} onChange={onChange('zipCode')} maxLength={10} />
               </div>
               <div className="sm-field">
                 <label className="sm-label">Request Type <span className="sm-req">*</span></label>
@@ -191,7 +197,7 @@ export default function ServiceModal({ open, onClose }: Props) {
               <label className="sm-label">Additional Notes</label>
               <textarea
                 className="sm-input sm-textarea"
-                placeholder="Any special requirements or details…"
+                placeholder="Enter additional notes"
                 rows={3}
                 value={form.notes}
                 onChange={(e) => setForm({ ...form, notes: e.target.value })}

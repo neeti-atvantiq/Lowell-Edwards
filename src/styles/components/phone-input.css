@@ -1,0 +1,74 @@
+/* =====================================================
+   PHONE FIELD — react-phone-input-2 theme overrides
+===================================================== */
+
+.phone-field.react-tel-input { font-family: var(--fb); width: 100%; }
+.phone-field.react-tel-input .form-control {
+  width: 100%;
+  height: auto;
+  padding: 13px 16px 13px 52px;
+  background: #FFFFFF;
+  border: 1px solid rgba(26,26,46,.12);
+  border-radius: 6px;
+  color: var(--cream);
+  font-family: var(--fb);
+  font-size: 14px;
+  line-height: 1.4;
+  box-sizing: border-box;
+  outline: none;
+  transition: border .2s, box-shadow .2s;
+}
+.phone-field.react-tel-input .form-control:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(103,0,1,.08);
+}
+.phone-field.react-tel-input .form-control::placeholder { color: rgba(26,26,46,.3); }
+.phone-field.react-tel-input .form-control:disabled { background: rgba(26,26,46,.03); cursor: not-allowed; }
+
+/* When only the dial code is present, render it like a placeholder so it doesn't read as user-entered black text. */
+.phone-field--empty.react-tel-input .form-control { color: rgba(26,26,46,.3); font-weight: 300; }
+
+.phone-field.react-tel-input .flag-dropdown {
+  background: transparent;
+  border: 1px solid rgba(26,26,46,.12);
+  border-right: none;
+  border-radius: 6px 0 0 6px;
+}
+.phone-field.react-tel-input .flag-dropdown.open { border-radius: 6px 0 0 6px; background: rgba(26,26,46,.03); }
+.phone-field.react-tel-input .flag-dropdown:hover,
+.phone-field.react-tel-input .flag-dropdown:focus,
+.phone-field.react-tel-input .selected-flag:hover,
+.phone-field.react-tel-input .selected-flag:focus { background: rgba(26,26,46,.03); }
+.phone-field.react-tel-input .selected-flag { padding: 0 0 0 14px; border-radius: 6px 0 0 6px; }
+
+.phone-field.react-tel-input .country-list {
+  margin: 6px 0;
+  background: #FFFFFF;
+  border: 1px solid rgba(26,26,46,.10);
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(26,26,46,.10);
+  font-family: var(--fb);
+}
+.phone-field.react-tel-input .country-list .country { padding: 8px 14px; font-size: 13px; color: var(--cream); }
+.phone-field.react-tel-input .country-list .country .dial-code { color: var(--c45); }
+.phone-field.react-tel-input .country-list .country.highlight,
+.phone-field.react-tel-input .country-list .country:hover { background: rgba(103,0,1,.06); color: var(--cream); }
+.phone-field.react-tel-input .country-list .search { padding: 10px 14px; border-bottom: 1px solid rgba(26,26,46,.08); }
+.phone-field.react-tel-input .country-list .search-box {
+  width: 100%;
+  margin: 0;
+  padding: 8px 12px;
+  border: 1px solid rgba(26,26,46,.12);
+  border-radius: 6px;
+  font-family: var(--fb);
+  font-size: 13px;
+  outline: none;
+}
+.phone-field.react-tel-input .country-list .search-box:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(103,0,1,.08); }
+
+/* Service modal compact variant */
+.sm-field .phone-field.react-tel-input .form-control { padding: 13px 16px 13px 52px; font-size: 14px; }
+.sm-field .phone-field.react-tel-input .selected-flag { padding-left: 14px; }
+
+/* Contact page variant — slightly taller to match other inputs */
+.contact-form-field .phone-field.react-tel-input .form-control { padding-top: 13px; padding-bottom: 13px; }

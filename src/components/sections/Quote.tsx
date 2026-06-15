@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { useRecaptchaToken } from '@/hooks/useRecaptchaToken';
 import CustomSelect from '@/components/ui/CustomSelect';
+import PhoneField from '@/components/ui/PhoneField';
 
 export default function Quote() {
   const [submitted, setSubmitted] = useState(false);
@@ -106,24 +107,28 @@ export default function Quote() {
                 <div className="qf-row">
                   <div>
                     <label className="qf-label">First Name</label>
-                    <input className="qf-input" placeholder="John" value={form.first} onChange={onChange('first')} />
+                    <input className="qf-input" placeholder="Enter first name" value={form.first} onChange={onChange('first')} />
                   </div>
                   <div>
                     <label className="qf-label">Last Name</label>
-                    <input className="qf-input" placeholder="Smith" value={form.last} onChange={onChange('last')} />
+                    <input className="qf-input" placeholder="Enter last name" value={form.last} onChange={onChange('last')} />
                   </div>
                 </div>
                 <div className="qf-field">
                   <label className="qf-label">Company / Organisation</label>
-                  <input className="qf-input" placeholder="Acme Property Management Ltd" value={form.company} onChange={onChange('company')} />
+                  <input className="qf-input" placeholder="Enter company name" value={form.company} onChange={onChange('company')} />
                 </div>
                 <div className="qf-field">
                   <label className="qf-label">Email Address</label>
-                  <input className="qf-input" type="email" placeholder="john@yourcompany.com" value={form.email} onChange={onChange('email')} />
+                  <input className="qf-input" type="email" placeholder="Enter email address" value={form.email} onChange={onChange('email')} />
                 </div>
                 <div className="qf-field">
                   <label className="qf-label">Phone Number</label>
-                  <input className="qf-input" type="tel" placeholder="+1 201-525-3300" value={form.phone} onChange={onChange('phone')} />
+                  <PhoneField
+                    value={form.phone}
+                    onChange={(v) => setForm({ ...form, phone: v })}
+                    placeholder="Enter phone number"
+                  />
                 </div>
                 <div className="qf-field">
                   <label className="qf-label">Building Type</label>

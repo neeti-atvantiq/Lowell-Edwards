@@ -10,16 +10,17 @@ section.quote-section { background: #FFFFFF; }
 .qb-icon svg { color: var(--gold); }
 .qb-title { font-family: var(--fd); font-size: 17px; font-weight: 600; color: var(--cream); margin-bottom: 4px; }
 .qb-body { font-family: var(--fb); font-size: 13px; font-weight: 300; line-height: 1.7; color: var(--c65); }
-.quote-form-wrap { border: 1px solid rgba(26,26,46,.08); padding: 48px 44px; background: #FAFBFC; box-shadow: 0 4px 24px rgba(26,26,46,.06); }
+.quote-form-wrap { border: 1px solid rgba(26,26,46,.08); padding: 48px 44px; background: #FAFBFC; box-shadow: 0 4px 24px rgba(26,26,46,.06); border-radius: 12px; }
 .qf-title { font-family: var(--fd); font-size: 34px; font-weight: 600; color: var(--cream); margin-bottom: 7px; }
 .qf-sub { font-family: var(--fb); font-size: 12.5px; font-weight: 300; color: #000; margin-bottom: 36px; letter-spacing: .04em; }
-.qf-label { display: block; font-family: var(--fb); font-size: 10px; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; opacity: .8; }
-.qf-input, .qf-select, .qf-textarea { width: 100%; padding: 13px 16px; background: #FFFFFF; border: 1px solid rgba(26,26,46,.12); color: var(--cream); font-family: var(--fb); font-size: 14px; outline: none; transition: border .2s; -webkit-appearance: none; appearance: none; }
+.qf-label { display: block; font-family: var(--fb); font-size: 10.5px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; opacity: .85; }
+.qf-input, .qf-select, .qf-textarea { width: 100%; padding: 13px 16px; background: #FFFFFF; border: 1px solid rgba(26,26,46,.12); border-radius: 6px; color: var(--cream); font-family: var(--fb); font-size: 14px; line-height: 1.4; box-sizing: border-box; outline: none; transition: border .2s; -webkit-appearance: none; appearance: none; }
 .qf-input:focus, .qf-select:focus, .qf-textarea:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(103,0,1,.08); }
 .qf-input::placeholder, .qf-textarea::placeholder { color: rgba(26,26,46,.3); }
 .qf-textarea { resize: vertical; min-height: 94px; }
 .qf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 18px; }
 .qf-field { margin-bottom: 18px; }
-.qf-submit { width: 100%; padding: 16px; background: var(--gold); color: #fff; font-family: var(--fb); font-size: 12.5px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; border: none; cursor: pointer; margin-top: 6px; transition: all .2s; display: flex; align-items: center; justify-content: center; gap: 10px; }
-.qf-submit:hover { background: var(--gold2); }
+.qf-submit { width: 100%; padding: 14px 28px; background: var(--gold); color: #fff; font-family: var(--fb); font-size: 12.5px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; border: none; border-radius: 100px; cursor: pointer; margin-top: 6px; transition: all .25s var(--ease); display: inline-flex; align-items: center; justify-content: center; gap: 9px; box-shadow: 0 4px 16px rgba(103,0,1,.3); }
+.qf-submit:hover { background: var(--gold2); transform: translateY(-1px); box-shadow: 0 6px 24px rgba(103,0,1,.35); }
+.qf-submit:disabled { opacity: .55; cursor: not-allowed; transform: none; box-shadow: none; }
 .qf-privacy { font-family: var(--fb); font-size: 11px; color: var(--c25); text-align: center; margin-top: 12px; letter-spacing: .02em; }
