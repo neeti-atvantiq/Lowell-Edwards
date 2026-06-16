@@ -123,7 +123,6 @@ export default function Products() {
                 <a href="#quote" className="btn btn-gold" style={{ fontSize: 11.5, padding: '11px 22px' }}>
                   Request a Quote
                 </a>
-                <a href="#compare" className="btn btn-ghost">Compare</a>
               </div>
             </div>
           ))}

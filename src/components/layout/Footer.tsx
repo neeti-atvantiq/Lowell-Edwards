@@ -78,7 +78,6 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <hr className="rule" />
         <div className="footer-bottom">
           <div className="footer-legal">
             © 2026 Lowell Edwards Home Integration · All rights reserved.

@@ -25,6 +25,8 @@
 @import './components/custom-select.css';
 @import './components/chatbot.css';
 @import './components/footer.css';
+@import 'react-phone-input-2/lib/style.css';
+@import './components/phone-input.css';
 
 /* 3. Page-specific styles */
 @import './pages/contact.css';

@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { toast } from 'sonner';
 import CustomSelect from '@/components/ui/CustomSelect';
+import PhoneField from '@/components/ui/PhoneField';
 import RequiredMark from '@/components/ui/RequiredMark';
 
 type ApiResponse = {
@@ -103,24 +104,28 @@ export default function Quote() {
                 <div className="qf-row">
                   <div>
                     <label className="qf-label">First Name<RequiredMark /></label>
-                    <input className="qf-input" placeholder="John" value={form.first} onChange={onChange('first')} required />
+                    <input className="qf-input" placeholder="Enter first name" value={form.first} onChange={onChange('first')} required />
                   </div>
                   <div>
                     <label className="qf-label">Last Name<RequiredMark /></label>
-                    <input className="qf-input" placeholder="Smith" value={form.last} onChange={onChange('last')} required />
+                    <input className="qf-input" placeholder="Enter last name" value={form.last} onChange={onChange('last')} required />
                   </div>
                 </div>
                 <div className="qf-field">
                   <label className="qf-label">Company / Organisation<RequiredMark /></label>
-                  <input className="qf-input" placeholder="Acme Property Management Ltd" value={form.company} onChange={onChange('company')} required />
+                  <input className="qf-input" placeholder="Enter company name" value={form.company} onChange={onChange('company')} required />
                 </div>
                 <div className="qf-field">
                   <label className="qf-label">Email Address<RequiredMark /></label>
-                  <input className="qf-input" type="email" placeholder="john@yourcompany.com" value={form.email} onChange={onChange('email')} required />
+                  <input className="qf-input" type="email" placeholder="Enter email address" value={form.email} onChange={onChange('email')} required />
                 </div>
                 <div className="qf-field">
                   <label className="qf-label">Phone Number<RequiredMark /></label>
-                  <input className="qf-input" type="tel" placeholder="+1 201-525-3300" value={form.phone} onChange={onChange('phone')} required />
+                  <PhoneField
+                    value={form.phone}
+                    onChange={(v) => setForm({ ...form, phone: v })}
+                    placeholder="Enter phone number"
+                  required />
                 </div>
                 <div className="qf-field">
                   <label className="qf-label">Building Type<RequiredMark /></label>
