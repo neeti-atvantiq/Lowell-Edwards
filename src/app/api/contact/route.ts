@@ -1,62 +1,63 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { verifyRecaptcha } from '@/lib/recaptcha';
-import { sendEmail } from '@/lib/ses';
-import { renderContactEmail, type ContactPayload } from '@/lib/email-templates';
+import { createLead, formatLeadMessage } from '@/lib/leads';
+import { contactLeadSchema, formatValidationMessage } from '@/lib/lead-validation';
+import { sendLeadEmails } from '@/lib/resend';
 
 export const runtime = 'nodejs';
 
-type RequestBody = Partial<ContactPayload> & { recaptchaToken?: string };
-
-function getClientIp(req: NextRequest): string | undefined {
-  const fwd = req.headers.get('x-forwarded-for');
-  if (fwd) return fwd.split(',')[0]?.trim();
-  return req.headers.get('x-real-ip') ?? undefined;
-}
-
-function isEmail(s: string): boolean {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s);
-}
-
 export async function POST(req: NextRequest) {
-  let body: RequestBody;
+  let body: unknown;
+
   try {
-    body = (await req.json()) as RequestBody;
+    body = await req.json();
   } catch {
-    return NextResponse.json({ ok: false, error: 'Invalid JSON' }, { status: 400 });
+    return NextResponse.json(
+      { status: false, code: 400, message: 'Invalid request. Please try again.' },
+      { status: 400 }
+    );
   }
 
-  const name = (body.name ?? '').trim();
-  const email = (body.email ?? '').trim();
-  const phone = (body.phone ?? '').trim();
-  const appointmentDate = (body.appointmentDate ?? '').trim();
-  const appointmentTime = (body.appointmentTime ?? '').trim();
-  const message = (body.message ?? '').trim();
-  const token = body.recaptchaToken ?? '';
-
-  if (!name || !email || !phone || !appointmentDate || !appointmentTime || !message) {
-    return NextResponse.json({ ok: false, error: 'Missing required fields' }, { status: 400 });
+  const result = contactLeadSchema.safeParse(body);
+  if (!result.success) {
+    return NextResponse.json(
+      {
+        status: false,
+        code: 400,
+        message: formatValidationMessage(result.error),
+      },
+      { status: 400 }
+    );
   }
-  if (!isEmail(email)) {
-    return NextResponse.json({ ok: false, error: 'Invalid email address' }, { status: 400 });
-  }
-
-  const verification = await verifyRecaptcha({
-    token,
-    expectedAction: 'contact',
-    remoteIp: getClientIp(req),
-  });
-  if (!verification.ok) {
-    return NextResponse.json({ ok: false, error: verification.reason }, { status: 400 });
-  }
-
-  const { subject, html, text } = renderContactEmail({ name, email, phone, appointmentDate, appointmentTime, message });
 
   try {
-    await sendEmail({ subject, html, text, replyTo: email });
-  } catch (err) {
-    console.error('SES send failed (contact):', err);
-    return NextResponse.json({ ok: false, error: 'Failed to send message' }, { status: 502 });
-  }
+    const payload = result.data;
+    const message = formatLeadMessage([
+      ['Appointment Date', payload.appointmentDate],
+      ['Appointment Time', payload.appointmentTime],
+      ['Message', payload.message],
+    ]);
+    await createLead({
+      formType: 'contact',
+      name: payload.name,
+      email: payload.email,
+      phone: payload.phone,
+      message,
+    });
 
-  return NextResponse.json({ ok: true });
+    await sendLeadEmails({
+      formType: 'Book a Consultation',
+      name: payload.name,
+      email: payload.email,
+      phone: payload.phone,
+      message,
+    });
+
+    return NextResponse.json({ status: true, code: 200, message: 'Your consultation request has been submitted.' });
+  } catch (error) {
+    console.error('Failed to save contact lead:', error);
+    return NextResponse.json(
+      { status: false, code: 500, message: 'Something went wrong. Please try again.' },
+      { status: 500 }
+    );
+  }
 }

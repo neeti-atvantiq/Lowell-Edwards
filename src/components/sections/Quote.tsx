@@ -1,17 +1,24 @@
 'use client';
 import { useState } from 'react';
-import { useRecaptchaToken } from '@/hooks/useRecaptchaToken';
+import { toast } from 'sonner';
 import CustomSelect from '@/components/ui/CustomSelect';
+import RequiredMark from '@/components/ui/RequiredMark';
+
+type ApiResponse = {
+  status?: boolean;
+  code?: number;
+  message?: string;
+};
+
+const initialQuoteForm = {
+  first: '', last: '', company: '', email: '', phone: '',
+  buildingType: '', units: '', priority: '', notes: '',
+};
 
 export default function Quote() {
-  const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
-  const getRecaptchaToken = useRecaptchaToken();
-  const [form, setForm] = useState({
-    first: '', last: '', company: '', email: '', phone: '',
-    buildingType: '', units: '', priority: '', notes: '',
-  });
+  const [form, setForm] = useState(initialQuoteForm);
 
   const onChange =
     (k: keyof typeof form) =>
@@ -25,26 +32,22 @@ export default function Quote() {
     setSubmitting(true);
     setErrorMessage('');
 
-    const recaptchaToken = await getRecaptchaToken('quote');
-    if (!recaptchaToken) {
-      setSubmitting(false);
-      setErrorMessage('Could not verify reCAPTCHA. Please refresh and try again.');
-      return;
-    }
-
     try {
       const res = await fetch('/api/quote', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...form, recaptchaToken }),
+        body: JSON.stringify(form),
       });
-      const data = (await res.json().catch(() => ({}))) as { ok?: boolean; error?: string };
-      if (!res.ok || !data.ok) {
-        throw new Error(data.error || 'Submission failed');
+      const data = (await res.json().catch(() => ({}))) as ApiResponse;
+      if (!res.ok || !data.status) {
+        throw new Error(data.message || 'Submission failed');
       }
-      setSubmitted(true);
+      toast.success(data.message || 'Your quote request has been submitted.');
+      setForm(initialQuoteForm);
     } catch (err) {
-      setErrorMessage(err instanceof Error ? err.message : 'Submission failed');
+      const message = err instanceof Error ? err.message : 'Submission failed';
+      setErrorMessage(message);
+      toast.error(message);
     } finally {
       setSubmitting(false);
     }
@@ -94,43 +97,38 @@ export default function Quote() {
             </div>
           </div>
           <div className="quote-form-wrap reveal" style={{ transitionDelay: '.15s' }}>
-            {submitted ? (
-              <>
-                <div className="qf-title">Thank you — we&apos;ve received your request.</div>
-                <div className="qf-sub">An engineer will be in touch within one business day.</div>
-              </>
-            ) : (
-              <form onSubmit={onSubmit}>
+            <form onSubmit={onSubmit}>
                 <div className="qf-title">Get Your Free Quote</div>
                 <div className="qf-sub">No obligation · Response within 1 business day</div>
                 <div className="qf-row">
                   <div>
-                    <label className="qf-label">First Name</label>
-                    <input className="qf-input" placeholder="John" value={form.first} onChange={onChange('first')} />
+                    <label className="qf-label">First Name<RequiredMark /></label>
+                    <input className="qf-input" placeholder="John" value={form.first} onChange={onChange('first')} required />
                   </div>
                   <div>
-                    <label className="qf-label">Last Name</label>
-                    <input className="qf-input" placeholder="Smith" value={form.last} onChange={onChange('last')} />
+                    <label className="qf-label">Last Name<RequiredMark /></label>
+                    <input className="qf-input" placeholder="Smith" value={form.last} onChange={onChange('last')} required />
                   </div>
                 </div>
                 <div className="qf-field">
-                  <label className="qf-label">Company / Organisation</label>
-                  <input className="qf-input" placeholder="Acme Property Management Ltd" value={form.company} onChange={onChange('company')} />
+                  <label className="qf-label">Company / Organisation<RequiredMark /></label>
+                  <input className="qf-input" placeholder="Acme Property Management Ltd" value={form.company} onChange={onChange('company')} required />
                 </div>
                 <div className="qf-field">
-                  <label className="qf-label">Email Address</label>
-                  <input className="qf-input" type="email" placeholder="john@yourcompany.com" value={form.email} onChange={onChange('email')} />
+                  <label className="qf-label">Email Address<RequiredMark /></label>
+                  <input className="qf-input" type="email" placeholder="john@yourcompany.com" value={form.email} onChange={onChange('email')} required />
                 </div>
                 <div className="qf-field">
-                  <label className="qf-label">Phone Number</label>
-                  <input className="qf-input" type="tel" placeholder="+1 201-525-3300" value={form.phone} onChange={onChange('phone')} />
+                  <label className="qf-label">Phone Number<RequiredMark /></label>
+                  <input className="qf-input" type="tel" placeholder="+1 201-525-3300" value={form.phone} onChange={onChange('phone')} required />
                 </div>
                 <div className="qf-field">
-                  <label className="qf-label">Building Type</label>
+                  <label className="qf-label">Building Type<RequiredMark /></label>
                   <CustomSelect
                     value={form.buildingType}
                     onChange={(v) => setForm({ ...form, buildingType: v })}
                     placeholder="Select building type…"
+                    required
                     options={[
                       { value: 'Residential Condominium Building', label: 'Residential Condominium Building' },
                       { value: 'Residential Cooperative Building', label: 'Residential Cooperative Building' },
@@ -144,11 +142,12 @@ export default function Quote() {
                 </div>
                 <div className="qf-row">
                   <div>
-                    <label className="qf-label">Number of Units</label>
+                    <label className="qf-label">Number of Units<RequiredMark /></label>
                     <CustomSelect
                       value={form.units}
                       onChange={(v) => setForm({ ...form, units: v })}
                       placeholder="Units…"
+                      required
                       options={[
                         { value: '1–10', label: '1–10' },
                         { value: '11–50', label: '11–50' },
@@ -158,11 +157,12 @@ export default function Quote() {
                     />
                   </div>
                   <div>
-                    <label className="qf-label">Priority Need</label>
+                    <label className="qf-label">Priority Need<RequiredMark /></label>
                     <CustomSelect
                       value={form.priority}
                       onChange={(v) => setForm({ ...form, priority: v })}
                       placeholder="Select…"
+                      required
                       options={[
                         { value: 'Immediate Installation', label: 'Immediate Installation' },
                         { value: 'Future Planning', label: 'Future Planning' },
@@ -198,8 +198,7 @@ export default function Quote() {
                   <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>Privacy</a>{' '}·{' '}
                   <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>Terms</a>
                 </div>
-              </form>
-            )}
+            </form>
           </div>
         </div>
       </div>

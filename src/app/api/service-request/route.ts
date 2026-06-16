@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createLead, formatLeadMessage } from '@/lib/leads';
-import { formatValidationMessage, quoteLeadSchema } from '@/lib/lead-validation';
+import { formatValidationMessage, serviceRequestLeadSchema } from '@/lib/lead-validation';
 import { sendLeadEmails } from '@/lib/resend';
 
 export const runtime = 'nodejs';
@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  const result = quoteLeadSchema.safeParse(body);
+  const result = serviceRequestLeadSchema.safeParse(body);
   if (!result.success) {
     return NextResponse.json(
       {
@@ -29,35 +29,39 @@ export async function POST(req: NextRequest) {
     );
   }
 
+  const payload = result.data;
+  const address = [
+    payload.streetAddress,
+    payload.apartment,
+    `${payload.city}, ${payload.state} ${payload.zipCode}`,
+  ].filter(Boolean).join(', ');
+
   try {
-    const payload = result.data;
-    const name = `${payload.first} ${payload.last}`;
     const message = formatLeadMessage([
-      ['Units', payload.units],
-      ['Priority', payload.priority],
+      ['Address', address],
       ['Notes', payload.notes],
     ]);
     await createLead({
-      formType: 'quote',
-      name,
+      formType: 'service-request',
+      name: payload.name,
       email: payload.email,
       phone: payload.phone,
       company: payload.company,
-      service: payload.buildingType,
+      service: payload.requestType,
       message,
     });
 
     await sendLeadEmails({
-      formType: 'Get Your Quote',
-      name,
+      formType: 'Request Service',
+      name: payload.name,
       email: payload.email,
       phone: payload.phone,
       message,
     });
 
-    return NextResponse.json({ status: true, code: 200, message: 'Your quote request has been submitted.' });
+    return NextResponse.json({ status: true, code: 200, message: 'Your service request has been submitted.' });
   } catch (error) {
-    console.error('Failed to save quote lead:', error);
+    console.error('Failed to save service request lead:', error);
     return NextResponse.json(
       { status: false, code: 500, message: 'Something went wrong. Please try again.' },
       { status: 500 }

@@ -36,8 +36,14 @@ export default function CustomSelect({
   const containerRef = useRef<HTMLDivElement>(null);
   const listRef = useRef<HTMLUListElement>(null);
   const searchRef = useRef<HTMLInputElement>(null);
+  const nativeSelectRef = useRef<HTMLSelectElement>(null);
 
   const selectedOption = options.find((o) => o.value === value);
+
+  useEffect(() => {
+    if (!nativeSelectRef.current) return;
+    nativeSelectRef.current.setCustomValidity(required && !value ? 'This field is required.' : '');
+  }, [required, value]);
 
   const filteredOptions = useMemo(() => {
     if (!searchable || !search.trim()) return options;
@@ -164,15 +170,16 @@ export default function CustomSelect({
       ref={containerRef}
       className={`cs-wrap ${className} ${isOpen ? 'cs-open' : ''} ${disabled ? 'cs-disabled' : ''}`}
     >
-      {/* Hidden native select for form submission/validation */}
-      {name && (
+      {/* Native select keeps browser required-field validation for this custom UI. */}
+      {(name || required) && (
         <select
+          ref={nativeSelectRef}
           name={name}
           value={value}
           required={required}
           tabIndex={-1}
           aria-hidden="true"
-          style={{ position: 'absolute', opacity: 0, pointerEvents: 'none', width: 0, height: 0 }}
+          className="cs-native-select"
           onChange={() => {}}
         >
           <option value="">{placeholder}</option>

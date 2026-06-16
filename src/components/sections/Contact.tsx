@@ -1,18 +1,27 @@
 'use client';
 import { useState } from 'react';
 import Image from 'next/image';
-import { useRecaptchaToken } from '@/hooks/useRecaptchaToken';
+import { toast } from 'sonner';
 import CustomSelect from '@/components/ui/CustomSelect';
+import RequiredMark from '@/components/ui/RequiredMark';
+
+type ApiResponse = {
+  status?: boolean;
+  code?: number;
+  message?: string;
+};
+
+const initialContactForm = {
+  name: '',
+  email: '',
+  phone: '',
+  appointmentDate: '',
+  appointmentTime: '',
+  message: ''
+};
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    appointmentDate: '',
-    appointmentTime: '',
-    message: ''
-  });
+  const [formData, setFormData] = useState(initialContactForm);
   const [timeHour, setTimeHour] = useState('');
   const [timeMinute, setTimeMinute] = useState('');
   const [timePeriod, setTimePeriod] = useState('AM');
@@ -30,7 +39,6 @@ export default function ContactPage() {
   };
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState<string>('');
-  const getRecaptchaToken = useRecaptchaToken();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -39,28 +47,27 @@ export default function ContactPage() {
     setStatus('submitting');
     setErrorMessage('');
 
-    const recaptchaToken = await getRecaptchaToken('contact');
-    if (!recaptchaToken) {
-      setStatus('error');
-      setErrorMessage('Could not verify reCAPTCHA. Please refresh and try again.');
-      return;
-    }
-
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...formData, recaptchaToken }),
+        body: JSON.stringify(formData),
       });
-      const data = (await res.json().catch(() => ({}))) as { ok?: boolean; error?: string };
-      if (!res.ok || !data.ok) {
-        throw new Error(data.error || 'Submission failed');
+      const data = (await res.json().catch(() => ({}))) as ApiResponse;
+      if (!res.ok || !data.status) {
+        throw new Error(data.message || 'Submission failed');
       }
       setStatus('success');
-      setFormData({ name: '', email: '', phone: '', appointmentDate: '', appointmentTime: '', message: '' });
+      toast.success(data.message || 'Your consultation request has been submitted.');
+      setFormData(initialContactForm);
+      setTimeHour('');
+      setTimeMinute('');
+      setTimePeriod('AM');
     } catch (err) {
+      const message = err instanceof Error ? err.message : 'Submission failed';
       setStatus('error');
-      setErrorMessage(err instanceof Error ? err.message : 'Submission failed');
+      setErrorMessage(message);
+      toast.error(message);
     }
   };
 
@@ -172,7 +179,7 @@ New York Metro and surrounding areas
                 <form onSubmit={handleSubmit}>
                   <div className="contact-form-row">
                     <div className="contact-form-field">
-                      <label htmlFor="name" className="contact-form-label">Full Name</label>
+                      <label htmlFor="name" className="contact-form-label">Full Name<RequiredMark /></label>
                       <input
                         type="text"
                         id="name"
@@ -184,7 +191,7 @@ New York Metro and surrounding areas
                       />
                     </div>
                     <div className="contact-form-field">
-                      <label htmlFor="email" className="contact-form-label">Email</label>
+                      <label htmlFor="email" className="contact-form-label">Email<RequiredMark /></label>
                       <input
                         type="email"
                         id="email"
@@ -197,7 +204,7 @@ New York Metro and surrounding areas
                     </div>
                   </div>
                   <div className="contact-form-field">
-                    <label htmlFor="phone" className="contact-form-label">Phone</label>
+                    <label htmlFor="phone" className="contact-form-label">Phone<RequiredMark /></label>
                     <input
                       type="tel"
                       id="phone"
@@ -210,7 +217,7 @@ New York Metro and surrounding areas
                   </div>
                   <div className="contact-form-row">
                     <div className="contact-form-field">
-                      <label htmlFor="appointmentDate" className="contact-form-label">Date</label>
+                      <label htmlFor="appointmentDate" className="contact-form-label">Date<RequiredMark /></label>
                       <input
                         type="date"
                         id="appointmentDate"
@@ -222,7 +229,7 @@ New York Metro and surrounding areas
                       />
                     </div>
                     <div className="contact-form-field">
-                      <label className="contact-form-label">Time</label>
+                      <label className="contact-form-label">Time<RequiredMark /></label>
                       <div style={{ display: 'flex', gap: 8 }}>
                         <CustomSelect
                           value={timeHour}
@@ -256,7 +263,6 @@ New York Metro and surrounding areas
                       onChange={handleChange}
                       className="contact-form-textarea"
                       rows={6}
-                      required
                     />
                   </div>
                   <button type="submit" className="contact-form-submit" disabled={status === 'submitting'}>
@@ -268,11 +274,6 @@ New York Metro and surrounding areas
                     </svg>
                     {status === 'submitting' ? 'Sending…' : 'Submit Request'}
                   </button>
-                  {status === 'success' && (
-                    <p role="status" style={{ marginTop: 16, color: '#1f6b3a', fontSize: 14 }}>
-                      Thanks — your request has been sent. We&apos;ll confirm by email within 24 hours.
-                    </p>
-                  )}
                   {status === 'error' && (
                     <p role="alert" style={{ marginTop: 16, color: '#b3261e', fontSize: 14 }}>
                       {errorMessage || 'Something went wrong. Please try again or call us.'}

@@ -146,3 +146,50 @@ export function renderCategoryQuoteEmail(p: CategoryQuotePayload) {
     text: toText(title, fields),
   };
 }
+
+export type LeadEmailTemplateInput = {
+  formType: string;
+  name: string;
+  email: string;
+  phone?: string;
+  message?: string;
+};
+
+export function renderAdminNotificationEmail(input: LeadEmailTemplateInput) {
+  const title = 'New Lead Submission';
+  const fields: Array<[string, string | undefined]> = [
+    ['Form Type', input.formType],
+    ['Name', input.name],
+    ['Email', input.email],
+    ['Phone', input.phone],
+    ['Message', input.message],
+  ];
+
+  return {
+    subject: `New ${input.formType} lead - ${input.name}`,
+    html: wrap(title, fields.map(([label, value]) => row(label, value)).join('')),
+    text: toText(title, fields),
+  };
+}
+
+export function renderCustomerConfirmationEmail(input: LeadEmailTemplateInput) {
+  const title = 'Thank You for Contacting Lowell Edwards';
+  const submittedDetails = toText('Submitted Details', [
+    ['Form Type', input.formType],
+    ['Name', input.name],
+    ['Email', input.email],
+    ['Phone', input.phone],
+    ['Message', input.message],
+  ]);
+  const fields: Array<[string, string | undefined]> = [
+    ['Customer Name', input.name],
+    ['Submitted Details', submittedDetails],
+    ['Thank You Message', 'Thank you for reaching out. Our team has received your submission and will contact you shortly.'],
+  ];
+
+  return {
+    subject: 'We received your Lowell Edwards request',
+    html: wrap(title, fields.map(([label, value]) => row(label, value)).join('')),
+    text: toText(title, fields),
+  };
+}
