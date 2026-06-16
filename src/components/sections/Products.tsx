@@ -5,52 +5,57 @@ const products = [
     klass: 'bmx',
     cert: 'Authorised Reseller',
     certLogo: '/images/products/cert/butterfly.png',
+    logo: '/images/logo/butterflymx.png',
     ref: 'Series 02',
     brand: 'ButterflyMX',
     type: 'Video Intercom & Smart Access',
     image: '/images/products/butterfly_img.png',
-    desc: 'Cloud-managed video intercom purpose-built for residential buildings. Residents open doors via smartphone; managers control entire portfolios from a single dashboard; couriers use dedicated delivery access codes.',
+    desc: 'Cloud-managed video intercom purpose-built for residential buildings. Residents open doors via smartphone; managers control entire portfolios from a single dashboard; residents create delivery access codes.',
     specs: [
       'HD video call to any smartphone',
       'QR code & mobile key entry',
       'Package room & delivery management',
       'Cloud-managed portfolio dashboard',
-      'Visitor & contractor access codes',
+      'Resident created visitor & delivery access codes',
+      'Access control system integration'
     ],
   },
   {
     klass: 'akv',
     cert: 'Authorised Partner',
       certLogo: '/images/products/cert/akuvox.png',
+    logo: '/images/logo/akuvox.webp',
     ref: 'Series 04',
     brand: 'Akuvox',
     type: 'AI Face Recognition Intercom',
     image: '/images/products/akuvox_img.png',
-    desc: 'AI-powered SIP intercom with touchless face recognition entry. Designed for both small and large residential buildings. Integrates with existing wiring systems and supports Bluetooth and PIN backup access methods with full audit logging.',
+    desc: 'AI-powered SIP intercom with touchless face recognition entry. Designed for both small and large residential buildings. Integrates with existing wiring systems and supports Bluetooth and PIN code access methods. Cloud Managed full audit logging.',
     specs: [
       'AI face recognition — touchless entry',
       'Access Control system integration',
-      'Bluetooth & PIN ~ Backup access & Code Access',
-      'Multi-tenant door station support',
+      'Bluetooth & PIN Code Access',
       'Full entry audit log',
       'Standard phone support',
-      'Apartment stations are available'
+      'Apartment stations are available',
+      'IP65 / IK10 - outdoor and vandal rated',
     ],
   },
   {
     klass: 'db',
     cert: 'Certified Installer',
       certLogo: '/images/products/cert/doorbird.png',
+    logo: '/images/logo/doorbird.png',
     ref: 'Series 07',
     brand: 'DoorBird',
     type: 'Premium IP Video Door Station',
     image: '/images/products/doorbird_img.jpg',
     desc: 'Premium stainless steel IP video door stations built for demanding architectural environments. IP65 and IK10 rated for outdoor durability and vandal resistance. Ultra-wide 1080p camera with IR night vision. The preferred choice for luxury developments where aesthetics are non-negotiable.',
     specs: [
+      'HD videocall to any smartphone',
+      'Fob and Pin Code access',
       'Stainless steel architectural design',
       'IP65 / IK10 — outdoor & vandal rated',
       '1080p ultra-wide fisheye camera',
-      'Smart home platform integration',
       'IR night vision',
     ],
   },
@@ -94,8 +99,12 @@ export default function Products() {
               </div>
               <div className="prod-top">
                 <div className="prod-top-left">
-                  <div className="prod-brand">{p.brand}</div>
-                  <div className="prod-type">{p.type}</div>
+                  <img
+                    src={p.logo}
+                    alt={`${p.brand} logo`}
+                    className="prod-brand-logo"
+                    style={{ maxHeight: 48, width: 'auto', objectFit: 'contain' }}
+                  />
                 </div>
                 <span className="prod-cert">
                   <Image

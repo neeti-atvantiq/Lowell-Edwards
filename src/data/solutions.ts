@@ -10,14 +10,14 @@ export const solutionCards: SolutionCard[] = [
   {
     n: '01',
     title: 'See Every Visitor Before You Open',
-    body: 'HD video intercom lets residents and managers see and speak to any visitor before granting access — from their phone, from anywhere in the world. No more opening blind.',
+    body: 'Residents can see and speak with visitors or receive packages — from their phone, from anywhere. No more buzzing in strangers or missed deliveries.',
     fact: 'Real-time HD video to any device',
     image: '/images/solutions/solution-01.png',
   },
   {
     n: '02',
     title: 'Touchless Face Recognition Entry',
-    body: 'For premium buildings, AI-powered face recognition provides frictionless, keyless entry for registered residents — secure, hygienic, and effortlessly modern.',
+    body: 'For premium buildings, AI-powered face recognition provides fast and easy, keyless entry for registered residents — no key, no fob, no phone out of pocket.',
     fact: 'AI-powered, hygienic entry',
     image: '/images/solutions/solution-05.jpeg',
   },

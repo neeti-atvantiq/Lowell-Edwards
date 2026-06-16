@@ -34,14 +34,15 @@ export default function Hero() {
             className="body-lg hero-desc"
             style={{
               fontSize: 19,
-              maxWidth: 580,
+              maxWidth: 650,
               lineHeight: 1.75,
               marginBottom: 52,
               textShadow: '0 1px 12px rgba(0,0,0,.7)',
             }}
           >
-            Video intercoms and access control systems supplied, installed, and maintained by our
-            dedicated local team. 
+            Certified Akuvox, ButterflyMX, and DoorBird integrator. Video intercoms and access control for apartments, offices, and gated communities
+— designed, installed, and supported by our dedicated local team.
+
             {/* Onsite or remote — we respond within 24 hours, guaranteed. */}
           </p>
           <div className="hero-actions">

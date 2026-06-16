@@ -48,7 +48,7 @@ export default function Solution() {
         <div className="solution-header reveal">
           <div className="tag" style={{ justifyContent: 'center' }}>The Solution</div>
           <h2 className="h2" style={{ textAlign: 'center' }}>
-            Intercom systems that solves every <em className="em">problem</em>
+            <span className="tight-o">O</span>ne Intercom System.<br /> Every access problem <em className="em">solved</em>.
           </h2>
           <p
             className="body-lg"
