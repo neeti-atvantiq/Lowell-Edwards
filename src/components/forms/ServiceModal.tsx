@@ -3,8 +3,8 @@ import { useState, useEffect, useMemo } from 'react';
 import { State, City } from 'country-state-city';
 import { toast } from 'sonner';
 import CustomSelect from '@/components/ui/CustomSelect';
-import PhoneField from '@/components/ui/PhoneField';
 import RequiredMark from '@/components/ui/RequiredMark';
+import PhoneField from '@/components/ui/PhoneField';
 
 type Props = {
   open: boolean;

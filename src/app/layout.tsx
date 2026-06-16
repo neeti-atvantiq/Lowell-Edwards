@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { Toaster } from "sonner";
+import "react-phone-input-2/lib/style.css";
 import "@/styles/index.css";
 import RecaptchaProvider from "@/components/providers/RecaptchaProvider";
 
@@ -36,7 +37,7 @@ export default function RootLayout({
     <html lang="en" data-theme="estate" className={`${futurist.variable} ${basset.variable}`}>
       <body>
         <RecaptchaProvider>{children}</RecaptchaProvider>
-        <Toaster richColors position="top-right" />
+        <Toaster richColors position="top-center" />
       </body>
     </html>
   );
